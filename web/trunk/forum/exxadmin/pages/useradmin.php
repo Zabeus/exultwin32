@@ -122,7 +122,7 @@ $i++;
 </tr>
 <tr>
     <th nowrap="nowrap">&nbsp;Username:&nbsp;&nbsp;</th>
-    <td><input type="text" name="username" size="30" maxlength="50" value="<?php echo $rec['username']; ?>" /></td>
+    <td><input type="text" name="formusername" size="30" maxlength="50" value="<?php echo $rec['username']; ?>" /></td>
 </tr>
 <tr>
     <th nowrap="nowrap">&nbsp;Name:&nbsp;&nbsp;</th>
