@@ -34,6 +34,7 @@
      <a href="../../dev.php">Development</a> |
      <a href="index.php">Discussion</a> |
      <a href="../../about.php">About Us</a> |
+     <a href="../../letters.php">Letters</a> |
      <a href="../../history.php">History</a> |
     <a href="../../links.php">Links</a>
    </b></td>
