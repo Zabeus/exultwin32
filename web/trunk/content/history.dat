@@ -1,3 +1,94 @@
+<p><b>2002-03-03</b></p>
+<ul>
+<li>Jeff has created an 'ipack' program to help with creating and
+modifying art files.
+<li>You can now adjust the combat difficulty in the exult.cfg file
+<li>Several improvements to how map-editing mode works.
+<li>Bug fixes (including some spells, traps and serpent venom)
+</ul>
+<p><b>2002-02-19</b></p>
+	<ul>
+	<li>Gumps can now be moved when in target mode
+	<li>Combat takes strength into account a bit more
+	<li>Fixes to Exult/ExultStudio to allow for the creation of new games from scratch (i.e. not as patches to existing games)
+	<li>The Photoshop plugin has been fixed for PS6
+	<li>Bug fixes
+	</ul>
+<p><b>2002-02-11</b></p>
+	<li>Colourless has made ExultStudio work under Win95 and WinNT
+	<li>DrCode has added frame browsing and palette import/export to ExultStudio
+	<li>Common code between Exult and Pentagram has been factored out to increase reusability
+	<li>Bug fixes (including the skin colour in the sex scenes problem)
+	</ul>
+<p><b>2002-01-31</b></p>
+	<ul>
+	<li>Colourless has completed the SI intro and ending with full 
+	    synchronization of text/sound/speech
+	<li>DrCode has added grouping functionality to ExultStudio
+	<li>WJP has fixed wud and wuc (usecode disassembler and assembler) so
+	    that they are now compatible with each other.
+	<li>More Pentagram hacking...
+	</ul>
+<p><b>2002-01-21</b></p>
+	<ul>
+	<li>Colourless and Kirben have been working a lot to get ExultStudio going under Windows with the help of Mark Siewert
+	    who has provided drag &amp; drop support amongs other things.<br>
+	<li>DrCode has been adding more usability features to ExultStudio
+	<li>Nadir has merged Ruediger Hanke's patches for AmigaOS/MorphOS support
+	<li>Dominus has updated the FAQ and Documentation. Go and read them now
+	<li>Colourless and WJP have been hacking on Pentagram... :)
+	</ul>
+<p><b>2002-01-11</b></p>
+	<ul>
+	<li>Bugs fixed related to the Hound of Doskar and Dupre rejoining the party in SI
+	<li>Rewrote part of the teleporter code, which should prevent teleporters from taking you to the wrong spot
+	<li>various other changes and fixes, including more work on Exult Studio.
+	</ul>
+<p><b>2002-01-06</b></p>
+	<ul>
+	<li>Several fixes related to character attributes. (str, int, combat, etc...)
+	<li>Fixed a bug where the Jawbone would be created in the wrong spot, causing Erstam not to realize you picked it up
+	<li>Expack is now a bit more verbose, and should be able to handle Unix-style indexfiles in Windows.
+	<li>Jeff has done a lot of work on Exult Studio. You can now edit terrain.
+	</ul>
+<p><b>2001-12-26</b></p>
+	<ul>
+	<li>The Spanish version of Serpent Isle should work now.
+	<li>Serpent gates work even if you don't have Silver Seed
+	<li>Duelists will attack their dummies and archery targets
+	<li>Magic Storm now actually damages enemies
+	<li>Various other fixes to schedules, monster spawning, menus,
+	and many more
+	</ul>
+<p><b>2001-12-19</b></p>
+	<ul>
+	<li>Exult now compiles under Solaris with G++
+	<li>Music looping is now configurable via the Audio Options
+	<li>A few fixes for correct display of spanish menus have gone in
+	<li>Combat has been modified slightly to make it more challenging
+	<li>More bug fixes
+	</ul>
+<p><b>2001-12-10</b></p>
+	<ul>
+	<li>Make sure you read <a href="README.1ST">this</a>
+	<li>There is an Amiga port of Exult, which hopefully will be
+	    integrated in the mainstream code. Get it <a href="http://www.muenster.de/~tomjoad/exult.html">here</a>
+	<li>Patrick's UCXT (usecode decompiler/disassembler) now works and will
+	    be included in future "Tools" releases
+	<li>Jeff has upgraded UCC (usecode compiler) to work with the new 
+	    conversation calls, and has released a new "patch" to BG.
+	    Grab it from <a href="http://prdownloads.sourceforge.net/exult/bgpatch3.zip">here</a>
+	<li>Exult's data files (exult*.flx) have a CRC so that Exult refuses to 
+	    run with non-matching data files
+	<li>We fixed a few crashers and other bugs
+	</ul>
+<p><b>2001-11-29</b></p>
+	<b>Exult Beta released !!!</b>
+	<p>Get it from the <a href="download.php">download</a> page,
+	   see the <a href="screenshots.php">screenshots</a>,
+	   read the <a href="docs.php">documentation</a> and the
+	   <a href="faq.php">FAQ</a>.</p>
+	<p>And there was much rejoicing :)</p>
 <p><b>2001-11-19</b></p>
 <ul>
 <li>Colourless has implemented proper Ice Dungeon rendering
@@ -25,7 +116,7 @@ the way !!!
 <li>WJP added mousewheel support for the slider gumps
 <li>Other bugs fixes
 </ul>
-<b><p>2001-10-25</b></p>
+<p><b>2001-10-25</b></p>
 <ul>
 <li>We have lost all messages in the forum, because of a bug. WJP took the
 opportunity to upgrade to the latest stable version of the forum software.
