@@ -1,6 +1,9 @@
 2004-02-03 Dominik Reichardt <dominus@users.sourceforge.net>
 	* content/exult_studio.dat: converted JPGs to PNGs
 	* images/studio*.jpg removed, studio0*.png added instead
+	* images/sfbug.jpg replaced with sfbug.png
+	* content/docs.dat, faq.dat: updated and eliminated another jpg
+	* docs.txt, faq.txt: updated and eliminated another jpg
 	
 2003-04-06  Darke <takhisisii@users.sourceforge.net>
 	* content/faq.dat: Made sentence make sense. *grin*
