@@ -1,4 +1,15 @@
 <table width="100%">
+	<tr><td width="20%" valign="top">21 January 2002<br></td>
+	<td><p>We have been working hard at the following items:
+	<ul>
+	<li>Colourless and Kirben have been working a lot to get ExultStudio going under Windows with the help of Mark Siewert
+	    who has provided drag &amp; drop support amongs other things.<br>
+	<li>DrCode has been adding more usability features to ExultStudio
+	<li>Nadir has merged Ruediger Hanke's patches for AmigaOS/MorphOS support
+	<li>Dominus has updated the FAQ and Documentation. Go and read them now
+	<li>Colourless and WJP have been hacking on Pentagram... :)
+	</ul>
+	</td></tr>
 	<tr><td width="20%" valign="top">11 January 2002<br></td>
 	<td><p>Exult has been nominated for the LinuxFormat Best Game award! Go <a href="http://linuxformat.co.uk/awards">here</a> to vote for Exult! :-)
 	<ul>
