@@ -508,10 +508,10 @@ class FastTemplate {
 
 //	************************************************************
 
-	function clear_parse ( $ReturnVar = "")
-	{
-		$this->clear($ReturnVar);
-	}
+//	function clear_parse ( $ReturnVar = "")
+//	{
+//		$this->clear($ReturnVar);
+//	}
 
 //	************************************************************
 
