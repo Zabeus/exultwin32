@@ -7,10 +7,7 @@ begin_section("Official - v1.1Beta1");
  add_extern_entry("exult-tools-1.1Beta1-1.i386.rpm", "RedHat 9 binary rpm (tools)", 240);
  add_extern_entry("exult-studio-1.1Beta1-1.i386.rpm", "RedHat 9 binary rpm (Exult Studio)", 225);
  add_extern_entry("exult-1.1Beta1-1.src.rpm", "Source (.rpm)", 1617);
-
-
-
-// add_extern_entry("exult_1.1beta1_arm.ipk", "Sharp Zaurus binary (ROM version ...)", 1353
+ add_extern_entry("exult_1.1beta1_arm.ipk", "Sharp Zaurus binary .ipk", 1353);
 end_section();
 
 
