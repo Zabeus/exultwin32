@@ -1,7 +1,7 @@
 <?php
 begin_section("Official - v1.1.9rc1");
  add_extern_entry("exult-1.1.9rc1.tar.gz", "Source (.tar.gz)", 1743);
- add_extern_entry("exult-1.1.9rc1-win32.exe", "Windows (95/98/ME/NT/2000/XP) Binary", 1940);
+ add_extern_entry("exult-1.1.9rc1a-win32.exe", "Windows (95/98/ME/NT/2000/XP) Binary (Fixed Sound)", 1940);
  add_extern_entry("exult-1.1.9rc1-1.i386.rpm", "Fedora Core 1 binary rpm", 1014);
  add_extern_entry("exult-tools-1.1.9rc1-1.i386.rpm", "Fedora Core 1 binary rpm (tools)", 274);
  add_extern_entry("exult-studio-1.1.9rc1-1.i386.rpm", "Fedora Core 1 binary rpm (Exult Studio)", 250);
