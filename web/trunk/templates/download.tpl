@@ -33,7 +33,7 @@
 	<tr><td width="10">&nbsp;</td><td></td><td width="10"></td><td></td></tr>
 	
 	<tr>
-		<td colspan="2"><b>Pentagram - Experimantal map and shapes viewer for Ultima 8</b></td>
+		<td colspan="2"><b>Pentagram - Experimental map and shapes viewer for Ultima 8</b></td>
 		<td width="10"></td>
 		<td></td>
 	</tr>
