@@ -1,4 +1,7 @@
-2002-03-12  Dominik Reichardt <gigdr@tesionmail.de>
+2002-03-15  Max Horn  <max@quendi.de>
+	* content/download.dat: OS X version changed to 0.98rc1a
+
+2002-03-12  Max Horn  <max@quendi.de>
 	* download.php, content/download.dat: Major rewrite, should simplify handling
 	  of the download section; updated to version 0.98rc1 files
 	* templates/download_section.tpl, templates/empty.tpl: New auxillary files
