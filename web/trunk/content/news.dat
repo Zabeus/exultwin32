@@ -1,4 +1,13 @@
 <table width="100%">
+	<tr><td width="20%" valign="top">12 March 2003<br></td>
+	<td><ul>
+	<li>Behaviour of the bookmark in the spellbook has been improved.</li>
+	<li>A crash while sleeping has been fixed.</li>
+	<li>Jeff has been working on improving Exult Studio, including
+	some bugfixes.</li>
+	<li>Some miscellaneous bugfixes</li>
+	</ul>
+	</td></tr>
 	<tr><td width="20%" valign="top">3 March 2003<br></td>
 	<td><br>
 	Development seems to have picked up again after being stalled for a few
