@@ -1,3 +1,40 @@
+<p><b>20 October 2003</b></p>
+<b>Exult 1.1beta3 has been released!</b><br>
+We have just released Exult 1.1beta3. This release should fix
+all reported item duplication/disappearance bugs, as well as several
+other issues. You can download it from our
+<a href="download.php">download page</a>. Currently, sources and
+Redhat 9 and Windows binary packages are available. Other platforms
+should arrive within a few days.
+Please report any bugs you find in our
+<a href="http://sourceforge.net/bugs/?group_id=2335">bug tracker</a>.
+<br><b>Update:</b> packages for Mac OS X and the Sharp Zaurus are
+also available.
+
+<p><b>9 August 2003</b></p>
+<b>Exult 1.1beta2 has been released</b><br>
+Because of some serious bugs in Exult 1.1beta1 we have released
+version 1.1beta2. As usual, you can download it from our
+<a href="download.php">download page</a>. Sources and Redhat 9,
+Windows and Zaurus binary packages are available, others will follow
+soon.	
+
+<p><b>1 August 2003</b></p>
+Packages for RedHat 9 and the Sharp Zaurus have been added to the
+<a href="download.php">download page</a>
+
+<p><b>28 July 2003</b></p>
+<b>Exult 1.1Beta1 has been released !!!</b><br>
+Exult 1.1Beta1 is now available for download. Please read the
+<a href="docs.php">documentation</a> and <a href="faq.php">FAQ</a>
+before <a href="download.php">downloading</a>.
+Please report any bugs you find in this release on
+our <a href="http://sourceforge.net/bugs/?group_id=2335">bug tracker</a><br>
+Right now the Mac OS X and Windows releases are available for download,
+and of course the source code.
+Other operating systems should be available soon.
+Enjoy !
+
 <p><b>04 May 2003</p></b>
 <ul>
 <li>Jeff changed party formation to look more like the one used in the
