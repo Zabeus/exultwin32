@@ -75,9 +75,9 @@ The latest version of this document can be found at http://exult.sourceforge.net
 
 0. Changes to the FAQ
 0.1. - 18 June 2002
-* 4.2. How do I submit a proper bug report? SourceForge requires registration for attaching files.
 * 1.9. Why are there now two different snapshots? same as on our main page, also some explanation for the different FAQ/Docs.
 * 3.19. Why is Exult Studio not working with the RC2 or newer snapshots of Exult?Exult Studio is no longer supported in RC2 and stable snapshots.
+* 4.2. How do I submit a proper bug report? SourceForge requires registration for attaching files.
 
 
 
