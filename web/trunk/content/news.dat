@@ -1,4 +1,15 @@
 <table width="100%">
+	<tr><td width="20%" valign="top">1 March 2004<br></td>
+	<td><b>Exult 1.1.10rc2 has been released!</b><br>
+	This is mainly a bugfix release. We have fixed a number of
+	potentially plot-stopping crash bugs and additionally resolved
+	some Windows-only bugs, including a problem with resurrection.
+	Sources and Fedora Core and Windows binary packages are	currently
+	available for <a href="download.php">download</a>.
+	Expect binaries for other platforms soon.<br>
+	Note that the 1.1.10rc2 hasn't propagated to all the SourceForge
+	download mirrors yet, so you may have to try a few mirrors.
+	</td></tr>
 	<tr><td width="20%" valign="top">5 February 2004<br></td>
 	<td>There has been a change in Exult's audio configuration
 	between 1.1beta3 and 1.1.9rc1 that is worth mentioning here.
