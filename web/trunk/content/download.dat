@@ -36,6 +36,8 @@ begin_section("Additional Data files (not required)");
  add_extern_entry("sqsfxsi.zip", "Sound pack for Serpent Isle (Roland MT-32)", 7834);
  add_extern_entry("U7MusicOGG_1of2.zip", "Ogg encoded Music files for Exult Part 1", 12030);
  add_extern_entry("U7MusicOGG_2of2.zip", "Ogg encoded Music files for Exult Part 2", 10860);
+ add_local_entry("exult-sfx-si_0.4_arm.ipk", "Zaurus SI sfx package");
+ add_local_entry("exult-sfx-bg_0.4_arm.ipk", "Zaurus BG sfx package");
 end_section();
 
 // snapshots
@@ -48,7 +50,5 @@ begin_section("Exult 1.4.x Snapshots (Unstable) - use at your own risk!");
  add_local_entry("GimpPlugin.exe", "Gimp 1.x Plugin (For Windows)");
  add_local_entry("Gimp20Plugin.exe", "Gimp 2.x Plugin (For Windows)");
  add_local_entry("ExultStudio.exe", "Exult Studio (work in progress)");
- add_local_entry("exult-sfx-si_0.4_arm.ipk", "Zaurus SI sfx package");
- add_local_entry("exult-sfx-bg_0.4_arm.ipk", "Zaurus BG sfx package");
 end_section();
 ?>
