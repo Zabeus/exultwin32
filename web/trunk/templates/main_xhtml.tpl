@@ -24,6 +24,7 @@
 									<a href="download.php">Download</a> |
 									<a href="docs.php">Documentation</a> |
 									<a href="faq.php">FAQ</a> |
+									<a href="studio.php">Studio</a> |
 									<a href="screenshots.php">Screen Shots</a>
 								</font></td>
 							</tr>
