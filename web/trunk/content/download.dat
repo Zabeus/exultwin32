@@ -2,11 +2,11 @@
 begin_section("Official - v0.99.1RC2");
  add_extern_entry("exult-0.99.1RC2.tar.gz", "Source (.tar.gz)", 1419);
  add_extern_entry("exult-0.99.1RC2-1.src.rpm", "Source .rpm", 1433);
- add_extern_entry("exult-0.99.1RC2-1.i386.rpm", "i386 RedHat binary", 944);
+ add_extern_entry("exult-0.99.1RC2-1.i386.rpm", "i386 RedHat binary (Exult)", 944);
  add_extern_entry("exult-tools-0.99.1RC2-1.i386.rpm", "i386 RedHat binary
-(tools)", 187);
+(Exult tools)", 187);
  add_extern_entry("exult-studio-0.99.1RC2-1.i386.rpm", "i386 RedHat binary
-(exult studio)", 239);
+(Exult Studio)", 239);
  add_extern_entry("exult-gimp-plugin-0.99.1RC2-1.i386.rpm", "i386 RedHat binary
 (gimp plugin)", 11);
  add_extern_entry("exult-0.99.1RC2-win32.exe", "Windows (95/98/ME/NT/2000/XP) Binary", 1542);
