@@ -1,7 +1,7 @@
 <?php
-	add_screenshot("z_exult_icon.jpg",267,200,"Exult Icon");
 	add_screenshot("z_front.jpg",200,267,"Zaurus");
 	add_screenshot("z_opened.jpg",200,267,"Zaurus");
+	add_screenshot("z_exult_icon.jpg",267,200,"Exult Icon");
 	add_screenshot("z2_exultmenu.jpg",300,200,"Exult Menu");
 	add_screenshot("z2_simenu.jpg",300,200,"Serpent Isle");
 	add_screenshot("z2_create_character.jpg",300,200,"Character Creation");
