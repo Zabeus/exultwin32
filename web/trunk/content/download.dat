@@ -58,7 +58,7 @@ begin_section("Exult 1.1.x Snapshots (Unstable) - use at your own risk!");
  add_local_entry("2.0/Exult.zip", "Exult CVS source code snapshot");
  add_local_entry("2.0/ExultTools.exe", "Exult Win32 Tools snapshot ");
  add_local_entry("2.0/ExultStudio.exe", "Exult Studio (work in progress)");
- add_local_entry("2.0/exult-1.1.0cvs-0.6.2.ipk", "Zaurus binary snapshot");
+ add_local_entry("2.0/exult-zaurus.ipk", "Zaurus binary snapshot");
  add_local_entry("2.0/exult-sfx-si_0.4_arm.ipk", "Zaurus SI sfx package");
  add_local_entry("2.0/exult-sfx-bg_0.4_arm.ipk", "Zaurus BG sfx package");
 end_section();
