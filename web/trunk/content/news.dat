@@ -2,12 +2,14 @@
 	<tr><td width="20%" valign="top">3 March 2003<br></td>
 	<td><br>
 	Development seems to have picked up again after being stalled for a few
-	months.<br>
-	DrCode has added a new scaler (Scale2X by Andrea Mazzoleni), implemented
-	exploding weapons, made pathfinding faster and fixed a few bugs
-	WJP has updated the build system to the latest tools, and provided a 
-	couple of fixes<br>
-	Nadir has been porting ExultStudio to GTK+ 2.0<br>
+	months.<ul>
+	<li>DrCode has added a new scaler (Scale2X by Andrea Mazzoleni),
+	implemented exploding weapons, made pathfinding faster and fixed
+	a few bugs</li>
+	<li>WJP has updated the build system to the latest tools, and provided
+	a couple of fixes</li>
+	<li>Nadir has been porting ExultStudio to GTK+ 2.0</li>
+	</ul>
 	</td></tr>
 	<tr><td width="20%" valign="top">7 November 2002<br></td>
 	<td><b>Exult 1.0 has been released !!!</b><br>
