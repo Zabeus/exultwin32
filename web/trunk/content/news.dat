@@ -1,5 +1,16 @@
 <table width="100%">
-		<tr><td width="20%" valign="top">5 May 2002<br></td>
+	<tr><td width="20%" valign="top">19 May 2002<br></td>
+	<td><ul>
+	<li>Jeff has changed the party formation a bit.
+	<li>Stackable items (coins, arrows, lockpicks...) are now auto-combined when put in a backpack 
+		or bag of the party. In SI keys are now automatically added to the keyring.
+	<li>Colourless fixed a bug that affected some Windows users (only the first savegame was visible).
+	<li>Simon Quinn has now recorded the SFX for SI and also changed the SFX for BG. Download his
+		Roland MT32 soundpacks from our download page.
+	<li>We now have combos working in Exult Studio (see the documentation for Exult Studio).
+	<li>Dominus has updated the FAQ and also the documentation for Exult and Exult Studio</a>	
+	</ul></td></tr>
+	<tr><td width="20%" valign="top">5 May 2002<br></td>
 	<td><ul>
 	<li>Simon Quinn has recorded the SFX for BG with his Roland MT32. If you ever wanted to know how those 
 		sfx sounded download it at <a href="http://prdownloads.sourceforge.net/exult/sqsfxbg.zip">sqsfxbg.zip</a><br/>
