@@ -1,3 +1,7 @@
+2004-02-03 Dominik Reichardt <dominus@users.sourceforge.net>
+	* content/exult_studio.dat: converted JPGs to PNGs
+	* images/studio*.jpg removed, studio0*.png added instead
+	
 2003-04-06  Darke <takhisisii@users.sourceforge.net>
 	* content/faq.dat: Made sentence make sense. *grin*
 
@@ -58,9 +62,9 @@
 
 2002-03-12  Dominik Reichardt <gigdr@tesionmail.de>
 	* faq.txt, content/faq.dat: version updated+other small updates
-	
+
 2002-03-11  Dominik Reichardt <gigdr@tesionmail.de>
-	* download.php: added /snapshot/pentagram where all the stuff for Pentagram 
+	* download.php: added /snapshot/pentagram where all the stuff for Pentagram
 	  download is storeed
 
 2002-03-10  Dominik Reichardt <gigdr@tesionmail.de>
@@ -87,4 +91,3 @@
 
 2002-01-10  Max Horn  <max@quendi.de>
 	* Initial checkin
-

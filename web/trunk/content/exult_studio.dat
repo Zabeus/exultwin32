@@ -96,7 +96,7 @@
  to enter map-editing mode.
 					<em>Exult Studio</em> should open up if you did everything correctly. In map-editing mode the world is
 					frozen, but you are still able to move your characters around in order to place objects.
-					You're now ready to start your world editing. You should be seeing something like this:<br/><img alt="game window with red grid" src="images/studio1.jpg"/></li></ol></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="can_do_atm">2.4. What you can do at the moment</a></strong></td></tr><tr><td><p>
+					You're now ready to start your world editing. You should be seeing something like this:</li></ol><p><img alt="game window with red grid" src="images/studio01.png"/></p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="can_do_atm">2.4. What you can do at the moment</a></strong></td></tr><tr><td><p>
 					With the latest source you can
 				</p><ul><li>browse shapes in the main window.</li><li>drag a shape from the shape browser to <em>Exult</em>, and that
 							object will be placed in the game.</li><li>edit an 'egg' by double-clicking on it. An edit box
@@ -150,7 +150,7 @@
   						This option is only useful to developers who want to edit exult_studio.glade
   						themselves.</li></ul></td></tr></table><hr width="100%"/><table width="100%"><tr><th align="left"><a name="Exult Studio basics">3. Exult Studio basics</a></th></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="overview">3.1. Description</a></strong></td></tr><tr><td><p>
 					Once <em>Exult Studio</em> runs correctly , a tree of game files is displayed to the left of
-					the main window, while the currently selected file is viewed in detail to the right.<br/><img alt="Exult Studio default view" src="images/studio2.jpg"/><br/>
+					the main window, while the currently selected file is viewed in detail to the right.<br/><img alt="Exult Studio default view" src="images/studio02.png"/><br/>
 					The types of files <em>Exult Studio</em> supports are described next.
 				</p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="shape_files">3.2. Shape files</a></strong></td></tr><tr><td><p>
 					Shapes are the basic graphical elements of the game. Each shape has one or more
@@ -487,7 +487,7 @@
 					out their assigned schedule if given the friendly alignment.<br/>
 					As a final monster spawn option, you can set the number of creatures you want to appear using
 					the count option. You can set anywhere from 1 to 31 monsters. When you're finished setting
-					the egg how you want, simply press "Apply" and place the egg on the world map.<br/><img alt="Exult Egg window" src="images/studio3.jpg"/><br/></p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="creature_schedules">6.6. Schedules of Creatures</a></strong></td></tr><tr><td><p>
+					the egg how you want, simply press "Apply" and place the egg on the world map.<br/><img alt="Exult Egg window" src="images/studio03.png"/><br/></p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="creature_schedules">6.6. Schedules of Creatures</a></strong></td></tr><tr><td><p>
 					When setting a monster spawn you will most like want to use one of the following schedules.
 				</p><ul><li><strong>Horiz. Pace</strong><br/>
 						Any creature given this schedule will pace back and forth in a horizontal manner. Great
@@ -509,7 +509,7 @@
 						beside each other and its rumble time. This also works by placing them near training
 						dummies or archery targets. For an extra laugh place 10 spawns each set for 31 guards
 						to appear in dueling mode.</li><li><strong>Patrol</strong><br/>
-						A creature given this setting will very slowly wander from place to place.<br/><img alt="Guards duel" src="images/studio4.jpg"/><br/></li></ul></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="audio_eggs">6.7. Jukebox, Sound Effects and Voice eggs</a></strong></td></tr><tr><td><p>
+						A creature given this setting will very slowly wander from place to place.<br/><img alt="Guards duel" src="images/studio04.png"/><br/></li></ul></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="audio_eggs">6.7. Jukebox, Sound Effects and Voice eggs</a></strong></td></tr><tr><td><p>
 					Using these eggs couldn't be more straightforward, select the sound effect, music score,
 					or recorded digital voice you desire and then place them onto the map. When a character
 					activates the egg they begin to play. You can set music and sound effects to play on a
@@ -537,7 +537,7 @@
 					Using these options you can make some pretty dangerous obstacles for the Avatar to avoid.
 				</p><p><strong>Note:</strong> Shape numbers assume you are using either BG or SI data. When making
 					a new game you can set weapons info of shapes yourself and choose which shape numbers are
-					used by each weapon.<br/><img alt="missiles" src="images/studio5.jpg"/><br/></p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="teleport_eggs">6.10. Teleport eggs</a></strong></td></tr><tr><td><p>
+					used by each weapon.<br/><img alt="missiles" src="images/studio05.png"/><br/></p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="teleport_eggs">6.10. Teleport eggs</a></strong></td></tr><tr><td><p>
 					The primary purpose of the teleport egg is to simply move a character from one place to another
 					instantly without forcing them to walk there. Think of any dungeon teleporter that moves you
 					from one place to another.<br/>
@@ -605,7 +605,7 @@
 					over the <em>Exult</em> window, wait for the window to switch and then place the item. You will get a
 					green grid that will show you exactly where you can expect the object to show up. Once you
 					found where you would like the object to appear, simply let go of the mouse and the object is
-					placed. If you're unhappy where you placed the object, simply drag and drop it somewhere else.<br/><img alt="green grid" src="images/studio6.jpg"/></p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="control_obj">8.4. Mark, delete, copy, make multiple objects</a></strong></td></tr><tr><td><p>
+					placed. If you're unhappy where you placed the object, simply drag and drop it somewhere else.<br/><img alt="green grid" src="images/studio06.png"/></p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="control_obj">8.4. Mark, delete, copy, make multiple objects</a></strong></td></tr><tr><td><p>
 					To mark multiple objects hold down 
 	'<font color="maroon">ctrl</font>'
  and click on the objects you want to mark.
@@ -635,7 +635,7 @@
 					object's z height by changing the value in the grid height menu. If you want your character to
 					be able to walk underneath an object it must be set 4 grid heights above the surface which your
 					character is walking on. If you want your character to be able to walk on an object, the top of
-					the object must be no more then 1-grid height above the surface the character is currently on.<br/><img alt="crate bridge" src="images/studio7.jpg"/></p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="change_frame">8.6. How to change the frame of an object</a></strong></td></tr><tr><td><p>
+					the object must be no more then 1-grid height above the surface the character is currently on.<br/><img alt="crate bridge" src="images/studio07.png"/></p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="change_frame">8.6. How to change the frame of an object</a></strong></td></tr><tr><td><p>
 					So you see an apple tree on the map, but you think you'd much rather have a palm tree. <em>Exult Studio</em>
 					supports many different frames for each object. To change the frame of an object, select an
 					object so it highlights red and select the "Basic Properties" option. The <em>Exult</em> Object box
@@ -651,7 +651,7 @@
 					are located under the heading U7chunks. The chunks are many large pieces of preformed landscape
 					that help give the world a more consistent feel. They also make the job of editing the world
 					somewhat easier. To place a chunk simply place it the same way that you would a shape, but keep
-					in mind that chunks can only be placed within the red squared formed by the map-editing grid.<br/><img alt="chunk placing" src="images/studio8.jpg"/></p><p>
+					in mind that chunks can only be placed within the red squared formed by the map-editing grid.<br/><img alt="chunk placing" src="images/studio08.png"/></p><p>
 					There are a lot of interesting chunks already available in the chunks.vga file, but what if you
 					want to make some minor changes to the design of a pre-made chunk? Maybe make the Britannia
 					transport system a little more safe by painting a yellow line down the centre of each road chunk.
@@ -672,7 +672,7 @@
 					handy. Select the New Combos option and then enter the window where Exult is running. Your
 					mouse will have become a cross hair. Double click on all the objects you plan on adding to
 					your new object. In this example we're making a roof by double-clicking all sections of the
-					roof.<br/><img alt="combo builder" src="images/studio9.jpg"/></p><p>
+					roof.<br/><img alt="combo builder" src="images/studio09.png"/></p><p>
 					As you double-click each object, the selection appears in the combo window showing you exactly
 					what you have selected. Now give the object a name and select Okay. The object will now be
 					temporarily saved in the combos.flx menu. The object can now be placed on the map normally. If
