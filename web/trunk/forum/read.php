@@ -15,7 +15,7 @@
 //   You should have received a copy of the Phorum License                    //
 //   along with this program.                                                 //
 ////////////////////////////////////////////////////////////////////////////////
-// $Id: read.php,v 1.2 2002/07/22 20:27:47 wjpalenstijn Exp $
+// $Id: read.php,v 1.3 2002/07/23 10:04:49 wjpalenstijn Exp $
 
   $read=true;
 

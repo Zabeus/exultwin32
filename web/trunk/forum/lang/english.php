@@ -53,6 +53,7 @@
   $lOlderMessages   = "Older Messages";
   $lNew             = "new";
   $lFrozen          = "frozen";
+  $lSticky          = "sticky";
   $lTopics          = "Topics";
   $lAuthor          = "Author";
   $lDate            = "Date";

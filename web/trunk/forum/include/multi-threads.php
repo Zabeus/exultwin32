@@ -15,7 +15,7 @@
     global $ForumTableBodyColor1,$ForumTableBodyFontColor1,$ForumTableBodyColor2,$ForumTableBodyFontColor2;
     global $read_page,$ext,$collapse,$id,$UseCookies,$phflat,$$phflat;
     global $space_gif,$num,$old_message,$haveread,$use_haveread;
-    global $lNew, $lFrozen, $GetVars, $users, $moderators;
+    global $lNew, $lFrozen, $lSticky, $GetVars, $users, $moderators;
     $thread_total="";
 
     if(($row_color%2)==0){
@@ -74,8 +74,12 @@
         $subject.="<font class=\"PhorumNewFlag\">".$lNew."</font>";
       }
       if(($topic["threadflags"] & FLG_FROZEN) && ($topic["parent"] == 0)) {
-       $subject.="<font class=\"PhorumFrozenFlag\">$lFrozen</font>";
+        $subject.="<font class=\"PhorumFrozenFlag\">$lFrozen</font>";
       }
+      if(($topic["threadflags"] & FLG_KEEPONTOP) && ($topic["parent"] == 0)) {
+        $subject.= "<font class=\"PhorumStickyFlag\">$lSticky</font>";
+	  }
+
 
     }
 

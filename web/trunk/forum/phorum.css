@@ -67,6 +67,13 @@ BODY, TD, TR, P, UL, OL, LI, INPUT, SELECT, DL, DD, DT, FONT
     color: Blue;
 }
 
+.PhorumStickyFlag
+{
+    font-family: Geneva, Verdana, MS Sans Serif , Clean, sans-serif;
+    font-size: 10px;
+    color: Green;
+}
+
 .PhorumMessage
 {
     font-family: Verdana, sans-serif;

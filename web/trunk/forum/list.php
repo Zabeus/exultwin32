@@ -94,14 +94,16 @@
   }
 
   //++++ NEEDS WORK
-  $KeepOnTopOrder = " ((threadflags/" . FLG_KEEPONTOP . ")%2) desc";
+  $KeepOnTopOrder = " ((threadflags/" . FLG_KEEPONTOP . ")%2) desc ";
+  $KeepOnTop = " ((threadflags/" . FLG_KEEPONTOP . ")%2) ";
+//  $KeepOnTop = " 0 ";
 
   if ($ForumMultiLevel==2) {
-    $myflag="";
+    $myflag=" 1 ";
     if ($thread!=0) {
       if($action==3)
     $comp="=";
-      $myflag = " and modifystamp <$comp $thread";
+      $myflag = " modifystamp <$comp $thread ";
       if($action==1){
         if($$phcollapse==0){
             $SQL = "Select modifystamp as maxtime from $ForumTableName WHERE approved='Y'  AND modifystamp > $thread ORDER BY modifystamp".$limit;
@@ -113,7 +115,7 @@
     $numrows=$q->numrows();
         if($numrows>0){
       $maxtime=(int)$q->field("maxtime", $numrows-1);
-      $myflag = " AND modifystamp <= ".$maxtime;
+      $myflag = " modifystamp <= ".$maxtime;
         } else {
           Header("Location: $forum_url/$list_page.$ext?f=$num$GetVars");
           exit();
@@ -122,7 +124,7 @@
     }
 
     if($$phcollapse==0){
-      $SQL = "SELECT thread, modifystamp FROM $ForumTableName WHERE approved='Y' $myflag GROUP BY thread, modifystamp ORDER BY modifystamp desc, thread desc".$limit;
+      $SQL = "SELECT thread, modifystamp FROM $ForumTableName WHERE approved='Y' AND $myflag GROUP BY thread, modifystamp ORDER BY modifystamp desc, thread desc".$limit;
     } else {
       if($DB->type=="mysql"){
         $convfunc="FROM_UNIXTIME";
@@ -130,7 +132,7 @@
       else{
         $convfunc="datetime";
       }
-      $SQL = "SELECT thread, modifystamp, count(id) AS tcount, $convfunc(modifystamp) AS latest, max(id) as maxid FROM $ForumTableName WHERE approved='Y' $myflag GROUP BY thread, modifystamp ORDER BY modifystamp desc, thread desc".$limit;
+      $SQL = "SELECT thread, modifystamp, count(id) AS tcount, $convfunc(modifystamp) AS latest, max(id) as maxid, threadflags FROM $ForumTableName WHERE approved='Y' AND (($myflag) or $KeepOnTop) GROUP BY thread, modifystamp ORDER BY $KeepOnTopOrder, modifystamp desc, thread desc".$limit;
     }
 
     $thread_list = new query($DB, $SQL);
@@ -168,9 +170,9 @@
     if (!empty($threadstring)) {
 
       if($$phcollapse==0){
-        $SQL = "Select id,parent,thread,subject,author,datestamp,userid,threadflags FROM $ForumTableName WHERE approved='Y' $myflag and thread IN (".$threadstring.") order by modifystamp desc, id asc";
+        $SQL = "Select id,parent,thread,subject,author,datestamp,userid,threadflags FROM $ForumTableName WHERE approved='Y' AND (($myflag and thread IN (".$threadstring.")) or $KeepOnTop) order by $KeepOnTopOrder, modifystamp desc, id asc";
       } else {
-        $SQL = "Select id,0 as parent,thread,subject,author,datestamp,userid,threadflags FROM $ForumTableName WHERE approved='Y' AND parent = 0 $myflag and thread IN (".$threadstring.") order by modifystamp desc";
+        $SQL = "Select id,0 as parent,thread,subject,author,datestamp,userid,threadflags FROM $ForumTableName WHERE approved='Y' AND parent = 0 and (($myflag and thread IN (".$threadstring.")) or $KeepOnTop) order by $KeepOnTopOrder, modifystamp desc";
       }
     }
   } else {
@@ -266,10 +268,10 @@
     }
 
     if($$phcollapse==0){
-      $SQL = "Select id,parent,thread,subject,author,datestamp,userid,threadflags from $ForumTableName where approved='Y' AND thread<=$max and thread>=$min order by $KeepOnTopOrder, thread desc, id asc";
+      $SQL = "Select id,parent,thread,subject,author,datestamp,userid,threadflags from $ForumTableName where approved='Y' AND thread<=$max and thread>=$min or $KeepOnTop) order by $KeepOnTopOrder, thread desc, id asc";
     }
     else{
-      $SQL = "Select id,thread,subject,author,datestamp,userid,threadflags from $ForumTableName where approved='Y' AND thread = id AND thread<=$max AND thread>=$min order by $KeepOnTopOrder, thread desc";
+      $SQL = "Select id,thread,subject,author,datestamp,userid,threadflags from $ForumTableName where approved='Y' AND thread = id AND thread<=$max AND thread>=$min order by thread desc";
     }
 
   }

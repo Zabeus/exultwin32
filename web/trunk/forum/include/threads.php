@@ -110,8 +110,11 @@
         echo "<font class=\"PhorumNewFlag\">".$lNew."</font>";
       }
       if($t_flags & FLG_FROZEN){
-       echo "<font class=\"PhorumFrozenFlag\">$lFrozen</font>";
+        echo "<font class=\"PhorumFrozenFlag\">$lFrozen</font>";
       }
+	  if($t_flags & FLG_KEEPONTOP) {
+        echo "<font class=\"PhorumStickyFlag\">$lSticky</font>";
+	  }
     }
 
     echo "</td>\n";
