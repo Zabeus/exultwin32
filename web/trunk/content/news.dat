@@ -1,4 +1,12 @@
 <table width="100%">
+	<tr><td width="20%" valign="top">20 July 2002<br></td>
+	<td>
+	<li>Fixed the bug that broke moongates in the Sphere generator (BG)
+	<li>Added some more new BG paperdoll art (Thanks sb-x)
+	<li>Some fixes to cart-handling
+	<li>Serpent Isle has been fully played through with the current 1.0.x snapshots, resulting in a lot of SI bugfixes.
+	</ul></td></tr>
+
 	<tr><td width="20%" valign="top">7 July 2002<br></td>
 	<td>
 	We've been fixing lots of bugs in the 1.0.x snapshots the last month: <ul>
