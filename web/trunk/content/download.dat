@@ -23,6 +23,8 @@ add_snapshot("ExultTools.exe", "Exult Win32 Tools snapshot ");
 add_snapshot("PhotoshopShapePlugin.zip", "Photoshop Plugin");
 add_snapshot("ExultStudio.exe", "Exult Studio (work in progress)");
 
+add_pentagram("ChangelogPent", "Changelog");
+add_pentagram("Pentagram.zip", "Pentagram CVS source code snapshot");
 add_pentagram("Pentagram.exe", "Windows 9x/ME/NT/2000 binary snapshot");
 
 add_datafile("jmsfx.zip", "Sound pack for Black Gate", 4667);
