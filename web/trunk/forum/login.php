@@ -81,20 +81,6 @@
     else{
       $Error=$lLoginError;
     }
-  } elseif (!empty($forgotpass)) {
-    $SQL="select username, email from $pho_main"."_auth where username='$lookup' or email='$lookup'";
-    $q->query($DB, $SQL);
-    $rec=$q->getrow();
-    if(!empty($rec["username"])){
-        $newpass=substr(md5($username.microtime()), 0, 8);
-        $crypt_pass=md5($newpass);
-        $SQL="update $pho_main"."_auth set password='$crypt_pass' where username='$rec[username]'";
-        $q->query($DB, $SQL);
-        mail($rec["email"], $lNewPassword, "$lNewPassBody:\n\n  $lUserName: $rec[username]\n  $lPassword:  $newpass\n\n$lNewPassChange", "From: <$DefaultEmail>");
-        $Error=$lNewPassMailed;
-    } else {
-        $Error=$lNewPassError;
-    }
   }
 
   if(basename($PHP_SELF)=="login.$ext"){
@@ -156,31 +142,6 @@
         <tr>
             <td <?php echo bgcolor($table_body_color_1); ?> nowrap="nowrap">&nbsp;</td>
             <td <?php echo bgcolor($table_body_color_1); ?>><input type="submit" value="<?php echo $lLogin; ?>" />&nbsp;<br /><img src="images/trans.gif" width=3 height=3 border=0></td>
-        </tr>
-        </table>
-    </td>
-</tr>
-</table>
-</form>
-
-<form action="<?php echo "login.$ext"; ?>" method="post">
-<input type="hidden" name="f" value="<?php echo $f; ?>" />
-<input type="hidden" name="target" value="<?php echo $target; ?>" />
-<input type="hidden" name="forgotpass" value="1" />
-<?php echo $PostVars; ?>
-<table cellspacing="0" cellpadding="0" border="0">
-<tr>
-    <td <?php echo bgcolor($default_nav_color); ?>>
-
-        <table class="PhorumListTable" width="400" cellspacing="0" cellpadding="2" border="0">
-        <tr>
-            <td height="21" <?php echo bgcolor($default_table_header_color); ?>><FONT color="<?php echo $default_table_header_font_color; ?>">&nbsp;<?php echo $lForgotPass; ?></font></td>
-        </tr>
-        <tr>
-            <td <?php echo bgcolor($default_table_body_color_1); ?>><font color="<?php echo $default_table_body_font_color_1; ?>"><?php echo $lLostPassExplain; ?></font></td>
-        </tr>
-        <tr>
-            <td align="center" <?php echo bgcolor($default_table_body_color_1); ?>><input type="Text" name="lookup" size="30" maxlength="50"> <input type="submit" value="<?php echo $lSubmit; ?>" /></td>
         </tr>
         </table>
     </td>
