@@ -73,6 +73,15 @@
       $newflags = $threadflags | FLG_FROZEN;
       echo "&nbsp;|&nbsp;<a href=\"$myname?page=easyadmin&action=flags&flags=$newflags&mythread=$thread&navigate=$navigate&num=$num\">Freeze</a>";
     }
+
+	if ($threadflags & FLG_KEEPONTOP) {
+      $newflags = $threadflags & ~FLG_KEEPONTOP;
+      echo "&nbsp;|&nbsp;<a href=\"$myname?page=easyadmin&action=flags&flags=$newflags&mythread=$thread&navigate=$navigate&num=$num\">Unstick</a>";
+    } else {
+      $newflags = $threadflags | FLG_KEEPONTOP;
+      echo "&nbsp;|&nbsp;<a href=\"$myname?page=easyadmin&action=flags&flags=$newflags&mythread=$thread&navigate=$navigate&num=$num\">Stick</a>";
+	}
+
   }
 ?></TD>
 
