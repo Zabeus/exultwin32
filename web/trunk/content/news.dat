@@ -1,4 +1,12 @@
 <table width="100%">
+	<tr><td width="20%" valign="top">11 January 2002<br></td>
+	<td><p>Exult has been nominated for the LinuxFormat Best Game award! Go <a href="http://linuxformat.co.uk/awards">here</a> to vote for Exult! :-)
+	<ul>
+	<li>Bugs fixed related to the Hound of Doskar and Dupre rejoining the party in SI
+	<li>Rewrote part of the teleporter code, which should prevent teleporters from taking you to the wrong spot
+	<li>various other changes and fixes, including more work on Exult Studio.
+	</ul>
+	</td></tr>
 	<tr><td width="20%" valign="top">6 January 2002<br></td>
 	<td><p>Happy New Year! Lots of progress these last few weeks, including:</p>
 	<ul>
