@@ -56,6 +56,7 @@ begin_section("Exult 1.1.x Snapshots (Unstable) - use at your own risk!");
  add_local_entry("2.0/Exult.zip", "Exult CVS source code snapshot");
  add_local_entry("2.0/ExultTools.exe", "Exult Win32 Tools snapshot ");
  add_local_entry("2.0/ExultStudio.exe", "Exult Studio (work in progress)");
+ add_local_entry("2.0/exult-1.1.0cvs-0.3.ipk", "Zaurus binary snapshot");
 end_section();
 
 // pentagram
