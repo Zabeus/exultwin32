@@ -1,16 +1,17 @@
 Exult Documentation
-last changed: 08 August 2003(GMT)
+last changed: 18 October 2003(GMT)
 
 The latest version of this document can be found at http://exult.sourceforge.net/docs.php
 
 
 0. Changes to the Documentation
-0.1. - 08 August 2003
-0.2. - 04 May 2003
-0.3. - 04 March 2003
+0.1. - 18 October 2003
+0.2. - 08 August 2003
+0.3. - 04 May 2003
+0.4. - 04 March 2003
 
 1. Introduction
-1.1. Important Notice
+1.1. Exult Version
 1.2. What is Exult?
 1.3. Terms we use in regard to Exult and Ultima 7
 
@@ -73,19 +74,24 @@ The latest version of this document can be found at http://exult.sourceforge.net
 --------------------------------------------------------------------------------
 
 0. Changes to the Documentation
-0.1. - 08 August 2003
+0.1. - 18 October 2003
+* 1.1. Exult Version note Exult version.
+
+
+
+0.2. - 08 August 2003
 * 8. Zaurus Guide added Artaxerxes' guide.
 * 9.1. Thanks added Artaxerxes for his guide.
 
 
 
-0.2. - 04 May 2003
+0.3. - 04 May 2003
 * 2.2. Settings in exult.cfg option for "original" party formation added.
 
 
 
-0.3. - 04 March 2003
-* 1.1. Important Notice this doc is for 1.1.x and not for 1.0 anymore.
+0.4. - 04 March 2003
+* 1.1. Exult Version this doc is for 1.1.x and not for 1.0 anymore.
 * 2.2. Settings in exult.cfg added more combat options and Scale2x.
 * 4.2. Scaler added Scale2x and information on it.
 * 6.6. Combat Options Some explanations for the combat options.
@@ -96,8 +102,8 @@ The latest version of this document can be found at http://exult.sourceforge.net
 --------------------------------------------------------------------------------
 
 1. Introduction
-1.1. Important Notice
-This documentation is for the work-in-progress 1.1.x version of Exult. Documentation for the 1.0 version can be found where you installed the release.
+1.1. Exult Version
+This documentation is for the 1.1beta3 version of Exult. If you have another Exult version, its documentation can be found where you installed the release.
 
 
 1.2. What is Exult?
@@ -507,7 +513,7 @@ Exult offers some "hidden" command line options:
 * --si Starts the game with the Serpent Isle menu
 * --nomenu Skips game menu.
 * --buildmap x x = 0 shows all roofs, x = 2 pops them all. You have to specify the game first (Example: exult --bg --buildmap 0). Builds the map of the game specified. The map is huge and in pcx format, you will need a lot of ram to even look at this map once it is build (and even that requires a lot of patience) Exult is required to be run in windowed mode and you get the best map if you started a new game before you build the map.
-* --nocrc Recently we added a crc check that Exult doesn't start when the exult*.flx files in the data dir aren't the same it got compiled with. This parameter lets the game start nevertheless. Don't try this if you don't know what you are doing.
+* --nocrc Recently we added a crc check that Exult doesn't start when the exult*.flx files in the data dir aren't the same it got compiled with. This parameter lets the game start nethertheless. Don't try this if you don't know what you are doing.
 * --game gamename Unused yet. Loads a game specified in exult.cfg when there are other games made with Exult Studio.
 
 
