@@ -1,3 +1,6 @@
+2002-03-10  Dominik Reichardt <gigdr@tesionmail.de>
+	* download.php, content/download.dat, templates/download.tpl : Added Pentagram to Downloads
+
 2002-03-08  Dominik Reichardt <gigdr@tesionmail.de>
 	* faq.txt updated
 	* docs.txt added

@@ -68,6 +68,22 @@
 		$tpl->parse(SNAPSHOT_ENTRIES,".s_entry");
 	}
 
+		function add_pentagram( $file, $desc )
+	{
+		global $tpl;
+		
+		$tpl->assign(
+			array(
+				FILENAME	=>	$file,
+				DESCRIPTION	=>	$desc,
+				FILE_TIME	=>	date("H:i",filemtime("snapshots/$file")),
+				FILE_DATE	=>	date("Y-m-d",filemtime("snapshots/$file")),
+				SIZE		=>	ceil(filesize("snapshots/$file")/1000)
+			)
+		);
+		$tpl->parse(PENTAGRAM_ENTRIES,".s_entry");
+	}
+	
 	function add_datafile( $file, $desc, $size )
 	{
 		global $tpl;
