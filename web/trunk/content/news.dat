@@ -1,4 +1,14 @@
 <table width="100%">
+	<tr><td width="20%" valign="top">19 February 2002<br></td>
+	<td><p>
+	<ul>
+	<li>Gumps can now be moved when in target mode
+	<li>Combat takes strength into account a bit more
+	<li>Fixes to Exult/ExultStudio to allow for the creation of new games from scratch (i.e. not as patches to existing games)
+	<li>The Photoshop plugin has been fixed for PS6
+	<li>Bug fixes
+	</ul>
+	</td></tr>
 	<tr><td width="20%" valign="top">11 February 2002<br></td>
 	<td><p>We're nearing our second beta release as bug reports are decreasing...
 	<ul>
