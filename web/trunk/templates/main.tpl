@@ -5,6 +5,7 @@
 	<head>
 		<title>{TITLE}</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link REL="icon" HREF="favicon.ico" TYPE="image/x-icon">
 	</head>
 
 	<body bgcolor="#cccccc" text="#333366" link="#666699" vlink="#669966" alink="#ffcc33" background="images/back.gif">
