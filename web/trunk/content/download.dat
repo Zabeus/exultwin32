@@ -10,7 +10,7 @@ begin_section("Official - v0.99.1RC2");
  add_extern_entry("exult-gimp-plugin-0.99.1RC2-1.i386.rpm", "i386 RedHat binary
 (gimp plugin)", 11);
  add_extern_entry("exult-0.99.1RC2-win32.exe", "Windows (95/98/ME/NT/2000/XP) Binary", 1542);
- add_extern_entry("exult-0.99.1RC2.dmg", "MacOS X binary", 1488);
+ add_extern_entry("exult-0.99.1RC2.dmg", "MacOS X binary", 2309);
 end_section();
 
 
