@@ -58,7 +58,7 @@ The latest version of this document can be found at http://exult.sourceforge.net
 
 0. Changes to the Documentation
 0.1. - 07 April 2002
-* 1.1. What is Exult? somehow we didn't emntion Serpent Isle.
+* 1.1. What is Exult? somehow we didn't mention Serpent Isle.
 * 1.2. Terms we use in regard to Exult and Ultima 7 added so people know what we are actually talking about.
 * 2.2. Settings in exult.cfg fixed error with save_compression_level.
 * 2.3. Path-Settings warned of spaces in paths.

@@ -1,5 +1,5 @@
 <?php
-	$HEADLINE = "Studio Documentation";
+	$HEADLINE = "Exult Studio Documentation";
 
 	$DATAFILE = "exult_studio.dat";
 
