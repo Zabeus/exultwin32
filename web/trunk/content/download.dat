@@ -3,7 +3,7 @@ begin_section("Official - v1.00");
  add_extern_entry("exult-1.00.tar.gz", "Source (.tar.gz)", 1441);
  add_extern_entry("exult-1.00-1.src.rpm", "Source .rpm", 1448);
  add_extern_entry("exult-1.00-1.i386.rpm", "i386 RedHat 8.0 binary (Exult)", 928);
- add_extern_entry("exult-tools-1.00-1.i386.rpm", "i386 RedHat binary (Exult tools)", 270);
+ add_extern_entry("exult-tools-1.00-1.i386.rpm", "i386 RedHat 8.0 binary (Exult tools)", 270);
  add_extern_entry("exult-1.00-win32.exe", "Windows (95/98/ME/NT/2000/XP) Binary", 1566);
 end_section();
 
