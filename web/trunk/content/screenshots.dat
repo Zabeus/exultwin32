@@ -27,5 +27,7 @@
 
 	add_screenshot("interlaced.png",160,100,"The interlaced scaler");
 	add_screenshot("textbg.png",160,100,"The shaded background behind text");
+	add_screenshot("uccshot1.png", 160,100, "Conversation script");
+	add_screenshot("uccshot2.png", 160,100, "Conversation script");
 	
 ?>
