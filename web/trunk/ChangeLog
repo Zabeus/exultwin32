@@ -1,3 +1,7 @@
+2002-03-11  Dominik Reichardt <gigdr@tesionmail.de>
+	* download.php: added /snapshot/pentagram where all the stuff for Pentagram 
+	  download is storeed
+
 2002-03-10  Dominik Reichardt <gigdr@tesionmail.de>
 	* download.php, content/download.dat, templates/download.tpl : Added Pentagram to Downloads
 
