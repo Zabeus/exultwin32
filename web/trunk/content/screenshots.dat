@@ -1,15 +1,15 @@
 <?php
 	add_screenshot("mainmenu.png",160,100,"The Exult Menu");
-	add_screenshot("cheat.gif",160,100,"The Cheats");
-	add_screenshot("stage.gif",160,105,"The Britannia Theater");
+	add_screenshot("cheat.png",160,100,"The Cheats");
+	add_screenshot("stage.png",160,105,"The Britannia Theater");
 
-	add_screenshot("love.gif",160,106,"Love Test from Forge of Virtue");
-	add_screenshot("bgpaper.gif",160,120,"Paperdolls in Black Gate");
-	add_screenshot("si.gif",160,100,"Serpent Isle");
+	add_screenshot("love.png",160,106,"Love Test from Forge of Virtue");
+	add_screenshot("bgpaper.png",160,120,"Paperdolls in Black Gate");
+	add_screenshot("si.png",160,100,"Serpent Isle");
 
-	add_screenshot("alagnar.gif",160,104,"Alagnar");
-	add_screenshot("blackgate.gif",160,104,"The Black Gate");
-	add_screenshot("savescrn.gif",160,100,"The new savegame interface");
+	add_screenshot("alagnar.png",160,104,"Alagnar");
+	add_screenshot("blackgate.png",160,104,"The Black Gate");
+	add_screenshot("savescrn.png",160,100,"The new savegame interface");
 	add_screenshot("stats2.png",160,116,"Stats display");
 
 	add_screenshot("exult_studio1.jpg",160,116,"ExultStudio");
