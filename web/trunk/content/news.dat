@@ -1,4 +1,16 @@
 <table width="100%">
+	<tr><td width="20%" valign="top">7 July 2002<br></td>
+	<td>
+	We've been fixing lots of bugs in the 1.0.x snapshots the last month: <ul>
+	<li>Fixed several combat-related bugs
+	<li>Finished adding special object names for Serpent Isle
+	<li>The --buildmap command line option is working again
+	<li>Fixed a crash that could occur whenever you're near Spektran (SI)
+	<li>People should no longer sleep next to their beds or sit next to their chairs
+	<li>Some fixes to paperdolls in BG, and some new art by Oblivious.
+	<li>Lots of other minor (and not-so-minor) bugfixes
+	</ul></td></tr>
+
 	<tr><td width="20%" valign="top">10 June 2002<br></td>
 	<td>
 	<p>
