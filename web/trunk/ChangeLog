@@ -1,3 +1,8 @@
+2004-02-11 Dominik Reichardt <dominus@users.sourceforge.net>
+	* content/docs.dat: updated and added screenshots
+	* images/docs*.png added
+	* docs.txt updated
+
 2004-02-03 Dominik Reichardt <dominus@users.sourceforge.net>
 	* content/exult_studio.dat: converted JPGs to PNGs
 	* images/studio*.jpg removed, studio0*.png added instead
