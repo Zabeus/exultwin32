@@ -5,7 +5,7 @@ begin_section("Official - v1.2");
  add_extern_entry("exult-1.2-1.i386.rpm", "Fedora Core 1 binary rpm", 1032);
  add_extern_entry("exult-tools-1.2-1.i386.rpm", "Fedora Core 1 binary rpm (tools)", 274);
  add_extern_entry("exult-studio-1.2-1.i386.rpm", "Fedora Core 1 binary rpm (Exult Studio)", 255);
- add_extern_entry("exult-1.2.src.rpm", "Source (.rpm)", 1684);
+ add_extern_entry("exult-1.2-1.src.rpm", "Source (.rpm)", 1684);
  add_extern_entry("exult_1.2_arm.ipk", "Sharp Zaurus binary .ipk" , 1382);
 end_section();
 
