@@ -1,3 +1,7 @@
+2002-03-23  Willem Jan Palenstijn <wjpalenstijn@users.sourceforge.net>
+	* content/download.dat: added BeOS binary
+	* content/news.dat: weekly update
+
 2002-03-18  Dominik Reichardt <gigdr@tesionmail.de>
 	* content/download.dat: include Gimp Plugin for Windows
 

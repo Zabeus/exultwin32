@@ -1,4 +1,12 @@
 <table width="100%">
+	<tr><td width="20%" valign="top">23 March 2002<br></td>
+	<td><ul>
+	<li>Jeff has continued work on Exult Studio, improving image editing and
+	terrain editing.
+	<li>We fixed a few cosmetic bugs with the German version of BG
+	<li>Jack Burton has provided us with a BeOS binary of 0.98rc1. (Thanks!)
+	You can find it on the <a href="download.php">download page</a>
+	</ul></td></tr>
 	<tr><td width="20%" valign="top">15 March 2002<br></td>
 	<td><b>Fixed binary for OS X available</b><br>
 	The Mac OS X binary for Exult 0.98rc1 had some issues related to
