@@ -1,4 +1,11 @@
 <?php
+begin_section("Official - v1.1Beta1");
+ add_extern_entry("exult-1.1Beta1.tar.gz", "Source (.tar.gz)", 1615);
+ add_extern_entry("exult-1.1Beta1.dmg", "MacOS X binary", 1341);
+ add_extern_entry("exult-1.1Beta1-win32.exe", "Windows (95/98/ME/NT/2000/XP) Binary", 1740);
+end_section();
+
+
 begin_section("Official - v1.00");
  add_extern_entry("exult-1.00.tar.gz", "Source (.tar.gz)", 1441);
  add_extern_entry("exult-1.00-1.src.rpm", "Source .rpm", 1448);

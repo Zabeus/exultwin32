@@ -1,48 +1,13 @@
 <table width="100%">
-	<tr><td width="20%" valign="top">04 May 2003<br></td>
-	<td><ul>
-	<li>Jeff changed party formation to look more like the one used in the
-		original. He also fixed stealing some more.</li>
-	<li>Nadir's and Kirben's port of ExultStudio to GTK+ 2.0 has been merged with the
-		main branch but still needs some work.</li>
-	<li>Dominik updated the documentation, FAQ and the Exult Studio documentation.</li>
-	<li>As always some other bugfixes as well.</li>
-	<li>O'Reilly released an article on Exult at 
-		<a href="http://linux.oreillynet.com/pub/a/linux/2003/04/24/exult.html">O'Reilly Network</a>.</li>
-	</ul>
-	</td></tr>
-	<tr><td width="20%" valign="top">12 March 2003<br></td>
-	<td><ul>
-	<li>Behaviour of the bookmark in the spellbook has been improved.</li>
-	<li>A crash while sleeping has been fixed.</li>
-	<li>Jeff has been working on improving Exult Studio, including
-	some bugfixes.</li>
-	<li>Some miscellaneous bugfixes</li>
-	</ul>
-	</td></tr>
-	<tr><td width="20%" valign="top">3 March 2003<br></td>
-	<td><br>
-	Development seems to have picked up again after being stalled for a few
-	months.<ul>
-	<li>DrCode has added a new scaler (Scale2X by Andrea Mazzoleni),
-	implemented exploding weapons, made pathfinding faster and fixed
-	a few bugs</li>
-	<li>WJP has updated the build system to the latest tools, and provided
-	a couple of fixes</li>
-	<li>Nadir has been porting ExultStudio to GTK+ 2.0</li>
-	</ul>
-	</td></tr>
-	<tr><td width="20%" valign="top">7 November 2002<br></td>
-	<td><b>Exult 1.0 has been released !!!</b><br>
-	After 4 years of coding we finally see Exult fit to be released as 1.0!<br>
-	We would like to thank everyone who supported us so far, gave us 
-	<a href="letters.php">feedback</a>, <a href="http://sourceforge.net/bugs/?group_id=2335">bug reports</a>
-	and helped us in any other way.<br>
-	Before you go on to the download page we would like you to read our 
-	<a href="read1st.php">ReadMe.1st</a> carefully!<br>
-	As always please also read the <a href="docs.php">documentation</a> and <a href="faq.php">FAQ</a>.<br>
-	You can find the 1.00 version on our <a href="download.php">download</a> page.
-	Not every port is yet available for download but when they are done you will find them there.<br>
-	Enjoy!
+	<tr><td width="20%" valign="top">28 July 2003<br></td>
+	<td><b>Exult 1.1Beta1 has been released !!!</b><br>
+	Exult 1.1Beta1 is now available for download. Please read the
+	<a href="docs.php">documentation</a> and <a href="faq.php">FAQ</a>
+	before <a href="download.php">downloading</a>.
+	Please report any bugs you find in this release on
+	our <a href="http://sourceforge.net/bugs/?group_id=2335">bug tracker</a><br>
+	Right now there is only the Mac OS X and Windows release availlable for download.
+	Other operating systems should be availlable soon.
+	Enjoy !
 	</td></tr>
 </table>

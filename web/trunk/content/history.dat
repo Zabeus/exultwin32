@@ -1,7 +1,48 @@
+<p><b>04 May 2003</p></b>
+<ul>
+<li>Jeff changed party formation to look more like the one used in the
+original. He also fixed stealing some more.</li>
+<li>Nadir's and Kirben's port of ExultStudio to GTK+ 2.0 has been merged with the
+main branch but still needs some work.</li>
+<li>Dominik updated the documentation, FAQ and the Exult Studio documentation.</li>
+<li>As always some other bugfixes as well.</li>
+<li>O'Reilly released an article on Exult at
+<a href="http://linux.oreillynet.com/pub/a/linux/2003/04/24/exult.html">O'Reilly Network</a>.</li>
+</ul>
+<p><b>12 March 2003</p></b>
+<ul>
+<li>Behaviour of the bookmark in the spellbook has been improved.</li>
+<li>A crash while sleeping has been fixed.</li>
+<li>Jeff has been working on improving Exult Studio, including
+some bugfixes.</li>
+<li>Some miscellaneous bugfixes</li>
+</ul>
+<p><b>3 March 2003</p></b>
+Development seems to have picked up again after being stalled for a few
+months.<ul>
+<li>DrCode has added a new scaler (Scale2X by Andrea Mazzoleni),
+implemented exploding weapons, made pathfinding faster and fixed
+a few bugs</li>
+<li>WJP has updated the build system to the latest tools, and provided
+a couple of fixes</li>
+<li>Nadir has been porting ExultStudio to GTK+ 2.0</li>
+</ul>
+<p><b>7 November 2002</p></b>
+<b>Exult 1.0 has been released !!!</b>
+After 4 years of coding we finally see Exult fit to be released as 1.0!<br>
+We would like to thank everyone who supported us so far, gave us
+<a href="letters.php">feedback</a>, <a href="http://sourceforge.net/bugs/?group_id=2335">bug reports</a>
+and helped us in any other way.<br>
+Before you go on to the download page we would like you to read our
+<a href="read1st.php">ReadMe.1st</a> carefully!<br>
+As always please also read the <a href="docs.php">documentation</a> and <a href="faq.php">FAQ</a>.<br>
+You can find the 1.00 version on our <a href="download.php">download</a> page.
+Not every port is yet available for download but when they are done you will find them there.<br>
+Enjoy!
 <p><b>24 October 2002</p></b>
 Allthough news are a little slow at the moment we are still alive!
 <ul>
-<li>Jeffrey Hoeksma wrote an in depth guide on how to use Exult Studio and Dominus merged it with 
+<li>Jeffrey Hoeksma wrote an in depth guide on how to use Exult Studio and Dominus merged it with
 the existing documentation. Even though it is still not a complete guide it is already quite
 useful and a good informative read. Thanks Jeffrey!
 <li>We added a letter page that contains some of the praise we received from users and Lord British himself.
@@ -25,8 +66,8 @@ Artaxerxes is making a lot of progress with the Zaurus port. The latest version 
 <li>Some cosmetic fixes to conversations
 </ul>
 <p><b>28 July 2002</p></b>
-Artaxerxes is currently porting Exult to the Zaurus! Take a look at the 
-<A HREF="screenshots_zaurus.php">screenshots</A>. You can also download the current version of the page 
+Artaxerxes is currently porting Exult to the Zaurus! Take a look at the
+<A HREF="screenshots_zaurus.php">screenshots</A>. You can also download the current version of the page
 from our <A HREF="download.php">download page</A> (under 1.1.x snapshots)
 <ul>
 <li>Fixed a pathfinding bug in Windows and MacOS that caused trouble with finding paths across staircases. (e.g., Training in Monitor)
@@ -68,30 +109,30 @@ recommend using the 1.1.x snapshots for normal playing.
 </p>
 <p><b>6 June 2002</p></b>
 <b>Exult Release Candidate 2 has been released !!!</b><br>
-Exult 0.99.1RC2 is now available for download. Please read the 
+Exult 0.99.1RC2 is now available for download. Please read the
 <a href="docs.php">documentation</a> and <a href="faq.php">FAQ</a>
 before <a href="download.php">downloading</a>.
-Please report any bugs you find in this release on 
+Please report any bugs you find in this release on
 our <a href="http://sourceforge.net/bugs/?group_id=2335">bug tracker</a><br>
 Enjoy!
 <p><b>19 May 2002</b></p>
 <ul>
 	<li>Jeff has changed the party formation a bit.
-	<li>Stackable items (coins, arrows, lockpicks...) are now auto-combined when put in a backpack 
+	<li>Stackable items (coins, arrows, lockpicks...) are now auto-combined when put in a backpack
 		or bag of the party. In SI keys are now automatically added to the keyring.
 	<li>Colourless fixed a bug that affected some Windows users (only the first savegame was visible).
 	<li>Simon Quinn has now recorded the SFX for SI and also changed the SFX for BG. Download his
 		Roland MT32 soundpacks from our download page.
 	<li>We now have combos working in Exult Studio (see the documentation for Exult Studio).
-	<li>Dominus has updated the FAQ and also the documentation for Exult and Exult Studio</a>	
+	<li>Dominus has updated the FAQ and also the documentation for Exult and Exult Studio</a>
 </ul>
 <p><b>5 May 2002</b></p>
 <ul>
-	<li>Simon Quinn has recorded the SFX for BG with his Roland MT32. If you ever wanted to know how those 
+	<li>Simon Quinn has recorded the SFX for BG with his Roland MT32. If you ever wanted to know how those
 		sfx sounded download it at <a href="http://prdownloads.sourceforge.net/exult/sqsfxbg.zip">sqsfxbg.zip</a><br/>
 		Simon plans on recording the sfx for SI as well.
 	<li>As always lots of work on Exult Studio.
-	<li>Dominus has updated the <a href="http://exult.sourceforge.net/studio.php">documentation for Exult Studio</a>	
+	<li>Dominus has updated the <a href="http://exult.sourceforge.net/studio.php">documentation for Exult Studio</a>
 </ul>
 <p><b>10 April 2002</b></p>
 <ul>
@@ -123,10 +164,10 @@ Enjoy!
 	<a href="http://sourceforge.net/bugs/?group_id=2335">bug tracker</a><br>
 <p><b>13 March 2002</b></p>
 <b>Exult Release Candidate 1 has been released !!!</b><br>
-	Exult 0.98rc1 is now available for download. Please read the 
+	Exult 0.98rc1 is now available for download. Please read the
 	<a href="docs.php">documentation</a> and <a href="faq.php">FAQ</a>
 	before <a href="download.php">downloading</a>.
-	Please report any bugs you find in this release on 
+	Please report any bugs you find in this release on
 	our <a href="http://sourceforge.net/bugs/?group_id=2335">bug tracker</a><br>
 	Enjoy !
 <p><b>2002-03-03</b></p>
@@ -153,7 +194,7 @@ modifying art files.
 	</ul>
 <p><b>2002-01-31</b></p>
 	<ul>
-	<li>Colourless has completed the SI intro and ending with full 
+	<li>Colourless has completed the SI intro and ending with full
 	    synchronization of text/sound/speech
 	<li>DrCode has added grouping functionality to ExultStudio
 	<li>WJP has fixed wud and wuc (usecode disassembler and assembler) so
@@ -206,10 +247,10 @@ modifying art files.
 	    integrated in the mainstream code. Get it <a href="http://www.muenster.de/~tomjoad/exult.html">here</a>
 	<li>Patrick's UCXT (usecode decompiler/disassembler) now works and will
 	    be included in future "Tools" releases
-	<li>Jeff has upgraded UCC (usecode compiler) to work with the new 
+	<li>Jeff has upgraded UCC (usecode compiler) to work with the new
 	    conversation calls, and has released a new "patch" to BG.
 	    Grab it from <a href="http://prdownloads.sourceforge.net/exult/bgpatch3.zip">here</a>
-	<li>Exult's data files (exult*.flx) have a CRC so that Exult refuses to 
+	<li>Exult's data files (exult*.flx) have a CRC so that Exult refuses to
 	    run with non-matching data files
 	<li>We fixed a few crashers and other bugs
 	</ul>
@@ -367,7 +408,7 @@ walls
 	<li>Kirben, our snapshot builder, has switched to a <a href="http://exult.on.openave.net">new, much faster</a>, hosting service
 	<li>Maciej Kalisiak has made the bilinear scaler 2x as fast
 	</ul>
-	
+
 	<b><p>2001-07-12</b></p>
 	<ul>
 	<li>Ryan has fixed dungeon rendering in SI!
@@ -453,7 +494,7 @@ Exult alpha 3 was reviewed by the German game magazine GameStar in
 the june 2001 issue! Translation from German (by Alexander Wetzlmaier):
 <blockquote>
 Ultima 7 still belongs to the best role-playing games. It's because
-of the many interaction possibilities and its epic story. However, 
+of the many interaction possibilities and its epic story. However,
 as a DOS program with a very exotic memory manager and missing
 speed adustment, the game doesn't run on modern PCs. Fans are now
 working on a new game engine for Windows. In the current Alpha 3
@@ -466,13 +507,13 @@ They rated it 1.8 on a scale from 1 (best) to 5 (worst)!
 <p><b>2001-05-10</b></p>
 <ul>
 <li>lots and lots of bugs fixes, including resurrection, object
-names, caltrops, fields and several Forge of Virtue and Silver 
+names, caltrops, fields and several Forge of Virtue and Silver
 Seed bugs
 <li>Jeff is working on the interaction between Exult Studio and
 Exult (Linux only for now). For instance, entering map-editor mode
 will now automatically launch Exult Studio if possible.
-<li>Fixed a cross-platform bug in the new savegame info. Old 
-savegames on some platforms will show wrong information. (The game	
+<li>Fixed a cross-platform bug in the new savegame info. Old
+savegames on some platforms will show wrong information. (The game
 itself isn't damaged)
 <li>Pressing 1-8 will now open the inventory of your party members.
 (Thanks to Telemachos)
@@ -543,10 +584,10 @@ Enjoy! (Be sure to read the <a href="faq.php">FAQ</a> if you run into any proble
 </ul>
 <p><b>2001-03-13</b></p>
 <ul>
-	<li>Lots of audio bugs have been squashed, including a 
+	<li>Lots of audio bugs have been squashed, including a
 	crash-at-exit in windows, and a timidity-freeze in Linux.
 	<li>Jeff is implementing support for digital SFX (as .wav's). "Real soon now" :-)
-	<li>Adam Delman and Philip Gottschalk are working on BG paperdoll 
+	<li>Adam Delman and Philip Gottschalk are working on BG paperdoll
 	art! Some of Adam's work is already in Exult. I'll include the rest
 	as soon as possible. Thanks!
 </ul>
