@@ -23,6 +23,7 @@ end_section();
 // datafiles
 begin_section("Additional Data files (not required)");
  add_extern_entry("jmsfx.zip", "Sound pack for Black Gate", 4667);
+ add_extern_entry("sqsfxbg.zip", "Sound pack for Black Gate (Roland Mt-32)", 6328);
  add_extern_entry("jmsfxsi.zip", "Sound pack for Serpent Isle", 6050);
 end_section();
 

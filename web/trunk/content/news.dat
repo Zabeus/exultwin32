@@ -1,4 +1,12 @@
 <table width="100%">
+		<tr><td width="20%" valign="top">5 May 2002<br></td>
+	<td><ul>
+	<li>Simon Quinn has recorded the SFX for BG with his Roland MT32. If you ever wanted to know how those 
+		sfx sounded download it at <a href="http://prdownloads.sourceforge.net/exult/sqsfxbg.zip">sqsfxbg.zip</a><br/>
+		Simon plans on recording the sfx for SI as well.
+	<li>As always lots of work on Exult Studio.
+	<li>Dominus has updated the <a href="http://exult.sourceforge.net/studio.php">documentation for Exult Studio</a>	
+	</ul></td></tr>	
 	<tr><td width="20%" valign="top">10 April 2002<br></td>
 	<td><ul>
 	<li>Lots of work on Exult Studio, including the beginning of font file support, and continuously improving support for creating new games.
