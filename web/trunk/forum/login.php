@@ -17,7 +17,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
   // register_globals picks up a sourceforge.net 'username' cookie... *sigh*
-  $username = $PHP_POST_VARS['username'];
+  $username = $HTTP_POST_VARS['username'];
 
   require "./common.php";
 
