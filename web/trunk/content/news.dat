@@ -1,4 +1,11 @@
 <table width="100%">
+	<tr><td width="20%" valign="top">10 April 2002<br></td>
+	<td><ul>
+	<li>Lots of work on Exult Studio, including the beginning of font file support, and continuously improving support for creating new games.
+	<li>Fixed a problem with monsters which caused savegames to grow far too large
+	<li>Dominus has started <a href="http://exult.sourceforge.net/studio.php">documentation for Exult Studio</a>
+	<li>Take a look at <a href="http://si-french.sourceforge.net/">SI-French</a> for a project that's translating all of Serpent Isle into French using Exult
+	</ul></td></tr>	
 	<tr><td width="20%" valign="top">1st April 2002<br></td>
 	<td>
 	Happy <b>April Fool's day</b>, we hope you enjoyed our little joke. Sorry if you
