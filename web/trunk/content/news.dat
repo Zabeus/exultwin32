@@ -1,62 +1,11 @@
 <table width="100%">
-	<tr><td width="20%" valign="top">19 May 2002<br></td>
-	<td><ul>
-	<li>Jeff has changed the party formation a bit.
-	<li>Stackable items (coins, arrows, lockpicks...) are now auto-combined when put in a backpack 
-		or bag of the party. In SI keys are now automatically added to the keyring.
-	<li>Colourless fixed a bug that affected some Windows users (only the first savegame was visible).
-	<li>Simon Quinn has now recorded the SFX for SI and also changed the SFX for BG. Download his
-		Roland MT32 soundpacks from our download page.
-	<li>We now have combos working in Exult Studio (see the documentation for Exult Studio).
-	<li>Dominus has updated the FAQ and also the documentation for Exult and Exult Studio</a>	
-	</ul></td></tr>
-	<tr><td width="20%" valign="top">5 May 2002<br></td>
-	<td><ul>
-	<li>Simon Quinn has recorded the SFX for BG with his Roland MT32. If you ever wanted to know how those 
-		sfx sounded download it at <a href="http://prdownloads.sourceforge.net/exult/sqsfxbg.zip">sqsfxbg.zip</a><br/>
-		Simon plans on recording the sfx for SI as well.
-	<li>As always lots of work on Exult Studio.
-	<li>Dominus has updated the <a href="http://exult.sourceforge.net/studio.php">documentation for Exult Studio</a>	
-	</ul></td></tr>	
-	<tr><td width="20%" valign="top">10 April 2002<br></td>
-	<td><ul>
-	<li>Lots of work on Exult Studio, including the beginning of font file support, and continuously improving support for creating new games.
-	<li>Fixed a problem with monsters which caused savegames to grow far too large
-	<li>Dominus has started <a href="http://exult.sourceforge.net/studio.php">documentation for Exult Studio</a>
-	<li>Take a look at <a href="http://si-french.sourceforge.net/">SI-French</a> for a project that's translating all of Serpent Isle into French using Exult
-	</ul></td></tr>	
-	<tr><td width="20%" valign="top">1st April 2002<br></td>
-	<td>
-	Happy <b>April Fool's day</b>, we hope you enjoyed our little joke. Sorry if you
-	got seriously upset by it, but the majority of you seemed to like it :-).
-	If you missed it, you can still find it <a href="aprilfools.html">here</a>
-	</td></tr>
-
-	<tr><td width="20%" valign="top">23 March 2002<br></td>
-	<td><ul>
-	<li>Jeff has continued work on Exult Studio, improving image editing and
-	terrain editing.
-	<li>We fixed a few cosmetic bugs with the German version of BG
-	<li>Jack Burton has provided us with a BeOS binary of 0.98rc1. (Thanks!)
-	You can find it on the <a href="download.php">download page</a>
-	</ul></td></tr>
-	<tr><td width="20%" valign="top">15 March 2002<br></td>
-	<td><b>Fixed binary for OS X available</b><br>
-	The Mac OS X binary for Exult 0.98rc1 had some issues related to
-	mouse movement and full screen mode, caused by the version of SDL used
-	to create it. We just released a new
-	<a href="http://prdownloads.sourceforge.net/exult/exult-0.98rc1a.dmg">updated
-	binary</a> which hopefully fixes these issues. If you still encounter
-	problems, please report them at our
-	<a href="http://sourceforge.net/bugs/?group_id=2335">bug tracker</a><br>
-	</td></tr>
-	<tr><td width="20%" valign="top">13 March 2002<br></td>
-	<td><b>Exult Release Candidate 1 has been released !!!</b><br>
-	Exult 0.98rc1 is now available for download. Please read the 
+	<tr><td width="20%" valign="top">6 June 2002<br></td>
+	<td><b>Exult Release Candidate 2 has been released !!!</b><br>
+	Exult 0.99.1RC2 is now available for download. Please read the 
 	<a href="docs.php">documentation</a> and <a href="faq.php">FAQ</a>
 	before <a href="download.php">downloading</a>.
 	Please report any bugs you find in this release on 
 	our <a href="http://sourceforge.net/bugs/?group_id=2335">bug tracker</a><br>
-	Enjoy !
+	Enjoy!
 	</td></tr>
 </table>

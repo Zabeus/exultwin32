@@ -1,16 +1,19 @@
 <?php
-begin_section("Official - v0.98rc1");
- add_extern_entry("exult-0.98rc1.tar.gz", "Source (.tar.gz)", 1338);
- add_extern_entry("exult_0.98rc1-1_i386.deb", "Linux Intel Debian Sid Binary", 994);
- add_extern_entry("exult-0.98rc1-win32.exe", "Windows (95/98/ME/NT/2000/XP) Binary", 1901);
- add_extern_entry("exult-0.98rc1.sit", "MacOS Binary", 859);
- add_extern_entry("exult-0.98rc1a.dmg", "MacOS X binary", 1541);
- add_extern_entry("exult-0.98rc1.x86.beos.zip", "BeOS binary", 1230);
+begin_section("Official - v0.99.1RC2");
+ add_extern_entry("exult-0.99.1RC2.tar.gz", "Source (.tar.gz)", 1419);
+ add_extern_entry("exult-0.99.1RC2-win32.exe", "Windows (95/98/ME/NT/2000/XP) Binary", 1542);
 end_section();
 
 
 // older release stuff
 begin_section("Older releases");
+ add_extern_entry("exult_0.98rc1-1_i386.deb", "Linux Intel Debian Sid Binary", 994);
+ add_extern_entry("exult-0.98rc1.sit", "MacOS Binary", 859);
+ add_extern_entry("exult-0.98rc1a.dmg", "MacOS X binary", 1541);
+ add_extern_entry("exult-0.98rc1.x86.beos.zip", "BeOS binary", 1230);
+end_section();
+
+begin_section("Ancient releases");
  add_extern_entry("exult-0.96beta1-1.src.rpm", "Source RPM (0.96beta1)", 1204);
  add_extern_entry("exult-0.96beta1-1.i386.rpm", "Linux Intel RedHat 7.2 Binary RPM (0.96beta1)", 860);
  add_extern_entry("exult-0.96beta1.openbsd-2.9.tar.gz", "OpenBSD 2.9 Binary (0.96beta1)", 1215);
