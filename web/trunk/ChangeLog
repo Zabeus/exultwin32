@@ -1,3 +1,7 @@
+2004-07-29 Dominik Reichardt <dominus@users.sourceforge.net>
+	* forum/include/footer.php, /templates/main.tpl,main2.tpl, main_xhtml.tpl:
+	  to contact us you have to use the forum now. 
+	
 2004-02-11 Dominik Reichardt <dominus@users.sourceforge.net>
 	* content/docs.dat: updated and added screenshots
 	* images/docs*.png added
