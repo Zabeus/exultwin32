@@ -82,7 +82,7 @@
 					understand and modify. Take care though. Handling of syntax errors in this file
 					is not well tested.
 				</p><p>
-					Okay, the default file looks like this (do not copy the **and following
+					The default file looks like this (do not copy the **and following
 					- these are my remarks).
 				</p><p>
 					Note: yes means enabled, no means disabled
@@ -638,7 +638,7 @@
 					so:<br/><font color="maroon"><kbd>$ su</kbd></font><br/><font color="maroon"><kbd># chown zaurus:zaurus /home/zaurus/.exult* -R</kbd></font><br/><font color="maroon"><kbd># chown zaurus:zaurus /opt/QtPalmtop/share/exult -R</kbd></font><br/><font color="maroon"><kbd># chown zaurus:zaurus /opt/QtPalmtop/bin/exult* -R</kbd></font><br/><font color="maroon"><kbd># chown zaurus:zaurus /opt/QtPalmtop/pics/exult.png -R</kbd></font><br/><font color="maroon"><kbd># chown zaurus:zaurus /opt/QtPalmtop/apps/Games/exult.desktop -R</kbd></font><br/><font color="maroon"><kbd># exit</kbd></font></p><p>
 					The # is the root's prompt. The "exit" command will stop the "su"
 					command and make you return to the "zaurus" user. It is now time to
-					edit the .exult.cfg. A fast way to do it:<br/><font color="maroon"><kbd>$ sed -e 's/root/zaurus/' ~/.exult.cfg ~/.exult.cfg_new</kbd></font><br/><font color="maroon"><kbd>$ mv ~/.exult.cfg_new ~/.exult.cfg</kbd></font></p><p>
+					edit the .exult.cfg. A fast way to do it:<br/><font color="maroon"><kbd>$ sed -e 's/root/zaurus/' &gt;~/.exult.cfg ~/.exult.cfg_new</kbd></font><br/><font color="maroon"><kbd>$ mv ~/.exult.cfg_new ~/.exult.cfg</kbd></font></p><p>
 					Normally, you should be able to start and play the game normally.
 					Let me know if I am missing anything.
 				</p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="zaurus_tidbits">8.10. Useful tidbits </a></strong></td></tr><tr><td><p>
