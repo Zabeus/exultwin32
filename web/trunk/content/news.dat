@@ -3,7 +3,6 @@
         <td>
         Artaxerxes is making a lot of progress with the Zaurus port. The latest version supports sound!
         <ul>
-        <li>Time now stops fully when gumps are open
         <li>Explosions inside containers should now properly work
         <li>Fixes to sleeping (you should now lie down in the right bed)
         <li>Various combat-related bugfixes (slimes, party-members not attacking)
