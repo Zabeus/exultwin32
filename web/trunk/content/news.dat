@@ -2,7 +2,7 @@
 	<tr><td width="20%" valign="top">28 July 2002<br></td>
 	<td>
 	Artaxerxes is currently porting Exult to the Zaurus! Take a look at the <A HREF="screenshots_zaurus.php">screenshots</A>. You can also download the current version of the page from our <A HREF="download.php">download page</A> (under 1.1.x snapshots)
-	<td><ul>
+	<ul>
 	<li>Fixed a pathfinding bug in Windows and MacOS that caused trouble with finding paths across staircases. (e.g., Training in Monitor)
 	<li>Fixed a bug that caused the camera to lose the avatar when going through moongates
 	<li>Several other bugfixes
