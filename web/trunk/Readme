@@ -9,6 +9,4 @@ Quick and dirty guide to our Web-CVS
 
 - ssh into our webspace (/home/groups/e/ex/exult/htdocs)
 
-- execute "cvs update" (updates /home/groups/e/ex/exult/htdocs with CVS version)
-
-- execute "./update.sh" (gives the right permissions to everyone)
+- execute "./update.sh" (updates /home/../htdocs with CVS version and gives the right permissions to everyone)
