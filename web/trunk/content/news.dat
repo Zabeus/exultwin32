@@ -1,4 +1,14 @@
 <table width="100%">
+	<tr><td width="20%" valign="top">15 March 2002<br></td>
+	<td><b>Fixed binary for OS X available</b><br>
+	The Mac OS X binary for Exult 0.98rc1 had some issues related to
+	mouse movement and full screen mode, caused by the version of SDL used
+	to create it. We just released a new
+	<a href="http://prdownloads.sourceforge.net/exult/exult-0.98rc1a.dmg">updated
+	binary</a> which hopefully fixes these issues. If you still encounter
+	problems, please report them at our
+	<a href="http://sourceforge.net/bugs/?group_id=2335">bug tracker</a><br>
+	</td></tr>
 	<tr><td width="20%" valign="top">13 March 2002<br></td>
 	<td><b>Exult Release Candidate 1 has been released !!!</b><br>
 	Exult 0.98rc1 is now available for download. Please read the 
