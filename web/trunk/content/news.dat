@@ -1,4 +1,14 @@
 <table width="100%">
+	<tr><td width="20%" valign="top">3 March 2002<br></td>
+	<td><p>
+	<ul>
+	<li>Jeff has created an 'ipack' program to help with creating and
+	modifying art files.
+	<li>You can now adjust the combat difficulty in the exult.cfg file
+	<li>Several improvements to how map-editing mode works.
+	<li>Bug fixes (including some spells, traps and serpent venom)
+	</ul>
+	</td></tr>
 	<tr><td width="20%" valign="top">19 February 2002<br></td>
 	<td><p>
 	<ul>
