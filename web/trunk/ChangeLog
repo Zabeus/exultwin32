@@ -1,3 +1,8 @@
+2002-01-16  Max Horn  <max@quendi.de>
+	* qipcounter.php3: removed
+	* content/download.dat: added win32 exult studio snapshot
+	* base.inc: removed call to counter code (not used anyway)
+
 2002-01-11  Willem Jan Palenstijn <wjpalenstijn@users.sourceforge.net>
 	* content/news.dat: weekly update
 

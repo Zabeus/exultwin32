@@ -21,6 +21,7 @@ add_snapshot("Exultwin32.exe", "Windows 9x/ME/NT/2000 binary snapshot");
 add_snapshot("Exult.zip", "Exult CVS source code snapshot");
 add_snapshot("ExultTools.exe", "Exult Win32 Tools snapshot ");
 add_snapshot("PhotoshopShapePlugin.zip", "Photoshop Plugin");
+add_snapshot("ExultStudio.exe", "Exult Studio (work in progress)");
 
 add_datafile("jmsfx.zip", "Sound pack for Black Gate", 4667);
 add_datafile("jmsfxsi.zip", "Sound pack for Serpent Isle", 6050);

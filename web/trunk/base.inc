@@ -4,16 +4,6 @@
 		$CURRENTFILE = $regs[0];
 
 
-	// Counter stuff:
-	include("qipcounter.php3");
-	$myCounter = new PageCounter("../cgi-bin/count.qip", "../cgi-bin/ipdata.qip");
-	if( $myCounter->checkIP($REMOTE_ADDR) )
-		$myCounter->inc();
-	if( $XHTML )
-		$counterHTML = $myCounter->getAsXHTML();
-	else
-		$counterHTML = $myCounter->getAsHTML();
-
 	// Default value for title
 	if( !isset($TITLE) )
 		$TITLE = "Exult - $HEADLINE";
@@ -54,7 +44,6 @@
 	$tpl->assign(
 		array(
 			URL			=>	$PHP_SELF,
-			COUNTER		=>	$counterHTML,
 			MOD_DATE	=>	$MOD_DATE,
 			CURRENTFILE	=>	$CURRENTFILE,
 
