@@ -39,7 +39,7 @@ begin_section("Additional Data files (not required)");
 end_section();
 
 // snapshots
-begin_section("Exult 1.x Snapshots (Stable) - use at your own risk!");
+begin_section("Exult 1.0.x Snapshots (Stable) - use at your own risk!");
  add_local_entry("1.0/Changelog", "Changelog");
  add_local_entry("1.0/Exultwin32.exe", "Windows 9x/ME/NT/2000 binary snapshot");
  add_local_entry("1.0/Exult.zip", "Exult CVS source code snapshot");

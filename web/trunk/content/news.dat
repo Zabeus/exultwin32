@@ -1,4 +1,22 @@
 <table width="100%">
+	<tr><td width="20%" valign="top">10 June 2002<br></td>
+	<td>
+	<p>
+	If you checked our download page recently, you may have noticed that
+	we have two sets of development snapshots now: a 1.0.x (stable)
+	snapshot, and a 1.1.x (unstable) snapshot.
+	</p><p>
+	The 1.0.x branch will become our 1.0 release soon, hopefully, and we
+	will mainly be fixing any remaining bugs in this branch. We recommend
+	using the 1.0.x snapshots for playing and testing Exult.
+	</p><p>
+	The 1.1.x branch is meant mostly as a 'developer playground' at the
+	moment. We are making some very destabilizing changes to this branch,
+	like a rewritten usecode interpreter and new audio code. We do not
+	recommend using the 1.1.x snapshots for normal playing.
+	</p>
+	</td></tr>
+
 	<tr><td width="20%" valign="top">6 June 2002<br></td>
 	<td><b>Exult Release Candidate 2 has been released !!!</b><br>
 	Exult 0.99.1RC2 is now available for download. Please read the 
