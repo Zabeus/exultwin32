@@ -1,4 +1,14 @@
 <table width="100%">
+	<tr><td width="20%" valign="top">11 September 2002<br></td>
+        <td>
+        Development is proceeding quite slowly, but we're still fixing bugs.
+        Remember some of the things mentioned here are happening on the development 1.1 branch
+        whereas the 1.0 is only for bugfixes.
+        <ul>
+        <li>More progress on the Zaurus port (MIDI support, also thanks to Colourless' port of the FMOPL driver)
+        <li>Weather shows when gumps are open
+        <li>Bug fixes
+        </ul></td></tr>
 	<tr><td width="20%" valign="top">19 August 2002<br></td>
         <td>
         Artaxerxes is making a lot of progress with the Zaurus port. The latest version supports sound!
