@@ -1,3 +1,79 @@
+<p><b>24 October 2002</p></b>
+Allthough news are a little slow at the moment we are still alive!
+<ul>
+<li>Jeffrey Hoeksma wrote an in depth guide on how to use Exult Studio and Dominus merged it with 
+the existing documentation. Even though it is still not a complete guide it is already quite
+useful and a good informative read. Thanks Jeffrey!
+<li>We added a letter page that contains some of the praise we received from users and Lord British himself.
+<li>Dr.Code fixed some bugs in Exult (selling baked bread, another trial bug in SI) and Exult Studio.
+</ul>
+<p><b>11 September 2002</p></b>
+Development is proceeding quite slowly, but we're still fixing bugs.
+Remember some of the things mentioned here are happening on the development 1.1 branch
+whereas the 1.0 is only for bugfixes.
+<ul>
+<li>More progress on the Zaurus port (MIDI support, also thanks to Colourless' port of the FMOPL driver)
+<li>Weather shows when gumps are open
+<li>Bug fixes
+</ul></td></tr>
+<p><b>19 August 2002</p></b>
+Artaxerxes is making a lot of progress with the Zaurus port. The latest version supports sound!
+<ul>
+<li>Explosions inside containers should now properly work
+<li>Fixes to sleeping (you should now lie down in the right bed)
+<li>Various combat-related bugfixes (slimes, party-members not attacking)
+<li>Some cosmetic fixes to conversations
+</ul>
+<p><b>28 July 2002</p></b>
+Artaxerxes is currently porting Exult to the Zaurus! Take a look at the 
+<A HREF="screenshots_zaurus.php">screenshots</A>. You can also download the current version of the page 
+from our <A HREF="download.php">download page</A> (under 1.1.x snapshots)
+<ul>
+<li>Fixed a pathfinding bug in Windows and MacOS that caused trouble with finding paths across staircases. (e.g., Training in Monitor)
+<li>Fixed a bug that caused the camera to lose the avatar when going through moongates
+<li>Several other bugfixes
+</ul>
+<p><b>20 July 2002</p></b>
+<ul>
+<li>Fixed the bug that broke moongates in the Sphere generator (BG)
+<li>Added some more new BG paperdoll art (Thanks sb-x)
+<li>Some fixes to cart-handling
+<li>Serpent Isle has been fully played through with the current 1.0.x snapshots, resulting in a lot of SI bugfixes.
+</ul>
+<p><b>7 July 2002</p></b>
+We've been fixing lots of bugs in the 1.0.x snapshots the last month:
+<ul>
+<li>Fixed several combat-related bugs
+<li>Finished adding special object names for Serpent Isle
+<li>The --buildmap command line option is working again
+<li>Fixed a crash that could occur whenever you're near Spektran (SI)
+<li>People should no longer sleep next to their beds or sit next to their chairs
+<li>Some fixes to paperdolls in BG, and some new art by Oblivious.
+<li>Lots of other minor (and not-so-minor) bugfixes
+</ul>
+<p><b>10 June 2002</p></b>
+<p>
+If you checked our download page recently, you may have noticed that
+we have two sets of development snapshots now: a 1.0.x (stable)
+snapshot, and a 1.1.x (unstable) snapshot.
+</p><p>
+The 1.0.x branch will become our 1.0 release soon, hopefully, and we
+will mainly be fixing any remaining bugs in this branch. We recommend
+using the 1.0.x snapshots for playing and testing Exult.
+</p><p>
+The 1.1.x branch is meant mostly as a 'developer playground' at the
+moment. We are making some very destabilizing changes to this branch,
+like a rewritten usecode interpreter and new audio code. We do not
+recommend using the 1.1.x snapshots for normal playing.
+</p>
+<p><b>6 June 2002</p></b>
+<b>Exult Release Candidate 2 has been released !!!</b><br>
+Exult 0.99.1RC2 is now available for download. Please read the 
+<a href="docs.php">documentation</a> and <a href="faq.php">FAQ</a>
+before <a href="download.php">downloading</a>.
+Please report any bugs you find in this release on 
+our <a href="http://sourceforge.net/bugs/?group_id=2335">bug tracker</a><br>
+Enjoy!
 <p><b>19 May 2002</b></p>
 <ul>
 	<li>Jeff has changed the party formation a bit.
