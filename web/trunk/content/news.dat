@@ -1,4 +1,15 @@
 <table width="100%">
+	<tr><td width="20%" valign="top">31 January 2002<br></td>
+	<td><p>Progress, progress, progress...
+	<ul>
+	<li>Colourless has completed the SI intro and ending with full 
+	    synchronization of text/sound/speech
+	<li>DrCode has added grouping functionality to ExultStudio
+	<li>WJP has fixed wud and wuc (usecode disassembler and assembler) so
+	    that they are now compatible with each other.
+	<li>More Pentagram hacking...
+	</ul>
+	</td></tr>
 	<tr><td width="20%" valign="top">21 January 2002<br></td>
 	<td><p>We have been working hard at the following items:
 	<ul>
