@@ -71,6 +71,11 @@
 	</tr>
 	<tr>
 		<td valign="top" width="10"></td>
+		<td valign="top"><a href="http://nuvie.souceforge.net"><b>nuvie</b></a></td>
+		<td>A Game Engine for Ultima 6.</td>
+	</tr>
+	<tr>
+		<td valign="top" width="10"></td>
 		<td valign="top"><a href="http://uwadv.sourceforge.net/"><b>Underworld Adventures</b></a></td>
 		<td>Aims to recreate Ultima Underworld.</td>
 	</tr>
