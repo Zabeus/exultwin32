@@ -507,7 +507,7 @@ Exult offers some "hidden" command line options:
 * --si Starts the game with the Serpent Isle menu
 * --nomenu Skips game menu.
 * --buildmap x x = 0 shows all roofs, x = 2 pops them all. You have to specify the game first (Example: exult --bg --buildmap 0). Builds the map of the game specified. The map is huge and in pcx format, you will need a lot of ram to even look at this map once it is build (and even that requires a lot of patience) Exult is required to be run in windowed mode and you get the best map if you started a new game before you build the map.
-* --nocrc Recently we added a crc check that Exult doesn't start when the exult*.flx files in the data dir aren't the same it got compiled with. This parameter lets the game start nethertheless. Don't try this if you don't know what you are doing.
+* --nocrc Recently we added a crc check that Exult doesn't start when the exult*.flx files in the data dir aren't the same it got compiled with. This parameter lets the game start nevertheless. Don't try this if you don't know what you are doing.
 * --game gamename Unused yet. Loads a game specified in exult.cfg when there are other games made with Exult Studio.
 
 

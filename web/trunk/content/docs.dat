@@ -252,7 +252,7 @@
 						started a new game before you build the map.</li><li>--nocrc<br/>
 						Recently we added a crc check that Exult doesn't start when the
 						exult*.flx files in the data dir aren't the same it got compiled with.
-						This parameter lets the game start nethertheless. Don't try this if you
+						This parameter lets the game start nevertheless. Don't try this if you
 						don't know what you are doing.</li><li>--game gamename<br/>
 						Unused yet. Loads a game specified in exult.cfg when there are other games made
 						with <em>Exult Studio</em>.</li></ul></td></tr></table><hr width="100%"/><table width="100%"><tr><th align="left"><a name="Audio">3. Audio</a></th></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="music">3.1. Music</a></strong></td></tr><tr><td><p>
