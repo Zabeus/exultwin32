@@ -1,3 +1,6 @@
+2002-03-12  Dominik Reichardt <gigdr@tesionmail.de>
+	* faq.txt, content/faq.dat: version updated+other small updates
+	
 2002-03-11  Dominik Reichardt <gigdr@tesionmail.de>
 	* download.php: added /snapshot/pentagram where all the stuff for Pentagram 
 	  download is storeed
