@@ -1,0 +1,14 @@
+Quick and dirty guide to our Web-CVS
+====================================
+
+- checkout our repository in CVS called "web".
+
+- change/add stuff there 
+
+- commit changes to CVS
+
+- ssh into our webspace (/home/groups/e/ex/exult/htdocs)
+
+- execute "cvs update" (updates /home/groups/e/ex/exult/htdocs with CVS version)
+
+- execute "./update.sh" (gives the right permissions to everyone)
