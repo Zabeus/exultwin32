@@ -44,11 +44,6 @@ switch($subaction) {
             }
 
             if(!empty($uid)){
-
-				print "get: " . $HTTP_GET_VARS['username'] . "<BR>";
-				print "post: " . $HTTP_POST_VARS['username'] . "<BR>";
-				print "cookie: " . $HTTP_COOKIE_VARS['username'] . "<BR>";
-				
                 $sSQL="UPDATE $pho_main"."_auth SET username='$formusername', name='$name', $pass email='$email', webpage='$webpage', image='$image', signature='$signature', icq='$icq', yahoo='$yahoo', aol='$aol', msn='$msn', jabber='$jabber' WHERE id='$uid'";
                 $q->query($DB, $sSQL);
                 $sSQL="delete from $PHORUM[mod_table] where user_id='$uid'";
