@@ -7,6 +7,6 @@
 <p><a href="mailto:max@quendi.de">Max Horn</a>, a first year MCS student in Darmstadt, Germany, did the MacOS port and made the new webpage. He is also a C++ standard lib guru, and works on exception handling code.</p>
 <p><a href="mailto:jameson@linuxgames.com">Christoph Reichenbach</a>, aka &quot;Jameson&quot;, has ported Exult to the Alpha, using Compaq's cxx compiler.</p>
 <p><a href="mailto:gigdr@tesionmail.de">Dominik Reichardt</a>, aka &quot;Dominus Dragon&quot;, has written and maintains the Exult FAQ.</p>
-<p><a href="mailto:takhisisii@yahoo.com.au">Patrick Burke</a> aka
-&quot;SharpTooth/Darke&quot;, is developing a Usecode disassembler/decompiler.</p>
+<p><a href="mailto:takhisisii@yahoo.com.au">Patrick Burke</a> aka &quot;SharpTooth/Darke&quot;, is developing a Usecode disassembler/decompiler.</p>
 <p><a href="mailto:simonquinn@users.sourceforge.net">Simon Quinn</a> in England, aka &quot;Mungo&quot;, is working on the sound code, converting it to SDL_mixer and adding Digital Music (i.e. OGG) support. </p>
+<p><a href="mailto:kirben@users.sourceforge.net">Travis Howell</a> in Australia, aka &quot;Kirben&quot;, is compiling the daily Windows snapshots of Exult and related utilites. </p>
