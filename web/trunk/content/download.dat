@@ -36,6 +36,8 @@ begin_section("Additional Data files (not required)");
  add_extern_entry("sqsfxbg.zip", "Sound pack for Black Gate (Roland MT-32)", 6330);
  add_extern_entry("jmsfxsi.zip", "Sound pack for Serpent Isle", 6050);
  add_extern_entry("sqsfxsi.zip", "Sound pack for Serpent Isle (Roland MT-32)", 7834);
+ add_extern_entry("U7MusicOGG_1of2.zip", "Ogg encoded Music files for Exult Part 1(use with 1.1.x snapshot only)", 12030);
+ add_extern_entry("U7MusicOGG_2of2.zip", "Ogg encoded Music files for Exult Part 2(use with 1.1.x snapshot only)", 10860);
 end_section();
 
 // snapshots
