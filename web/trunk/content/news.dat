@@ -1,4 +1,12 @@
 <table width="100%">
+	<tr><td width="20%" valign="top">5 February 2004<br></td>
+	<td>There has been a change in Exult's audio configuration
+	between 1.1beta3 and 1.1.9rc1 that is worth mentioning here.
+	If you want to use digital music (.ogg files), you now need to
+	enable that as follows: while in-game, press <b>escape</b> and
+	go to the <b>Audio Options</b> menu. There, set
+	the <b>driver</b> option to <b>Digital</b>.
+	</td></tr>
 	<tr><td width="20%" valign="top">29 January 2004<br></td>
 	<td><b>Exult 1.1.9rc1 has been released!</b><br>
 	We have just released Exult 1.1.9rc1. We would like to invite
