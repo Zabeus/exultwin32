@@ -20,11 +20,11 @@
 
 
     if($phorum_user["moderator"]!=true){
-    if(!$phorum_user) {
-          header("Location: $list_page.$ext?f=$num$GetVars");
-        } else {
-          header("Location: $HTTP_REFERER");
-        }
+      if(!$phorum_user) {
+        header("Location: $list_page.$ext?f=$num$GetVars");
+      } else {
+        header("Location: $HTTP_REFERER");
+      }
       exit;
     }
 
@@ -111,8 +111,8 @@
             }
 
             if($bold){
-                $subject="<b>$subject</b>";
-                $author="<b>$author</b>";
+                $subject="<strong>$subject</strong>";
+                $author="<strong>$author</strong>";
             }
 
             if(is_array($attachments)){
@@ -144,6 +144,13 @@
         case "delete":
             include "$include_path/delete_message.php";
             delete_messages($i);
+            if($i==$t){
+                header("Location: $list_page.$ext?f=$num$GetVars");
+            } else {
+                header("Location: $read_page.$ext?f=$num&i=$t&t=$t$GetVars");
+            }
+            exit;
+            break;
     }
 
     if(!empty($i)){
@@ -156,7 +163,7 @@
         } else {
             $html=0;
         }
-        if(substr($mtext["subject"], 0, 3)=="<b>"){
+        if(substr($mtext["subject"], 0, 3)=="<strong>"){
             $mtext["subject"]=ereg_replace("</*b>", "", $mtext["subject"]);
             $mtext["author"]=ereg_replace("</*b>", "", $mtext["author"]);
             $bold=1;
@@ -166,31 +173,25 @@
     }
 
 
-    //php changed to $ext now you dont need to edit it if you dont use php.
-    if(file_exists("$include_path/header_".$PHORUM['ForumConfigSuffix'].".$ext")){
-        include "$include_path/header_".$PHORUM['ForumConfigSuffix'].".$ext";
-    }
-    else{
-        include "$include_path/header.$ext";
-    }
+    include phorum_get_file_name("header");
 
     // is there a message for the user?
     if(!empty($msg)) {
-        print "<font class=PhorumForumTitle><b>$msg</b></font>";
+        print "<font class=PhorumForumTitle><strong>$msg</strong></font>";
     }
 ?>
 <form action="<?php echo $PHP_SELF; ?>" method="POST">
-<input type="Hidden" name="mod" value="update">
-<input type="Hidden" name="num" value="<?php echo $num; ?>">
-<input type="Hidden" name="i" value="<?php echo $i; ?>">
-<input type="Hidden" name="t" value="<?php echo $t; ?>">
-<input type="Hidden" name="page" value="<?php echo $page; ?>">
-<input type="Hidden" name="html" value="<?php echo $html; ?>">
-<input type="Hidden" name="bold" value="<?php echo $bold; ?>">
+<input type="hidden" name="mod" value="update" />
+<input type="hidden" name="num" value="<?php echo $num; ?>" />
+<input type="hidden" name="i" value="<?php echo $i; ?>" />
+<input type="hidden" name="t" value="<?php echo $t; ?>" />
+<input type="hidden" name="page" value="<?php echo $page; ?>" />
+<input type="hidden" name="html" value="<?php echo $html; ?>" />
+<input type="hidden" name="bold" value="<?php echo $bold; ?>" />
 
 <?php
 if (isset($mythread)) { ?>
-<input type="Hidden" name="mythread" value="<?php echo $mythread; ?>">
+<input type="hidden" name="mythread" value="<?php echo $mythread; ?>" />
 <?php
 }
 ?>
@@ -213,15 +214,15 @@ if (isset($mythread)) { ?>
 </tr>
 <tr>
     <th <?php echo bgcolor($ForumTableBodyColor1); ?>><font color="<?php echo $ForumTableBodyFontColor1; ?>">&nbsp;<?php echo $lAuthor?></font></th>
-    <td <?php echo bgcolor($ForumTableBodyColor1); ?>><input type="Text" name="author" value="<?php echo $mtext["author"]; ?>" size="10" style="width: 300px;" class="TEXT"></td>
+    <td <?php echo bgcolor($ForumTableBodyColor1); ?>><input type="Text" name="author" value="<?php echo $mtext["author"]; ?>" size="10" style="width: 300px;" class="TEXT" /></td>
 </tr>
 <tr>
     <th <?php echo bgcolor($ForumTableBodyColor1); ?>><font color="<?php echo $ForumTableBodyFontColor1; ?>">&nbsp;<?php echo $lEmail?></font></th>
-    <td <?php echo bgcolor($ForumTableBodyColor1); ?>><input type="Text" name="email" value="<?php echo $mtext["email"]; ?>" size="10" style="width: 300px;" class="TEXT"></td>
+    <td <?php echo bgcolor($ForumTableBodyColor1); ?>><input type="Text" name="email" value="<?php echo $mtext["email"]; ?>" size="10" style="width: 300px;" class="TEXT" /></td>
 </tr>
 <tr>
     <th <?php echo bgcolor($ForumTableBodyColor1); ?>><font color="<?php echo $ForumTableBodyFontColor1; ?>">&nbsp;<?php echo $lFormSubject?></font></th>
-    <td <?php echo bgcolor($ForumTableBodyColor1); ?>><input type="Text" name="subject" value="<?php echo $mtext["subject"]; ?>" size="10" style="width: 300px;" class="TEXT"></td>
+    <td <?php echo bgcolor($ForumTableBodyColor1); ?>><input type="Text" name="subject" value="<?php echo $mtext["subject"]; ?>" size="10" style="width: 300px;" class="TEXT" /></td>
 </tr>
 <?php
 if($PHORUM['AllowAttachments'] && $PHORUM['ForumAllowUploads'] == 'Y') {
@@ -229,10 +230,10 @@ if($PHORUM['AllowAttachments'] && $PHORUM['ForumAllowUploads'] == 'Y') {
   $q->query($DB, $SQL);
   while($rec=$q->getrow()){
 ?>
-<input type="hidden" NAME="attachments[<?php echo $rec["id"]; ?>]" value="<?php echo $rec["filename"]; ?>">
+<input type="hidden" name="attachments[<?php echo $rec["id"]; ?>]" value="<?php echo $rec["filename"]; ?>" />
 <tr>
   <th <?php echo bgcolor($ForumTableBodyColor1); ?>><font color="<?php echo $ForumTableBodyFontColor1; ?>">&nbsp;<?php echo $lFormAttachment?> [<?php echo $rec["id"]; ?>]:</font></th>
-  <td <?php echo bgcolor($ForumTableBodyColor1); ?>><input type="Text" NAME="new_attachment[<?php echo $rec["id"]; ?>]" value="<?php echo $rec["filename"]; ?>" size="10" style="width: 300px;" class="TEXT">&nbsp;&nbsp;<INPUT TYPE="checkbox" NAME="del_attachment[<?php echo $rec["id"]; ?>]" VALUE="true"> delete attachment</td>
+  <td <?php echo bgcolor($ForumTableBodyColor1); ?>><input type="Text" name="new_attachment[<?php echo $rec["id"]; ?>]" value="<?php echo $rec["filename"]; ?>" size="10" style="width: 300px;" class="TEXT" />&nbsp;&nbsp;<input TYPE="checkbox" name="del_attachment[<?php echo $rec["id"]; ?>]" VALUE="true" /> delete attachment</td>
 </tr>
 <?php
   }
@@ -240,13 +241,13 @@ if($PHORUM['AllowAttachments'] && $PHORUM['ForumAllowUploads'] == 'Y') {
 ?>
 <tr>
 
-    <td <?php echo bgcolor($ForumTableBodyColor1); ?> colspan=2 width="100%" nowrap align="left"><table cellpadding="5" cellspacing="0" border="0"><tr><td align="CENTER" valign="TOP"><font face="courier"><textarea name="body" cols="45" rows="20" wrap="VIRTUAL"><?php echo $mtext["body"]; ?></textarea></font></td></tr></table></td>
+    <td <?php echo bgcolor($ForumTableBodyColor1); ?> colspan=2 width="100%" nowrap="nowrap" align="left"><table cellpadding="5" cellspacing="0" border="0"><tr><td align="CENTER" valign="TOP"><font face="courier"><textarea class="PhorumBodyArea" name="body" cols="45" rows="20" wrap="VIRTUAL"><?php echo htmlspecialchars($mtext["body"]); ?></textarea></font></td></tr></table></td>
 </tr>
 </td>
 </tr>
 <tr>
-<td <?php echo bgcolor($ForumTableBodyColor1); ?> colspan="2">
-    <input type="Submit" name="post" value=" <?php echo $lFormUpdate;?> ">&nbsp;<br><img src="images/trans.gif" width=3 height=3 border=0></td>
+<td <?php echo bgcolor($ForumTableBodyColor1); ?> colspan="2" align="RIGHT">
+    <input type="Submit" name="post" value=" <?php echo $lFormUpdate;?> " />&nbsp;<br /><img src="images/trans.gif" width=3 height=3 border=0></td>
     </tr>
     </table>
   </td>
@@ -255,11 +256,5 @@ if($PHORUM['AllowAttachments'] && $PHORUM['ForumAllowUploads'] == 'Y') {
 </form>
 <?php
 
-  //php changed to $ext now you dont need to edit it if you dont use php.
-  if(file_exists("$include_path/footer_".$PHORUM['ForumConfigSuffix'].".$ext")){
-    include "$include_path/footer_".$PHORUM['ForumConfigSuffix'].".$ext";
-  }
-  else{
-    include "$include_path/footer.$ext";
-  }
+  include phorum_get_file_name("footer");
 ?>

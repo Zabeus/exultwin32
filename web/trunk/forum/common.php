@@ -21,7 +21,7 @@
   // **TODO: make this a define and figure out where we really need it.
   $cutoff = 800;
 
-  $phorumver="3.3";
+  $phorumver="3.3.2c";
 
   // all available db-files
   $dbtypes = array(
@@ -47,6 +47,13 @@
 
   // signature
   define("PHORUM_SIG_MARKER", "[%sig%]");
+
+  // thread flags
+  define("FLG_FROZEN", 1);
+  define("FLG_MODERATED", 2); //not yet implemented
+  define("FLG_UNMODERATED", 4); //not yet implemented
+  define("FLG_KEEPONTOP", 8); //not yet implemented
+
 
   // **TODO: move all this into the admin
   $GetVars="";
@@ -204,6 +211,64 @@
     }
   }
 
+  function phorum_get_file_name($type)
+  {
+    global $PHORUM;
+    settype($PHORUM["ForumConfigSuffix"], "string");
+    switch($type){
+        case "css":
+            $file="phorum.css";
+            $custom="phorum_$PHORUM[ForumConfigSuffix].css";
+            break;
+        case "header":
+            $file="$PHORUM[include]/header.php";
+            $custom="$PHORUM[include]/header_$PHORUM[ForumConfigSuffix].php";
+            break;
+        case "footer":
+            $file="$PHORUM[include]/footer.php";
+            $custom="$PHORUM[include]/footer_$PHORUM[ForumConfigSuffix].php";
+            break;
+    }
+
+    return (file_exists($custom)) ? $custom : $file;
+  }
+
+
+  function phorum_check_login($user, $pass)
+  {
+    global $q, $DB, $PHORUM;
+
+    if(!get_magic_quotes_gpc()) $user=addslashes($user);
+
+    $md5_pass=md5($pass);
+
+    $id=0;
+    $SQL="Select id from $PHORUM[auth_table] where username='$user' and password='$md5_pass'";
+    $q->query($DB, $SQL);
+    if($q->numrows()==0 && function_exists("crypt")){
+        // check for old crypt system
+        $crypt_pass=crypt($pass, substr($pass, 0, CRYPT_SALT_LENGTH));
+        $SQL="Select id from $PHORUM[auth_table] where username='$user' and password='$crypt_pass'";
+        $q->query($DB, $SQL);
+        if($q->numrows()>0){
+            // update password to md5.
+            $SQL="Update $PHORUM[auth_table] set password='$md5_pass' where username='$user'";
+            $q->query($DB, $SQL);
+        }
+    }
+
+    if($q->numrows()>0){
+        $id=$q->field("id", 0);
+    }
+
+    return $id;
+  }
+
+  function phorum_session_id($username, $password)
+  {
+    return md5($username.$password.microtime());
+  }
+
   // variable initialization function
   // **TODO: need to scrap this function and just use settype()
   function initvar($varname, $value=''){
@@ -258,7 +323,6 @@
 
   // create database classes
   $DB = new db();
-  $q = new query($DB); //dummy query for generic operations
 
   // check if database is already configured or if we are in the admin
   if ( defined( "_DB_LAYER" ) && $PHORUM["DatabaseName"]!=''){
@@ -267,6 +331,13 @@
     $DB->open($PHORUM["DatabaseName"], implode(':', explode(':', $PHORUM["DatabaseServer"])), $PHORUM["DatabaseUser"], $PHORUM["DatabasePassword"]);
   } elseif(!defined("PHORUM_ADMIN")) {
     echo "<html><head><title>Phorum Error</title></head><body>You need to go to the admin and fix your database settings.</body></html>";
+    exit();
+  }
+
+  //dummy query for generic operations
+  $q = new query($DB);
+  if(!is_object($q)){
+    echo "<html><head><title>Phorum Error</title></head><body>Unkown error creating $q.</body></html>";
     exit();
   }
 
@@ -297,11 +368,12 @@
 
   if(!defined("PHORUM_ADMIN") && $DB->connect_id){
      // check security
-    if($ForumSecurity==SEC_ALL && !$phorum_auth){
-      header("Location: $forum_url/login.$ext?target=$REQUEST_URI");
-      exit();
+    if($ForumFolder==1 || $f==0){
+        $SQL="Select max(security) as sec from $pho_main";
+        $q->query($DB, $SQL);
+        $max_sec=$q->field("sec", 0);
     }
-    elseif(isset($phorum_auth)){
+    if(($ForumSecurity!=SEC_NONE || (($ForumFolder==1 || $f==0) && $max_sec>0)) && isset($phorum_auth)){
       $SQL="Select * from $PHORUM[auth_table] where sess_id='$phorum_auth'";
       $q->query($DB, $SQL);
       $phorum_user=$q->getrow();
@@ -313,9 +385,13 @@
           AddGetPostVars("phorum_auth", "$phorum_auth");
         }
       }
-      else{
-        unset($phorum_auth);
-      }
+    }
+
+    if(!isset($phorum_user["id"]) && isset($phorum_auth))  unset($phorum_auth);
+
+    if($ForumSecurity==SEC_ALL && empty($phorum_auth)){
+      header("Location: $forum_url/login.$ext?target=".urlencode($REQUEST_URI));
+      exit();
     }
 
     // load plugins

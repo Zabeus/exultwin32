@@ -11,7 +11,7 @@
 
 <body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
 <form action="stats.php" method="GET">
-<font size="+3">Phorum Stats</font><br>
+<font size="+3">Phorum Stats</font><br />
 <font size="-1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phorum Version: <?php echo $phorumver; ?></font>
 <hr width="100%" size="1" noshade>
 <?php
@@ -50,7 +50,7 @@
 
   if ($ForumName) {
 
-        echo "<font size=\"+2\">Forum: $ForumName</b></font>\n";
+        echo "<font size=\"+2\">Forum: $ForumName</strong></font>\n";
         echo "<table width=\"500\" border=\"0\" cellspacing=\"1\" cellpadding=\"10\" bordercolor=\"#000000\" bgcolor=\"#000000\">\n";
 
 /* Posts available from */
@@ -84,7 +84,7 @@
             if ($date_diff == 0) $date_diff=1;
             $avg = number_format($total/$date_diff, 1, '.', '');
 
-            echo "<tr><td nowrap bgcolor=#F0F0F0 valign=top><b>Analyzed Dates:</b></td><td nowrap bgcolor=#F0F0F0>";
+            echo "<tr><td nowrap=\"nowrap\" bgcolor=#F0F0F0 valign=top><strong>Analyzed Dates:</strong></td><td nowrap=\"nowrap\" bgcolor=#F0F0F0>";
 
             $fdyear = substr($first_day, 0, 4);
             $fdmonth = substr($first_day, 5, 2);
@@ -101,8 +101,8 @@
 
 /* Total Posts */
 
-            echo "<tr><td nowrap bgcolor=#F0F0F0 valign=top><b>Total messages:</b></td><td nowrap bgcolor=#F0F0F0>$total</td></tr>";
-            echo "<tr><td nowrap bgcolor=#F0F0F0 valign=top><b>Average per day:</b></td><td nowrap bgcolor=#F0F0F0>$avg</td></tr>";
+            echo "<tr><td nowrap=\"nowrap\" bgcolor=#F0F0F0 valign=top><strong>Total messages:</strong></td><td nowrap=\"nowrap\" bgcolor=#F0F0F0>$total</td></tr>";
+            echo "<tr><td nowrap=\"nowrap\" bgcolor=#F0F0F0 valign=top><strong>Average per day:</strong></td><td nowrap=\"nowrap\" bgcolor=#F0F0F0>$avg</td></tr>";
 
 /* Posts in the last X days */
 
@@ -114,11 +114,11 @@
                 $lastdayscount = $row["total"];
                 $lastdaysavg = number_format($lastdayscount/$lastdays, 1, '.', '');
 
-                echo "<tr><td nowrap bgcolor=#F0F0F0 valign=top><b>Posts in the last $lastdays days:</b></td><td nowrap bgcolor=#F0F0F0>";
-                echo "$lastdayscount<br>";
-                echo "<font size=-1>An average of $lastdaysavg posts per day<br>";
+                echo "<tr><td nowrap=\"nowrap\" bgcolor=#F0F0F0 valign=top><strong>Posts in the last $lastdays days:</strong></td><td nowrap=\"nowrap\" bgcolor=#F0F0F0>";
+                echo "$lastdayscount<br />";
+                echo "<font size=-1>An average of $lastdaysavg posts per day<br />";
                 $lastpercent = round(($lastdayscount/$total) * 100);
-                echo "<font size=-1>The last $lastdays days account for $lastpercent" . "% of total posts<br>";
+                echo "<font size=-1>The last $lastdays days account for $lastpercent" . "% of total posts<br />";
                 echo "</td></tr>\n";
             }
 
@@ -129,9 +129,9 @@
 
             if ($q->numrows()>0) {
                 $num_authors=$q->numrows();
-                echo "<tr><td nowrap bgcolor=#F0F0F0>Total Unique Authors:</td><td nowrap bgcolor=#F0F0F0><b>$num_authors</b></td></tr>\n";
+                echo "<tr><td nowrap=\"nowrap\" bgcolor=#F0F0F0>Total Unique Authors:</td><td nowrap=\"nowrap\" bgcolor=#F0F0F0><strong>$num_authors</strong></td></tr>\n";
             } else {
-                echo "<tr><td nowrap bgcolor=#F0F0F0>Total Unique Authors:</td><td nowrap bgcolor=#F0F0F0><b>No-one has posted yet!</b></td></tr>\n";
+                echo "<tr><td nowrap=\"nowrap\" bgcolor=#F0F0F0>Total Unique Authors:</td><td nowrap=\"nowrap\" bgcolor=#F0F0F0><strong>No-one has posted yet!</strong></td></tr>\n";
             }
 
 /* Total Unique Threads */
@@ -141,9 +141,9 @@
 
             if ($q->numrows()>0) {
                 $num_threads=$q->numrows();
-                echo "<tr><td nowrap bgcolor=#F0F0F0>Total Unique Threads:</td><td nowrap bgcolor=#F0F0F0><b>$num_threads</b></td></tr>\n";
+                echo "<tr><td nowrap=\"nowrap\" bgcolor=#F0F0F0>Total Unique Threads:</td><td nowrap=\"nowrap\" bgcolor=#F0F0F0><strong>$num_threads</strong></td></tr>\n";
             } else {
-                echo "<tr><td nowrap bgcolor=#F0F0F0>Total Unique Threads:</td><td nowrap bgcolor=#F0F0F0><b>No-one has posted yet!</b></td></tr>\n";
+                echo "<tr><td nowrap=\"nowrap\" bgcolor=#F0F0F0>Total Unique Threads:</td><td nowrap=\"nowrap\" bgcolor=#F0F0F0><strong>No-one has posted yet!</strong></td></tr>\n";
             }
 
 /* The Top Thread Subject (unchecked, maybe not correct result) */
@@ -154,11 +154,11 @@
             if ($q->numrows() > 0) {
                 $row=$q->getrow();
                 $threadcount = $row["cnt"];
-                echo "<tr><td nowrap bgcolor=#F0F0F0 valign=top>Most Popular Thread:</td><td nowrap bgcolor=#F0F0F0><b>";
+                echo "<tr><td nowrap=\"nowrap\" bgcolor=#F0F0F0 valign=top>Most Popular Thread:</td><td nowrap=\"nowrap\" bgcolor=#F0F0F0><strong>";
                 echo $row["subject"];
-                echo "</b><br><font size=-1>There are $threadcount posts in this thread</td></tr>\n";
+                echo "</strong><br /><font size=-1>There are $threadcount posts in this thread</td></tr>\n";
             } else {
-                echo "<tr><td nowrap bgcolor=#F0F0F0>Total Unique Posters:</td><td nowrap bgcolor=#F0F0F0><b>No-one has posted yet!</b></td></tr>\n";
+                echo "<tr><td nowrap=\"nowrap\" bgcolor=#F0F0F0>Total Unique Posters:</td><td nowrap=\"nowrap\" bgcolor=#F0F0F0><strong>No-one has posted yet!</strong></td></tr>\n";
             }
 
 /* Top 10 posters */
@@ -174,11 +174,11 @@
                 }
 
                 $row=$q->firstrow();
-                echo "<tr><td nowrap bgcolor=#F0F0F0 valign=top>Top $num_authors posters:</td><td nowrap bgcolor=#F0F0F0>";
+                echo "<tr><td nowrap=\"nowrap\" bgcolor=#F0F0F0 valign=top>Top $num_authors posters:</td><td nowrap=\"nowrap\" bgcolor=#F0F0F0>";
 
                 if ($row) {
           while(is_array($row)){
-                    echo $row["author"]."<<a href=\"mailto:$row[email]\">$row[email]</a>><br>";
+                    echo $row["author"]."<<a href=\"mailto:$row[email]\">$row[email]</a>><br />";
                     $row=$q->getrow();
           }
                 } else {

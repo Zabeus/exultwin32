@@ -1,3 +1,73 @@
+Phorum 3.3.2c Changelog
+------------------------------------------------------------
+fixed delete_messages-function, modifystamp is now reset too (ts)
+fixed plugin/replace/admin.php for security measures (ts)
+
+
+Phorum 3.3.2b3 Changelog
+------------------------------------------------------------
+fixed security measures with included remote-code (blm) 
+
+Phorum 3.3.2b2 Changelog
+------------------------------------------------------------
+fixed install-problem with empty form-action (ts)
+
+Phorum 3.3.2b1 Changelog
+------------------------------------------------------------
+fixes some admin bugs for pgsql 7.2 (ts, blm)
+
+Phorum 3.3.2a Changelog
+------------------------------------------------------------
+fixed regex in read_functions.php that was causing errors. (blm)
+
+Phorum 3.3.2 Changelog
+------------------------------------------------------------
+removed where clause on max query.  It was slowing things down with lots of messages and it really is not needed. (blm)
+added missing checks in attach.php. (ts)
+fix for missing $GetVars on some links. (ts)
+fix for wrong bold marking of moderator. (ts)
+fix for search returning only a part of the results. (blm)
+fix for moderators post not approved. (blm)
+added JS for disabling duplicate posts. (blm)
+fixed some problems with the upgrade of attachments in mysql (from Scott Sneddon). (ts)
+fixed bug with using just default colors for the register-form. (ts)
+made the "go to post" work if you are in threaded view but flat view on posts. (ts)
+fine grain "show IP" control, on always or on for anonymous posters. (ts)
+fixed bug where $phorum_user used when not set. (blm)
+fixed bug where bold tags would not be removed from subject and author before being used in the form. (blm)
+
+Phorum 3.3.1a Changelog
+------------------------------------------------------------
+fix for warning in login.php (ts)
+fix for wrong "back" link in list.php (blm)
+blank-language-file updated to contain all vars (ts)
+of in search.php changed to lang-var (ts)
+fix for "go to top" (ts)
+fix for admin-/user-login (ts)
+
+Phorum 3.3.1 Changelog
+------------------------------------------------------------
+fixed delete message for moderators.  It was not in the lang file (blm)
+better marking of moderators in thread list. (blm)
+set older messages so it always shows now. (blm)
+removed old docs. (blm)
+Fixed some browser display issues for the admin. (nld/blm)
+Fixed some CSS and XHTML issues (blm + others)
+fixed html tags that appeared in the edit window. (blm)
+Fixed bug when deleting a post and you were put to an edit screen. (blm)
+fixed font and anchor tags that were not getting closed.
+added new function to inlcude header and footer instead of having dup'd code. (blm)
+converted the password storage to md5 instead of crypt. (blm)
+created new login function to make login code simpler (blm)
+fixed admin login so it does not step on forums login. (blm)
+fixed search bug when searching all forums. (blm)
+fixed security hole that allowed non-logged in users to read forums marked Login To Read. (blm)
+added DTD to admin/header.php for picky browsers (nld)
+added switch for reply-checkbox for anonymous posters (ts)
+look for both $SCRIPT_FILENAME and $PATH_TRANSLATED in admin. (blm)
+Added the icons provided by Rich Davey for the messengers. (blm)
+Bug fixes that were left from 3.3.0. (blm)
+
 Phorum 3.3.0 Changelog
 ------------------------------------------------------------
 fixed potential security issue with malicious user input. Thanks Alexey Polushin. (blm)

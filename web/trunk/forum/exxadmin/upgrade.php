@@ -36,6 +36,8 @@
   $q->query($DB, $SQL);
   $SQL="ALTER TABLE $pho_main ADD showip smallint(5) unsigned DEFAULT 1 NOT NULL";
   $q->query($DB, $SQL);
+  $SQL="ALTER TABLE $pho_main ADD emailnotification smallint(5) unsigned DEFAULT '0' NOT NULL";
+  $q->query($DB, $SQL);
   $SQL="ALTER TABLE $pho_main ADD body_color char(7) DEFAULT '' NOT NULL";
   $q->query($DB, $SQL);
   $SQL="ALTER TABLE $pho_main ADD body_link_color char(7) DEFAULT '' NOT NULL";
@@ -114,7 +116,6 @@
     $q->query($DB, $SQL);
     if($q->numrows()>0){
         echo "Converting Attachments for $rec[name]<br />\n";
-        create_table($DB, "attachments", "$rec[table_name]_attachments");
         while($rec2=$q->getrow()){
 
             $id=$DB->nextid("$rec[table_name]_attachments");
@@ -122,18 +123,20 @@
               echo "Could not get an id for the attachment.<br />\n";
             }
             else{
-              $SQL="Insert into $rec[table_name]_attachments (id, message_id, filename) values($id, $rec2[id], '$rec2[attachment]')";
-              $q->query($DB, $SQL);
-              $err=$q->error();
-              if($err==""){
-                if($DB->type=="mysql"){
-                  $id=$DB->lastid();
-                }
+              if ($rec2[attachment]) {
+                  $SQL="Insert into $rec[table_name]_attachments (id, message_id, filename) values($id, $rec2[id], '$rec2[attachment]')";
+                  $q2->query($DB, $SQL);
+                  $err=$q2->error();
+                  if($err==""){
+                    if($DB->type=="mysql"){
+                      $id=$DB->lastid();
+                    }
 
-                $new_name = "$AttachmentDir/$rec[name]/$rec2[id]"."_$id".strtolower(strrchr($rec2["attachment"], "."));
-                if(rename("$AttachmentDir/$rec[name]/$rec2[attachment]", $new_name)){
-                  echo "Can't save upload file.";
-                }
+                    $new_name = "$AttachmentDir/$rec[table_name]/$rec2[id]"."_$id".strtolower(strrchr($rec2["attachment"], "."));
+                    if(! rename("$AttachmentDir/$rec[table_name]/$rec2[attachment]", $new_name)){
+                      echo "Can't save upload file.";
+                    }
+                  }
               }
               else{
                 echo "Error adding attachment.  DB said: $err<br />\n";
@@ -143,7 +146,7 @@
         }
         $SQL="ALTER TABLE $rec[table_name] DROP attachment";
         $q->query($DB, $SQL);
-
+        create_table($DB, "attachments", "$rec[table_name]_attachments");
     }
 
     $rec=$query->getrow();

@@ -4,8 +4,8 @@ if ( defined( "_DB_LAYER" ) ) return;
 
 define("_DB_LAYER", 1 );
 
-if(!function_exists("mysql_connect")){
-  echo "<b>Error: You have configured Phorum to use MySQL.  MySQL support is not available to PHP on this server.</b>";
+if(!defined("PHORUM_ADMIN") && !function_exists("mysql_connect")){
+  echo "<strong>Error: You have configured Phorum to use MySQL.  MySQL support is not available to PHP on this server.</strong>";
   exit();
 }
 
@@ -53,7 +53,7 @@ class db {
 
   function lastid(){
     // This function is only used for MySQL
-    return mysql_insert_id();
+    return mysql_insert_id($this->connect_id);
   }
 
   function nextid($sequence) {
@@ -95,9 +95,8 @@ class query {
 
   function getrow() {
     $row=0;
-    if($row=@mysql_fetch_array($this->result, MYSQL_ASSOC)){
-      $this->row=$row;
-    }
+    $row=@mysql_fetch_array($this->result, MYSQL_ASSOC);
+    $this->row=$row;
     return $row;
   }
 
@@ -244,6 +243,7 @@ class query {
           max_uploads int unsigned DEFAULT '0' NOT NULL,
           security int unsigned DEFAULT '0' NOT NULL,
           showip smallint unsigned DEFAULT 1 NOT NULL,
+          emailnotification smallint unsigned DEFAULT 1 NOT NULL,
           body_color char(7) DEFAULT '' NOT NULL,
           body_link_color char(7) DEFAULT '' NOT NULL,
           body_alink_color char(7) DEFAULT '' NOT NULL,
@@ -251,7 +251,8 @@ class query {
           PRIMARY KEY (id),
           KEY (name),
           KEY (active),
-          KEY (parent) )";
+          KEY (parent),
+          key (security) )";
         $q->query($DB, $sSQL);
         $ret=$q->error();
         return $ret;
@@ -276,7 +277,9 @@ class query {
           signature varchar(255) DEFAULT '' NOT NULL,
           PRIMARY KEY (id),
           KEY (name),
-          KEY (username)
+          KEY (username),
+          key (sess_id),
+          key (password)
         )";
         $q->query($DB, $sSQL);
         $ret=$q->error();

@@ -1,4 +1,3 @@
-<?php check_security(); ?>
 <?php
   if(!get_magic_quotes_gpc()){
     $author = addslashes($author);
@@ -13,8 +12,8 @@
   }
 
   if($bold){
-    $subject="<b>$subject</b>";
-    $author="<b>$author</b>";
+    $subject="<strong>$subject</strong>";
+    $author="<strong>$author</strong>";
   }
 
   if(is_array($attachments)){

@@ -1,12 +1,12 @@
-<HTML>
-<HEAD>
-<meta name="Phorum Version" content="<?PHP echo $phorumver; ?>">
-<meta name="Phorum DB" content="<?PHP echo $DB->type; ?>">
-<meta name="PHP Version" content="<?PHP echo phpversion(); ?>">
-<TITLE>phorum - <?PHP if(isset($ForumName)) echo $ForumName; ?><?PHP echo initvar("title"); ?></TITLE>
-<link rel="STYLESHEET" type="text/css" href="<?PHP echo $include_path; ?>/phorum.css">
-</HEAD>
-<BODY BGCOLOR="#FFFFFF" LINK="#0000FF" ALINK="#FF0000" VLINK="#330000">
-<font class=PhorumForumTitle><b><?PHP echo $ForumName; ?></b></font>
-<center>
-<br>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "XHTML1-t.dtd">
+<html>
+<head>
+<meta name="Phorum Version" content="<?php echo $phorumver; ?>" />
+<meta name="Phorum DB" content="<?php echo $DB->type; ?>" />
+<meta name="PHP Version" content="<?php echo phpversion(); ?>" />
+<title>phorum<?php if(isset($ForumName)) echo " - $ForumName"; ?><?php echo initvar("title"); ?></title>
+<link rel="STYLESHEET" type="text/css" href="<?php echo phorum_get_file_name("css"); ?>" />
+</head>
+<body bgcolor="<?php echo (empty($ForumBodyColor)) ? $default_body_color : $ForumBodyColor; ?>" link="<?php echo (empty($ForumBodyLinkColor)) ? $default_body_link_color : $ForumBodyLinkColor; ?>" alink="<?php echo (empty($ForumBodyALinkColor)) ? $default_body_alink_color : $ForumBodyALinkColor; ?>" vlink="<?php echo (empty($ForumBodyVLinkColor)) ? $default_body_vlink_color : $ForumBodyVLinkColor; ?>">
+<div class="PhorumForumTitle"><strong><?php echo $ForumName; ?></strong></div>
+<br />

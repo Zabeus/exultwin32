@@ -1,8 +1,0 @@
-AuthUserFile /home/groups/e/ex/exult/.htpasswd
-AuthName exult
-AuthType Basic
-<Limit GET>
-require valid-user
-</Limit>
-
-

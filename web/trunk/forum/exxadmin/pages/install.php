@@ -1,3 +1,11 @@
+<?php
+
+if(!defined("PHORUM_ADMIN")){
+    echo "Don't load this file directly.  Load the main admin page.";
+    exit();
+}
+?>
+
 <html>
 <head>
   <title>Phorum Install</title>
@@ -6,7 +14,7 @@
 Phorum Install Script<br /><br />
 <?php
 
-settype($upgrade, "boolean");
+settype($upgrade, "integer");
 
 if(isset($HTTP_POST_VARS)){
   reset($HTTP_POST_VARS);
@@ -18,17 +26,15 @@ if(isset($HTTP_POST_VARS)){
 // process forms
 switch($step){
     case 1:
-          $PHORUM['dbtype']=$dbType;
-          writefile();
-}
- switch($step){
+        $PHORUM['dbtype']=$dbType;
+        writefile();
+        break;
     case 2:
-          if(!file_exists("./db/$dbType.php")) {
-        $err="Could not find or open the dbfile. Check your settings again.";
-      } else {
-        include ("./db/$dbType.php");
-        if(!$DB->open($dbName, implode(':', explode(':', $dbServer)), $dbUser, $dbPass)){
-          $err="Could not connect to database.  Check your settings again.";
+        if(!file_exists("./db/$dbType.php")) {
+            $err="Could not find or open the dbfile. Check your settings again.";
+        } else {
+            if(!$DB->open($dbName, implode(':', explode(':', $dbServer)), $dbUser, $dbPass)){
+            $err="Could not connect to database.  Check your settings again.";
         } else {
           $PHORUM['main_table']=$mainTable;
           $PHORUM['dbtype']=$dbType;
@@ -45,6 +51,7 @@ switch($step){
             } else {
               include("$admindir/upgrade_pg.php");
             }
+            writefile("all");
           } else {
             echo "Creating initial tables...";
             if(($err=create_table($DB, "forums", $PHORUM["main_table"])) || ($err=create_table($DB, "auth", $PHORUM["main_table"])) || ($err=create_table($DB, "moderators", $PHORUM["main_table"]))){
@@ -63,7 +70,7 @@ switch($step){
             $err="Passwords do not match";
         } else {
             $id=$DB->nextid($PHORUM["auth_table"]);
-            $crypt_pass=crypt($AdminPass, substr($AdminPass, 0, CRYPT_SALT_LENGTH));
+            $crypt_pass=md5($AdminPass);
             $SQL="Insert into $PHORUM[auth_table] (username, password) values ('$AdminUser', '$crypt_pass')";
             if($q->query($DB, $SQL)){
                 if($DB->type=="mysql") $id=$DB->lastid();
@@ -90,8 +97,8 @@ switch($step){
         } elseif(!is_email($AdminEmail)) {
             $err="That is not a valid email address";
         } else {
-            $PHORUM["forum_url"]=$PhorumURL;
-            $PHORUM["DefaultEmail"]=$AdminEmail;
+            $forum_url=$PhorumURL;
+            $DefaultEmail=$AdminEmail;
             writefile();
         $SQL="update $PHORUM[auth_table] set email='$AdminEmail',name='Admin' where id=$id";
             $q->query($DB, $SQL);
@@ -102,7 +109,9 @@ switch($step){
 
 
 if($err){
-    echo "<br><font color=\"Red\">Error: $err<br /><br /></font>";
+    echo "<br /><font color=\"Red\">Error: $err<br /><br /></font>";
+    $cont=$step+1;
+    echo "<form action=\"$myname\" method=\"post\"><input type=\"hidden\" name=\"step\" value=\"$cont\" /><input type=\"submit\" value=\"Continue\" /></form>";
     $step--;
 }
 
@@ -111,8 +120,8 @@ switch($step){
     case 0:
 ?>
 <form action="<?php echo $myname; ?>" method="POST">
-<input type="Hidden" name="page" value="install">
-<input type="Hidden" name="step" value="1">
+<input type="hidden" name="page" value="install" />
+<input type="hidden" name="step" value="1" />
 Enter Type Of Database :<br />
 <table border="0" cellspacing="0" cellpadding="3">
 <tr>
@@ -132,8 +141,8 @@ Enter Type Of Database :<br />
    </td>
 </tr>
 </table>
-<br>
-<center><input type="submit" value="Submit"></center>
+<br />
+<center><input type="submit" value="Submit" /></center>
 <br />
 <br />
 </form>
@@ -142,66 +151,66 @@ Enter Type Of Database :<br />
     case 1:
 ?>
 <form action="<?php echo $myname; ?>" method="POST">
-<input type="Hidden" name="page" value="install">
-<input type="Hidden" name="step" value="2">
-<input type="hidden" name="dbType" value="<?php echo $dbType; ?>">
+<input type="hidden" name="page" value="install" />
+<input type="hidden" name="step" value="2" />
+<input type="hidden" name="dbType" value="<?php echo $dbType; ?>" />
 Enter Your Database Settings:<br />
 <table border="0" cellspacing="0" cellpadding="3">
 <tr>
   <th align="left" valign="middle">Database - Server Name:</th>
-  <td valign="middle"><input type="Text" name="dbServer" value="<?php echo $dbServer; ?>" size="20"></td>
+  <td valign="middle"><input type="Text" name="dbServer" value="<?php echo $dbServer; ?>" size="20" /></td>
 </tr>
 <tr>
   <th align="left" valign="middle">Database - Name:</th>
-  <td valign="middle"><input type="Text" name="dbName" value="<?php echo $dbName; ?>" size="20"></td>
+  <td valign="middle"><input type="Text" name="dbName" value="<?php echo $dbName; ?>" size="20" /></td>
 </tr>
 <tr>
   <th align="left" valign="middle">Database - User Name:</th>
-  <td valign="middle"><input type="Text" name="dbUser" value="<?php echo $dbUser; ?>" size="20"></td>
+  <td valign="middle"><input type="Text" name="dbUser" value="<?php echo $dbUser; ?>" size="20" /></td>
 </tr>
 <tr>
   <th align="left" valign="middle">Database - Password:</th>
-  <td valign="middle"><input type="Text" name="dbPass" value="<?php echo $dbPass; ?>" size="20"></td>
+  <td valign="middle"><input type="Text" name="dbPass" value="<?php echo $dbPass; ?>" size="20" /></td>
 </tr>
 <tr>
   <th align="left" valign="middle">Phorum - Main Table Name:</th>
-  <td valign="middle"><input type="Text" name="mainTable" value="<?php echo $PHORUM['main_table']; ?>" size="20"></td>
+  <td valign="middle"><input type="Text" name="mainTable" value="<?php echo $PHORUM['main_table']; ?>" size="20" /></td>
 </tr>
 <tr>
   <th align="left" valign="middle">&nbsp;</th>
   <td valign="middle"><input type="checkbox" name="upgrade" value="1" /> Check here if this is an upgrade.<br />Read docs/upgrade.txt for information about some of your settings.</td>
 </tr>
 </table>
-<br>
-<center><input type="submit" value="Submit"></center>
+<br />
+<center><input type="submit" value="Submit" /></center>
 <br />
 <br />
-<b>NOTE:  If SQL Safe Mode is in use on your server, leave the username and password emtpy.</b>
+<strong>NOTE:  If SQL Safe Mode is in use on your server, leave the username and password emtpy.</strong>
 </form>
 <?php
     break;
     case 2:
 ?>
 <form action="<?php echo $myname; ?>" method="POST">
-<input type="Hidden" name="page" value="install">
-<input type="Hidden" name="step" value="3">
+<input type="hidden" name="page" value="install" />
+<input type="hidden" name="step" value="3" />
 Create the admin user:<br />
 <table border="0" cellspacing="0" cellpadding="3">
 <tr>
   <th align="left" valign="middle">User Name:</th>
-  <td valign="middle"><input type="text" name="AdminUser" value="<?php echo $AdminUser; ?>" maxlength="50" size="20"></td>
+  <td valign="middle"><input type="text" name="AdminUser" value="<?php echo $AdminUser; ?>" maxlength="50" size="20" /></td>
 </tr>
 <tr>
   <th align="left" valign="middle">Password:</th>
-  <td valign="middle"><input type="password" name="AdminPass" maxlength="50" size="20"></td>
+  <td valign="middle"><input type="password" name="AdminPass" maxlength="50" size="20" /></td>
 </tr>
 <tr>
   <th valign="middle" align="right">(again)</th>
-  <td valign="middle"><input type="password" name="AdminPass2" maxlength="50" size="20"></td>
+  <td valign="middle"><input type="password" name="AdminPass2" maxlength="50" size="20" /></td>
 </tr>
 </table>
-<br>
-<center><input type="submit" value="Submit"></center>
+<br />
+<center><input type="submit" value="Submit" /></center>
 </form>
 <?php
     break;
@@ -209,22 +218,22 @@ Create the admin user:<br />
         if(empty($PhorumURL)) $PhorumURL="http://$HTTP_HOST".dirname(dirname($PHP_SELF));
 ?>
 <form action="<?php echo $myname; ?>" method="POST">
-<input type="Hidden" name="page" value="install">
-<input type="Hidden" name="step" value="4">
-<input type="Hidden" name="id" value="<?php echo $id?>">
+<input type="hidden" name="page" value="install" />
+<input type="hidden" name="step" value="4" />
+<input type="hidden" name="id" value="<?php echo $id?>" />
 Last step.<br />
 <table border="0" cellspacing="0" cellpadding="3">
 <tr>
   <th align="left" valign="middle">Phorum URL:</th>
-  <td valign="middle"><input type="text" name="PhorumURL" value="<?php echo $PhorumURL; ?>" size="40"></td>
+  <td valign="middle"><input type="text" name="PhorumURL" value="<?php echo $PhorumURL; ?>" size="40" /></td>
 </tr>
 <tr>
   <th align="left" valign="middle">Admin Email Address:</th>
-  <td valign="middle"><input type="text" name="AdminEmail" value="<?php echo $AdminEmail; ?>" size="20"></td>
+  <td valign="middle"><input type="text" name="AdminEmail" value="<?php echo $AdminEmail; ?>" size="20" /></td>
 </tr>
 </table>
-<br>
-<center><input type="submit" value="Submit"></center>
+<br />
+<center><input type="submit" value="Submit" /></center>
 </form>
 <?php
     break;

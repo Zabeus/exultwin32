@@ -6,7 +6,6 @@
         $description = addslashes($description);
       }
       if(!$ForumFolder) {
-        $html=get_html_value();
         if(isset($att_types)){
           $upload_types=strtolower(implode(";", $att_types));
         }
@@ -27,8 +26,8 @@
                     multi_level=$multi_level,
                     collapse=$collapsed,
                     flat=$rflat,
-                    lang='$lang',
-                    html='$html',
+                    lang='$language_file',
+                    html='$allow_html',
                     table_width='$table_width',
                     table_header_color='$table_header_color',
                     table_header_font_color='$table_header_font_color',
@@ -44,6 +43,7 @@
                     max_uploads='$max_uploads',
                     security='$security',
                     showip='$showip',
+                    emailnotification=$emailnotification,
                     body_color='$body_color',
                     body_link_color='$body_link_color',
                     body_alink_color='$body_alink_color',
@@ -51,7 +51,7 @@
                where
                  id=$num";
       } else {
-        $sSQL="Update ".$pho_main." set name='$name', description='$description', config_suffix='$config_suffix', lang='$lang', parent=$parent, table_width='$table_width', table_header_color='$table_header_color', table_header_font_color='$table_header_font_color', table_body_color_1='$table_body_color_1', table_body_font_color_1='$table_body_font_color_1', nav_color='$nav_color', nav_font_color='$nav_font_color', body_color='$body_color', body_link_color='$body_link_color', body_alink_color='$body_alink_color', body_vlink_color='$body_vlink_color' where id=$num";
+        $sSQL="Update ".$pho_main." set name='$name', description='$description', config_suffix='$config_suffix', lang='$language_file', parent=$parent, table_width='$table_width', table_header_color='$table_header_color', table_header_font_color='$table_header_font_color', table_body_color_1='$table_body_color_1', table_body_font_color_1='$table_body_font_color_1', nav_color='$nav_color', nav_font_color='$nav_font_color', body_color='$body_color', body_link_color='$body_link_color', body_alink_color='$body_alink_color', body_vlink_color='$body_vlink_color' where id=$num";
       }
 
       $q->query($DB, $sSQL);

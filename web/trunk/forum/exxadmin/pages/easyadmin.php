@@ -3,15 +3,15 @@
 
 // Set up variables
 
-  $t_gif="<IMG SRC=\"$forum_url/images/t.gif\" WIDTH=12 HEIGHT=21 BORDER=0>";
-  $l_gif="<IMG SRC=\"$forum_url/images/l.gif\" WIDTH=12 HEIGHT=21 BORDER=0>";
-  $p_gif="<IMG SRC=\"$forum_url/images/p.gif\" WIDTH=9 HEIGHT=21 BORDER=0>";
-  $m_gif="<IMG SRC=\"$forum_url/images/m.gif\" WIDTH=9 HEIGHT=21 BORDER=0>";
-  $c_gif="<IMG SRC=\"$forum_url/images/c.gif\" WIDTH=9 HEIGHT=21 BORDER=0>";
-  $i_gif="<IMG SRC=\"$forum_url/images/i.gif\" WIDTH=12 HEIGHT=21 BORDER=0>";
-  $n_gif="<IMG SRC=\"$forum_url/images/n.gif\" WIDTH=9 HEIGHT=21 BORDER=0>";
-  $space_gif="<IMG SRC=\"$forum_url/images/trans.gif\" WIDTH=5 HEIGHT=21 BORDER=0>";
-  $trans_gif="<IMG SRC=\"$forum_url/images/trans.gif\" WIDTH=12 HEIGHT=21 BORDER=0>";
+  $t_gif="<img src=\"$forum_url/images/t.gif\" width=12 height=21 border=0 />";
+  $l_gif="<img src=\"$forum_url/images/l.gif\" width=12 height=21 border=0 />";
+  $p_gif="<img src=\"$forum_url/images/p.gif\" width=9 height=21 border=0 />";
+  $m_gif="<img src=\"$forum_url/images/m.gif\" width=9 height=21 border=0 />";
+  $c_gif="<img src=\"$forum_url/images/c.gif\" width=9 height=21 border=0 />";
+  $i_gif="<img src=\"$forum_url/images/i.gif\" width=12 height=21 border=0 />";
+  $n_gif="<img src=\"$forum_url/images/n.gif\" width=9 height=21 border=0 />";
+  $space_gif="<img src=\"$forum_url/images/trans.gif\" width=5 height=21 border=0 />";
+  $trans_gif="<img src=\"$forum_url/images/trans.gif\" width=12 height=21 border=0 />";
 
   $cutoff = 800; // See the faq.
 
@@ -36,32 +36,49 @@
       $font_color="#000000";
     }
 
-    $subject ="<TABLE CELLSPACING=0 CELLPADDING=0 BORDER=0";
+    $subject ="<table cellspacing=0 cellpadding=0 border=0";
     if($bgcolor!=""){
-        $subject.=" BGCOLOR=\"".$bgcolor."\"";
+        $subject.=" bgcolor=\"".$bgcolor."\"";
     }
     $subject.=">\n";
-    $subject.="<TR>\n<TD>";
+    $subject.="<tr>\n<td>";
     $subject.=$space_gif;
-    $subject.=$image."</TD>\n<TD><FONT face=\"Arial,Helvetica\" COLOR=\"$font_color\">&nbsp;";
+    $subject.=$image."</td>\n<td><FONT face=\"Arial,Helvetica\" COLOR=\"$font_color\">&nbsp;";
 
     $subject.="<a href=\"$forum_url/$read_page.$ext?admview=1&f=$num&i=".$topic["id"];
     $subject.="&t=".$topic["thread"]."\">".$topic["subject"]."</a>";
     $author = $topic["author"];
     $approved = $topic["approved"];
     $datestamp = date_format($topic["datestamp"]);
+    $threadflags = $topic["threadflags"];
+    $parent = $topic["parent"];
+    $thread = $topic["thread"];
 
     $subject.="&nbsp;&nbsp;";
 
-    $subject.="</TD>\n</TR>\n</TABLE>";
+    $subject.="</td>\n</tr>\n</table>";
 
 ?>
-<TR VALIGN=middle>
-<TD bgcolor=<?php echo $bgcolor; ?>><?php echo $subject;?></TD>
-<TD bgcolor=<?php echo $bgcolor; ?> nowrap><FONT face="Arial,Helvetica" COLOR="<?php echo $font_color;?>"><?php echo $author;?></TD>
-<TD bgcolor=<?php echo $bgcolor; ?> nowrap><FONT face="Arial,Helvetica" SIZE="-2" COLOR="<?php echo $font_color;?>"><?php echo $datestamp;?>&nbsp;</TD>
-<TD bgcolor=<?php echo $bgcolor; ?> nowrap><FONT face="Arial,Helvetica" SIZE="-2" COLOR="<?php echo $font_color;?>"><a href="<?php echo $myname; ?>?page=easyadmin&action=del&type=quick&id=<?php echo $topic["id"]; ?>&num=<?php echo $num; ?>&navigate=<?php echo $navigate; ?>&thread=<?php echo $max; ?>">Delete</A>&nbsp;|&nbsp;<a href="<?php echo $myname; ?>?page=edit&srcpage=easyadmin&id=<?php echo $topic["id"]; ?>&num=<?php echo $num; ?>&navigate=<?php echo $navigate; ?>&mythread=<?php echo $max; ?>">Edit</A>&nbsp;|&nbsp;<a href="<?php echo $myname; ?>?page=easyadmin&action=moderate&approved=<?php echo $approved; ?>&id=<?php echo $topic["id"]; ?>&num=<?php echo $num; ?>&navigate=<?php echo $navigate; ?>&mythread=<?php echo $max; ?>"><?php if ($approved == 'Y') { echo "Hide"; } else { echo "Approve"; } ?></A></TD>
-</TR>
+<tr VALIGN=middle>
+<td bgcolor=<?php echo $bgcolor; ?>><?php echo $subject;?></td>
+<td bgcolor=<?php echo $bgcolor; ?> nowrap="nowrap"><FONT face="Arial,Helvetica" COLOR="<?php echo $font_color;?>"><?php echo $author;?></td>
+<td bgcolor=<?php echo $bgcolor; ?> nowrap="nowrap"><FONT face="Arial,Helvetica" SIZE="-2" COLOR="<?php echo $font_color;?>"><?php echo $datestamp;?>&nbsp;</td>
+<td bgcolor=<?php echo $bgcolor; ?> nowrap="nowrap"><FONT face="Arial,Helvetica" SIZE="-2" COLOR="<?php echo $font_color;?>"><a href="<?php echo $myname; ?>?page=easyadmin&action=del&type=quick&id=<?php echo $topic["id"]; ?>&num=<?php echo $num; ?>&navigate=<?php echo $navigate; ?>&thread=<?php echo $max; ?>">Delete</a>&nbsp;|&nbsp;<a href="<?php echo $myname; ?>?page=edit&srcpage=easyadmin&id=<?php echo $topic["id"]; ?>&num=<?php echo $num; ?>&navigate=<?php echo $navigate; ?>&mythread=<?php echo $max; ?>">Edit</a>&nbsp;|&nbsp;<a href="<?php echo $myname; ?>?page=easyadmin&action=moderate&approved=<?php echo $approved; ?>&id=<?php echo $topic["id"]; ?>&num=<?php echo $num; ?>&navigate=<?php echo $navigate; ?>&mythread=<?php echo $max; ?>"><?php if ($approved == 'Y') { echo "Hide"; } else { echo "Approve"; } ?></a>
+<?php
+  if($parent==0) {
+    if ($threadflags & FLG_FROZEN) {
+      $newflags = $threadflags & ~FLG_FROZEN;
+      echo "&nbsp;|&nbsp;<a href=\"$myname?page=easyadmin&action=flags&flags=$newflags&mythread=$thread&navigate=$navigate&num=$num\">Unfreeze</a>";
+    } else {
+      $newflags = $threadflags | FLG_FROZEN;
+      echo "&nbsp;|&nbsp;<a href=\"$myname?page=easyadmin&action=flags&flags=$newflags&mythread=$thread&navigate=$navigate&num=$num\">Freeze</a>";
+    }
+  }
+?></TD>
+
+
+
+</tr>
 <?php
   }
 
@@ -207,7 +224,7 @@
     $min=0;
   }
 
-  $sSQL = "Select id,parent,thread,subject,author,datestamp,approved from $ForumTableName where thread<=$max and thread>=$min order by thread desc, id asc";
+  $sSQL = "Select id,parent,thread,subject,author,datestamp,approved,threadflags from $ForumTableName where thread<=$max and thread>=$min order by thread desc, id asc";
 
   $msg_list = new query($DB, $sSQL);
 
@@ -244,17 +261,17 @@
   }
 
 ?>
-<TABLE WIDTH="100%" CELLSPACING=0 CELLPADDING=0 BORDER=0>
-<TR>
-    <TD HEIGHT=21 class="table-header">&nbsp;<?php echo $lTopics;?></TD>
-    <TD HEIGHT=21 NOWRAP WIDTH=150 class="table-header"><?php echo $lAuthor;?>&nbsp;</TD>
-    <TD HEIGHT=21 NOWRAP WIDTH=40 class="table-header"><?php echo $lDate;?></TD>
-    <TD HEIGHT=21 NOWRAP WIDTH=40 class="table-header">Actions</TD>
-</TR>
+<table width="100%" cellspacing=0 cellpadding=0 border=0>
+<tr>
+    <td height=21 class="table-header">&nbsp;<?php echo $lTopics;?></td>
+    <td height=21 nowrap="nowrap" width=150 class="table-header"><?php echo $lAuthor;?>&nbsp;</td>
+    <td height=21 nowrap="nowrap" width=40 class="table-header"><?php echo $lDate;?></td>
+    <td height=21 nowrap="nowrap" width=40 class="table-header">Actions</td>
+</tr>
 <?php
   thread();
 ?>
-</TABLE>
+</table>
 
 <table width="100%" cellspacing="0" cellpadding="3" border="0">
 <tr>

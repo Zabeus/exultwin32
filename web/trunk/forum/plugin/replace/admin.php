@@ -1,4 +1,5 @@
 <?php
+if ( !defined( "_COMMON_PHP" ) ) return;
 
 if($do!="props") return;
 
@@ -29,9 +30,9 @@ if(isset($update)) {
     fputs($fp,$data);
     fclose($fp);
   } else {
-    echo("Permission denied for writing \"plugin/$plugindirname/settings.php\", please check file permissions.\n<br>");
-    echo("Optionally, you may issue the following command from the phorum directory:<br>\n");
-    echo("<p><div align=\"left\">cat &lt;&lt;EOF &gt; plugin/$plugindirname/settings.php<br>\n".nl2br(htmlspecialchars(str_replace("\$","\\$",$data)))."EOF</div></p>\n");
+    echo("Permission denied for writing \"plugin/$plugindirname/settings.php\", please check file permissions.\n<br />");
+    echo("Optionally, you may issue the following command from the phorum directory:<br />\n");
+    echo("<p><div align=\"left\">cat &lt;&lt;EOF &gt; plugin/$plugindirname/settings.php<br />\n".nl2br(htmlspecialchars(str_replace("\$","\\$",$data)))."EOF</div></p>\n");
   }
 }
 
@@ -50,7 +51,7 @@ if(file_exists("$PHORUM[settings_dir]/replace.php")) {
 <table border="1" cellspacing="0" cellpadding="3">
 <tr>
     <td align="center" valign="middle" bgcolor="#000080" colspan="2">
-        <font face="Arial,Helvetica" color="#FFFFFF"><b>Replace Plugin Admin</b>
+        <font face="Arial,Helvetica" color="#FFFFFF"><strong>Replace Plugin Admin</strong>
     </td>
 </tr>
 
@@ -60,9 +61,9 @@ $num=1;
 while(list($key,$val) = @each($pluginreplace)) {
   echo("<tr>\n<td align=\"right\" valign=\"middle\" bgcolor=\"#FFFFFF\">\n<font face=\"Arial,Helvetica\">");
 
-  echo("<b>$num</b>. Replace <INPUT TYPE=\"text\" NAME=\"key$num\" VALUE=\"".htmlspecialchars($key)."\">");
+  echo("<strong>$num</strong>. Replace <input type=\"text\" name=\"key$num\" VALUE=\"".htmlspecialchars($key)."\">");
   echo("</font>\n</td>\n<td align=\"right\" valign=\"middle\" bgcolor=\"#FFFFFF\">\n<font face=\"Arial,Helvetica\">");
-  echo(" with <INPUT TYPE=\"text\" NAME=\"val$num\" VALUE=\"".htmlspecialchars($val)."\"><br>\n");
+  echo(" with <input TYPE=\"text\" name=\"val$num\" VALUE=\"".htmlspecialchars($val)."\"><br />\n");
   echo("</font>\n</td>\n</tr>\n\n");
   $num++;
 }
@@ -70,9 +71,9 @@ while(list($key,$val) = @each($pluginreplace)) {
 $i=$num+5;
 while($i>$num) {
   echo("<tr><td align=\"right\" valign=\"middle\" bgcolor=\"#FFFFFF\"><font face=\"Arial,Helvetica\">");
-  echo("<b>New</b>. Replace <INPUT TYPE=\"text\" NAME=\"key$num\">");
+  echo("<strong>New</strong>. Replace <input TYPE=\"text\" name=\"key$num\">");
   echo("</font></td><td align=\"right\" valign=\"middle\" bgcolor=\"#FFFFFF\"><font face=\"Arial,Helvetica\">");
-  echo("with <INPUT TYPE=\"text\" NAME=\"val$num\"><br>\n");
+  echo("with <input TYPE=\"text\" name=\"val$num\"><br />\n");
   echo("</font></td></tr>");
   $num++;
 }

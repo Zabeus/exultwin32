@@ -1,6 +1,6 @@
 <?php
   // /12,34,2/grad_logo.gif
-  if(empty($PATH_INFO))  $PATH_INFO=$HTTP_SERVER_VARS["PATH_INFO"];
+  $PATH_INFO=$HTTP_SERVER_VARS["PATH_INFO"];
   $file=basename($PATH_INFO);
   list($f, $id, $fileid)=explode(",", basename(dirname($PATH_INFO)));
 

@@ -4,7 +4,7 @@
   $lNoAuthor        = ""; // You must supply an author.
   $lNoSubject       = ""; // You must supply a subject.
   $lNoBody          = ""; // You must supply a message.
-  $lNoEmail         = ""; // You did not enter a valid email address.  An email address is not required.<br>If you do not wish to leave your email address please leave the field blank.
+  $lNoEmail         = ""; // You did not enter a valid email address.  An email address is not required.<br />If you do not wish to leave your email address please leave the field blank.
   $lNoEmailReply    = ""; // When requesting to be emailed replies, you must supply a valid email address.
   $lModerated       = ""; // Moderated forum.  All posts are reviewed before posting.
   $lModeratedMsg    = ""; // This is a moderated forum.  Your post has been emailed to the moderator and will be reviewed as soon as possible.
@@ -65,7 +65,7 @@
   $lNextTopic       = ""; // Older Topic
   $lSearchResults   = ""; // Search Results
   $lSearchTips      = ""; // Search Tips
-  $lTheSearchTips   = ""; // AND is the default. That is, a search for <B>dog</B> and <B>cat</B> returns all messages that contain those words anywhere.<p>QUOTES (\") allow searches for phrases. That is, a search for <B>\"dog cat\"</B> returns all messages that contain that exact phrase, with space.<p>MINUS (-) eliminates words. That is, a seach for <B>dog</B> and <B>-cat</B> returns all messages that contain <b>dog</b> but not <b>cat</b>. You can MINUS a phrase in QUOTES, like <B>dog -\"siamese cat\"</B>.<p>The engine is not case-sensitive and searches the title, body, and author.
+  $lTheSearchTips   = ""; // AND is the default. That is, a search for <strong>dog</strong> and <strong>cat</strong> returns all messages that contain those words anywhere.<p>QUOTES (\") allow searches for phrases. That is, a search for <strong>\"dog cat\"</strong> returns all messages that contain that exact phrase, with space.<p>MINUS (-) eliminates words. That is, a seach for <strong>dog</strong> and <strong>-cat</strong> returns all messages that contain <strong>dog</strong> but not <strong>cat</strong>. You can MINUS a phrase in QUOTES, like <strong>dog -\"siamese cat\"</strong>.<p>The engine is not case-sensitive and searches the title, body, and author.
   $lNoMatches       = ""; // No matches found :(
   $lMessageBodies   = ""; // Message Bodies (slower)
   $lMoreMatches     = ""; // More Matches
@@ -103,7 +103,8 @@
   $lDupEmail        = ""; // Your e-mail already used by someone else
   $lNoPassMacth     = ""; // Passwords Don't Match
   $lPassAgain       = ""; // Again
-  $lFillInAll       = ""; // You dind't fill all mandatory fields
+  $lFillInAll       = ""; // You didn't fill all mandatory fields
+  $lDelMessageWarning = ""; // You are about to delete this\\nmessage and all it's children.\\n Do you want to continue?
   //Profile Stuff
   $lUserProfile     = ""; // User Profile
   $lMyProfile       = ""; // My Profile
@@ -124,6 +125,10 @@
   $lModDelete       = ""; // Delete Post
   $lEditPost        = ""; // Edit Post
   $lFormUpdate      = ""; // Update Post";
+  $lRequiredFields  = ""; // Fields marked with * are required.
+  $lRegistrationCensor = ""; // Some words you used are in our censor list.  Please remove them.
+  $lOf = ""; // of
+
 
 // This function takes a date string in the ANSI format
 // (YYYY-MM-DD HH:MM:SS) and formats it for display.

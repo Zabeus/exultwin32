@@ -4,8 +4,8 @@ if ( defined( "_DB_LAYER" ) ) return;
 
 define("_DB_LAYER", 1 );
 
-if(!function_exists("pg_connect"))
-  echo "<b>Error: You have configured Phorum to use PostgreSQL.  PostgreSQL support is not available to PHP on this server.</b>";
+if(!defined("PHORUM_ADMIN") && !function_exists("pg_connect"))
+  echo "<strong>Error: You have configured Phorum to use PostgreSQL.  PostgreSQL support is not available to PHP on this server.</strong>";
 
 class db {
 
@@ -123,9 +123,9 @@ class query {
   function getrow() {
     $row=0;
     if($row=@pg_fetch_array($this->result, $this->curr_row, PGSQL_ASSOC)){
-      $this->row=$row;
       $this->curr_row++;
     }
+    $this->row=$row;
     return $row;
   }
 
@@ -274,6 +274,7 @@ class query {
                   max_uploads int4 DEFAULT '0' NOT NULL,
                   security int4 DEFAULT '0' NOT NULL,
                   showip int2 DEFAULT 1 NOT NULL,
+                  emailnotification int2 DEFAULT 1 NOT NULL,
                   body_color varchar(7) DEFAULT '' NOT NULL,
                   body_link_color varchar(7) DEFAULT '' NOT NULL,
                   body_alink_color varchar(7) DEFAULT '' NOT NULL,
@@ -286,6 +287,8 @@ class query {
           $SQL="CREATE INDEX ".$table_name."_active on ".$table_name."(active)";
           $q->query($DB, $SQL);
           $SQL="CREATE INDEX ".$table_name."_parent on ".$table_name."(parent)";
+          $q->query($DB, $SQL);
+          $SQL="CREATE INDEX ".$table_name."_security on ".$table_name."(security)";
           $q->query($DB, $SQL);
         } else {
           return $q->error();
@@ -313,6 +316,10 @@ class query {
         $q->query($DB, $SQL);
         $SQL="CREATE UNIQUE INDEX username_".$table_name."_ukey ON ".$table_name." (username)";
         $q->query($DB, $SQL);
+        $SQL="CREATE INDEX sess_id_".$table_name."_key ON ".$table_name." (sess_id)";
+        $q->query($DB, $SQL);
+        $SQL="CREATE INDEX password_".$table_name."_key ON ".$table_name." (password)";
+        $q->query($DB, $SQL);
         break;
       case "moderators":
         // moderator xref
@@ -332,6 +339,8 @@ class query {
                   message_id int4 DEFAULT '0' NOT NULL,
                   filename varchar(50) DEFAULT '' NOT NULL,
                   CONSTRAINT ".$table_name."pri_key PRIMARY KEY(id, message_id))";
+        $q->query($DB, $SQL);
+        $SQL="CREATE INDEX message_id_".$table_name."_key ON ".$table_name."_moderators (message_id)";
         $q->query($DB, $SQL);
         break;
     }

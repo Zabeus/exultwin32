@@ -30,13 +30,8 @@
     }
   }
 
-  $title = $lForumList;
-  if(file_exists("$include_path/header_$ForumConfigSuffix.php")){
-    include "$include_path/header_$ForumConfigSuffix.php";
-  }
-  else{
-    include "$include_path/header.php";
-  }
+  $title = " - $lForumList";
+  include phorum_get_file_name("header");
 
   if($f!=0){
     $level='';
@@ -69,14 +64,16 @@
 
     // Log Out/Log In
     if(isset($phorum_auth)){
-      addnav($menu, $lLogOut, "login.$ext?logout=1");
+      addnav($menu, $lLogOut, "login.$ext?logout=1$GetVars");
       addnav($menu, $lMyProfile, "profile.$ext?f=$f&id=$phorum_user[id]$GetVars");
     }
     else{
       $SQL="Select max(security) as sec from $pho_main";
       $q->query($DB, $SQL);
       if($q->field("sec", 0)){
-          addnav($menu, $lLogIn, "login.$ext");
+          $url="login.$ext";
+          if(!empty($f)) $url.="?f=$f";
+          addnav($menu, $lLogIn, $url);
       }
     }
 
@@ -90,7 +87,7 @@
 ?>
 <table width="<?php echo $table_width; ?>" border="0" cellspacing="0" cellpadding="3">
   <tr>
-    <td <?php echo bgcolor($nav_color); ?> valign="TOP" nowrap><?php echo $TopNav; ?></td>
+    <td <?php echo bgcolor($nav_color); ?> valign="TOP" nowrap="nowrap"><?php echo $TopNav; ?></td>
   </tr>
 </table>
 <?php
@@ -98,7 +95,7 @@
 ?>
 <table class="PhorumListTable" width="<?php echo $table_width; ?>" cellspacing="0" cellpadding="2" border="0">
 <tr>
-    <td class="PhorumTableHeader" width="100%" colspan=3 <?php echo bgcolor($table_header_color); ?>><FONT color="<?php echo $table_header_font_color; ?>">&nbsp;<?php echo $lAvailableForums;?></font></td>
+    <td class="PhorumTableHeader" width="100%" colspan="3" <?php echo bgcolor($table_header_color); ?>><FONT color="<?php echo $table_header_font_color; ?>">&nbsp;<?php echo $lAvailableForums;?></font></td>
 </tr>
 <?php
   if(isset($q)){
@@ -135,8 +132,8 @@
         else{
           $last_post_date=date_format($trec["max_date"]);
         }
-        $posts="$lNumPosts: <b>$num_posts</b>&nbsp;&nbsp;";
-        $last="$lLastPostDate: <b>$last_post_date</b>";
+        $posts="$lNumPosts: <strong>$num_posts</strong>&nbsp;&nbsp;";
+        $last="$lLastPostDate: <strong>$last_post_date</strong>";
         $url="$list_page.$ext?f=$num$GetVars";
       }
 
@@ -146,14 +143,14 @@
       }
 
 ?>
-<TR>
-  <TD nowrap bgcolor="<?php echo $table_body_color_1; ?>"><FONT color="<?php echo $table_body_font_color_1; ?>" class="PhorumForumTitle">&nbsp;<a href="<?php echo $url; ?>"><?php echo $name; ?></a></font></TD>
-  <TD nowrap bgcolor="<?php echo $table_body_color_1; ?>">&nbsp;&nbsp;<?php echo $posts; ?></TD>
-  <TD nowrap bgcolor="<?php echo $table_body_color_1; ?>">&nbsp;&nbsp;<?php echo $last; ?></TD>
-</TR>
-<TR>
-  <TD colspan=3 bgcolor="<?php echo $table_body_color_1; ?>"><FONT color="<?php echo $table_body_font_color_1; ?>"><blockquote><br><?php echo $description; ?></blockquote></font></TD>
-</TR>
+<tr>
+  <td nowrap="nowrap" bgcolor="<?php echo $table_body_color_1; ?>"><FONT color="<?php echo $table_body_font_color_1; ?>" class="PhorumForumTitle">&nbsp;<a href="<?php echo $url; ?>"><?php echo $name; ?></a></font></td>
+  <td nowrap="nowrap" bgcolor="<?php echo $table_body_color_1; ?>">&nbsp;&nbsp;<?php echo $posts; ?></td>
+  <td nowrap="nowrap" bgcolor="<?php echo $table_body_color_1; ?>">&nbsp;&nbsp;<?php echo $last; ?></td>
+</tr>
+<tr>
+  <td colspan=3 bgcolor="<?php echo $table_body_color_1; ?>"><FONT color="<?php echo $table_body_font_color_1; ?>"><blockquote><br /><?php echo $description; ?></blockquote></font></td>
+</tr>
 <?php
       $rec=$q->getrow();
 
@@ -171,10 +168,5 @@
 ?>
 </table>
 <?php
-  if(file_exists("$include_path/footer_$ForumConfigSuffix.php")){
-    include "$include_path/footer_$ForumConfigSuffix.php";
-  }
-  else{
-    include "$include_path/footer.php";
-  }
+  include phorum_get_file_name("footer");
 ?>

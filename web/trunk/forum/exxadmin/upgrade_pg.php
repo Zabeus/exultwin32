@@ -22,6 +22,8 @@
   $q->query($DB, $SQL);
   $SQL="ALTER TABLE $pho_main ADD showip int2 DEFAULT 1 NOT NULL";
   $q->query($DB, $SQL);
+  $SQL="ALTER TABLE $pho_main ADD emailnotification int2 DEFAULT '0' NOT NULL";
+  $q->query($DB, $SQL);
   $SQL="ALTER TABLE $pho_main ADD body_color char(7) DEFAULT '' NOT NULL";
   $q->query($DB, $SQL);
   $SQL="ALTER TABLE $pho_main ADD body_link_color char(7) DEFAULT '' NOT NULL";
@@ -38,8 +40,8 @@
   //$q->query($DB, $SQL);
   //$SQL="ALTER TABLE $pho_main DROP staff_host";
   //$q->query($DB, $SQL);
-  echo "<b>$pho_main now contains 3 redundant fields: mod_email, mod_pass & staff_host<br />\n";
-  echo "these can be removed useing a tool such as phpPgAdmin</b><br />\n";
+  echo "<strong>$pho_main now contains 3 redundant fields: mod_email, mod_pass & staff_host<br />\n";
+  echo "these can be removed useing a tool such as phpPgAdmin</strong><br />\n";
 
 
   create_table($DB, "auth", $PHORUM["main_table"]);
@@ -128,8 +130,8 @@
         //$SQL="ALTER TABLE $rec[table_name] DROP attachment";
         //good_query($SQL) || return 0;
 
-  echo "<b>$rec[table_name] contains 1 redundant field: attachment<br />\n";
-  echo "this can be removed useing a tool such as phpPgAdmin</b><br />\n";
+  echo "<strong>$rec[table_name] contains 1 redundant field: attachment<br />\n";
+  echo "this can be removed useing a tool such as phpPgAdmin</strong><br />\n";
 
     }
 

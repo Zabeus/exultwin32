@@ -3,7 +3,7 @@
     <td align="center" class="table-header">Moderate For:</td>
 </tr>
 <tr>
-<td>
+<td nowrap="nowrap">
 <?php
     while(list($fid, $value)=each($PHORUM["admin_user"]["forums"])){
         $path=GetForumPath($fid);

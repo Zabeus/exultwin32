@@ -1,3 +1,5 @@
+<?php if(!defined("PHORUM_ADMIN")) return; ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "XHTML1-t.dtd">
 <html>
 <head>
 <title>phorum admin</title>
@@ -33,6 +35,7 @@
     {
         font-size: 13px;
         font-family: Verdana, Arial, Helvetica, sans-serif;
+        text-align: left;
     }
 
     a
@@ -87,7 +90,6 @@
         border-right-width : 0px;
         border-style : solid;
         border-color : Gray;
-
     }
 
     td.table-header
@@ -97,6 +99,7 @@
         font-weight: bold;
         background-color: Navy;
         color: White;
+        text-align: center;
     }
 
     td.table-header a
@@ -123,6 +126,7 @@
         font-size: 14px;
         font-family: Verdana, Arial, Helvetica, sans-serif;
         font-weight: bold;
+        display: inline;
     }
 
 </style>
@@ -131,19 +135,19 @@
 <body>
 <table width="100%" cellspacing="0" cellpadding="0" border="0">
 <tr>
-    <td width="50%" class="nav" valign="top"><?php if(!empty($q)){ ?><a href="<?php echo $PHP_SELF; ?>">Main Menu</a> | <A HREF="<?php echo "$forum_url/$forum_page.$ext"; ?>">Forum Index</a> | <a href="<?php echo $PHP_SELF; ?>?logout=1">Logout</a><?php } ?></td>
-    <td width="50%" align="right" valign="top" class="nav"><span id="title">PHORUM ADMIN</span><br /><?php
+    <td width="50%" class="nav" valign="top"><?php if(!empty($q)){ ?><a href="<?php echo $PHP_SELF; ?>">Main Menu</a> | <a HREF="<?php echo "$forum_url/$forum_page.$ext"; ?>">Forum Index</a> | <a href="<?php echo $PHP_SELF; ?>?logout=1">Logout</a><?php } ?></td>
+    <td width="50%" align="right" valign="top" class="nav" style="text-align: right;"><div id="title">PHORUM ADMIN</div><br /><?php
 if(!empty($q)){
     if(@isset($DB->connect_id)){
       if($DB->connect_id){
         echo "Database Connection Established";
       }
       else{
-        echo "<b>Database Connection Failed</b>";
+        echo "<strong>Database Connection Failed</strong>";
       }
     }
     else{
-      echo "<b>No Database Connection Available</b>";
+      echo "<strong>No Database Connection Available</strong>";
     }
     ?><br />version: <?php echo $phorumver;
 }

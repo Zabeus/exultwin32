@@ -8,7 +8,7 @@
 <meta name="PHP Version" content="<?PHP echo phpversion(); ?>">
 -->
 <title>phorum - <?PHP if(isset($ForumName)) echo $ForumName; ?><?PHP echo initvar("title"); ?></title>
-<link rel="STYLESHEET" type="text/css" href="<?PHP echo $include_path; ?>/phorum.css">
+<link rel="STYLESHEET" type="text/css" href="<?PHP echo $PHORUM['forum_url'] ?>/phorum.css">
 </head>
 <body bgcolor="#FFFFFF" TEXT="#333366" LINK="#666699" ALINK="#ffcc33" VLINK="#669966" background="../images/back.gif">
 <div align="center">

@@ -2,7 +2,7 @@
   // login.php
 
     function check_login(){
-        global $HTTP_COOKIE_VARS, $HTTP_POST_VARS, $HTTP_GET_VARS, $PHORUM, $q, $DB;
+        global $PHP_SELF, $HTTP_COOKIE_VARS, $HTTP_POST_VARS, $HTTP_GET_VARS, $PHORUM, $q, $DB;
 
         $success=false;
 
@@ -31,16 +31,11 @@
 
         if(!$success && isset($HTTP_POST_VARS["login"]) && isset($HTTP_POST_VARS["passwd"])){
 
-            $crypt_pass=crypt($HTTP_POST_VARS["passwd"], substr($HTTP_POST_VARS["passwd"], 0, CRYPT_SALT_LENGTH));
-
-            $SQL="Select * from $PHORUM[auth_table] where username='$HTTP_POST_VARS[login]' and password='$crypt_pass'";
-            $q->query($DB, $SQL);
-            $rec=$q->getrow();
-
-            if(!empty($rec["id"])){
-                $sess_id=md5($user.$password.microtime());
+            $id=phorum_check_login($HTTP_POST_VARS['login'], $HTTP_POST_VARS["passwd"]);
+            if($id){
+                $sess_id=phorum_session_id($HTTP_POST_VARS['login'], $HTTP_POST_VARS["passwd"]);
                 setcookie("phorum_admin_session", "$sess_id");
-                phorum_login_user($sess_id, $rec["id"]);
+                phorum_login_user($sess_id, $id);
                 header("Location: $PHP_SELF");
                 exit();
             }
@@ -73,15 +68,15 @@
 <table border="0" cellspacing="0" cellpadding="2" class="box-table">
 <tr>
   <th>Login: </th>
-  <td><input class="login" type="text" size="15" name="login"></td>
+  <td><input class="login" type="text" size="15" name="login" /></td>
 </tr>
 <tr>
   <th>Password: </th>
-  <td><input class="login" type="password" size="15" name="passwd"></td>
+  <td><input class="login" type="password" size="15" name="passwd" /></td>
 </tr>
 <tr>
   <td>&nbsp;</td>
-  <td><input class="login" type="submit" value="Login"></td>
+  <td><input class="login" type="submit" value="Login" /></td>
 </tr>
 </table>
 </form>

@@ -21,15 +21,19 @@
 
   define("PHORUM_ADMIN", 1);
 
+  // if you move the admin out of the phorum dir, change this below.
   chdir("../");
 
-  include "common.php";
+  include "./common.php";
 
-  // figure out where we are!
-  $admindir = dirname($PATH_TRANSLATED);
+  $admindir = dirname(__FILE__);
+
   include "$admindir/functions.php";
+
   // set a sensible error level:
   error_reporting  (E_ERROR | E_WARNING | E_PARSE);
+
+  $myname="$PHP_SELF";
 
   if(empty($forum_url)){
     include "$admindir/pages/install.php";
@@ -38,25 +42,12 @@
     $page="main";
   }
 
-  if(isset($HTTP_POST_VARS)){
-    if(isset($HTTP_POST_VARS["login"])){
-      $login=$HTTP_POST_VARS["login"];
-    }
-    elseif(isset($login)){
-      unset($login);
-    }
-  }
-
-  settype($login, "integer");
-
   if(isset($page))
     $page=basename($page);
   else
     $page="main";
 
   $forum_id = 0;
-
-  $myname="$PHP_SELF";
 
   include "$admindir/login.php";
   if($DB->connect_id) check_login();

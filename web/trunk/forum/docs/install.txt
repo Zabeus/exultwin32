@@ -176,8 +176,6 @@ progress and will ask you some questions.  It is pretty self explanitory.
 Once the install process is done, click the link to go the admin and login
 using the username and password you provided to the install script.
 
-You will need to see docs/usage.txt for more on how to use Phorum.
-
 
 4. Using attachments (file uploads)
 ------------------------------------

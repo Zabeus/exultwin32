@@ -21,18 +21,18 @@
   }
 </script>
 <form action="<?php echo $myname; ?>" method="POST">
-<input type="Hidden" name="num" value="<?php echo $num; ?>">
-<input type="Hidden" name="action" value="props">
-<input type="Hidden" name="frompage" value="props">
-<input type="Hidden" name="page" value="managemenu">
-<input type="Hidden" name="table" value="<?php echo $forum["table_name"]; ?>">
+<input type="hidden" name="num" value="<?php echo $num; ?>" />
+<input type="hidden" name="action" value="props" />
+<input type="hidden" name="frompage" value="props" />
+<input type="hidden" name="page" value="managemenu" />
+<input type="hidden" name="table" value="<?php echo $forum["table_name"]; ?>" />
 <table border="0" cellspacing="0" cellpadding="3" class="box-table">
 <tr>
   <td colspan="2" align="center" valign="middle" class="table-header">Edit <?php $folder ? $word="Folder" : $word="Forum"; echo "$word: $forum[name]"; ?></td>
 </tr>
 <tr>
   <th valign="middle">Name:</th>
-  <td valign="middle"><input type="Text" name="name" value="<?php echo $forum["name"]; ?>" size="25" class="TEXT"></td>
+  <td valign="middle"><input type="Text" name="name" value="<?php echo $forum["name"]; ?>" size="25" class="TEXT" /></td>
 </tr>
 <tr>
   <th valign="middle">Description:</th>
@@ -40,7 +40,7 @@
 </tr>
 <tr>
   <th valign="middle">Config Suffix:</th>
-  <td valign="middle"><input type="Text" name="config_suffix" value="<?php echo $forum["config_suffix"]; ?>" size="10" class="TEXT"></td>
+  <td valign="middle"><input type="Text" name="config_suffix" value="<?php echo $forum["config_suffix"]; ?>" size="10" class="TEXT" /></td>
 </tr>
 <tr>
   <th valign="middle">Folder:</th>
@@ -61,7 +61,7 @@
 </tr>
 <tr>
   <th valign="middle">Language File:</th>
-  <td valign="middle"><select name="lang">
+  <td valign="middle"><select name="language_file">
 <?php
 $aryLangs = array();
 $strLangDir = "lang/";
@@ -93,18 +93,18 @@ while ($file) {
 <tr>
   <th valign="middle">Security:</th>
   <td valign="middle"><select name="security">
-<option value="<?php echo SEC_NONE; ?>" <?php if($forum["security"]==SEC_NONE) echo "selected"; ?>>Public</option>
 <option value="<?php echo SEC_OPTIONAL; ?>" <?php if($forum["security"]==SEC_OPTIONAL) echo "selected"; ?>>Login Is Optional</option>
 <option value="<?php echo SEC_POST; ?>" <?php if($forum["security"]==SEC_POST) echo "selected"; ?>>Login To Post</option>
-<option value="<?php echo SEC_ALL; ?>" <?php if($forum["security"]==SEC_ALL) echo "selected"; ?>>Login To Read</option>
+<option value="<?php echo SEC_ALL; ?>" <?php if($forum["security"]==SEC_ALL) echo "selected"; ?>>Login Required</option>
+<option value="<?php echo SEC_NONE; ?>" <?php if($forum["security"]==SEC_NONE) echo "selected"; ?>>Public</option>
 </select></td>
 </tr>
 <tr>
   <th valign="middle">Email Moderator:</th>
   <td valign="middle"><select name="moderation" class=big>
-  <option value="none" <?php if($forum["moderation"]=='n') echo 'selected'; ?>>No</option>
-  <option value="all" <?php if($forum["moderation"]=='a') echo 'selected'; ?>>All Messages Before Posted</option>
-  <option value="react" <?php if($forum["moderation"]=='r') echo 'selected'; ?>>All Messages After Posted</option>
+  <option value="n" <?php if($forum["moderation"]=='n') echo 'selected'; ?>>No</option>
+  <option value="a" <?php if($forum["moderation"]=='a') echo 'selected'; ?>>All Messages Before Posted</option>
+  <option value="r" <?php if($forum["moderation"]=='r') echo 'selected'; ?>>All Messages After Posted</option>
 </select></td>
 </tr>
 <?php } ?>
@@ -112,58 +112,58 @@ while ($file) {
   <td colspan="2" valign="middle" bgcolor="#000000">&nbsp;</td>
 </tr>
 <tr>
-  <th valign="middle">Body Color:<br><font size="-2">Leave blank for default. (<?php echo $default_body_color; ?>)</th>
-  <td valign="middle"><input type="Text" name="body_color" value="<?php echo $forum["body_color"]; ?>" size="10" class="TEXT"></td>
+  <th valign="middle">Body Color:<br /><font size="-2">Leave blank for default. (<?php echo $default_body_color; ?>)</th>
+  <td valign="middle"><input type="Text" name="body_color" value="<?php echo $forum["body_color"]; ?>" size="10" class="TEXT" /></td>
 </tr>
 <tr>
-  <th valign="middle">Link Color:<br><font size="-2">Leave blank for default. (<?php echo $default_body_link_color; ?>)</th>
-  <td valign="middle"><input type="Text" name="body_link_color" value="<?php echo $forum["body_link_color"]; ?>" size="10" class="TEXT"></td>
+  <th valign="middle">Link Color:<br /><font size="-2">Leave blank for default. (<?php echo $default_body_link_color; ?>)</th>
+  <td valign="middle"><input type="Text" name="body_link_color" value="<?php echo $forum["body_link_color"]; ?>" size="10" class="TEXT" /></td>
 </tr>
 <tr>
-  <th valign="middle">Visited Link Color:<br><font size="-2">Leave blank for default. (<?php echo $default_body_vlink_color; ?>)</th>
-  <td valign="middle"><input type="Text" name="body_vlink_color" value="<?php echo $forum["body_vlink_color"]; ?>" size="10" class="TEXT"></td>
+  <th valign="middle">Visited Link Color:<br /><font size="-2">Leave blank for default. (<?php echo $default_body_vlink_color; ?>)</th>
+  <td valign="middle"><input type="Text" name="body_vlink_color" value="<?php echo $forum["body_vlink_color"]; ?>" size="10" class="TEXT" /></td>
 </tr>
 <tr>
-  <th valign="middle">Active Link Color:<br><font size="-2">Leave blank for default. (<?php echo $default_body_alink_color; ?>)</th>
-  <td valign="middle"><input type="Text" name="body_alink_color" value="<?php echo $forum["body_alink_color"]; ?>" size="10" class="TEXT"></td>
+  <th valign="middle">Active Link Color:<br /><font size="-2">Leave blank for default. (<?php echo $default_body_alink_color; ?>)</th>
+  <td valign="middle"><input type="Text" name="body_alink_color" value="<?php echo $forum["body_alink_color"]; ?>" size="10" class="TEXT" /></td>
 </tr>
 <tr>
-  <th valign="middle">Table Width:<br><font size="-2">Leave blank for default. (<?php echo $default_table_width; ?>)</th>
-  <td valign="middle"><input type="Text" name="table_width" value="<?php echo $forum["table_width"]; ?>" size="10" class="TEXT"></td>
+  <th valign="middle">Table Width:<br /><font size="-2">Leave blank for default. (<?php echo $default_table_width; ?>)</th>
+  <td valign="middle"><input type="Text" name="table_width" value="<?php echo $forum["table_width"]; ?>" size="10" class="TEXT" /></td>
 </tr>
 <tr>
-  <th valign="middle">Table Header Color:<br><font size="-2">Leave blank for default. (<?php echo $default_table_header_color; ?>)</th>
-  <td valign="middle"><input type="Text" name="table_header_color" value="<?php echo $forum["table_header_color"]; ?>" size="10" class="TEXT"></td>
+  <th valign="middle">Table Header Color:<br /><font size="-2">Leave blank for default. (<?php echo $default_table_header_color; ?>)</th>
+  <td valign="middle"><input type="Text" name="table_header_color" value="<?php echo $forum["table_header_color"]; ?>" size="10" class="TEXT" /></td>
 </tr>
 <tr>
-  <th valign="middle">Table Header Font Color:<br><font size="-2">Leave blank for default. (<?php echo $default_table_header_font_color; ?>)</th>
-  <td valign="middle"><input type="Text" name="table_header_font_color" value="<?php echo $forum["table_header_font_color"]; ?>" size="10" class="TEXT"></td>
+  <th valign="middle">Table Header Font Color:<br /><font size="-2">Leave blank for default. (<?php echo $default_table_header_font_color; ?>)</th>
+  <td valign="middle"><input type="Text" name="table_header_font_color" value="<?php echo $forum["table_header_font_color"]; ?>" size="10" class="TEXT" /></td>
 </tr>
 <tr>
-  <th valign="middle">Main Table Body Color:<br><font size="-2">Leave blank for default. (<?php echo $default_table_body_color_1; ?>)</th>
-  <td valign="middle"><input type="Text" name="table_body_color_1" value="<?php echo $forum["table_body_color_1"]; ?>" size="10" class="TEXT"></td>
+  <th valign="middle">Main Table Body Color:<br /><font size="-2">Leave blank for default. (<?php echo $default_table_body_color_1; ?>)</th>
+  <td valign="middle"><input type="Text" name="table_body_color_1" value="<?php echo $forum["table_body_color_1"]; ?>" size="10" class="TEXT" /></td>
 </tr>
 <tr>
-  <th valign="middle">Main Table Body Font Color:<br><font size="-2">Leave blank for default. (<?php echo $default_table_body_font_color_1; ?>)</th>
-  <td valign="middle"><input type="Text" name="table_body_font_color_1" value="<?php echo $forum["table_body_font_color_1"]; ?>" size="10" class="TEXT"></td>
+  <th valign="middle">Main Table Body Font Color:<br /><font size="-2">Leave blank for default. (<?php echo $default_table_body_font_color_1; ?>)</th>
+  <td valign="middle"><input type="Text" name="table_body_font_color_1" value="<?php echo $forum["table_body_font_color_1"]; ?>" size="10" class="TEXT" /></td>
 </tr>
 <?php if(!$forum["Folder"]){ ?>
 <tr>
-  <th valign="middle">Alt. Table Body Color:<br><font size="-2">Leave blank for default. (<?php echo $default_table_body_color_2; ?>)</th>
-  <td valign="middle"><input type="Text" name="table_body_color_2" value="<?php echo $forum["table_body_color_2"]; ?>" size="10" class="TEXT"></td>
+  <th valign="middle">Alt. Table Body Color:<br /><font size="-2">Leave blank for default. (<?php echo $default_table_body_color_2; ?>)</th>
+  <td valign="middle"><input type="Text" name="table_body_color_2" value="<?php echo $forum["table_body_color_2"]; ?>" size="10" class="TEXT" /></td>
 </tr>
 <tr>
-  <th valign="middle">Alt. Table Body Font Color:<br><font size="-2">Leave blank for default. (<?php echo $default_table_body_font_color_2; ?>)</th>
-  <td valign="middle"><input type="Text" name="table_body_font_color_2" value="<?php echo $forum["table_body_font_color_2"]; ?>" size="10" class="TEXT"></td>
+  <th valign="middle">Alt. Table Body Font Color:<br /><font size="-2">Leave blank for default. (<?php echo $default_table_body_font_color_2; ?>)</th>
+  <td valign="middle"><input type="Text" name="table_body_font_color_2" value="<?php echo $forum["table_body_font_color_2"]; ?>" size="10" class="TEXT" /></td>
 </tr>
 <?php } ?>
 <tr>
-  <th valign="middle">Navigation Background Color:<br><font size="-2">Leave blank for default. (<?php echo $default_nav_color; ?>)</th>
-  <td valign="middle"><input type="Text" name="nav_color" value="<?php echo $forum["nav_color"]; ?>" size="10" class="TEXT"></td>
+  <th valign="middle">Navigation Background Color:<br /><font size="-2">Leave blank for default. (<?php echo $default_nav_color; ?>)</th>
+  <td valign="middle"><input type="Text" name="nav_color" value="<?php echo $forum["nav_color"]; ?>" size="10" class="TEXT" /></td>
 </tr>
 <tr>
-  <th valign="middle">Navigation Font Color:<br><font size="-2">Leave blank for default. (<?php echo $default_nav_font_color; ?>)</th>
-  <td valign="middle"><input type="Text" name="nav_font_color" value="<?php echo $forum["nav_font_color"]; ?>" size="10" class="TEXT"></td>
+  <th valign="middle">Navigation Font Color:<br /><font size="-2">Leave blank for default. (<?php echo $default_nav_font_color; ?>)</th>
+  <td valign="middle"><input type="Text" name="nav_font_color" value="<?php echo $forum["nav_font_color"]; ?>" size="10" class="TEXT" /></td>
 </tr>
 
 <?php if(!$forum["folder"]){ ?>
@@ -179,7 +179,7 @@ while ($file) {
 </tr>
 <tr>
   <th valign="middle">Messages Per Page:</th>
-  <td valign="middle"><input type="Text" name="display" value="<?php echo $forum["display"]; ?>" size="10" class="TEXT"></td>
+  <td valign="middle"><input type="Text" name="display" value="<?php echo $forum["display"]; ?>" size="10" class="TEXT" /></td>
 </tr>
 <tr>
   <th valign="middle">Thread Type:</th>
@@ -189,7 +189,7 @@ while ($file) {
 <option value="2" <?php if($forum["multi_level"]==2) echo "selected"; ?>>Float to Top</option>
 </select></td>
 </tr>
-<b><br>
+<strong><br />
 <tr>
   <th valign="middle">Thread Display:</th>
   <td valign="middle"><select name="collapsed">
@@ -207,45 +207,24 @@ while ($file) {
 <tr>
   <th valign="middle">Show Users IP/Host:</th>
   <td valign="middle"><select name="showip" class=big>
-<option value="0" <?php if($forum["showip"]==0) echo "selected"; ?>>Off</option>
-<option value="1" <?php if($forum["showip"]==1) echo "selected"; ?>>On</option>
+<option value="0" <?php if($forum["showip"]==0) echo "selected"; ?>>Never</option>
+<option value="1" <?php if($forum["showip"]==1) echo "selected"; ?>>Always</option>
+<option value="2" <?php if($forum["showip"]==2) echo "selected"; ?>>Anonymous Posts only</option>
 </select></td>
 </tr>
 <tr>
-  <th valign="middle">HTML Settings:</th>
-  <td valign="middle">
-<?php
-  if($forum["html"]=="Y"){
-    $html_all=1;
-    $html_style=0;
-    $html_font=0;
-    $html_li=0;
-    $html_img=0;
-    $html_a=0;
-  }
-  else{
-    strstr($forum["html"], "|i|")   ? $html_style=1 : $html_style=0;
-    strstr($forum["html"], "font")  ? $html_font=1  : $html_font=0;
-    strstr($forum["html"], "ul")  ? $html_li=1    : $html_li=0;
-    strstr($forum["html"], "img") ? $html_img=1   : $html_img=0;
-    strstr($forum["html"], "a")    ? $html_a=1     : $html_a=0;
-  }
-?>
-<table cellspacing="0" cellpadding="2" border="0">
-<tr>
-    <td><input type="checkbox" name="html_all" value="1" <?php if($html_all==1) echo "checked"; ?>> Allow All</td>
-    <td><input type="checkbox" name="html_style" value="1" <?php if($html_style==1) echo "checked"; ?>> Bold, Italic, Underline</td>
+  <th valign="middle">Allow Email-Notification for anonymous Posters:</th>
+  <td valign="middle"><select name="emailnotification" class=big>
+<option value="0" <?php if($forum["emailnotification"]==0) echo "selected"; ?>>Off</option>
+<option value="1" <?php if($forum["emailnotification"]==1) echo "selected"; ?>>On</option>
+</select></td>
 </tr>
 <tr>
-    <td><input type="checkbox" name="html_font" value="1" <?php if($html_font==1) echo "checked"; ?>> Fonts</td>
-    <td><input type="checkbox" name="html_li" value="1" <?php if($html_li==1) echo "checked"; ?>> Lists (ul,ol,li)</td>
-</tr>
-<tr>
-    <td><input type="checkbox" name="html_img" value="1" <?php if($html_img==1) echo "checked"; ?>> Images</td>
-    <td><input type="checkbox" name="html_a" value="1" <?php if($html_a==1) echo "checked"; ?>> Anchors (Links)</td>
-</tr>
-</table>
-</td>
+  <th valign="middle">Phorum Code:</th>
+  <td valign="middle"><select name="allow_html" class=big>
+<option value="0" <?php if($forum["html"]==0 || $forum["allow_html"]=="") echo "selected"; ?>>Off</option>
+<option value="1" <?php if($forum["html"]!=0) echo "selected"; ?>>On</option>
+</select> See docs/usage.txt</td>
 </tr>
 <tr>
   <td colspan="2" valign="middle" bgcolor="#000000">&nbsp;</td>
@@ -256,17 +235,17 @@ while ($file) {
   if($AllowAttachments){
 ?>
   <td valign="middle">
-  <input type="radio" name="allow_uploads" value="Y" <?php if ($forum["allow_uploads"] == 'Y') echo "checked"; ?>>Yes
-  <input type="radio" name="allow_uploads" value="N" <?php if ($forum["allow_uploads"] == 'N') echo "checked"; ?>>No
+  <input type="radio" name="allow_uploads" value="Y" <?php if ($forum["allow_uploads"] == 'Y') echo "checked"; ?> />Yes
+  <input type="radio" name="allow_uploads" value="N" <?php if ($forum["allow_uploads"] == 'N') echo "checked"; ?> />No
   </td>
 <?php
   }
   else{
 ?>
   <td rowspan="4" valign="middle">
-  <input type="hidden" name="allow_uploads" value="N">
-  <input type="hidden" name="upload_size" value="">
-  To use these features turn on<br>
+  <input type="hidden" name="allow_uploads" value="N" />
+  <input type="hidden" name="upload_size" value="" />
+  To use these features turn on<br />
   attachments in the <a href="?page=attachments">Phorum Setup</a>.
 <?php
   }
@@ -275,7 +254,7 @@ while ($file) {
 <tr>
   <th valign="middle">Attachment Size Limit<?php if(!empty($AttachmentSizeLimit)) echo " (max: ".$AttachmentSizeLimit."k)"; ?>:</td>
 <?php if($AllowAttachments){ ?>
-  <td valign="middle"><input type="Text" name="upload_size" value="<?php echo $forum["upload_size"]; ?>" size="10" class="TEXT"></td>
+  <td valign="middle"><input type="Text" name="upload_size" value="<?php echo $forum["upload_size"]; ?>" size="10" class="TEXT" /></td>
 <?php } ?>
 </tr>
 <tr>
@@ -308,7 +287,7 @@ while ($file) {
       ?></tr></table><?php
     }
     else{
-      ?>There are no file types listed in the<br><A HREF="?page=attachments">Phorum Setup</a>.  Therefore all will<br>be allowed.<?php
+      ?>There are no file types listed in the<br /><a HREF="?page=attachments">Phorum Setup</a>.  Therefore all will<br />be allowed.<?php
     }
   ?>
   </td>
@@ -317,7 +296,7 @@ while ($file) {
 <tr>
   <th valign="middle">Maximum # of Attachments<?php if(!empty($MaximumNumberAttachments)) echo " (max: ".$MaximumNumberAttachments.")"; ?>:</td>
 <?php if($AllowAttachments){ ?>
-  <td valign="middle"><input type="Text" name="max_uploads" value="<?php echo $forum["max_uploads"]; ?>" size="10" class="TEXT"></td>
+  <td valign="middle"><input type="Text" name="max_uploads" value="<?php echo $forum["max_uploads"]; ?>" size="10" class="TEXT" /></td>
 <?php } ?>
 </tr>
 <tr>
@@ -325,20 +304,20 @@ while ($file) {
 </tr>
 <tr>
   <th valign="middle">Email All Posts To:</th>
-  <td valign="middle"><input type="Text" name="email_list" value="<?php echo $forum["email_list"]; ?>" size="25" class="TEXT"></td>
+  <td valign="middle"><input type="Text" name="email_list" value="<?php echo $forum["email_list"]; ?>" size="25" class="TEXT" /></td>
 </tr>
 <tr>
   <th valign="middle">Return Email Address:</th>
-  <td valign="middle"><input type="Text" name="email_return" value="<?php echo $forum["email_return"]; ?>" size="25" class="TEXT"></td>
+  <td valign="middle"><input type="Text" name="email_return" value="<?php echo $forum["email_return"]; ?>" size="25" class="TEXT" /></td>
 </tr>
 <tr>
   <th valign="middle">Email Subject Tag:</th>
-  <td valign="middle"><input type="Text" name="email_tag" value="<?php echo $forum["email_tag"]; ?>" size="25" class="TEXT"></td>
+  <td valign="middle"><input type="Text" name="email_tag" value="<?php echo $forum["email_tag"]; ?>" size="25" class="TEXT" /></td>
 </tr>
 <?php } ?>
 </td>
 </tr>
 </table>
 <p>
-<center><input type="Submit" name="submit" value="Update" class="BUTTON"></center>
+<center><input type="Submit" name="submit" value="Update" class="BUTTON" /></center>
 </form>

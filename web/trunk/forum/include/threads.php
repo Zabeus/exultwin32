@@ -6,12 +6,12 @@
 <table class="PhorumListTable" width="<?php echo $ForumTableWidth; ?>" cellspacing="0" cellpadding="0" border="0">
 <tr>
     <td class="PhorumListHeader" <?php echo bgcolor($ForumTableHeaderColor); ?>><FONT color="<?php echo $ForumTableHeaderFontColor; ?>">&nbsp;<?php echo $lTopics;?><img src="images/trans.gif" border=0 width=1 height=24 align="absmiddle"></font></td>
-    <td class="PhorumListHeader" <?php echo bgcolor($ForumTableHeaderColor); ?> width="150" nowrap><FONT color="<?php echo $ForumTableHeaderFontColor; ?>"><?php echo $lAuthor;?>&nbsp;</font></td>
+    <td class="PhorumListHeader" <?php echo bgcolor($ForumTableHeaderColor); ?> width="150" nowrap="nowrap"><FONT color="<?php echo $ForumTableHeaderFontColor; ?>"><?php echo $lAuthor;?>&nbsp;</font></td>
 <?php if ( !initvar("read") && $$phcollapse != 0) { ?>
-    <td class="PhorumListHeader" align="center" <?php echo bgcolor($ForumTableHeaderColor); ?> width="80" nowrap><FONT color="<?php echo $ForumTableHeaderFontColor; ?>"><?php echo $lReplies;?>&nbsp;</font></td>
-    <td class="PhorumListHeader" <?php echo bgcolor($ForumTableHeaderColor); ?> width="115" nowrap><FONT color="<?php echo $ForumTableHeaderFontColor; ?>"><?php echo $lLatest;?></font></td>
+    <td class="PhorumListHeader" align="center" <?php echo bgcolor($ForumTableHeaderColor); ?> width="80" nowrap="nowrap"><FONT color="<?php echo $ForumTableHeaderFontColor; ?>"><?php echo $lReplies;?>&nbsp;</font></td>
+    <td class="PhorumListHeader" <?php echo bgcolor($ForumTableHeaderColor); ?> width="115" nowrap="nowrap"><FONT color="<?php echo $ForumTableHeaderFontColor; ?>"><?php echo $lLatest;?></font></td>
 <?php }else{ ?>
-    <td class="PhorumListHeader" <?php echo bgcolor($ForumTableHeaderColor); ?> width="115" nowrap><FONT color="<?php echo $ForumTableHeaderFontColor; ?>"><?php echo $lDate;?></font></td>
+    <td class="PhorumListHeader" <?php echo bgcolor($ForumTableHeaderColor); ?> width="115" nowrap="nowrap"><FONT color="<?php echo $ForumTableHeaderFontColor; ?>"><?php echo $lDate;?></font></td>
 <?php } ?>
 </tr>
 <?php
@@ -39,12 +39,14 @@
     if(!empty($users[$message["userid"]])){
         $t_author=$users[$message["userid"]]["name"];
         if(isset($moderators[$message["userid"]])){
-            $t_author="<b>$t_author<b/>";
+            $t_subject="<strong>$t_subject</strong>";
+            $t_author="<strong>$t_author</strong>";
         }
     } else {
         $t_author=chop($message["author"]);
     }
     $t_datestamp = date_format($message["datestamp"]);
+    $t_flags = $message["threadflags"];
 
     if( ($$phcollapse != 0) && (!$read) ){
       $t_latest=date_format($trec["latest"]);
@@ -66,9 +68,9 @@
     }
 
     if(initvar("id")==$t_id && $read=true){
-      $t_subject = "<b>$t_subject</b>";
-      $t_author = "<b>$t_author</b>";
-      $t_datestamp = "<b>$t_datestamp</b>";
+      $t_subject = "<strong>$t_subject</strong>";
+      $t_author = "<strong>$t_author</strong>";
+      $t_datestamp = "<strong>$t_datestamp</strong>";
     }
     else{
       $t_subject="<a href=\"$read_page.$ext?f=$num&i=$t_id&t=$t_thread$GetVars\">$t_subject</a>";
@@ -107,18 +109,21 @@
       if($isnew){
         echo "<font class=\"PhorumNewFlag\">".$lNew."</font>";
       }
+      if($t_flags & FLG_FROZEN){
+       echo "<font class=\"PhorumFrozenFlag\">$lFrozen</font>";
+      }
     }
 
     echo "</td>\n";
-    echo '  <td class="PhorumListRow" width="150" '.$color.' nowrap><FONT color="'.$fcolor.'">'.$t_author.'&nbsp;</font></td>'."\n";
+    echo '  <td class="PhorumListRow" width="150" '.$color.' nowrap="nowrap"><FONT color="'.$fcolor.'">'.$t_author.'&nbsp;</font></td>'."\n";
     if( $$phcollapse != 0 && !$read ){
       $t_count=$trec["tcount"]-1;
       $trec=next($threads);
-      echo '  <td class="PhorumListRow" align="center" width="80" '.$color.' nowrap><FONT color="'.$fcolor.'" size=-1>'.$t_count."&nbsp;</font></td>\n";
-      echo '  <td class="PhorumListRow" width="120" '.$color.' nowrap><FONT color="'.$fcolor.'" size=-1>'.$t_latest."&nbsp;</font></td>\n";
+      echo '  <td class="PhorumListRow" align="center" width="80" '.$color.' nowrap="nowrap"><FONT color="'.$fcolor.'" size=-1>'.$t_count."&nbsp;</font></td>\n";
+      echo '  <td class="PhorumListRow" width="120" '.$color.' nowrap="nowrap"><FONT color="'.$fcolor.'" size=-1>'.$t_latest."&nbsp;</font></td>\n";
     }
     else{
-      echo '  <td class="PhorumListRow" width="120" '.$color.' nowrap><FONT color="'.$fcolor.'" size=-1>'.$t_datestamp.'&nbsp;</font></td>'."\n";
+      echo '  <td class="PhorumListRow" width="120" '.$color.' nowrap="nowrap"><FONT color="'.$fcolor.'" size=-1>'.$t_datestamp.'&nbsp;</font></td>'."\n";
     }
     echo "</tr>\n";
     $x++;

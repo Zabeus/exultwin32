@@ -14,7 +14,7 @@
   }
 ?>
 <center class="nav"><?php echo $nav; ?></center>
-<table border="0" cellspacing="0" cellpadding="3" class="box-table">
+<table align="center" border="0" cellspacing="0" cellpadding="3" class="box-table">
 <tr>
     <td colspan="2" align="center" class="table-header"><?php echo $ForumName; ?></td>
 </tr>

@@ -23,6 +23,8 @@
     exit;
   }
 
+  include "$include_path/read_functions.php";
+
   /////////////////////////////////////////////////////////////////
   // build the search terms array
   // this will build the array to pass to build_sql()
@@ -90,7 +92,7 @@
         reset($fields);
         unset($likeArray);
         while (list ($key, $val) = each ($fields)) {
-          $term=str_replace("'", "\\'", $term);
+          $term=addslashes($term);
           if(strstr($DB->type, "postgresql")){
             $likeArray[]=" upper($val) $notmod"."~~ upper('%$term%') ";
           }
@@ -160,11 +162,11 @@
     // Log Out/Log In
     if($ForumSecurity){
       if(!empty($phorum_auth)){
-        addnav($menu, $lLogOut, "login.$ext?logout=1");
+        addnav($menu, $lLogOut, "login.$ext?logout=1$GetVars");
         addnav($menu, $lMyProfile, "profile.$ext?f=$f&id=$phorum_user[id]$GetVars");
       }
       else{
-        addnav($menu, $lLogIn, "login.$ext");
+        addnav($menu, $lLogIn, "login.$ext?f=$f$GetVars");
       }
     }
 
@@ -190,7 +192,10 @@
           $SQL.=" id in (".implode(",", $searchforums).")";
         }
         else{
-          $SQL.=" active=1 or id=$num";
+          $SQL.=" (active=1 or id=$num)";
+        }
+        if(empty($phorum_auth)){
+          $SQL.=" and security!=".SEC_ALL;
         }
         $q->query($DB, $SQL);
         $row = $q->getrow();
@@ -220,25 +225,28 @@
           $row=0;
         }
       }
-      $q->free();
+
+      if($globalsearch){
+        $q->free();
+      }
+
 
       $winner=1;
       $MessagesCopied=0;
       $MessagesMatched=0;
       while($MessagesCopied<$ForumDisplay && $winner!=0){
         $winner=0;
-        $current=reset($results);
+        reset($results);
         $highdate="";
-        while(is_object($current)){
-          $forum=key($results);
-          if(!empty($results[$forum]->row)){
-            if($results[$forum]->field("datestamp")>$highdate){
-              $highdate=$results[$forum]->field("datestamp");
+        while(list($forum, $res)=each($results)){
+          if(!empty($res->row)){
+            if($res->field("datestamp")>$highdate){
+              $highdate=$res->field("datestamp");
               $winner=$forum;
             }
           }
-          $current=next($results);
         }
+
         if($winner!=0){
           $MessagesMatched++;
           if($MessagesMatched>=$start){
@@ -248,6 +256,10 @@
             $messages["$row[datestamp]-$winner-$row[id]"]=$row;
           }
           $results[$winner]->getrow();
+          // if these match then there are no more rows in this result.
+          if(empty($results[$winner]->row["id"]) || $row["id"]==$results[$winner]->row["id"]){
+            unset($results[$winner]);
+          }
         }
       }
 
@@ -256,19 +268,14 @@
 
   $sTitle=" ".strtolower($lSearch);
 
-  if(file_exists("$include_path/header_$ForumConfigSuffix.php")){
-    include "$include_path/header_$ForumConfigSuffix.php";
-  }
-  else{
-    include "$include_path/header.php";
-  }
+  include phorum_get_file_name("header");
 ?>
 <?php
   if(@is_array($terms)){
 ?>
 <table width="<?php echo $ForumTableWidth; ?>" border="0" cellspacing="0" cellpadding="3">
   <tr>
-    <td <?php echo bgcolor($ForumNavColor); ?> valign="TOP" nowrap><font color="<?php echo $ForumNavFontColor; ?>"><?php echo $TopLeftNav; ?></font></td>
+    <td <?php echo bgcolor($ForumNavColor); ?> valign="TOP" nowrap="nowrap"><font color="<?php echo $ForumNavFontColor; ?>"><?php echo $TopLeftNav; ?></font></td>
   </tr>
 </table>
 <table class="PhorumListTable" width="<?php echo $ForumTableWidth; ?>" cellspacing="0" cellpadding="4" border="0">
@@ -276,14 +283,14 @@
     <?php
       $end=count($messages)+$start-1;
       if($end>0){
-        $range="$start-$end of $totalFound";
+        $range="$start-$end $lOf $totalFound";
       }
       else{
         $range="";
       }
 
     ?>
-    <td <?php echo bgcolor($ForumTableHeaderColor); ?> valign="TOP" nowrap><font color="<?php echo $ForumTableHeaderFontColor; ?>"  class="PhorumTableHeader">&nbsp;<?php echo "$lSearchResults: $range";?></font></td>
+    <td <?php echo bgcolor($ForumTableHeaderColor); ?> valign="TOP" nowrap="nowrap"><font color="<?php echo $ForumTableHeaderFontColor; ?>"  class="PhorumTableHeader">&nbsp;<?php echo "$lSearchResults: $range";?></font></td>
   </tr>
 <?php
     $bgcolor=bgcolor($ForumTableBodyColor1);
@@ -296,15 +303,10 @@
         if(!isset($top_id)){
           $top_id=$message["id"];
         }
-        $text=chop(substr($message["body"], 0, 200));
-        if(function_exists("strip_tags")){
-          $text=strip_tags($text);
-        }
-        else{
-          $text=ereg_replace("<[^>]*>", "", $text);
-          $text=ereg_replace("^<[^>]*>", "", $text);
-          $text=ereg_replace("<[^>]*>$", "", $text);
-        }
+        $text=format_body($message["body"]);
+        $text=chop(substr($text, 0, 200));
+        $text=strip_tags($text);
+        $text=str_replace(PHORUM_SIG_MARKER, "", $text);
         $link="$read_page.$ext?f=$message[forum]&i=$message[id]&t=$message[thread]$GetVars";
         $subject=chop($message["subject"]);
         $author=chop($message["author"]);
@@ -313,15 +315,15 @@
         echo "<tr><td $bgcolor>\n";
         echo "<table width=\"100%\" cellpadding=\"4\" cellspacing=\"0\">\n";
         echo "  <tr>\n";
-        echo "    <td width=\"5%\" nowrap $bgcolor><b>&nbsp;$count.</b></td>\n";
-        echo "    <td width=\"47%\" $bgcolor><a href=\"$link\"><b>$subject</b></a></td>\n";
+        echo "    <td width=\"5%\" nowrap=\"nowrap\" $bgcolor><strong>&nbsp;$count.</strong></td>\n";
+        echo "    <td width=\"47%\" $bgcolor><a href=\"$link\"><strong>$subject</strong></a></td>\n";
         echo "    <td width=\"24%\" $bgcolor>$author&nbsp;&nbsp;&nbsp;</td>\n";
         echo "    <td width=\"24%\" $bgcolor>$datestamp</td>\n";
         echo "  </tr>\n";
         echo "</table>\n";
         echo "<blockquote>\n";
-        echo "<font class=\"PhorumMessage\">$text</font><br><br>\n";
-        echo "<B>$lBigForum: <A HREF=\"$list_page.$ext?f=$message[forum]$GetVars\">$forum</A></B>\n";
+        echo "<font class=\"PhorumMessage\">$text</font><br /><br />\n";
+        echo "<strong>$lBigForum: <a HREF=\"$list_page.$ext?f=$message[forum]$GetVars\">$forum</a></strong>\n";
         echo "</blockquote>\n";
         echo "</td></tr>\n";
         $last_id=$message["id"];
@@ -330,7 +332,7 @@
     }
     else{
       echo "<tr>\n";
-      echo "  <td nowrap $bgcolor><b>$lNoMatches</b></td>\n";
+      echo "  <td nowrap=\"nowrap\" $bgcolor><strong>$lNoMatches</strong></td>\n";
       echo "</tr>\n";
       $count = 0;
     }
@@ -349,39 +351,39 @@
     }
     if($prevmatch || $morematch){
       echo "<tr>\n  <td colspan=\"3\" $bgcolor>\n";
-      echo "<center><br><br><div class=nav><FONT color=\"$ForumNavFontColor\"><b>";
+      echo "<center><br /><br /><div class=nav><FONT color=\"$ForumNavFontColor\"><strong>";
       if($prevmatch) echo $prevmatch;
       if($prevmatch && $morematch) echo '&nbsp;&nbsp;|&nbsp;&nbsp;';
       if($morematch) echo $morematch;
-      echo "</font></div><br><br></center>\n";
+      echo "</font></div><br /><br /></center>\n";
       echo "  </td>\n</tr>\n";
     }
 
 ?>
 </table>
-<BR>
+<br />
 <?php
   }
 ?>
 <form action="<?php echo "$PHP_SELF"; ?>" method="GET">
 <?php echo $PostVars; ?>
-<input type="Hidden" name="f" value="<?php echo $num; ?>">
+<input type="hidden" name="f" value="<?php echo $num; ?>" />
 <table width="<?php echo $ForumTableWidth; ?>" border="0" cellspacing="0" cellpadding="3">
   <tr>
-    <td <?php echo bgcolor($ForumNavColor); ?> valign="TOP" nowrap><font color="<?php echo $ForumNavFontColor; ?>"><?php echo $TopLeftNav; ?></font></td>
+    <td <?php echo bgcolor($ForumNavColor); ?> valign="TOP" nowrap="nowrap"><font color="<?php echo $ForumNavFontColor; ?>"><?php echo $TopLeftNav; ?></font></td>
   </tr>
 </table>
 <table class="PhorumListTable" width="<?php echo $ForumTableWidth; ?>" border="0" cellspacing="0" cellpadding="2">
   <tr>
-    <td <?php echo bgcolor($ForumTableHeaderColor); ?> valign="TOP" nowrap><font color="<?php echo $ForumTableHeaderFontColor; ?>"  class="PhorumTableHeader">&nbsp;<?php echo $lSearch;?></font></td>
+    <td <?php echo bgcolor($ForumTableHeaderColor); ?> valign="TOP" nowrap="nowrap"><font color="<?php echo $ForumTableHeaderFontColor; ?>"  class="PhorumTableHeader">&nbsp;<?php echo $lSearch;?></font></td>
   </tr>
   <tr>
     <td align="CENTER" valign="MIDDLE" <?php echo bgcolor($ForumTableBodyColor2); ?>>
-    <br>
+    <br />
 <table cellspacing="0" cellpadding="2" border="0">
 <tr>
     <td align="right"><font color="<?php echo $ForumTableBodyFontColor2; ?>">&nbsp;&nbsp;<?php echo $lSearch;?>:&nbsp;&nbsp;</font></td>
-    <td><input type="Text" name="search" size="40" value="<?php echo $searchtext; ?>">&nbsp;<input type="Submit" value="<?php echo $lSearch;?>">&nbsp;&nbsp;</td>
+    <td><input type="Text" name="search" size="40" value="<?php echo $searchtext; ?>">&nbsp;<input type="Submit" value="<?php echo $lSearch;?>" />&nbsp;&nbsp;</td>
 </tr>
 <tr>
     <td align="right">&nbsp;</td>
@@ -389,10 +391,10 @@
 </tr>
 <tr>
     <td align="right">&nbsp;</td>
-    <td><font color="<?php echo $ForumTableBodyFontColor2; ?>"><input type="checkbox" name="fldauthor" value="1" <?php if($fldauthor==1)  echo "checked"; ?>> <?php echo $lAuthor; ?>&nbsp;&nbsp;&nbsp;<input type="checkbox" name="fldsubject" value="1" <?php if($fldsubject==1)  echo "checked"; ?>> <?php echo $lFormSubject; ?>&nbsp;&nbsp;&nbsp;<input type="checkbox" name="fldbody" value="1" <?php if($fldbody==1)  echo "checked"; ?>> <?php echo $lMessageBodies; ?>&nbsp;&nbsp;&nbsp;</font></td>
+    <td><font color="<?php echo $ForumTableBodyFontColor2; ?>"><input type="checkbox" name="fldauthor" value="1" <?php if($fldauthor==1)  echo "checked"; ?> /> <?php echo $lAuthor; ?>&nbsp;&nbsp;&nbsp;<input type="checkbox" name="fldsubject" value="1" <?php if($fldsubject==1)  echo "checked"; ?> /> <?php echo $lFormSubject; ?>&nbsp;&nbsp;&nbsp;<input type="checkbox" name="fldbody" value="1" <?php if($fldbody==1)  echo "checked"; ?> /> <?php echo $lMessageBodies; ?>&nbsp;&nbsp;&nbsp;</font></td>
 </tr>
 </table>
-</font><br></td>
+</font><br /></td>
 </td>
 </tr>
 </table>
@@ -400,19 +402,12 @@
 <p>
 <table class="PhorumListTable" width="<?php echo $ForumTableWidth; ?>" border="0" cellspacing="0" cellpadding="2">
   <tr>
-    <td <?php echo bgcolor($ForumTableHeaderColor); ?> valign="TOP" nowrap><font color="<?php echo $ForumTableHeaderFontColor; ?>" class="PhorumTableHeader">&nbsp;<?php echo $lSearchTips;?></font></td>
+    <td <?php echo bgcolor($ForumTableHeaderColor); ?> valign="TOP" nowrap="nowrap"><font color="<?php echo $ForumTableHeaderFontColor; ?>" class="PhorumTableHeader">&nbsp;<?php echo $lSearchTips;?></font></td>
   </tr>
   <tr>
-    <td width="<?php echo $ForumTableWidth; ?>" align="LEFT" valign="MIDDLE" <?php echo bgcolor($ForumTableBodyColor2); ?>><font color="<?php echo $ForumTableBodyFontColor2; ?>"><?php echo $lTheSearchTips;?><br></font></td>
+    <td width="<?php echo $ForumTableWidth; ?>" align="LEFT" valign="MIDDLE" <?php echo bgcolor($ForumTableBodyColor2); ?>><font color="<?php echo $ForumTableBodyFontColor2; ?>"><?php echo $lTheSearchTips;?><br /></font></td>
   </tr>
 </table>
 <?php
-
-  if(file_exists("$include_path/footer_$ForumConfigSuffix.php")){
-    include "$include_path/footer_$ForumConfigSuffix.php";
-  }
-  else{
-    include "$include_path/footer.php";
-  }
-
+  include phorum_get_file_name("footer");
 ?>

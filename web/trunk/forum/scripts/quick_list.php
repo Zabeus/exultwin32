@@ -23,7 +23,7 @@
   $q->query($DB, $SQL);
   $rec=$q->getrow();
   while(is_array($rec)){
-    echo "<a href=\"$forum_url/$read_page.$ext?f=$num&i=$rec[id]&t=$rec[thread]\">$rec[subject]</a><br>\n";
+    echo "<a href=\"$forum_url/$read_page.$ext?f=$num&i=$rec[id]&t=$rec[thread]\">$rec[subject]</a><br />\n";
     $rec=$q->getrow();
   }
 ?>

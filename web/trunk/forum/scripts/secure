@@ -13,9 +13,8 @@ if [ ! -f common.php ]; then
   exit
 fi
 
-PHCONFIG="./admin/settings"
-PHCONFIGMOD="N"
 PHADMIN="admin"
+PHCONFIGMOD="N"
 PHADMINMOD="N"
 PHHTACCESS="n"
 PHFILECHMOD="606"
@@ -26,15 +25,6 @@ echo "This script will help you secure your Phorum.  Please answer the"
 echo "following questions."
 echo
 
-echo "It is a good idea to move the settings dir out"
-echo "of the web tree.  You may enter any path you like below."
-echo
-echo -n "Phorum settings path [$PHCONFIG]: "; read
-if [ "$REPLY" != "" -a "$REPLY" != "$PHCONFIG" ]; then
-  PHCONFIG=$REPLY
-  PHCONFIGMOD="Y"
-fi
-
 echo
 echo "Renaming the admin directory is also a simple"
 echo "way to keep out intruders."
@@ -43,6 +33,17 @@ echo -n "New admin directory name [$PHADMIN]: "; read
 if [ "$REPLY" != "" -a "$REPLY" != "$PHADMIN" ]; then
   PHADMIN=$REPLY
   PHADMINMOD="Y"
+fi
+
+PHCONFIG="$PHADMIN/settings"
+
+echo "It is a good idea to move the settings dir out"
+echo "of the web tree.  You may enter any path you like below."
+echo
+echo -n "Phorum settings path [$PHCONFIG]: "; read
+if [ "$REPLY" != "" -a "$REPLY" != "$PHCONFIG" ]; then
+  PHCONFIG=$REPLY
+  PHCONFIGMOD="Y"
 fi
 
 echo
@@ -79,22 +80,24 @@ fi
 
 echo
 echo "Securing Phorum...."
-if [ $PHCONFIGMOD = "Y" ]; then
+
+if [ $PHADMINMOD = "Y" ]; then
+  echo "Moving the admin dir..."
+  mv admin $PHADMIN
+fi
+
+if [ $PHCONFIGMOD = "Y" -o $PHADMINMOD = "Y" ]; then
   CMD="mkdir -p $PHCONFIG"
   echo $CMD
   $CMD
   echo "Moving the settings dir..."
-  mv ./admin/settings/* $PHCONFIG
+  mv $PHADMIN/settings/* $PHCONFIG
   cp common.php common2.php
   echo "Updating common.php..."
   sed s%\$settings_dir=\"./admin/settings%\$settings_dir=\"$PHCONFIG% common2.php > common.php
   rm -rf common2.php
 fi
 
-if [ $PHADMINMOD = "Y" ]; then
-  echo "Moving the admin dir..."
-  mv admin $PHADMIN
-fi
 
 echo "Setting file permissions..."
 chmod $PHDIRCHMOD $PHCONFIG

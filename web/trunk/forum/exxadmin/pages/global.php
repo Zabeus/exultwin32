@@ -1,7 +1,7 @@
 <?php check_security(); ?>
 <form action="<?php echo $myname; ?>" method="POST">
-<input type="Hidden" name="page" value="setup">
-<input type="Hidden" name="action" value="global">
+<input type="hidden" name="page" value="setup" />
+<input type="hidden" name="action" value="global" />
   <table border="0" cellspacing="0" cellpadding="3" class="box-table">
     <tr>
       <td colspan="2" align="center" valign="middle" class="table-header">Global Settings</td>
@@ -9,19 +9,19 @@
     <tr>
       <th valign="middle">Default Messages Per Page:</th>
       <td valign="middle">
-        <input type="Text" name="new_DefaultDisplay" value="<?php echo $DefaultDisplay; ?>" size="10" style="width: 200px;" class="TEXT">
+        <input type="Text" name="new_DefaultDisplay" value="<?php echo $DefaultDisplay; ?>" size="10" style="width: 200px;" class="TEXT" />
       </td>
     </tr>
     <tr>
       <th valign="middle">Default Email:</th>
       <td valign="middle">
-        <input type="Text" name="new_DefaultEmail" value="<?php echo $DefaultEmail; ?>" size="10" style="width: 200px;" class="TEXT">
+        <input type="Text" name="new_DefaultEmail" value="<?php echo $DefaultEmail; ?>" size="10" style="width: 200px;" class="TEXT" />
       </td>
     </tr>
     <tr>
       <th valign="middle">PhorumMail Code:</th>
       <td valign="middle">
-        <input type="Text" name="new_PhorumMailCode" value="<?php echo $PhorumMailCode; ?>" size="10" style="width: 200px;" class="TEXT">
+        <input type="Text" name="new_PhorumMailCode" value="<?php echo $PhorumMailCode; ?>" size="10" style="width: 200px;" class="TEXT" />
       </td>
     </tr>
     <tr>
@@ -91,6 +91,6 @@ echo '          <option value="'.$x.'"'.($x==$TimezoneOffset?' selected':'').'>'
       </td>
     </tr>
   </table>
-<br>
-<center><input type="Submit" name="submit" value="Update" class="BUTTON"></center>
+<br />
+<center><input type="Submit" name="submit" value="Update" class="BUTTON" /></center>
 </form>

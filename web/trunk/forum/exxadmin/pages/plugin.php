@@ -33,7 +33,7 @@ if(@$do == "props" && !empty($plugin)){
         unset($pluginname); unset($plugindesc); unset($pluginversion);
         include("./plugin/$plugindirname/info.php");
         if(isset($pluginname) && isset($plugindesc) && isset($pluginversion)) {
-          echo "<tr><td align=\"left\" valign=\"middle\" bgcolor=\"#FFFFFF\"><b>$pluginname v$pluginversion<br>$plugindesc</td>";
+          echo "<tr><td align=\"left\" valign=\"middle\" bgcolor=\"#FFFFFF\"><strong>$pluginname v$pluginversion<br />$plugindesc</td>";
           echo "<td align=\"left\" valign=\"middle\" bgcolor=\"#FFFFFF\">";
           if(file_exists("./plugin/$plugindirname/admin.php")){
               echo "<a href=\"$myname?page=plugin&plugin=$plugindirname&do=props\">Properties</a> | ";

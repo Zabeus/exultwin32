@@ -26,8 +26,8 @@
       $sSQL = "Select max(id) as m_id from ".$pho_main;
       $q->query($DB, $sSQL);
       if ($q->error()) {
-        print "Problem accessing or creating main forums table (".$pho_main."). Exiting upgrade. <BR>\n";
-        print "Did you enter your database settings using the admin interface under Phorum Setup->Database Settings?<BR>\n";
+        print "Problem accessing or creating main forums table (".$pho_main."). Exiting upgrade. <br />\n";
+        print "Did you enter your database settings using the admin interface under Phorum Setup->Database Settings?<br />\n";
         exit();
       }
     }

@@ -13,9 +13,9 @@
   function echo_data($image, $topic, $row_color){
     global $ForumTableWidth,$ForumTableHeaderColor,$ForumTableHeaderFontColor;
     global $ForumTableBodyColor1,$ForumTableBodyFontColor1,$ForumTableBodyColor2,$ForumTableBodyFontColor2;
-    global $read_page,$ext,$collapse,$id,$UseCookies;
+    global $read_page,$ext,$collapse,$id,$UseCookies,$phflat,$$phflat;
     global $space_gif,$num,$old_message,$haveread,$use_haveread;
-    global $lNew, $GetVars, $users, $moderators;
+    global $lNew, $lFrozen, $GetVars, $users, $moderators;
     $thread_total="";
 
     if(($row_color%2)==0){
@@ -35,7 +35,8 @@
     if(!empty($users[$topic["userid"]])){
         $author=$users[$topic["userid"]]["name"];
         if(isset($moderators[$topic["userid"]])){
-            $author="<b>$author<b/>";
+            $subject="<strong>$subject</strong>";
+            $author="<strong>$author</strong>";
         }
     } else {
         $author=chop($topic["author"]);
@@ -44,13 +45,17 @@
     $datestamp = date_format($topic["datestamp"]);
 
     if($id==$topic["id"] && $read=true){
-        $subject .= "<b>".$topic["subject"]."</b>";
-        $author = "<b>".$author."</b>";
-        $datestamp = "<b>".$datestamp."</b>";
+        $subject .= "<strong>".$topic["subject"]."</strong>";
+        $author = "<strong>".$author."</strong>";
+        $datestamp = "<strong>".$datestamp."</strong>";
     }
     else{
         $subject.="<a href=\"$read_page.$ext?f=$num&i=".$topic["id"];
-        $subject.="&t=".$topic["thread"]."$GetVars\">".$topic["subject"]."</a>";
+	$reply_name='';
+	if ($$phflat) {
+	  $reply_name="#reply_".$topic["id"];
+	}
+        $subject.="&t=".$topic["thread"]."$GetVars$reply_name\">".$topic["subject"]."</a>";
     }
 
     $subject.="&nbsp;&nbsp;</font>";
@@ -68,14 +73,18 @@
       if($isnew){
         $subject.="<font class=\"PhorumNewFlag\">".$lNew."</font>";
       }
+      if(($topic["threadflags"] & FLG_FROZEN) && ($topic["parent"] == 0)) {
+       $subject.="<font class=\"PhorumFrozenFlag\">$lFrozen</font>";
+      }
+
     }
 
-    $subject.="</td>\n</tr>\n</TABLE>";
+    $subject.="</td>\n</tr>\n</table>";
 ?>
 <tr valign=middle>
 <td class="PhorumListRow" <?php echo bgcolor($bgcolor);?>><?php echo $subject;?></td>
-<td class="PhorumListRow" <?php echo bgcolor($bgcolor);?> nowrap><font color="<?php echo $font_color;?>"><?php echo $author;?></font></td>
-<td class="PhorumListRow" <?php echo bgcolor($bgcolor);?> nowrap><font color="<?php echo $font_color;?>"><?php echo $datestamp;?>&nbsp;</font></td>
+<td class="PhorumListRow" <?php echo bgcolor($bgcolor);?> nowrap="nowrap"><font color="<?php echo $font_color;?>"><?php echo $author;?></font></td>
+<td class="PhorumListRow" <?php echo bgcolor($bgcolor);?> nowrap="nowrap"><font color="<?php echo $font_color;?>"><?php echo $datestamp;?>&nbsp;</font></td>
 </tr>
 <?php
   }
@@ -188,10 +197,10 @@
 <table class="PhorumListTable" width="<?php echo $ForumTableWidth;?>" cellspacing="0" cellpadding="0" border="0">
 <tr>
     <td class="PhorumListHeader"<?php echo bgcolor($ForumTableHeaderColor);?>><font color="<?php echo $ForumTableHeaderFontColor; ?>">&nbsp;<?php echo $lTopics;?><img src="images/trans.gif" border="0" width=1 height=24 align="absmiddle"></font></td>
-    <td class="PhorumListHeader"<?php echo bgcolor($ForumTableHeaderColor);?> nowrap width=150><font color="<?php echo $ForumTableHeaderFontColor; ?>"><?php echo $lAuthor;?>&nbsp;</font></td>
-    <td class="PhorumListHeader"<?php echo bgcolor($ForumTableHeaderColor);?> nowrap width=150><font color="<?php echo $ForumTableHeaderFontColor; ?>"><?php echo $lDate;?></font></td>
+    <td class="PhorumListHeader"<?php echo bgcolor($ForumTableHeaderColor);?> nowrap="nowrap" width=150><font color="<?php echo $ForumTableHeaderFontColor; ?>"><?php echo $lAuthor;?>&nbsp;</font></td>
+    <td class="PhorumListHeader"<?php echo bgcolor($ForumTableHeaderColor);?> nowrap="nowrap" width=150><font color="<?php echo $ForumTableHeaderFontColor; ?>"><?php echo $lDate;?></font></td>
 </tr>
 <?php
   thread();
 ?>
-</TABLE>
+</table>

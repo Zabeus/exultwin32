@@ -49,7 +49,7 @@
     }
 
     // All the output is right here:
-    $data.="<a href=\"$url\">$forum_name</a> ($num_posts posts)<br>\n";
+    $data.="<a href=\"$url\">$forum_name</a> ($num_posts posts)<br />\n";
   }
 
   if($RETURN){

@@ -56,7 +56,7 @@
   // Check author against registration.
   // Returns true if ok, false if bad.
   function check_register($author) {
-    global $phorum_auth, $q, $DB, $pho_main;
+    global $phorum_auth, $q, $DB, $pho_main, $ForumSecurity;
     $ret=true;
     if($ForumSecurity!=SEC_NONE && empty($phorum_auth)){
       $SQL="Select id from $pho_main"."_auth where name = '$author'";
@@ -191,6 +191,36 @@
     return(array($author, $subject, $email, $body));
   }
 
+  // Checks data fo censored words.
+  // Returns boolean.
+  function censor_check($var) {
+    global $include_path, $ForumConfigSuffix;
+    if(file_exists("$include_path/censor_$ForumConfigSuffix.php")){
+      include "$include_path/censor_$ForumConfigSuffix.php";
+    } else {
+      include "$include_path/censor.php";
+    }
+
+    if(!is_array($var)) $var=array($var);
+
+    while (list(, $field) = each($var)) {
+      if (is_array($profan)) {
+        reset($profan);
+        while (list(, $sWord) = each($profan)) {
+          if(strstr(strtoupper($field), strtoupper($sWord))){
+            if(strtoupper($field)==strtoupper($sWord) ||
+               eregi("^$sWord([^a-zA-Z])", $field) ||
+               eregi("([^a-zA-Z])$sWord$", $field) ||
+               eregi("([^a-zA-Z])($sWord)([^a-zA-Z])", $field)){
+              return true;
+            }
+          }
+        }
+      }
+    }
+    return false;
+  }
+
 
   // Check for duplicate message.
   // Returns true if dup, false if unique.
@@ -224,13 +254,21 @@
 
 
   // checks that the parent of a posted message still exists
-  function check_parent($parent){
+  // if $checkfrozen also check if parent is frozen
+  function check_parent($parent, $checkfrozen){
+    global $threadflags;
     if(!$parent) return true;
     global $ForumTableName, $q, $DB;
     $ret=false;
-    $SQL="Select id from $ForumTableName where id=$parent";
+    $SQL="Select id,threadflags from $ForumTableName where id=$parent";
     $q->query($DB, $SQL);
-    if($q->numrows()>0) $ret=true;
+    if($q->numrows()>0) {
+      $rec=$q->getrow();
+      $threadflags = $rec["threadflags"];
+      if(!($threadflags & FLG_FROZEN) || !$checkfrozen) {
+        $ret=true;
+      }
+    }
     return $ret;
   }
 
@@ -239,8 +277,9 @@
   function post_to_database() {
     global $q, $DB, $ForumTableName, $ForumModeration, $phorum_user, $phorum_auth;
     global $ForumModEmail, $ForumName, $PhorumMailCode, $PhorumMail;
-    global $phorumver, $SERVER_NAME;
+    global $phorumver, $SERVER_name;
     global $thread, $subject, $inreplyto, $parent, $author, $body, $email;
+    global $threadflags;
     global $image, $datestamp, $host, $email_reply, $attachment_name, $msgid;
     global $plain_author, $plain_subject, $plain_body;
     global $admin_url, $admin_page, $forum_url, $read_page, $ext, $num, $id, $PHORUM;
@@ -301,7 +340,7 @@
     $sSQL = "Insert Into $ForumTableName"."_bodies (id, body, thread) values ($id, '$body', $thread)";
     $q->query($DB, $sSQL);
     if($err=$q->error()){
-      echo($err."<br>$sSQL");
+      echo($err."<br />$sSQL");
     }
 
     if($DB->type=="mysql"){
@@ -311,7 +350,7 @@
         $sSQL = "Update $ForumTableName"."_bodies SET thread = id WHERE id = $id";
         $q->query($DB, $sSQL);
         if($err=$q->error()){
-          echo($err."<br>$sSQL");
+          echo($err."<br />$sSQL");
         }
       }
     }
@@ -322,32 +361,41 @@
       }
     }
 
-    switch($ForumModeration){
-      case 'a':
-        $email_mod=true;
-        $approved='N';
-        break;
-      case 'r':
-        $email_mod=true;
+    // if this is a moderator, approve it.
+    if($phorum_user["moderator"]){
         $approved='Y';
-        break;
-      default:
         $email_mod=false;
-        $approved='Y';
-        break;
+    } else {
+        switch($ForumModeration){
+          case 'a':
+            $email_mod=true;
+            $approved='N';
+            break;
+          case 'r':
+            $email_mod=true;
+            $approved='Y';
+            break;
+          default:
+            $email_mod=false;
+            $approved='Y';
+            break;
+        }
     }
 
-    $sSQL = "Insert Into $ForumTableName (id, author, userid, email, datestamp, subject, host, thread, parent, email_reply, approved, msgid) values ('$id', '$author', '$phorum_user[id]', '$email', '$datestamp', '$subject', '$host', '$thread', '$parent', '$email_reply', '$approved', '$msgid')";
+
+    $userid = (isset($phorum_user["id"])) ? $phorum_user["id"] : 0;
+
+    $sSQL = "Insert Into $ForumTableName (id, author, userid, email, datestamp, subject, host, thread, parent, email_reply, approved, msgid, threadflags) values ('$id', '$author', '$userid', '$email', '$datestamp', '$subject', '$host', '$thread', '$parent', '$email_reply', '$approved', '$msgid', '$threadflags')";
     $q->query($DB, $sSQL);
     if($err=$q->error()){
-      echo($err."<br>$sSQL");
+      echo($err."<br />$sSQL");
     }
 
     $NOW=time();
     $sSQL = "UPDATE $ForumTableName SET modifystamp = $NOW WHERE thread = $thread";
     $q->query($DB, $sSQL);
     if($err=$q->error()){
-      echo($err."<br>$sSQL");
+      echo($err."<br />$sSQL");
     }
 
     if($email_mod==true){
@@ -364,10 +412,10 @@
       $ebody.="To edit this message use this URL:\n";
       $ebody.="$admin_url?page=edit&srcpage=easyadmin&id=$id&num=$num&mythread=$thread\n\n";
 
-      $SQL="Select b.email as email from ".$PHORUM['mod_table']." as a,".$PHORUM[auth_table]." as b where a.user_id=b.id and a.forum_id=$num";
+      $SQL="Select b.email as email from ".$PHORUM['mod_table']." as a,".$PHORUM['auth_table']." as b where a.user_id=b.id and a.forum_id=$num";
       $q->query($DB, $SQL);
       while($row=$q->getrow()) {
-         mail($row['email'], "Moderate for $ForumName at $SERVER_NAME Message: $id.", stripslashes($ebody), "From: Phorum <".$row['email'].">\nReturn-Path: <".$row['email'].">\nX-Phorum-$PhorumMailCode-Version: Phorum $phorumver");
+         mail($row['email'], "Moderate for $ForumName at $SERVER_name Message: $id.", stripslashes($ebody), "From: Phorum <".$row['email'].">\nReturn-Path: <".$row['email'].">\nX-Phorum-$PhorumMailCode-Version: Phorum $phorumver");
       }
 
     }
@@ -443,7 +491,7 @@
         }
       }
       // Only send to mailing list if NOT coming from PhorumMail!
-      if(!$PhorumMail && is_email($ForumEmailList) && is_email($ForumEmailReturnList)){
+      if(!$PhorumMail && is_email($ForumEmailList) && is_email($return)){
 //        mail("$ForumName <$ForumEmailList>", "$plain_subject [$num:$thread:$id]", $ebody, $headers);
         mail("$ForumName <$ForumEmailList>", $plain_subject, $ebody, $headers);
       }

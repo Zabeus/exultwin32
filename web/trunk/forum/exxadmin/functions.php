@@ -84,7 +84,7 @@
         $data.="    \$\$key=\$value;\n";
       }
       else{
-        $data.="    \$\$key=&\$PHORUM[\$key];\n";
+        $data.="    \$\$key=\$PHORUM[\$key];\n";
       }
       $data.="  }\n";
       $data.="\n";
@@ -111,6 +111,7 @@
           fclose($fp);
       } else {
           echo "Could not open file $PHORUM[settings].  Please check the file permissions.<br />";
+          exit();
       }
     }
 
@@ -121,9 +122,9 @@
       $rec=(object)$q->getrow();
       While(isset($rec->id)){
         if(!get_cfg_var("magic_quotes_runtime")){
-          $rec->name = str_replace("'", "\\'", $rec->name);
-          $rec->description = str_replace("'", "\\'", $rec->description);
-          $rec->staff_host = str_replace("'", "\\'", $rec->staff_host);
+          $rec->name = addslashes($rec->name);
+          $rec->description = addslashes($rec->description);
+          $rec->staff_host = addslashes($rec->staff_host);
         }
         $data ="<?php\n";
         $data.="  // $rec->name forum\n";
@@ -135,7 +136,7 @@
         $data.="  \$PHORUM['ForumFolder']='$rec->folder';\n";
         $data.="  \$PHORUM['ForumParent']='$rec->parent';\n";
         $data.="  \$PHORUM['ForumLang']='$rec->lang';\n";
-        if(empty($rec->folder)){
+        if(!$rec->folder){
           $data.="  \$PHORUM['ForumDisplay']='$rec->display';\n";
           $data.="  \$PHORUM['ForumTableName']='$rec->table_name';\n";
           $data.="  \$PHORUM['ForumModeration']='$rec->moderation';\n";
@@ -152,11 +153,12 @@
           $data.="  \$PHORUM['ForumUploadTypes']='$rec->upload_types';\n";
           $data.="  \$PHORUM['ForumUploadSize']='$rec->upload_size';\n";
           $data.="  \$PHORUM['ForumMaxUploads']='$rec->max_uploads';\n";
-          $var = (!empty($rec->table_body_color_2)) ? $rec->table_body_color_2 : $default_table_body_color_2;
-          $data.="  \$PHORUM['ForumTableBodyColor2']='$var';\n";
-          $var = (!empty($rec->table_body_font_color_2)) ? $rec->table_body_font_color_2 : $default_table_body_font_color_2;
-          $data.="  \$PHORUM['ForumTableBodyFontColor2']='$var';\n";
+          $var = (!empty($rec->table_body_color_2)) ? "'$rec->table_body_color_2'" : "\$PHORUM['default_table_body_color_2']";
+          $data.="  \$PHORUM['ForumTableBodyColor2']=$var;\n";
+          $var = (!empty($rec->table_body_font_color_2)) ? "'$rec->table_body_font_color_2'" : "\$PHORUM['default_table_body_font_color_2']";
+          $data.="  \$PHORUM['ForumTableBodyFontColor2']=$var;\n";
           $data.="  \$PHORUM['ForumShowIP']='$rec->showip';\n";
+      $data.="  \$PHORUM['ForumAllowEMailNotify']='$rec->emailnotification';\n";
         }
 
 
@@ -196,11 +198,11 @@
         $data.="\n";
         $data.="  // expand the array into vars for legacy code.\n";
         $data.="  while(list(\$key, \$value)=each(\$PHORUM)){\n";
-        if((int)phpversion()>3){
-          $data.="    \$\$key =& \$PHORUM[\$key];\n";
+        if((int)phpversion()<4){
+          $data.="    \$\$key=\$value;\n";
         }
         else{
-          $data.="    \$\$key=\$value;\n";
+          $data.="    \$\$key=\$PHORUM[\$key];\n";
         }
         $data.="  }\n";
 
@@ -210,6 +212,7 @@
             fclose($fp);
         } else {
             echo "Could not open file $PHORUM[settings_dir]/$rec->id.php.  Please check the file permissions.<br />";
+            exit();
         }
         $rec=(object)$q->getrow();
       }

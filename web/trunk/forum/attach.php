@@ -28,7 +28,6 @@
     exit;
   }
 
-
   // Error Checking.
   // We don't want to allow attachments if:
   //   the message was posted over 5 minutes ago.
@@ -98,8 +97,29 @@
       }
     }
 
+      if (@is_array($attachments)) {
+
+        while(list($key, $arr)=each($attachments)){
+          if(is_uploaded_file($arr["tmp_name"])){
+            $min_size=1024*min((int)$ForumUploadSize, (int)$AttachmentSizeLimit);
+            if (!ereg("^[-A-Za-z0-9_\.]+$", trim($arr["name"]))) {
+              $IsError="$lInvalidFile ($arr[name])";
+            }
+            elseif(!empty($ForumUploadTypes) && !strstr($ForumUploadTypes, strtolower(substr($arr["name"], strrpos($arr["name"], ".")+1)))){
+              $IsError=$lInvalidType.strtoupper(ereg_replace(";", " ", $ForumUploadTypes));
+            }
+            elseif($min_size>0  && $arr["size"]>$min_size){
+              $IsError=$lInvalidSize1.$arr["name"]."<br />".$lInvalidSize2.(string)min($ForumUploadSize, $AttachmentSizeLimit)."k";
+            }
+          }
+        }
+
+      }
+
+    reset($attachments);
+
     // Attachment handling:
-    if(!empty($attachments) && is_array($attachments)){
+    if(!empty($attachments) && is_array($attachments) && empty($IsError)){
       while(list($key, $attachment)=each($attachments)){
         if($attachment["name"])
           $IsError=add_attachment($attachment, $id);
@@ -122,12 +142,7 @@
     }
   }
 
-  if(file_exists("$include_path/header_$ForumConfigSuffix.php")){
-    include "$include_path/header_$ForumConfigSuffix.php";
-  }
-  else{
-    include "$include_path/header.php";
-  }
+  include phorum_get_file_name("header");
 
   //////////////////////////
   // START NAVIGATION     //
@@ -146,11 +161,11 @@
     // Log Out/Log In
     if($ForumSecurity){
       if(!empty($phorum_auth)){
-        addnav($menu, $lLogOut, "login.$ext?logout=1");
+        addnav($menu, $lLogOut, "login.$ext?logout=1$GetVars");
         addnav($menu, $lMyProfile, "profile.$ext?f=$f&id=$phorum_user[id]$GetVars");
       }
       else{
-        addnav($menu, $lLogIn, "login.$ext");
+        addnav($menu, $lLogIn, "login.$ext$GetVars");
       }
     }
 
@@ -160,8 +175,8 @@
   // END NAVIGATION       //
   //////////////////////////
 
-  if(isset($IsError) && $action){
-    echo "<p><b>$IsError</b>";
+  if(isset($IsError)){
+    echo "<p><strong>$IsError</strong>";
   }
 
 ?>
@@ -191,8 +206,8 @@
     } else {
 ?>
 <font class="PhorumMessage" color="<?php echo $ForumTableBodyFontColor1; ?>">
-<?php echo $lAuthor;?>:&nbsp;<?php echo $row["author"]; ?>&nbsp;(<?php echo $host; ?>)<br>
-<?php echo $lDate;?>:&nbsp;&nbsp;&nbsp;<?php echo $datestamp; ?><br><br>
+<?php echo $lAuthor;?>:&nbsp;<?php echo $row["author"]; ?>&nbsp;(<?php echo $host; ?>)<br />
+<?php echo $lDate;?>:&nbsp;&nbsp;&nbsp;<?php echo $datestamp; ?><br /><br />
 <?php echo format_body($row["body"]); ?>
 <?php
     }
@@ -205,10 +220,10 @@
 
 <?php if(!$noattach){ ?>
 <form action="<?php echo "$attach_page.$ext"; ?>" method="post" enctype="multipart/form-data">
-<input type="Hidden" name="t" value="<?php echo $row["thread"]; ?>">
-<input type="Hidden" name="f" value="<?php echo $num; ?>">
-<input type="Hidden" name="i" value="<?php echo $id; ?>">
-<input type="Hidden" name="post" value="1">
+<input type="hidden" name="t" value="<?php echo $row["thread"]; ?>" />
+<input type="hidden" name="f" value="<?php echo $num; ?>" />
+<input type="hidden" name="i" value="<?php echo $id; ?>" />
+<input type="hidden" name="post" value="1" />
 <?php echo $PostVars; ?>
 <table class="PhorumListTable" cellspacing="0" cellpadding="2" border="0" width="<?php echo $ForumTableWidth; ?>">
 <tr>
@@ -218,7 +233,7 @@
   if($count<$ForumMaxUploads){
     for($x=0;$x<$ForumMaxUploads-$count;$x++){
       echo "<tr>\n";
-      echo '    <td ' . bgcolor($ForumTableBodyColor1) . ' nowrap><font color="' . $ForumTableBodyFontColor1 . '">&nbsp;' . $lFormAttachment . ':</font></td>';
+      echo '    <td ' . bgcolor($ForumTableBodyColor1) . ' nowrap="nowrap"><font color="' . $ForumTableBodyFontColor1 . '">&nbsp;' . $lFormAttachment . ':</font></td>';
       echo '    <td ' . bgcolor($ForumTableBodyColor1) . ' width="100%"><input type="File" name="attachment_'.$x.'" size="30" maxlength="64"></td>';
       echo "</tr>\n";
     }
@@ -228,19 +243,14 @@
   }
 ?>
 <tr>
-    <td width="100%" colspan="2" align="RIGHT" <?php echo bgcolor($ForumTableBodyColor1); ?>><input type="Submit" name="post" value=" <?php echo $lFormPost;?> ">&nbsp;<br><img src="images/trans.gif" width=3 height=3 border=0></td>
+    <td width="100%" colspan="2" align="RIGHT" <?php echo bgcolor($ForumTableBodyColor1); ?>><input type="Submit" name="post" value=" <?php echo $lFormPost;?> ">&nbsp;<br /><img src="images/trans.gif" width=3 height=3 border=0></td>
 </tr>
 </table>
 </form>
 <?php
   }
 
-  if(file_exists("$include_path/footer_$ForumConfigSuffix.php")){
-    include "$include_path/footer_$ForumConfigSuffix.php";
-  }
-  else{
-    include "$include_path/footer.php";
-  }
+  include phorum_get_file_name("footer");
   exit();
 
 ?>

@@ -15,7 +15,7 @@
 //   You should have received a copy of the Phorum License                    //
 //   along with this program.                                                 //
 ////////////////////////////////////////////////////////////////////////////////
-// $Id: read.php,v 1.1 2002/01/10 16:05:43 fingolfin Exp $
+// $Id: read.php,v 1.2 2002/07/22 20:27:47 wjpalenstijn Exp $
 
   $read=true;
 
@@ -148,12 +148,15 @@
 
   $msg_list = new query($DB, $sSQL);
 
+  $threadflags = 0;
+
   $rec=$msg_list->getrow();
   $x=0;
   While(is_array($rec)){
     $headers[]=$rec;
     if($rec["id"]==$id) $loc=$x;
     if($ForumSecurity!=SEC_NONE && $rec["userid"]>0) $ids[]=$rec["userid"];
+    $threadflags = $rec["threadflags"];
     $rec=$msg_list->getrow();
     $x++;
   }
@@ -169,7 +172,7 @@
       $rec=$q->getrow();
     }
 
-    $SQL="select user_id from $pho_main"."_moderators where forum_id=$f and user_id in (".implode(",", $ids).")";
+    $SQL="select user_id from $pho_main"."_moderators where forum_id=$f or forum_id=0 and user_id in (".implode(",", $ids).")";
     $q->query($DB, $SQL);
     $rec=$q->getrow();
     While(is_array($rec)){
@@ -180,10 +183,7 @@
   }
 
   if ($$phflat) {
-    if ($admview==1) {
-      $sSQL = "Select * from $ForumTableName"."_bodies where thread=".$thread." ORDER BY id";
-    }
-    $sSQL = "SELECT $ForumTableName.id AS id, $ForumTableName.thread AS thread, body from $ForumTableName, ".$ForumTableName."_bodies WHERE $ForumTableName.approved = 'Y' AND $ForumTableName.thread = ".$thread." AND $ForumTableName.id = ".$ForumTableName."_bodies.id ORDER BY id";
+    $sSQL = "SELECT $ForumTableName.id AS id, $ForumTableName.thread AS thread, body FROM $ForumTableName, ".$ForumTableName."_bodies WHERE $ForumTableName.approved = 'Y' AND $ForumTableName.thread = ".$thread." AND $ForumTableName.id = ".$ForumTableName."_bodies.id ORDER BY id";
   } else {
     $sSQL = "Select * from $ForumTableName"."_bodies where id=".$id;
   }
@@ -278,70 +278,75 @@
   $rawsub=ereg_replace("</*b>", "", $subject);
   $title = " - ".$rawsub;
 
-  if(file_exists("$include_path/header_$ForumConfigSuffix.php")){
-    include "$include_path/header_$ForumConfigSuffix.php";
-  }
-  else{
-    include "$include_path/header.php";
-  }
+  include phorum_get_file_name("header");
 
   $toThread = $thread + 1;
 
-  //////////////////////////
+//////////////////////////
   // START NAVIGATION     //
   //////////////////////////
 
     $menu=array();
+
+    if(!$$phflat)
+      addnav($menu2, $lReplyMessage, "$read_page.$ext?f=$f&i=$id&t=$t$GetVars#REPLY");
+
     if($ActiveForums>1)
       // Forum List
-      addnav($menu, $lForumList, "$forum_page.$ext?f=$ForumParent$GetVars");
+      addnav($menu2, $lForumList, "$forum_page.$ext?f=$ForumParent$GetVars");
     // New Topic
-    addnav($menu, $lStartTopic, "$post_page.$ext?f=$num$GetVars");
+    addnav($menu1, $lStartTopic, "$post_page.$ext?f=$num$GetVars");
     // Go To Top
-    addnav($menu, $lGoToTop, "$list_page.$ext?f=$num$GetVars");
+    addnav($menu1, $lGoToTop, "$list_page.$ext?f=$num$GetVars");
+    addnav($menu2, $lGoToTop, "$list_page.$ext?f=$num$GetVars");
     // Go To Topic
     if ($ForumMultiLevel==2) {
       // Float to Top
-      addnav($menu, $lGoToTopic, "$list_page.$ext?f=$num&t=".$headers[0]["modifystamp"]."&a=2$GetVars");
+      addnav($menu1, $lGoToTopic, "$list_page.$ext?f=$num&t=".$headers[0]["modifystamp"]."&a=3$GetVars");
+      addnav($menu2, $lGoToTopic, "$list_page.$ext?f=$num&t=".$headers[0]["modifystamp"]."&a=3$GetVars");
     } else {
-      addnav($menu, $lGoToTopic, "$list_page.$ext?f=$num&t=$toThread&a=2$GetVars");
+      addnav($menu1, $lGoToTopic, "$list_page.$ext?f=$num&t=".$headers[0]["modifystamp"]."&a=3$GetVars");
+      addnav($menu2, $lGoToTopic, "$list_page.$ext?f=$num&t=$toThread&a=3$GetVars");
     }
     if($$phflat==0){
       // Flat View
-      addnav($menu, $lReadFlat, "$read_page.$ext?f=$num&i=$id&t=$thread&v=f$GetVars");
+      addnav($menu2, $lReadFlat, "$read_page.$ext?f=$num&i=$id&t=$thread&v=f$GetVars");
     } else {
       // Threaded View
-      addnav($menu, $lReadThreads, "$read_page.$ext?f=$num&i=$id&t=$thread&v=t$GetVars");
+      addnav($menu2, $lReadThreads, "$read_page.$ext?f=$num&i=$id&t=$thread&v=t$GetVars");
     }
     // Search
-    addnav($menu, $lSearch, "$search_page.$ext?f=$num$GetVars");
+    addnav($menu1, $lSearch, "$search_page.$ext?f=$num$GetVars");
 
     // Log Out/Log In
     if($ForumSecurity){
       if(!empty($phorum_auth)){
-        addnav($menu, $lLogOut, "login.$ext?logout=1$GetVars");
-        addnav($menu, $lMyProfile, "profile.$ext?f=$f&id=$phorum_user[id]$GetVars");
+        addnav($menu2, $lLogOut, "login.$ext?logout=1$GetVars");
+        addnav($menu2, $lMyProfile, "profile.$ext?f=$f&id=$phorum_user[id]$GetVars");
       }
       else{
-        addnav($menu, $lLogIn, "login.$ext?f=$num$GetVars");
+        addnav($menu1, $lLogIn, "login.$ext?f=$num$GetVars");
       }
     }
 
-    $TopLeftNav=getnav($menu);
+    $TopLeftNav=getnav($menu1);
+    $LowLeftNav=getnav($menu2);
 
-    $menu2=array();
+    $menu=array();
     // Prev Thread
-    addnav($menu2, $lPreviousTopic, "$read_page.$ext?$prev_thread$GetVars");
+    addnav($menu, $lPreviousTopic, "$read_page.$ext?$prev_thread$GetVars");
     // Next Thread
-    addnav($menu2, $lNextTopic, "$read_page.$ext?$next_thread$GetVars");
-    $ThreadNav=getnav($menu2);
+    addnav($menu, $lNextTopic, "$read_page.$ext?$next_thread$GetVars");
 
-    $menu3=array();
+    $ThreadNav=getnav($menu);
+
+    $menu=array();
     // Previous Message
-    addnav($menu3, $lPreviousMessage, "$read_page.$ext?$prev_link");
+    addnav($menu, $lPreviousMessage, "$read_page.$ext?$prev_link$GetVars");
     // Next Message
-    addnav($menu3, $lNextMessage, "$read_page.$ext?$next_link");
-    $MessageNav=getnav($menu3);
+    addnav($menu, $lNextMessage, "$read_page.$ext?$next_link$GetVars");
+
+    $MessageNav=getnav($menu);
 
   //////////////////////////
   // END NAVIGATION       //
@@ -351,7 +356,7 @@
 <script language="JavaScript" type="text/javascript">
 
 function delmsg(url){
-ans=window.confirm("You are about to delete this message and all of it's children. Do You want to continue?");
+ans=window.confirm("<?php echo $lDelMessageWarning; ?>");
   if(ans){
     window.location.replace(url);
   }
@@ -360,7 +365,7 @@ ans=window.confirm("You are about to delete this message and all of it's childre
 <table width="<?php echo $ForumTableWidth; ?>" cellspacing="0" cellpadding="3" border="0">
 <tr>
     <td width="100%" align="left" <?php echo bgcolor($ForumNavColor); ?>><?php echo $TopLeftNav; ?></td>
-    <td nowrap align="right" <?php echo bgcolor($ForumNavColor); ?>><?php echo $MessageNav; ?></tr>
+    <td nowrap="nowrap" align="right" <?php echo bgcolor($ForumNavColor); ?>><?php echo $MessageNav; ?></tr>
 </table>
 <?php if ($header_rows==0 || $body_rows==0) { ?>
 <table class="PhorumListTable" width="<?php echo $ForumTableWidth; ?>" cellspacing="0" cellpadding="2" border="0">
@@ -391,32 +396,32 @@ ans=window.confirm("You are about to delete this message and all of it's childre
       $body = $body_row["body"];
       $host="";
       $profile_link="";
+      $sig="";
       $reply_url="$read_page.$ext?f=$f&i=$rec_id&t=$t$GetVars#REPLY";
 
       if($head_row["userid"]>0 && isset($users[$head_row["userid"]])){
         $user=$users[$head_row["userid"]];
-        $author=$user["name"];
+        $author=$qauthor=$user["name"];
         $email=$user["email"];
         $host="";
         $author = "<a href=\"$forum_url/profile.$ext?f=$ForumId&id=$head_row[userid]$GetVars\">$author</a>";
-        //uthor .= (empty($phorum_user["moderator"])) ? $lMember : $lModerator;
         // replace sig
-        if(strstr($body, PHORUM_SIG_MARKER)){
-          $body=str_replace(PHORUM_SIG_MARKER, $user["signature"], $body);
-        }
+        $sig=$user["signature"];
       }
       else{
-        $author = chop($head_row["author"]);
+        $author=$qauthor=chop($head_row["author"]);
         $email = chop($head_row["email"]);
         if($email!=""){
           $author = "<a href=\"mailto:".htmlencode($email)."?subject=$rawsub\">$author</a>";
         }
-        $real_host=chop($head_row["host"]);
         $host="";
-        if(!empty($real_host) && $ForumShowIP){
+      }
+      $real_host=chop($head_row["host"]);
+      if(!empty($real_host) && ($ForumShowIP==1 || ($ForumShowIP==2 && $head_row["userid"]==0) || isset($phorum_user["moderator"]))){
           $host_arr=explode(".", $real_host);
           $count=count($host_arr);
-          if($count > 1){
+
+          if(empty($phorum_user["moderator"]) && $count > 1){
             if(intval($host_arr[$count-1])!=0){
               $host=substr($real_host,0,strrpos($real_host,".")).".---";
             }
@@ -428,13 +433,14 @@ ans=window.confirm("You are about to delete this message and all of it's childre
             $host=$real_host;
           }
           $host="($host)";
-        }
       }
 
-      $qauthor=ereg_replace("<b>|</b>", "", $author);
-      $qsubject=ereg_replace("<b>|</b>", "", $subject);
-
+      if($head_row["id"]==$i){
+          $qauthor=ereg_replace("<strong>|</strong>", "", $qauthor);
+          $qsubject=ereg_replace("<strong>|</strong>", "", $subject);
+      }
 ?>
+<a name="reply_<?php echo $head_row["id"]; ?>"></a>
 <table class="PhorumListTable" width="<?php echo $ForumTableWidth; ?>" cellspacing="0" cellpadding="2" border="0">
 <tr>
     <td <?php echo bgcolor($ForumTableHeaderColor); ?>><FONT class="PhorumTableHeader" color="<?php echo $ForumTableHeaderFontColor; ?>">&nbsp;<?php echo $subject; ?></font></td>
@@ -443,8 +449,8 @@ ans=window.confirm("You are about to delete this message and all of it's childre
     <td <?php echo bgcolor($ForumTableBodyColor2); ?> valign="TOP"><table width="100%" cellspacing="0" cellpadding="5" border="0">
 <tr>
     <td <?php echo bgcolor($ForumTableBodyColor2); ?> width="100%" valign="top"><font class="PhorumMessage" color="<?php echo $ForumTableBodyFontColor2; ?>">
-<?php echo $lAuthor;?>:&nbsp;<?php echo $author; ?>&nbsp;<?php echo $host; ?><br>
-<?php echo $lDate;?>:&nbsp;&nbsp;&nbsp;<?php echo $datestamp; ?><br>
+<?php echo $lAuthor;?>:&nbsp;<?php echo $author; ?>&nbsp;<?php echo $host; ?><br />
+<?php echo $lDate;?>:&nbsp;&nbsp;&nbsp;<?php echo $datestamp; ?><br />
 <?php
 
     // exec read_header plugins
@@ -461,12 +467,14 @@ ans=window.confirm("You are about to delete this message and all of it's childre
         $size=filesize($filename);
         if($size<1024) $size=1024;
         $size=round($size/1024)."k";
-        echo "$lFormAttachment:&nbsp; <A HREF=\"$forum_url/download.$ext/$num,$rec_id,$rec[id]/$rec[filename]\">$rec[filename]</A> ($size)<BR>\n";
+        echo "$lFormAttachment:&nbsp; <a href=\"$forum_url/download.$ext/$num,$rec_id,$rec[id]/$rec[filename]\">$rec[filename]</a> ($size)<br />\n";
       }
     }
-    echo '<br>';
+    echo '<br />';
 
     $qbody=$body;
+
+    $body=str_replace(PHORUM_SIG_MARKER, $sig, $body);
 
     $body=format_body($body);
 ?>
@@ -484,8 +492,8 @@ ans=window.confirm("You are about to delete this message and all of it's childre
 <tr>
 <td valign="TOP" width="100%" align="LEFT" <?php echo bgcolor($ForumTableBodyColor2); ?>>
 <FONT color='<?php echo $ForumTableBodyFontColor1; ?>' class="PhorumNav"><?php echo $lModerators; ?></font>
-<br><?php echo "<a href=\"$forum_url/moderator.$ext?mod=edit&f=$ForumId&i=$id&t=$thread$GetVars\">";?><FONT color='<?php echo $ForumTableBodyFontColor1; ?>' class="PhorumNav"><?php echo $lModEdit; ?></a></font>
-<br><a href="javascript:delmsg('<?php echo "$forum_url/moderator.$ext?mod=delete&f=$ForumId&i=$rec_id&t=$thread$GetVars";?>')"><FONT color='<?php echo $ForumTableBodyFontColor1; ?>' class="PhorumNav"><?php echo $lModDelete; ?></a></font>
+<br /><?php echo "<a href=\"$forum_url/moderator.$ext?mod=edit&f=$ForumId&i=$id&t=$thread$GetVars\">";?><FONT color='<?php echo $ForumTableBodyFontColor1; ?>' class="PhorumNav"><?php echo $lModEdit; ?></a></font>
+<br /><a href="javascript:delmsg('<?php echo "$forum_url/moderator.$ext?mod=delete&f=$ForumId&i=$rec_id&t=$thread$GetVars";?>')"><FONT color='<?php echo $ForumTableBodyFontColor1; ?>' class="PhorumNav"><?php echo $lModDelete; ?></a></font>
 </td>
 </tr>
 </table>
@@ -496,21 +504,21 @@ ans=window.confirm("You are about to delete this message and all of it's childre
 </table>
 <table width="<?php echo $ForumTableWidth; ?>" cellspacing="0" cellpadding="3" border="0">
 <tr>
-    <td valign="TOP" width=100% <?php echo bgcolor($ForumNavColor); ?>><a href="<?php echo $reply_url; ?>"><FONT color='<?php echo $ForumNavFontColor; ?>' class="PhorumNav"><?php echo $lReplyMessage; ?></font></a></td>
-    <td valign="TOP" align="RIGHT" nowrap <?php echo bgcolor($ForumNavColor); ?>><?php echo $ThreadNav; ?></td>
+    <td valign="TOP" width=100% <?php echo bgcolor($ForumNavColor); ?>><FONT color='<?php echo $ForumNavFontColor; ?>' class="PhorumNav"><?php echo $LowLeftNav; ?></font></td>
+    <td valign="TOP" align="RIGHT" nowrap="nowrap" <?php echo bgcolor($ForumNavColor); ?>><?php echo $ThreadNav; ?></td>
 </tr>
 </table>
 <p>
 <?php }else{ ?>
 <tr>
-    <td valign="TOP" width="100%" align="RIGHT" <?php echo bgcolor($ForumTableBodyColor2); ?>><a href="<?php echo $reply_url; ?>"><FONT color='<?php echo $ForumTableBodyFontColor1; ?>' class="PhorumNav"><?php echo $lReplyMessage; ?></a></font><br>
+    <td valign="TOP" width="100%" align="RIGHT" <?php echo bgcolor($ForumTableBodyColor2); ?>><a href="<?php echo $reply_url; ?>"><FONT color='<?php echo $ForumTableBodyFontColor1; ?>' class="PhorumNav"><?php echo $lReplyMessage; ?></a></font><br />
 <?php if(!empty($phorum_user["moderator"])){ ?>
 <table>
 <tr>
 <td valign="TOP" width="100%" align="LEFT" <?php echo bgcolor($ForumTableBodyColor2); ?>>
 <FONT color='<?php echo $ForumTableBodyFontColor1; ?>' class="PhorumNav"><?php echo $lModerators; ?></font>
-<br><?php echo "<a href=\"$forum_url/moderator.$ext?mod=edit&f=$ForumId&i=$rec_id&t=$thread$GetVars\">";?><FONT color='<?php echo $ForumTableBodyFontColor1; ?>' class="PhorumNav"><?php echo $lModEdit; ?></a></font>
-<br><a href="javascript:delmsg('<?php echo "$forum_url/moderator.$ext?mod=delete&f=$ForumId&i=$rec_id&t=$thread$GetVars";?>')"><FONT color='<?php echo $ForumTableBodyFontColor1; ?>' class="PhorumNav"><?php echo $lModDelete; ?></a></font>
+<br /><?php echo "<a href=\"$forum_url/moderator.$ext?mod=edit&f=$ForumId&i=$rec_id&t=$thread$GetVars\">";?><FONT color='<?php echo $ForumTableBodyFontColor1; ?>' class="PhorumNav"><?php echo $lModEdit; ?></a></font>
+<br /><a href="javascript:delmsg('<?php echo "$forum_url/moderator.$ext?mod=delete&f=$ForumId&i=$rec_id&t=$thread$GetVars";?>')"><FONT color='<?php echo $ForumTableBodyFontColor1; ?>' class="PhorumNav"><?php echo $lModDelete; ?></a></font>
 </td>
 </tr>
 </table>
@@ -548,8 +556,8 @@ ans=window.confirm("You are about to delete this message and all of it's childre
 ?>
 <table width="<?php echo $ForumTableWidth; ?>" cellspacing="0" cellpadding="3" border="0">
 <tr>
-    <td width="100%" align="left" <?php echo bgcolor($ForumNavColor); ?>><?php echo $TopLeftNav; ?></td>
-    <td nowrap align="right" <?php echo bgcolor($ForumNavColor); ?>><?php echo $MessageNav; ?></tr>
+    <td width="100%" align="left" <?php echo bgcolor($ForumNavColor); ?>><?php echo $LowLeftNav; ?></td>
+    <td nowrap="nowrap" align="right" <?php echo bgcolor($ForumNavColor); ?>><?php echo $MessageNav; ?></tr>
 </table>
 <?php
     unset($TopLeftNav);
@@ -558,15 +566,12 @@ ans=window.confirm("You are about to delete this message and all of it's childre
   unset($email);
   unset($subject);
 ?>
-<A name="REPLY">
+<a name="REPLY"></a>
 <br /><br />
-<?php require "$include_path/form.php"; ?>
-<?php } ?>
 <?php
-  if(file_exists("$include_path/footer_$ForumConfigSuffix.php")){
-    include "$include_path/footer_$ForumConfigSuffix.php";
+}
+  if (!empty($phorum_user["moderator"]) || !($threadflags & FLG_FROZEN)) {
+    require "$include_path/form.php";
   }
-  else{
-    include "$include_path/footer.php";
-  }
+    include phorum_get_file_name("footer");
 ?>

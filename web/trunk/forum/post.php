@@ -18,8 +18,13 @@
 
   require "./common.php";
 
+  if($num==0 || $ForumName==''){
+    Header("Location: $forum_url?$GetVars");
+    exit;
+  }
+
   if($ForumSecurity > SEC_OPTIONAL && empty($phorum_auth)){
-    header("Location: $forum_url/login.$ext?target=$REQUEST_URI");
+    header("Location: $forum_url/login.$ext?target=$REQUEST_URI&f=$num");
     exit();
   }
 
@@ -29,11 +34,6 @@
   $action=initvar("a");
   $id=(int)initvar("i");
   $parent=(int)initvar("p");
-
-  if($num==0 || $ForumName==''){
-    Header("Location: $forum_url?$GetVars");
-    exit;
-  }
 
   $ip = getenv('REMOTE_HOST');
   if(!$ip){
@@ -54,7 +54,7 @@
   // Attachment handling:
   if(is_array($HTTP_POST_FILES) && count($HTTP_POST_FILES)>0){
     // PHP4 style
-    $attachments=&$HTTP_POST_FILES;
+    $attachments=$HTTP_POST_FILES;
   }
   else{
     // PHP3 style
@@ -85,7 +85,7 @@
           $IsError=$lInvalidType.strtoupper(ereg_replace(";", " ", $ForumUploadTypes));
         }
         elseif($min_size>0  && $arr["size"]>$min_size){
-          $IsError=$lInvalidSize1.$arr["name"]."<br>".$lInvalidSize2.(string)min($ForumUploadSize, $AttachmentSizeLimit)."k";
+          $IsError=$lInvalidSize1.$arr["name"]."<br />".$lInvalidSize2.(string)min($ForumUploadSize, $AttachmentSizeLimit)."k";
         }
       }
     }
@@ -93,12 +93,7 @@
   }
 
   if($IsError || !$action){
-    if(file_exists("$include_path/header_$ForumConfigSuffix.php")){
-      include "$include_path/header_$ForumConfigSuffix.php";
-    }
-    else{
-      include "$include_path/header.php";
-    }
+    include phorum_get_file_name("header");
 
   //////////////////////////
   // START NAVIGATION     //
@@ -116,11 +111,11 @@
     // Log Out/Log In
       if($ForumSecurity){
         if(!empty($phorum_auth)){
-          addnav($menu, $lLogOut, "login.$ext?logout=1");
+          addnav($menu, $lLogOut, "login.$ext?logout=1$GetVars");
           addnav($menu, $lMyProfile, "profile.$ext?f=$f&id=$phorum_user[id]$GetVars");
         }
         else{
-          addnav($menu, $lLogIn, "login.$ext");
+          addnav($menu, $lLogIn, "login.$ext?f=$f$GetVars");
         }
       }
 
@@ -132,12 +127,7 @@
   //////////////////////////
 
     include "$include_path/form.php";
-    if(file_exists("$include_path/footer_$ForumConfigSuffix.php")){
-      include "$include_path/footer_$ForumConfigSuffix.php";
-    }
-    else{
-      include "$include_path/footer.php";
-    }
+    include phorum_get_file_name("footer");
     exit();
   }
 
@@ -170,30 +160,27 @@
   $datestamp = date("Y-m-d H:i:s");
 
   $plain_author=stripslashes($author);
-  $plain_subject=stripslashes(ereg_replace("<[^>]+>", "", $subject));
-  $plain_body=stripslashes(ereg_replace("<[^>]+>", "", $body));
+  $plain_subject=stripslashes(strip_tags($subject));
+  $plain_body=stripslashes(strip_tags($body));
 
   $author = htmlspecialchars($author);
   $email = htmlspecialchars($email);
   $subject = htmlspecialchars($subject);
 
+  $checkfrozen = true;
+  $threadflags = 0;
+
   if(!empty($phorum_user["moderator"])){
-    $author = "<b>$author</b>";
-    $subject = "<b>$subject</b>";
-    $body="<HTML>$body</HTML>";
+    $checkfrozen = false;
   }
-  else{
-    $body=eregi_replace("</*HTML>", "", $body);
-    if($ForumAllowHTML=="Y"){
-      $body="<HTML>$body</HTML>";
-    }
-  }
+
 
   $more="";
 
-  if (!check_dup() && check_parent($parent)) {
+  if (!check_dup() && check_parent($parent, $checkfrozen)) {
+    // check_parent will also set "$threadflags"
     // generate a message id for the email if needed.
-    $msgid="<".md5(uniqid(rand())).".$ForumName>";
+    $msgid="<".md5(uniqid(rand())).".".eregi("[^A-Z0-9]", "", $ForumName).">";
 
     // add the users signature if requested
     if(isset($use_sig)){
@@ -235,12 +222,7 @@
 
         if($IsError){
 
-          if(file_exists("$include_path/header_$ForumConfigSuffix.php")){
-            include "$include_path/header_$ForumConfigSuffix.php";
-          }
-          else{
-            include "$include_path/header.php";
-          }
+          include phorum_get_file_name("header");
 
           //////////////////////////
           // START NAVIGATION     //
@@ -272,12 +254,7 @@
           //////////////////////////
 
           include "$include_path/form.php";
-          if(file_exists("$include_path/footer_$ForumConfigSuffix.php")){
-            include "$include_path/footer_$ForumConfigSuffix.php";
-          }
-          else{
-            include "$include_path/footer.php";
-          }
+      include phorum_get_file_name("footer");
           exit();
 
 

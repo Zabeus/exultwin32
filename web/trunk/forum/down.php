@@ -19,30 +19,19 @@
   define("PHORUM_ADMIN", 1);
   require "./common.php";
   $title = $lForumDown;
-  if(file_exists("$include_path/header_$ForumConfigSuffix.php")){
-    include "$include_path/header_$ForumConfigSuffix.php";
-  }
-  else{
-    include "$include_path/header.php";
-  }
+  include phorum_get_file_name("header");
 ?>
 <center>
 <table class="PhorumListTable" width="<?php echo $default_table_width; ?>" border="0" cellspacing="0" cellpadding="2">
   <tr>
-    <td class="PhorumTableHeader" <?php echo bgcolor($default_table_header_color); ?> valign="TOP" nowrap><font color="<?php echo $default_table_header_font_color; ?>">&nbsp;<?php echo $lForumDown; ?></font></td>
+    <td class="PhorumTableHeader" <?php echo bgcolor($default_table_header_color); ?> valign="TOP" nowrap="nowrap"><font color="<?php echo $default_table_header_font_color; ?>">&nbsp;<?php echo $lForumDown; ?></font></td>
   </tr>
   <tr>
-    <td width="100%" align="LEFT" valign="MIDDLE" <?php echo bgcolor($default_table_body_color_2); ?>><font color="<?php echo $default_table_body_font_color_1; ?>"><?php echo $lForumDownNotice; ?></font><br></td>
+    <td width="100%" align="LEFT" valign="MIDDLE" <?php echo bgcolor($default_table_body_color_2); ?>><font color="<?php echo $default_table_body_font_color_1; ?>"><?php echo $lForumDownNotice; ?></font><br /></td>
   </tr>
 </table>
 </center>
 <?php
 
-  if(file_exists("$include_path/footer_$ForumConfigSuffix.php")){
-    include "$include_path/footer_$ForumConfigSuffix.php";
-  }
-  else{
-    include "$include_path/footer.php";
-  }
-
+  include phorum_get_file_name("footer");
 ?>

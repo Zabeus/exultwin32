@@ -49,7 +49,7 @@
 
         $DATESTAMP=date_format($DATESTAMP);
 
-        echo "<p><B>$HEADLINE</B><BR><font size=\"-1\">By $AUTHOR on $DATESTAMP</font><BR>$BODY</p>";
+        echo "<p><strong>$HEADLINE</strong><br /><font size=\"-1\">By $AUTHOR on $DATESTAMP</font><br />$BODY</p>";
     }
 
     // put the script back in the right dir.

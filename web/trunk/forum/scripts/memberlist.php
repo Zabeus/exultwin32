@@ -43,12 +43,7 @@ if(!$start) $start = 0;
 
 
 //HEADER
-  if(file_exists("$include_path/header_$ForumConfigSuffix.$ext")){
-    include "$include_path/header_$ForumConfigSuffix.$ext";
-  }
-  else{
-    include "$include_path/header.$ext";
-  }
+include phorum_get_file_name("header");
 
 ?>
 <table border="0" cellpadding="1" cellspacing="0" valign="top" width="100%">
@@ -80,7 +75,7 @@ if($all_topics > $topics_per_page) {
 
       $count++;
       if(!($count % 10))
-        echo "<BR>";
+        echo "<br />";
     }
   }
 }
@@ -100,17 +95,17 @@ $q->query($DB, $sql);
 $rec=$q->getrow();
 ?>
 <table border="0" cellspacing="1" cellpadding="2" width="100%">
-<TR <?PHP echo bgcolor($default_table_header_color); ?>>
-  <td nowrap>&nbsp;</td>
-  <td height="25" nowrap align="center"><font color="<?PHP echo $default_table_body_font_color_1; ?>">&nbsp;<B><a href="<?php echo $PHP_SELF ?>?sortby=name&start=<?php echo $start ?>"><?php echo $lName ?></a></B></font></TD>
-  <td height="25" nowrap align="center"><font color="<?PHP echo $default_table_body_font_color_1; ?>"><B><?php echo $lEmail ?></B></font></TD>
-  <td height="25" nowrap align="center"><font color="<?PHP echo $default_table_body_font_color_1; ?>"><B><?php echo $lWebpage ?></B></font></TD>
-  <td height="25" nowrap align="center"><font color="<?PHP echo $default_table_body_font_color_1; ?>"><B>ICQ</B></font></TD>
-  <td height="25" nowrap align="center"><font color="<?PHP echo $default_table_body_font_color_1; ?>"><B>AOL</B></font></TD>
-  <td height="25" nowrap align="center"><font color="<?PHP echo $default_table_body_font_color_1; ?>"><B>YAHOO</B></font></TD>
-  <td height="25" nowrap align="center"><font color="<?PHP echo $default_table_body_font_color_1; ?>"><B>MSN</B></font></TD>
-  <td height="25" nowrap align="center"><font color="<?PHP echo $default_table_body_font_color_1; ?>"><B>JABBER</B></font></TD>
-</TR>
+<tr <?PHP echo bgcolor($default_table_header_color); ?>>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td height="25" nowrap="nowrap" align="center"><font color="<?PHP echo $default_table_body_font_color_1; ?>">&nbsp;<strong><a href="<?php echo $PHP_SELF ?>?sortby=name&start=<?php echo $start ?>"><?php echo $lName ?></a></strong></font></td>
+  <td height="25" nowrap="nowrap" align="center"><font color="<?PHP echo $default_table_body_font_color_1; ?>"><strong><?php echo $lEmail ?></strong></font></td>
+  <td height="25" nowrap="nowrap" align="center"><font color="<?PHP echo $default_table_body_font_color_1; ?>"><strong><?php echo $lWebpage ?></strong></font></td>
+  <td height="25" nowrap="nowrap" align="center"><font color="<?PHP echo $default_table_body_font_color_1; ?>"><strong>ICQ</strong></font></td>
+  <td height="25" nowrap="nowrap" align="center"><font color="<?PHP echo $default_table_body_font_color_1; ?>"><strong>AOL</strong></font></td>
+  <td height="25" nowrap="nowrap" align="center"><font color="<?PHP echo $default_table_body_font_color_1; ?>"><strong>YAHOO</strong></font></td>
+  <td height="25" nowrap="nowrap" align="center"><font color="<?PHP echo $default_table_body_font_color_1; ?>"><strong>MSN</strong></font></td>
+  <td height="25" nowrap="nowrap" align="center"><font color="<?PHP echo $default_table_body_font_color_1; ?>"><strong>JABBER</strong></font></td>
+</tr>
 <?php
 do{
   if ($rec['email']){
@@ -129,7 +124,7 @@ do{
     $icq = "&nbsp;";
   }
   if ($rec['aol']){
-    $aol = "<a href=\"aim:goim?screenname=$rec[aol]&message=Hi+$rec[aol].+Are+you+there?\"><img src=\"$AolIMG\" width=\"30\" height=\"17\" border=\"0\" alt=\"Aol $rec[aol]\"></a></TD>";
+    $aol = "<a href=\"aim:goim?screenname=$rec[aol]&message=Hi+$rec[aol].+Are+you+there?\"><img src=\"$AolIMG\" width=\"30\" height=\"17\" border=\"0\" alt=\"Aol $rec[aol]\"></a></td>";
   }else{
     $aol = "&nbsp;";
   }
@@ -150,15 +145,15 @@ do{
   }
 ?>
         <tr>
-                <td bgcolor="<?php echo $default_table_body_color_1?>" nowrap align="center"><font color="<?PHP echo $default_table_body_font_color_1; ?>">&nbsp;<?php echo ++$ranking?>&nbsp;</font></TD>
-                <td bgcolor="<?php echo $default_table_body_color_1?>" height="30" nowrap><font color="<?PHP echo $default_table_body_font_color_1; ?>">&nbsp;<a href="profile.<?php echo $ext?>?id=<?php echo $rec['id']?>"><?php echo $rec['name']?></a></font></TD>
-                <td bgcolor="<?php echo $default_table_body_color_1?>" height="30" nowrap align="center"><font color="<?PHP echo $default_table_body_font_color_1; ?>"> <?php echo $email?> </font></TD>
-                <td bgcolor="<?php echo $default_table_body_color_1?>" height="30" nowrap align="center"><font color="<?PHP echo $default_table_body_font_color_1; ?>"> <?php echo $www?> </font></TD>
-                <td bgcolor="<?php echo $default_table_body_color_1?>" height="30" nowrap align="center"><font color="<?PHP echo $default_table_body_font_color_1; ?>"> <?php echo $icq?> </font></TD>
-                <td bgcolor="<?php echo $default_table_body_color_1?>" height="30" nowrap align="center"><font color="<?PHP echo $default_table_body_font_color_1; ?>"> <?php echo $aol?> </font></TD>
-                <td bgcolor="<?php echo $default_table_body_color_1?>" height="30" nowrap align="center"><font color="<?PHP echo $default_table_body_font_color_1; ?>"> <?php echo $yahoo?> </font></TD>
-                <td bgcolor="<?php echo $default_table_body_color_1?>" height="30" nowrap align="center"><font color="<?PHP echo $default_table_body_font_color_1; ?>"> <?php echo $msn?> </font></TD>
-                <td bgcolor="<?php echo $default_table_body_color_1?>" height="30" nowrap align="center"><font color="<?PHP echo $default_table_body_font_color_1; ?>"> <?php echo $jabber?> </font></TD>
+                <td bgcolor="<?php echo $default_table_body_color_1?>" nowrap="nowrap" align="center"><font color="<?PHP echo $default_table_body_font_color_1; ?>">&nbsp;<?php echo ++$ranking?>&nbsp;</font></td>
+                <td bgcolor="<?php echo $default_table_body_color_1?>" height="30" nowrap="nowrap"><font color="<?PHP echo $default_table_body_font_color_1; ?>">&nbsp;<a href="profile.<?php echo $ext?>?id=<?php echo $rec['id']?>"><?php echo $rec['name']?></a></font></td>
+                <td bgcolor="<?php echo $default_table_body_color_1?>" height="30" nowrap="nowrap" align="center"><font color="<?PHP echo $default_table_body_font_color_1; ?>"> <?php echo $email?> </font></td>
+                <td bgcolor="<?php echo $default_table_body_color_1?>" height="30" nowrap="nowrap" align="center"><font color="<?PHP echo $default_table_body_font_color_1; ?>"> <?php echo $www?> </font></td>
+                <td bgcolor="<?php echo $default_table_body_color_1?>" height="30" nowrap="nowrap" align="center"><font color="<?PHP echo $default_table_body_font_color_1; ?>"> <?php echo $icq?> </font></td>
+                <td bgcolor="<?php echo $default_table_body_color_1?>" height="30" nowrap="nowrap" align="center"><font color="<?PHP echo $default_table_body_font_color_1; ?>"> <?php echo $aol?> </font></td>
+                <td bgcolor="<?php echo $default_table_body_color_1?>" height="30" nowrap="nowrap" align="center"><font color="<?PHP echo $default_table_body_font_color_1; ?>"> <?php echo $yahoo?> </font></td>
+                <td bgcolor="<?php echo $default_table_body_color_1?>" height="30" nowrap="nowrap" align="center"><font color="<?PHP echo $default_table_body_font_color_1; ?>"> <?php echo $msn?> </font></td>
+                <td bgcolor="<?php echo $default_table_body_color_1?>" height="30" nowrap="nowrap" align="center"><font color="<?PHP echo $default_table_body_font_color_1; ?>"> <?php echo $jabber?> </font></td>
         </tr>
 <?php
         $rec=$q->getrow();
@@ -189,23 +184,18 @@ if($all_topics > $topics_per_page)
 
                          $count++;
                          if(!($count % 10))
-                                 echo "<BR>";
+                                 echo "<br />";
       }
    }
 }
 
 
-echo "<BR>\n";
+echo "<br />\n";
 ?>
 </td></tr>
 </table>
 <?PHP
-  if(file_exists("$include_path/footer_$ForumConfigSuffix.php")){
-    include "$include_path/footer_$ForumConfigSuffix.php";
-  }
-  else{
-    include "$include_path/footer.php";
-  }
+  include phorum_get_file_name("footer");
 
-  chdir($olddir); 
+  chdir($olddir);
 ?>

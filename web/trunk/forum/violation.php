@@ -18,17 +18,12 @@
 
   $sTitle=" sorry :(";
   require "./common.php";
-  if(file_exists("$include_path/header_$ForumConfigSuffix.php")){
-    include "$include_path/header_$ForumConfigSuffix.php";
-  }
-  else{
-    include "$include_path/header.php";
-  }
+  include phorum_get_file_name("header");
 ?>
 <center>
 <table class="PhorumListTable" width="$ForumTableWidth" border="0" cellspacing="0" cellpadding="2">
   <tr>
-    <td <?php echo bgcolor($ForumTableHeaderColor); ?> valign="TOP" nowrap><font color="<?php echo $ForumTableHeaderFontColor; ?>">&nbsp;<?php echo $lViolationTitle; ?></font></td>
+    <td <?php echo bgcolor($ForumTableHeaderColor); ?> valign="TOP" nowrap="nowrap"><font color="<?php echo $ForumTableHeaderFontColor; ?>">&nbsp;<?php echo $lViolationTitle; ?></font></td>
   </tr>
   <tr>
     <td width="100%" align="LEFT" valign="MIDDLE" <?php echo bgcolor($ForumTableBodyColor2); ?>><?php echo $lViolation; ?></td>
@@ -37,11 +32,6 @@
 </table>
 <?php
 
-  if(file_exists("$include_path/footer_$ForumConfigSuffix.php")){
-    include "$include_path/footer_$ForumConfigSuffix.php";
-  }
-  else{
-    include "$include_path/footer.php";
-  }
+  include phorum_get_file_name("footer");
 
 ?>

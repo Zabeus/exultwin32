@@ -5,7 +5,7 @@
 function mmlink($text, $link)
 {
     global $PHP_SELF, $f;
-    echo "<a href=\"$link\">$text</a><br>\n";
+    echo "<a href=\"$link\">$text</a><br />\n";
 }
 
 $Title=GetForumPath($num);

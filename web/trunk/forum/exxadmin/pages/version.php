@@ -17,7 +17,7 @@
 $cnt=count($ver_arr);
 for($x=2;$x<$cnt;$x++){
   $url=$ver_arr[$x];
-  echo "<a href=\"$url\">$url</a>\n<br>";
+  echo "<a href=\"$url\">$url</a>\n<br />";
 }
 ?></td>
 </tr>

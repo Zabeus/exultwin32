@@ -58,9 +58,9 @@ function deluser(url){
 
 <table width="600" border="0" cellspacing="0" cellpadding="3">
 <tr>
-    <td nowrap width="10%" align="center" valign="middle"><?php echo $backlink;?></td>
-    <td nowrap width="80%" align="center" valign="middle"><?php print "Page $page of $maxpages";?><br /><a href="<?php echo $myname."?page=useradmin&subaction=adduser&sort=$sort&st=$st";?>">Add User</a></td>
-    <td nowrap width="10%" align="center" valign="middle"><?php echo $forwardlink;?></td>
+    <td nowrap="nowrap" width="10%" align="center" valign="middle"><?php echo $backlink;?></td>
+    <td nowrap="nowrap" width="80%" align="center" valign="middle"><?php print "Page $page of $maxpages";?><br /><a href="<?php echo $myname."?page=useradmin&subaction=adduser&sort=$sort&st=$st";?>">Add User</a></td>
+    <td nowrap="nowrap" width="10%" align="center" valign="middle"><?php echo $forwardlink;?></td>
 </tr>
 </table>
 
@@ -109,69 +109,69 @@ $i++;
     }
 </script>
 <form action="<?php echo $myname; ?>" method="post">
-<input type="hidden" name="page" value="useradmin">
-<input type="hidden" name="action" value="useradmin">
-<input type="hidden" name="subaction" value="save_user">
-<input type="hidden" name="uid" value="<?php echo $uid; ?>">
-<input type="hidden" name="st" value="<?php echo $st; ?>">
-<input type="hidden" name="sort" value="<?php echo $sort; ?>">
+<input type="hidden" name="page" value="useradmin" />
+<input type="hidden" name="action" value="useradmin" />
+<input type="hidden" name="subaction" value="save_user" />
+<input type="hidden" name="uid" value="<?php echo $uid; ?>" />
+<input type="hidden" name="st" value="<?php echo $st; ?>" />
+<input type="hidden" name="sort" value="<?php echo $sort; ?>" />
 
 <table cellspacing="0" cellpadding="2" border="0" class="box-table" width="600">
 <tr>
     <td class="table-header" colspan="2"><?php echo ($subaction=="edituser") ? "Edit User Profile" : "Add User"; ?> :</td>
 </tr>
 <tr>
-    <th nowrap>&nbsp;Username:&nbsp;&nbsp;</th>
-    <td><input type="text" name="edit_username" size="30" maxlength="50" value="<?php echo $rec['username']; ?>"></td>
+    <th nowrap="nowrap">&nbsp;Username:&nbsp;&nbsp;</th>
+    <td><input type="text" name="username" size="30" maxlength="50" value="<?php echo $rec['username']; ?>" /></td>
 </tr>
 <tr>
-    <th nowrap>&nbsp;Name:&nbsp;&nbsp;</th>
-    <td><input type="text" name="name" size="30" maxlength="50" value="<?php echo $rec['name']; ?>"></td>
+    <th nowrap="nowrap">&nbsp;Name:&nbsp;&nbsp;</th>
+    <td><input type="text" name="name" size="30" maxlength="50" value="<?php echo $rec['name']; ?>" /></td>
 </tr>
 <tr>
-    <th nowrap>&nbsp;Email:&nbsp;&nbsp;</th>
-    <td ><input type="text" name="email" size="30" maxlength="50" value="<?php echo $rec['email']; ?>"></td>
+    <th nowrap="nowrap">&nbsp;Email:&nbsp;&nbsp;</th>
+    <td ><input type="text" name="email" size="30" maxlength="50" value="<?php echo $rec['email']; ?>" /></td>
 </tr>
                                     <? // We need those 2 Fields for Change Password Featue ?>
 <tr>
-    <th nowrap>&nbsp;Password:&nbsp;&nbsp;<br>(input to change)</th>
-    <td ><input type="password" name="password" size="30" maxlength="20" value=""></td>
+    <th nowrap="nowrap">&nbsp;Password:&nbsp;&nbsp;<br />(input to change)</th>
+    <td ><input type="password" name="password" size="30" maxlength="20" value="" /></td>
 </tr>
 <tr>
-    <th nowrap>&nbsp;Password (repetition): </th>
-    <td ><input type="password" name="password2" size="30" maxlength="20" value=""></td>
+    <th nowrap="nowrap">&nbsp;Password (repetition): </th>
+    <td ><input type="password" name="password2" size="30" maxlength="20" value="" /></td>
 </tr>
 <tr>
-    <th nowrap>&nbsp;Webpage:&nbsp;&nbsp;</th>
-    <td ><input type="text" name="webpage" size="50" maxlength="100" value="<?php echo $rec['webpage']; ?>"></td>
+    <th nowrap="nowrap">&nbsp;Webpage:&nbsp;&nbsp;</th>
+    <td ><input type="text" name="webpage" size="50" maxlength="100" value="<?php echo $rec['webpage']; ?>" /></td>
 </tr>
 <tr>
-    <th nowrap>&nbsp;Image:&nbsp;&nbsp;</th>
-    <td ><input type="text" name="image" size="50" maxlength="100" value="<?php echo $rec['image']; ?>"></td>
+    <th nowrap="nowrap">&nbsp;Image:&nbsp;&nbsp;</th>
+    <td ><input type="text" name="image" size="50" maxlength="100" value="<?php echo $rec['image']; ?>" /></td>
 </tr>
 <tr>
-    <th nowrap>&nbsp;ICQ:&nbsp;&nbsp;</th>
-    <td ><input type="text" name="icq" size="50" maxlength="50" value="<?php echo $rec['icq']; ?>"></td>
+    <th nowrap="nowrap">&nbsp;ICQ:&nbsp;&nbsp;</th>
+    <td ><input type="text" name="icq" size="50" maxlength="50" value="<?php echo $rec['icq']; ?>" /></td>
 </tr>
 <tr>
-    <th nowrap>&nbsp;AOL:&nbsp;&nbsp;</th>
-    <td ><input type="text" name="aol" size="50" maxlength="50" value="<?php echo $rec['aol']; ?>"></td>
+    <th nowrap="nowrap">&nbsp;AOL:&nbsp;&nbsp;</th>
+    <td ><input type="text" name="aol" size="50" maxlength="50" value="<?php echo $rec['aol']; ?>" /></td>
 </tr>
 <tr>
-    <th nowrap>&nbsp;Yahoo:&nbsp;&nbsp;</th>
-    <td ><input type="text" name="yahoo" size="50" maxlength="50" value="<?php echo $rec['yahoo']; ?>"></td>
+    <th nowrap="nowrap">&nbsp;Yahoo:&nbsp;&nbsp;</th>
+    <td ><input type="text" name="yahoo" size="50" maxlength="50" value="<?php echo $rec['yahoo']; ?>" /></td>
 </tr>
 <tr>
-    <th nowrap>&nbsp;MSN:&nbsp;&nbsp;</th>
-    <td ><input type="text" name="msn" size="50" maxlength="50" value="<?php echo $rec['msn']; ?>"></td>
+    <th nowrap="nowrap">&nbsp;MSN:&nbsp;&nbsp;</th>
+    <td ><input type="text" name="msn" size="50" maxlength="50" value="<?php echo $rec['msn']; ?>" /></td>
 </tr>
 <tr>
-    <th nowrap>&nbsp;Jabber:&nbsp;&nbsp;</th>
-    <td ><input type="text" name="jabber" size="50" maxlength="50" value="<?php echo $rec['jabber']; ?>"></td>
+    <th nowrap="nowrap">&nbsp;Jabber:&nbsp;&nbsp;</th>
+    <td ><input type="text" name="jabber" size="50" maxlength="50" value="<?php echo $rec['jabber']; ?>" /></td>
 </tr>
 <tr>
-    <th valign=top nowrap>&nbsp;Signature:&nbsp;&nbsp;</th>
-    <td ><textarea onKeyDown="textlimit(this.form.signature,255);" onKeyUp="textlimit(this.form.signature,255);" cols="30" rows="6" name="signature"><?php echo "\n".$rec['signature']; ?></textarea></td>
+    <th valign=top nowrap="nowrap">&nbsp;Signature:&nbsp;&nbsp;</th>
+    <td ><textarea onkeydown="textlimit(this.form.signature,255);" onkeyup="textlimit(this.form.signature,255);" cols="30" rows="6" name="signature"><?php echo "\n".$rec['signature']; ?></textarea></td>
 </tr>
 <?php
 $SQL="Select forum_id from $PHORUM[mod_table] where user_id=$user_id";
@@ -181,8 +181,8 @@ while($row=$q->getrow()) {
 }
 ?>
 <tr>
-    <th valign=top nowrap>&nbsp;Phorum Admin:&nbsp;&nbsp;</th>
-    <td><input type="checkbox" name="grant_admin" value="1" <?php if($moderation[0]==true) echo 'checked'?>> Allow full access to the admin.</td>
+    <th valign=top nowrap="nowrap">&nbsp;Phorum Admin:&nbsp;&nbsp;</th>
+    <td><input type="checkbox" name="grant_admin" value="1" <?php if($moderation[0]==true) echo 'checked'?> /> Allow full access to the admin.</td>
 </tr>
 </table>
 <br /><br />
@@ -213,6 +213,6 @@ while($row=$q->getrow()) {
 ?>
 </table>
 <br /><br />
-<input type="submit" name="submit" value="Save">
+<input type="submit" name="submit" value="Save" />
 </form>
 <?php } ?>

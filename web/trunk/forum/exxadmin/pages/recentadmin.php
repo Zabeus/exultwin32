@@ -1,10 +1,10 @@
 <table border="0" cellspacing="0" cellpadding="3" class="box-table">
-<TR>
-    <TD HEIGHT=21 WIDTH="100%" class="table-header">&nbsp;<?php echo $lTopics;?></TD>
-    <TD HEIGHT=21 NOWRAP WIDTH=150 class="table-header"><?php echo $lAuthor;?>&nbsp;</TD>
-    <TD HEIGHT=21 NOWRAP WIDTH=40 class="table-header"><?php echo $lDate;?></TD>
-    <TD HEIGHT=21 NOWRAP WIDTH=40 class="table-header">Actions</TD>
-</TR>
+<tr>
+    <td height=21 width="100%" class="table-header">&nbsp;<?php echo $lTopics;?></td>
+    <td height=21 nowrap="nowrap" width=150 class="table-header"><?php echo $lAuthor;?>&nbsp;</td>
+    <td height=21 nowrap="nowrap" width=40 class="table-header"><?php echo $lDate;?></td>
+    <td height=21 nowrap="nowrap" width=40 class="table-header">Actions</td>
+</tr>
 
 <?php
 require "./common.php";
@@ -42,19 +42,19 @@ if (is_array($rec)) {
       if (($x%2)==0) { $bgcolor=$ForumTableBodyColor1; }
       else { $bgcolor=$ForumTableBodyColor2; }
       $x++;
-      $nav.='<TR><TD '.bgcolor($bgcolor).'>';
-      $nav.="<A HREF=\"$forum_url/$read_page.$ext?admview=1&f=$num&i=".$tam["id"]."&t=${topic}\">";
-      $nav.="$subject</A></TD>";
-      $nav.='<TD '.bgcolor($bgcolor).">$person</TD><TD ".bgcolor($bgcolor).">";
-      $nav.="$datestamp</TD>";
-      $nav.='<TD '.bgcolor($bgcolor)."><A HREF=\"${myname}?page=recentadmin&action=del&type=quick&id=${id}";
-      $nav.="&num=${num}&navigate=${navigate}&thread=${topic}\">Delete</A>&nbsp;|&nbsp;";
-      $nav.="<A HREF=\"${myname}?page=edit&srcpage=recentadmin&id=${id}&num=${num}&navigate=${navigate}&mythread=${topic}\">";
-      $nav.="Edit</A>&nbsp;|&nbsp;";
-      $nav.="<A HREF=\"${myname}?page=recentadmin&action=moderate&approved=${approved}&id=${id}&num=${num}&navigate=${navigate}";
+      $nav.='<tr><td '.bgcolor($bgcolor).'>';
+      $nav.="<a HREF=\"$forum_url/$read_page.$ext?admview=1&f=$num&i=".$tam["id"]."&t=${topic}\">";
+      $nav.="$subject</a></td>";
+      $nav.='<td '.bgcolor($bgcolor).">$person</td><td ".bgcolor($bgcolor).">";
+      $nav.="$datestamp</td>";
+      $nav.='<td '.bgcolor($bgcolor)."><a HREF=\"${myname}?page=recentadmin&action=del&type=quick&id=${id}";
+      $nav.="&num=${num}&navigate=${navigate}&thread=${topic}\">Delete</a>&nbsp;|&nbsp;";
+      $nav.="<a HREF=\"${myname}?page=edit&srcpage=recentadmin&id=${id}&num=${num}&navigate=${navigate}&mythread=${topic}\">";
+      $nav.="Edit</a>&nbsp;|&nbsp;";
+      $nav.="<a HREF=\"${myname}?page=recentadmin&action=moderate&approved=${approved}&id=${id}&num=${num}&navigate=${navigate}";
       $nav.="&mythread=${topic}\">";
       if ($approved == 'Y') { $nav.="Hide"; } else { $nav.="Approve"; }
-      $nav.="</A></TD></TR>\n";
+      $nav.="</a></td></tr>\n";
     }
   }
   $rec=$q->getrow();
@@ -63,6 +63,6 @@ else {
   $nav.="No active forums";
 }
 
-$nav.='</TABLE>';
+$nav.='</table>';
 print "$nav";
 ?>
