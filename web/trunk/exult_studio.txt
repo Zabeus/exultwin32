@@ -1,14 +1,12 @@
 Exult Studio Documentation
-last changed: 06 February 2004(GMT)
+last changed: 23 May 2004(GMT)
 
 The latest version of this document can be found at http://exult.sourceforge.net/studio.php
 
 
 0. Changes to the Documentation
-0.1. - 06 February 2004
-0.2. - 08 August 2003
-0.3. - 04 May 2003
-0.4. - 28 October 2002
+0.1. - 23 May 2004
+0.2. - 06 February 2004
 
 1. Introduction
 1.1. What is Exult Studio?
@@ -94,32 +92,21 @@ The latest version of this document can be found at http://exult.sourceforge.net
 --------------------------------------------------------------------------------
 
 0. Changes to the Documentation
-0.1. - 06 February 2004
+0.1. - 23 May 2004
+* 3.4. Palettes files palette files are compatible with the Gimp.
+* 4.3. Edit note about map-editing operations.
+* 6.4. Properties of eggs some more infos.
+* 6.6. Schedules of Creatures more on the patrol schedule.
+* 7.5. NPC Flags removed some unused flags.
+
+
+
+0.2. - 06 February 2004
 * 1.3. Terms we use in regard to Exult and Ultima 7 some corrections by Willem.
 * 2.3. Step-by-step instructions to run Exult Studio some corrections.
 * 2.2. Running Exult Studio some corrections.
 * 3.3. Map files More right click options.
 * 7. NPC editing finally took on that task.
-
-
-
-0.2. - 08 August 2003
-* 2.1. Installation only use latest snapshots not latest release.
-* 2.3. Step-by-step instructions to run Exult Studio you need to set up the patch path in exult.cfg.
-* 9.6. Known Bugs with the Win32 portExult Studio now works on all Win32 platforms.
-
-
-
-0.3. - 04 May 2003
-* 9.6. Known Bugs with the Win32 port two bugs fixed in the win32 port.
-
-
-
-0.4. - 28 October 2002
-* 1.3. Terms we use in regard to Exult and Ultima 7 added NPC schedules.
-* 2.2. Running Exult Studio the -d command line arg is now -gGAME.
-* 2.4. What you can do at the moment 'Paint with chunk' added.
-* 3.2. Shape files 'Frames' mode mentioned and explained.
 
 
 
@@ -223,7 +210,7 @@ With the latest source you can
     ./blackgate/patch
     </patch>
   </blackgate>
-Exult will also read files from 'patch' if it exists on starting a new game.
+Exult will also read files from 'patch' if it exists on starting a new game. The patch dir is expected to be within the main game directory, parallel to the static and gamedat directories.
 In any mode, you can add the currently selected shape by shift-clicking..
 
 
@@ -242,7 +229,7 @@ You can change the settings of Exult Studio either with the preferences dialog o
       </height>
     </main>
     <default_game>
-    gamename 
+    gamename
 				** default game to edit (games must be specified in
 				<game> part of exult.cfg)
     </default_game>
@@ -306,7 +293,8 @@ The palettes used by a game are stored in the files listed there. When you selec
 * Move Moves palettes in the file.
 * File Import Overwrites the current palettes with palette text file. Export Exports the current palette to a text file.
 
-Right clicking on a chunk only gives you the default File-save/revert option.
+The palette text files are compatible with the Gimp.
+Right clicking on a palette only gives you the default File-save/revert option.
 
 
 3.5. Groups files
@@ -364,6 +352,7 @@ Note that the default location for saving and creation of new files is the STATI
 * Create egg... Create or edit eggs with this. See 6. Egg editing for detailed information.
 * Create NPC... Create or edit NPCs with this. See 7. NPC editing for more information (not yet there).
 
+When in map-edit mode, you can select shapes in Exult by left-clicking, or multiple shapes by ctrl+left-clicking.
 
 
 4.4. Mode
@@ -451,8 +440,8 @@ The most convenient way to create an egg is to select Create new egg from the ed
 Before you select the type of egg you want you can edit basic properties of eggs. These are:
 * Probability of the egg being activated. By giving an egg a probability of 100 you can ensure that whenever the requirements necessary to make an egg activate are met, the egg will activate. With a probability of 0 nothing will ever happen when the egg's requirements are met. A probability anywhere between 0 and 100 will cause the activation of an egg to be a random event.
 * Distance allows you to set how far a character needs to be from an egg in order to activate it. Each distance unit is equal to one tile (8x8 pixel) of the map.
-* Criteria is very important as it sets what needs to be done to activate the egg. The options are: Cached in - An egg with this characteristic is activated when the chunk it is on is loaded into memory. This usually happens from several screens away. Party near - causes an egg to be activated whenever the player controlled character or any of his party members wander within the area specified by the distance option. Avatar near - exactly the same as party near except only registers where the main character is moved, ignoring actions by the party members. Avatar far - Its like Avatar near except with a twist. This property allows you to walk into the area specified by the distance property but then as you leave the area the egg will be activated as you distance yourself from it. Can be great for sneak attacks from behind. Avatar footpad - In this case the distance property is ignored and the Avatar has to physically step onto the egg. Party footpad - This option is identical to the Avatar footpad option except if either the main character or one of his companions stumbles onto the egg it will be activated. Something on - This egg is activated whenever an object is placed within the area specified by an egg. External - Eggs set to the external characteristic will be activated by button eggs in the vicinity.
-* Flag final attribute you can give an egg to determine whether it will be activated or not. As a note you can mix and match flags, you can set an egg to nocturnal once only or nocturnal auto-reset. Nocturnal - Any egg with this setting will only be activated during the nighttime. Great for setting the spawning of creatures of the night, or giving some nice night time music. Hatched - This creates an egg that has already been activated. It is inactive and will not do anything. Once-Only - Any egg with this flag applied will only hatch once and then disappear from the game world. Auto-reset - Eggs with this flag attached will continue to activate every time the conditions set in the egg menu are met.
+* Criteria is very important as it sets what needs to be done to activate the egg. The options are: Cached in - An egg with this characteristic is activated when the chunk it is on is loaded into memory. This usually happens from several screens away. Party near - causes an egg to be activated whenever the player controlled character or any of his party members wander within the area specified by the distance option. Avatar near - exactly the same as party near except only registers where the main character is moved, ignoring actions by the party members. Avatar far - Its like Avatar near except with a twist. This property allows you to walk into the area specified by the distance property but then as you leave the area the egg will be activated as you distance yourself from it. Can be great for sneak attacks from behind. Avatar footpad - In this case the distance property is ignored and the Avatar has to physically step onto the egg. Party footpad - This option is identical to the Avatar footpad option except if either the main character or one of his companions stumbles onto the egg it will be activated. Something on - This egg is activated whenever an object is placed AND removed within the area specified by an egg. External - Eggs set to the external characteristic will be activated by button eggs in the vicinity.
+* Flag final attribute you can give an egg to determine whether it will be activated or not. As a note you can mix and match flags, you can set an egg to nocturnal once only or nocturnal auto-reset.Not that an egg will be reactivated after you walk about a screenful away and then return if the the flags "once-only" or "auto-reset" are not set. Nocturnal - Any egg with this setting will only be activated during the nighttime. Great for setting the spawning of creatures of the night, or giving some nice night time music. Hatched - This creates an egg that has already been activated. It is inactive and will not do anything. Once-Only - Any egg with this flag applied will only hatch once and then disappear from the game world. Auto-reset - Eggs with this flag attached will continue to activate every time the conditions set in the egg menu are met.
 
 
 
@@ -473,7 +462,7 @@ When setting a monster spawn you will most like want to use one of the following
 * Waiter Give a creature this schedule and watch him run back and forth around a crowded area like he has a purpose.
 * Graze An awful lot like loiter except the character seems to stay a little more to one area.
 * Duel Doesn't do a whole lot by itself, but put two neutral creatures with these settings beside each other and its rumble time. This also works by placing them near training dummies or archery targets. For an extra laugh place 10 spawns each set for 31 guards to appear in dueling mode.
-* Patrol A creature given this setting will very slowly wander from place to place.
+* Patrol An NPC with this schedule will follow "path" markers (shape #607). The default behavior is to go to "1", then "2", etc., and return to "1" when no higher numbers are found. There are also some fairly complicated rules that depend on the "quality" that you give to each of the path markers. (Exult Studio should have a dialog to create these, so I wouldn't worry about them right now.)
 
 
 
@@ -555,7 +544,6 @@ Here you can set special properties of NPCs. Some are only set for special NPCs,
 * Confused
 * Dancing
 * Fly
-* In motion
 * Invisible
 * No Magic
 * Petra
@@ -568,7 +556,6 @@ Here you can set special properties of NPCs. Some are only set for special NPCs,
 * Freeze The NPC is cold and needs warmer clothing.
 * In party The NPC is a member of the party.
 * Met The Avatar has previously spoken to the NPC.
-* Okay to land
 * Poisoned
 * Tattooed
 * Walk
