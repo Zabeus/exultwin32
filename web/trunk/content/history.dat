@@ -15,7 +15,7 @@ whereas the 1.0 is only for bugfixes.
 <li>More progress on the Zaurus port (MIDI support, also thanks to Colourless' port of the FMOPL driver)
 <li>Weather shows when gumps are open
 <li>Bug fixes
-</ul></td></tr>
+</ul>
 <p><b>19 August 2002</p></b>
 Artaxerxes is making a lot of progress with the Zaurus port. The latest version supports sound!
 <ul>
