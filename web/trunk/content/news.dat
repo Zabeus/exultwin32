@@ -1,4 +1,14 @@
 <table width="100%">
+	<tr><td width="20%" valign="top">24 October 2002<br></td>
+        <td>
+        Allthough news are a little slow at the moment we are still alive!
+        <ul>
+        <li>Jeffrey Hoeksma wrote an in depth guide on how to use Ecult Studio and Dominus merged it with 
+        	the existing documentation. Even though it is still not a complete guide it is already quite
+        	useful and a good informative read. Thanks Jeffrey!
+        <li>We added a letter page that contains some of the praise we received from users and Lord British himself.
+        <li>Dr.Code fixed some bugs in Exult (selling baked bread, another trial bug in SI) and Exult Studio.
+        </ul></td></tr>
 	<tr><td width="20%" valign="top">11 September 2002<br></td>
         <td>
         Development is proceeding quite slowly, but we're still fixing bugs.
