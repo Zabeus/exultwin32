@@ -1,4 +1,15 @@
 <table width="100%">
+	<tr><td width="20%" valign="top">19 August 2002<br></td>
+        <td>
+        Artaxerxes is making a lot of progress with the Zaurus port. The latest version supports sound!
+        <ul>
+        <li>Time now stops fully when gumps are open
+        <li>Explosions inside containers should now properly work
+        <li>Fixes to sleeping (you should now lie down in the right bed)
+        <li>Various combat-related bugfixes (slimes, party-members not attacking)
+        <li>Some cosmetic fixes to conversations
+        </ul></td></tr>
+        
 	<tr><td width="20%" valign="top">28 July 2002<br></td>
 	<td>
 	Artaxerxes is currently porting Exult to the Zaurus! Take a look at the <A HREF="screenshots_zaurus.php">screenshots</A>. You can also download the current version of the page from our <A HREF="download.php">download page</A> (under 1.1.x snapshots)
