@@ -1,4 +1,13 @@
 <table width="100%">
+	<tr><td width="20%" valign="top">11 February 2002<br></td>
+	<td><p>We're nearing our second beta release as bug reports are decreasing...
+	<ul>
+	<li>Colourless has made ExultStudio work under Win95 and WinNT
+	<li>DrCode has added frame browsing and palette import/export to ExultStudio
+	<li>Common code between Exult and Pentagram has been factored out to increase reusability
+	<li>Bug fixes (including the skin colour in the sex scenes problem)
+	</ul>
+	</td></tr>
 	<tr><td width="20%" valign="top">31 January 2002<br></td>
 	<td><p>Progress, progress, progress...
 	<ul>
