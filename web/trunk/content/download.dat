@@ -6,6 +6,7 @@ begin_section("Official - v1.1Beta3");
  add_extern_entry("exult-tools-1.1beta3-1.i386.rpm", "RedHat 9 binary rpm (tools)", 241);
  add_extern_entry("exult-studio-1.1beta3-1.i386.rpm", "RedHat 9 binary rpm (Exult Studio)", 225);
  add_extern_entry("exult-1.1beta3-1.src.rpm", "Source (.rpm)", 1644);
+ add_extern_entry("exult_1.1beta3_arm.ipk", "Sharp Zaurus binary .ipk", 1362);
 end_section();
 
 
@@ -20,7 +21,6 @@ end_section();
 
 // older release stuff
 begin_section("Older releases");
- add_extern_entry("exult_1.1beta2_arm.ipk", "Sharp Zaurus binary .ipk (1.1beta2)", 1356);
  add_extern_entry("exult-1.1Beta2.dmg", "Mac OS X binary (1.1beta2)", 1550);
  add_extern_entry("exult_0.98rc1-1_i386.deb", "Linux Intel Debian Sid Binary
 (0.98RC1)", 994);
