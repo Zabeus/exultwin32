@@ -5,7 +5,7 @@ begin_section("Official - v0.98rc1");
  add_extern_entry("exult-0.98rc1-win32.exe", "Windows (95/98/ME/NT/2000/XP) Binary", 1901);
  add_extern_entry("exult-0.98rc1.sit", "MacOS Binary", 859);
  add_extern_entry("exult-0.98rc1a.dmg", "MacOS X binary", 1541);
- add_extern_entry("exult-0.98rc1.x86.beos.zip, "BeOS binary", 1230);
+ add_extern_entry("exult-0.98rc1.x86.beos.zip", "BeOS binary", 1230);
 end_section();
 
 
