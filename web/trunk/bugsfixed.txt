@@ -1,0 +1,11 @@
+Bugs fixed since Exult 1.1.beta1:
+
+- exultmsg.txt now gets installed on all versions
+- Rewrote Preach schedule.
+- fixed memory corruption issue breaking item descriptions
+- don't stand when you're sitting 
+  (in certain scripted scenes, the avatar would not sit although he is supposed to)
+- Exult Studio: fixed crash in egg edit dialog
+- Exult Studio: Why not show shape #0?
+- Exult Studio: search works again
+- Exult Studio: fixed crash with exult_bg.flx
