@@ -7,7 +7,7 @@ begin_section("Official - v1.1.10rc2");
  add_extern_entry("exult-studio-1.1.10rc2-1.i386.rpm", "Fedora Core 1 binary rpm (Exult Studio)", 253);
  add_extern_entry("exult-1.1.10rc2-1.src.rpm", "Source (.rpm)", 1770);
  add_extern_entry("exult-1.1.10rc2.dmg", "Mac OS X 10.3 binary", 1535);
- add_extern_entry("exult_1.1.10rc2_arm.ipk", "Sharp Zaurus binary .ipk (1.1.9rc1)" , 1383);
+ add_extern_entry("exult_1.1.10rc2_arm.ipk", "Sharp Zaurus binary .ipk" , 1383);
 end_section();
 
 
