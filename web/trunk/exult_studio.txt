@@ -1,14 +1,15 @@
 Exult Studio Documentation
-last changed: 19 May 2002(GMT)
+last changed: 22 May 2002(GMT)
 
 The latest version of this document can be found at http://exult.sourceforge.net/studio.php
 
 
 0. Changes to the Documentation
-0.1. 19 May 2002
-0.2. 06 May 2002
-0.3. 03 May 2002
-0.4. 07 April 2002
+0.1. 22 May 2002
+0.2. 19 May 2002
+0.3. 06 May 2002
+0.4. 03 May 2002
+0.5. 07 April 2002
 
 1. Introduction
 1.1. What is Exult Studio?
@@ -57,7 +58,12 @@ The latest version of this document can be found at http://exult.sourceforge.net
 --------------------------------------------------------------------------------
 
 0. Changes to the Documentation
-0.1. 19 May 2002
+0.1. 22 May 2002
+* 6.1. Other tools that might be useful Jeff started documenting ucc.
+
+
+
+0.2. 19 May 2002
 * 1.2. About this Documentation. Some notes for the reader.
 * 3.3. Mode Select-mode is now implemented and added a note about dragging.
 * 3.5. Tool bar added "Hide lift" option.
@@ -66,7 +72,7 @@ The latest version of this document can be found at http://exult.sourceforge.net
 
 
 
-0.2. 06 May 2002
+0.3. 06 May 2002
 * 2.4. Command line options -d option no longer exists.
 * 3.3. Mode more information on Pick- and Combo-mode.
 * 4. Main Working Window added (working title only).
@@ -75,7 +81,7 @@ The latest version of this document can be found at http://exult.sourceforge.net
 
 
 
-0.3. 03 May 2002
+0.4. 03 May 2002
 This is the second draft of the Exult Studio documentation.
 * 2.4. Command line options I had spaces between the commands and the options.
 * 3. Menu Options description of all the Menu Options.
@@ -88,7 +94,7 @@ This is the second draft of the Exult Studio documentation.
 
 
 
-0.4. 07 April 2002
+0.5. 07 April 2002
 This is the first draft of the Exult Studio documentation. So please bear with me. It is by no means perfect and I ask you to send me all your comments on how to better express some stuff or to point out what I just plain forgot. Dominus
 
 
@@ -351,12 +357,12 @@ Someone does have to write extensive documentation for this but I (Dominus) am n
 6. Miscellaneous
 6.1. Other tools that might be useful
 In the process of creating Exult the team came up with some useful tools that might help in editing/making a game. These can be built from the Exult source or you can download the Windows binary snapshot. The source and binary snapshot can be found at http://exult.sourceforge.net/download.php. The tools are:
-* expack: lets you extract and create Flex files. See manual.
-* ipack: a tool for creating and updating Exult and U7 image archives, such as 'shapes.vga'. See manual.
-* shp2pcx: converts all frames contained in a Shape file into PCX-format image files. See manual.
-* splitshp: can be used to combine frames of a Shape file into one file, or split a Shape file into its component frames. See manual.
+* expack: lets you extract and create Flex files. See the manual.
+* ipack: a tool for creating and updating Exult and U7 image archives, such as 'shapes.vga'. See the manual.
+* shp2pcx: converts all frames contained in a Shape file into PCX-format image files. See the manual.
+* splitshp: can be used to combine frames of a Shape file into one file, or split a Shape file into its component frames. See the manual.
 * textpack: can be used edit text flex files. See manual.
-* ucc: can be used to create custom usecode (see 5.6.).
+* ucc: can be used to create custom usecode (see 5.6.). See the manual.
 * The GIMP Plug-in: can be used for editing shapes in the GIMP. Handles multiframe Shape files. See http://www.gimp.org for inormation on the GIMP.
 * Photoshop Plug-in: can be used for editing shapes in Photoshop. Can't handle multiframe Shape files. And also can't handle indexed images with Alpha correctly.
 
