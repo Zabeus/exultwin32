@@ -1,17 +1,17 @@
-<p>last changed: 04 May 2003(GMT)</p><hr/><p>
-		A text only version can be found <a href="http://exult.sourceforge.net/faq.txt">here</a></p><br/><p><a href="#Changes to the FAQ">0. Changes to the FAQ</a><br/><a href="#04052003">0.1. - 04 May 2003</a><br/><a href="#04032003">0.2. - 04 March 2003</a><br/></p><p><a href="#Introduction">1. Introduction</a><br/><a href="#important">1.1. Important Notice</a><br/><a href="#why_name_exult">1.2. Why is it called <em>Exult</em> - what is the meaning of this name?</a><br/><a href="#is_exult_free">1.3. Is <em>Exult</em> free ?</a><br/><a href="#origin_exult">1.4. Does Origin support <em>Exult</em>?</a><br/><a href="#other_ultimas">1.5. Will <em>Exult</em> support other Ultimas?</a><br/><a href="#pentagram">1.6. But isn't <em>Pentagram</em> some kind of <em>Exult</em> for U8?</a><br/><a href="#multiplayer">1.7. Will there be a multiplayer <em>Exult</em>?</a><br/><a href="#whereis_exult">1.8. Where do I find <em>Exult</em>?</a><br/><a href="#whatis_snapshot">1.9. What is a snapshot? Are these screenshots or what?</a><br/><a href="#different_snapshot">1.10. Why are there now two different snapshots?</a><br/><a href="#compile_snapshot">1.11. How do I compile a source code snapshot for my OS?</a><br/><a href="#latest_version">1.12. What is the latest version of <em>Exult</em>?</a><br/><a href="#what_platforms">1.13. On what platform does <em>Exult</em> run?</a><br/></p><p><a href="#Exult and Ultima 7">2. Exult and Ultima 7</a><br/><a href="#u7_needed">2.1. Do I need Ultima 7?</a><br/><a href="#u7_versions">2.2. Does <em>Exult</em> work on all versions of the game?</a><br/><a href="#play_through_u7">2.3. Can you play through U7 yet?</a><br/><a href="#si_support">2.4. How about Serpent Isle?</a><br/><a href="#addon_support">2.5. Do the Add-ons work?</a><br/><a href="#old_savegames">2.6. Do save games from the original work in <em>Exult</em>?</a><br/><a href="#saves_compatibility">2.7. Do <em>Exult</em> savegames work on all Operating Systems?</a><br/><a href="#u7_download">2.8. Where do I find Ultima 7 on the net to download?</a><br/></p><p><a href="#Miscellaneous">3. Miscellaneous</a><br/><a href="#walkthroughs">3.1. Where do I find a walkthrough?</a><br/><a href="#arrow_walking">3.2. Why can't I move my party with the arrow keys?</a><br/><a href="#transports_work">3.3. Do the carriages, ships and the magic carpet work?</a><br/><a href="#how_move_ships">3.4. So why can't I sail a ship in BG?</a><br/><a href="#si_ext_intro">3.5. Will you implement the extended intro for SI?</a><br/><a href="#party_formation">3.6. Why is the party formation different?</a><br/><a href="#save_crash">3.7. What should I do when Exult keeps crashing when I try to save?</a><br/><a href="#choppy_game">3.8. Why does the game run so choppy?</a><br/><a href="#no_sfx">3.9. Why can't I hear the Sound Effects?</a><br/><a href="#linux_audio">3.10. Why do I hear strange, noisy effects in Linux?</a><br/><a href="#diferent_volume">3.11. Why is the music so much louder/softer than the sfx/speech?</a><br/><a href="#blank_screen">3.12. Why does my monitor stay black when I try to run <em>Exult</em>?</a><br/><a href="#improvements">3.13. 
-				What are the improvements in <em>Exult</em> over the original Ultima 7?</a><br/><a href="#paperdoll_issues">3.14. 
+<p>last changed: 21 July 2003(GMT)</p><hr/><p>
+		A text only version can be found <a href="http://exult.sourceforge.net/faq.txt">here</a></p><br/><p><a href="#Changes to the FAQ">0. Changes to the FAQ</a><br/><a href="#21072003">0.1. - 21 July 2003</a><br/><a href="#04052003">0.2. - 04 May 2003</a><br/><a href="#04032003">0.3. - 04 March 2003</a><br/></p><p><a href="#Introduction">1. Introduction</a><br/><a href="#important">1.1. Important Notice</a><br/><a href="#why_name_exult">1.2. Why is it called <em>Exult</em> - what is the meaning of this name?</a><br/><a href="#is_exult_free">1.3. Is <em>Exult</em> free ?</a><br/><a href="#origin_exult">1.4. Does Origin support <em>Exult</em>?</a><br/><a href="#other_ultimas">1.5. Will <em>Exult</em> support other Ultimas?</a><br/><a href="#pentagram">1.6. But isn't <em>Pentagram</em> some kind of <em>Exult</em> for U8?</a><br/><a href="#multiplayer">1.7. Will there be a multiplayer <em>Exult</em>?</a><br/><a href="#whereis_exult">1.8. Where do I find <em>Exult</em>?</a><br/><a href="#whatis_snapshot">1.9. What is a snapshot? Are these screenshots or what?</a><br/><a href="#different_snapshot">1.10. Why are there now two different snapshots?</a><br/><a href="#compile_snapshot">1.11. How do I compile a source code snapshot for my OS?</a><br/><a href="#latest_version">1.12. What is the latest version of <em>Exult</em>?</a><br/><a href="#what_platforms">1.13. On what platform does <em>Exult</em> run?</a><br/></p><p><a href="#Exult and Ultima 7">2. Exult and Ultima 7</a><br/><a href="#u7_needed">2.1. Do I need Ultima 7?</a><br/><a href="#u7_versions">2.2. Does <em>Exult</em> work on all versions of the game?</a><br/><a href="#play_through_u7">2.3. Can you play through U7 yet?</a><br/><a href="#si_support">2.4. How about Serpent Isle?</a><br/><a href="#addon_support">2.5. Do the Add-ons work?</a><br/><a href="#old_savegames">2.6. Do save games from the original work in <em>Exult</em>?</a><br/><a href="#saves_compatibility">2.7. Do <em>Exult</em> savegames work on all Operating Systems?</a><br/><a href="#u7_download">2.8. Where do I find Ultima 7 on the net to download?</a><br/></p><p><a href="#Miscellaneous">3. Miscellaneous</a><br/><a href="#walkthroughs">3.1. Where do I find a walkthrough?</a><br/><a href="#arrow_walking">3.2. Why can't I move my party with the arrow keys?</a><br/><a href="#transports_work">3.3. Do the carriages, ships and the magic carpet work?</a><br/><a href="#how_move_ships">3.4. So why can't I sail a ship in BG?</a><br/><a href="#si_ext_intro">3.5. Will you implement the extended intro for SI?</a><br/><a href="#party_formation">3.6. Why is the party formation different?</a><br/><a href="#save_crash">3.7. What should I do when Exult keeps crashing when I try to save?</a><br/><a href="#choppy_game">3.8. Why does the game run so choppy?</a><br/><a href="#no_sfx">3.9. Why can't I hear the Sound Effects?</a><br/><a href="#linux_audio">3.10. Why do I hear strange, noisy effects in Linux?</a><br/><a href="#diferent_volume">3.11. Why is the music so much louder/softer than the sfx/speech?</a><br/><a href="#blank_screen">3.12. Why does my monitor stay black when I try to run <em>Exult</em>?</a><br/><a href="#improvements">3.13.
+				What are the improvements in <em>Exult</em> over the original Ultima 7?</a><br/><a href="#paperdoll_issues">3.14.
 				Are there issues with the SI style paperdoll in BG?
-			</a><br/><a href="#disable_improvements">3.15. 
+			</a><br/><a href="#disable_improvements">3.15.
 				How do I disable all improvements?
-			</a><br/><a href="#exult_engine">3.16. 
+			</a><br/><a href="#exult_engine">3.16.
 				I heard that <em>Exult</em> is meant to be a game engine. Can I make my own game with <em>Exult</em>?
-			</a><br/></p><p><a href="#Bugs, known issues and not yet implemented features">4. Bugs, known issues and not yet implemented features</a><br/><a href="#known_bugs">4.1. Bugs</a><br/><a href="#bug_report">4.2. How do I submit a proper bug report?</a><br/><a href="#by_design">4.3. Broken by Design</a><br/><a href="#known_issues">4.4. Known Issues</a><br/><a href="#compile_issues">4.5. Known Compile Issues</a><br/><a href="#not_yet_implemented">4.6. Not yet implemented</a><br/></p><p><a href="#Gameplay FAQ">5. Gameplay FAQ</a><br/><a href="#why_gameplayfaq">5.1. Why is there a gameplay FAQ?</a><br/><a href="#virtue_stones">5.2. Why can't I cast mark/recall on the Virtue Runes (BG)?</a><br/><a href="#skarabrae_sacrifice">5.3. Why can't I get the sacrifice in Skara Brae to work (BG)?</a><br/><a href="#skarabrae_forsythe">5.4. Why can't I talk to the mayor of Skara Brae (BG)?</a><br/><a href="#demon_gem">5.5. Where did my gem of the Demon vanish to (BG-FoV)?</a><br/><a href="#pikeman_disappears">5.6. Where is the pikeman that lets you train in Monitor (SI)?</a><br/><a href="#fedabiblio_quest">5.7. How do I get the Mandrake Roots for Fedabiblio (SI)?</a><br/><a href="#great_hierophant">5.8. Why can't I summon the Great Hierophant (SI)?</a><br/><a href="#serpent_staff">5.9. An important note about the Serpent Staff (SI)</a><br/><a href="#pillars_fort">5.10. How to break the plot by doubleclicking some pillars (SI-SS)</a><br/></p><p><a href="#Questions and Answers">6. Questions and Answers</a><br/><a href="#howto_get_answers">6.1. 
+			</a><br/></p><p><a href="#Bugs, known issues and not yet implemented features">4. Bugs, known issues and not yet implemented features</a><br/><a href="#known_bugs">4.1. Bugs</a><br/><a href="#bug_report">4.2. How do I submit a proper bug report?</a><br/><a href="#by_design">4.3. Broken by Design</a><br/><a href="#known_issues">4.4. Known Issues</a><br/><a href="#compile_issues">4.5. Known Compile Issues</a><br/><a href="#not_yet_implemented">4.6. Not yet implemented</a><br/></p><p><a href="#Gameplay FAQ">5. Gameplay FAQ</a><br/><a href="#why_gameplayfaq">5.1. Why is there a gameplay FAQ?</a><br/><a href="#virtue_stones">5.2. Why can't I cast mark/recall on the Virtue Runes (BG)?</a><br/><a href="#skarabrae_sacrifice">5.3. Why can't I get the sacrifice in Skara Brae to work (BG)?</a><br/><a href="#skarabrae_forsythe">5.4. Why can't I talk to the mayor of Skara Brae (BG)?</a><br/><a href="#demon_gem">5.5. Where did my gem of the Demon vanish to (BG-FoV)?</a><br/><a href="#pikeman_disappears">5.6. Where is the pikeman that lets you train in Monitor (SI)?</a><br/><a href="#fedabiblio_quest">5.7. How do I get the Mandrake Roots for Fedabiblio (SI)?</a><br/><a href="#great_hierophant">5.8. Why can't I summon the Great Hierophant (SI)?</a><br/><a href="#serpent_staff">5.9. An important note about the Serpent Staff (SI)</a><br/><a href="#pillars_fort">5.10. How to break the plot by doubleclicking some pillars (SI-SS)</a><br/></p><p><a href="#Questions and Answers">6. Questions and Answers</a><br/><a href="#howto_get_answers">6.1.
 				How can I get answers concerning Ultima 7/<em>Exult</em>?
-			</a><br/><a href="#contact">6.2. How do I contact the author of this FAQ?</a><br/></p><p><a href="#Links and Thanks">7. Links and Thanks</a><br/><a href="#main_links">7.1. Important Links</a><br/><a href="#thanks">7.2. Thanks</a><br/></p><hr width="100%"/><table width="100%"><tr><th align="left"><a name="Changes to the FAQ">0. Changes to the FAQ</a></th></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="04052003">0.1. - 04 May 2003</a></strong></td></tr><tr><td><ul><li><a href="#saves_compatibility">2.7. Do <em>Exult</em> savegames work on all Operating Systems?</a> don't use 1.1.x saves with 1.0.</li><li><a href="#party_formation">3.6. Why is the party formation different?</a> Jeff changed the behaviour of it.</li><li><a href="#skarabrae_forsythe">5.4. Why can't I talk to the mayor of Skara Brae (BG)?</a> added.</li><li><a href="#demon_gem">5.5. Where did my gem of the Demon vanish to (BG-FoV)?</a> added.</li><li><a href="#pillars_fort">5.10. How to break the plot by doubleclicking some pillars (SI-SS)</a> added.</li></ul></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="04032003">0.2. - 04 March 2003</a></strong></td></tr><tr><td><ul><li><a href="#important">1.1. Important Notice</a> this faq is for 1.1.x and not for 1.0 anymore.</li><li><a href="#pentagram">1.6. But isn't <em>Pentagram</em> some kind of <em>Exult</em> for U8?</a> here is the link to Pentagram and some more info.</li><li><a href="#saves_compatibility">2.7. Do <em>Exult</em> savegames work on all Operating Systems?</a> Savegames are platform independent.</li><li><a href="#by_design">4.3. Broken by Design</a> linked to Combat Options in the Menu.</li><li><a href="#known_issues">4.4. Known Issues</a> changed a bit, added issue with Nvidia 40.x reference drivers.</li><li><a href="#Gameplay FAQ">5. Gameplay FAQ</a> Not everytime you are stuck in the 
+			</a><br/><a href="#contact">6.2. How do I contact the author of this FAQ?</a><br/></p><p><a href="#Links and Thanks">7. Links and Thanks</a><br/><a href="#main_links">7.1. Important Links</a><br/><a href="#thanks">7.2. Thanks</a><br/></p><hr width="100%"/><table width="100%"><tr><th align="left"><a name="Changes to the FAQ">0. Changes to the FAQ</a></th></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="21072003">0.1. - 21 July 2003</a></strong></td></tr><tr><td><ul><li><a href="#latest_version">1.12. What is the latest version of <em>Exult</em>?</a> is now 1.1.beta1.</li></ul></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="04052003">0.2. - 04 May 2003</a></strong></td></tr><tr><td><ul><li><a href="#saves_compatibility">2.7. Do <em>Exult</em> savegames work on all Operating Systems?</a> don't use 1.1.x saves with 1.0.</li><li><a href="#party_formation">3.6. Why is the party formation different?</a> Jeff changed the behaviour of it.</li><li><a href="#skarabrae_forsythe">5.4. Why can't I talk to the mayor of Skara Brae (BG)?</a> added.</li><li><a href="#demon_gem">5.5. Where did my gem of the Demon vanish to (BG-FoV)?</a> added.</li><li><a href="#pillars_fort">5.10. How to break the plot by doubleclicking some pillars (SI-SS)</a> added.</li></ul></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="04032003">0.3. - 04 March 2003</a></strong></td></tr><tr><td><ul><li><a href="#important">1.1. Important Notice</a> this faq is for 1.1.x and not for 1.0 anymore.</li><li><a href="#pentagram">1.6. But isn't <em>Pentagram</em> some kind of <em>Exult</em> for U8?</a> here is the link to Pentagram and some more info.</li><li><a href="#saves_compatibility">2.7. Do <em>Exult</em> savegames work on all Operating Systems?</a> Savegames are platform independent.</li><li><a href="#by_design">4.3. Broken by Design</a> linked to Combat Options in the Menu.</li><li><a href="#known_issues">4.4. Known Issues</a> changed a bit, added issue with Nvidia 40.x reference drivers.</li><li><a href="#Gameplay FAQ">5. Gameplay FAQ</a> Not everytime you are stuck in the
 					game is it a bug. Maybe this section can help you.</li></ul></td></tr></table><hr width="100%"/><table width="100%"><tr><th align="left"><a name="Introduction">1. Introduction</a></th></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="important">1.1. Important Notice</a></strong></td></tr><tr><td><p>
 					This FAQ is for the work-in-progress 1.1.x version of <em>Exult</em>.
-					Frequently asked questions and answers for the 1.0 version can be found 
+					Frequently asked questions and answers for the 1.0 version can be found
 					where you installed the release.
 				</p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="why_name_exult">1.2. Why is it called <em>Exult</em> - what is the meaning of this name?</a></strong></td></tr><tr><td><p>Jeff wrote on the Boards:<br/><cite>
 					I originally wrote it [Exult] solely for X-windows, so that's where
@@ -61,7 +61,7 @@
 					to stir up interest in other coders to carry this basic work further.<br/>
 					Any <strong>developer</strong> is welcome to take a look and contact us.
 				</p><p>
-					Seriously <em>Pentagram</em> is slowly progressing and you can find snapshots of the code and 
+					Seriously <em>Pentagram</em> is slowly progressing and you can find snapshots of the code and
 					Win32 binaries for it on the <em>Exult</em><a href="http://exult.sourceforge.net/download.php">download page</a>.
 				</p><p>
 					On the official <em>Pentagram</em> homepage at <a href="http://pentagram.sourceforge.net/">http://pentagram.sourceforge.net/</a>
@@ -78,13 +78,13 @@
 					Note however that <em>Exult</em> is open source. If you want a multiplayer U7 no one
 					holds you back to code it in.
 				</p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="whereis_exult">1.8. Where do I find <em>Exult</em>?</a></strong></td></tr><tr><td><p>
-					The latest official version is found on 
+					The latest official version is found on
 					<a href="http://exult.sourceforge.net/">http://exult.sourceforge.net/</a><br/>
-					Daily snapshots (by Travis Howell) of the Win32 binary and of the CVS source tree 
+					Daily snapshots (by Travis Howell) of the Win32 binary and of the CVS source tree
 					can be found at
 					<a href="http://exult.sourceforge.net/download.php">http://exult.sourceforge.net/download.php</a>.<br/>
 					A BeOS binary snapshot can be found at
-					<a href="http://digilander.iol.it/burton666/exult-beos.zip">http://digilander.iol.it/burton666/exult-beos.zip</a>. Jack Burton 
+					<a href="http://digilander.iol.it/burton666/exult-beos.zip">http://digilander.iol.it/burton666/exult-beos.zip</a>. Jack Burton
 					provides this weekly or whenever it compiles for him. Thanks!<br/>
 					There is also a version available for AmigaOS/MorphOS at
 					<a href="http://www.muenster.de/~tomjoad/exult.html">http://www.muenster.de/~tomjoad/exult.html</a>. Please see
@@ -102,17 +102,17 @@
 					Also this FAQ mainly addresses the snapshots as people use them and ask question.
 					And all the new features and improvements are found in those!
 				</p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="different_snapshot">1.10. Why are there now two different snapshots?</a></strong></td></tr><tr><td><p>
-			    	If you checked our download page recently, you may have noticed that we have 
-			    	two sets of development snapshots now: a 1.0.x (stable) snapshot, and a 
+			    	If you checked our download page recently, you may have noticed that we have
+			    	two sets of development snapshots now: a 1.0.x (stable) snapshot, and a
 			    	1.1.x (unstable) snapshot.
 			    </p><p>
-					The 1.0.x branch has developed into our 1.0 release and we will mainly 
-					be fixing any remaining bugs in this branch. We recommend using the 1.0.x 
-					snapshots for playing and testing Exult. 
+					The 1.0.x branch has developed into our 1.0 release and we will mainly
+					be fixing any remaining bugs in this branch. We recommend using the 1.0.x
+					snapshots for playing and testing Exult.
 				</p><p>
-					The 1.1.x branch is meant mostly as a 'developer playground' at the moment. 
-					We are making some very destabilizing changes to this branch, like a rewritten 
-					usecode interpreter and new audio code. We do not recommend using the 1.1.x 
+					The 1.1.x branch is meant mostly as a 'developer playground' at the moment.
+					We are making some very destabilizing changes to this branch, like a rewritten
+					usecode interpreter and new audio code. We do not recommend using the 1.1.x
 					snapshots for normal playing.
 				</p><p>
 			    	This also means that the documentation and the FAQ needs to be different. You will
@@ -122,26 +122,26 @@
 					The source code snapshots contain a file called "README.OS" (like Readme.win32,
 					Readme.MacOS) that explains everything.
 				</p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="latest_version">1.12. What is the latest version of <em>Exult</em>?</a></strong></td></tr><tr><td><p>
-					The current official release is V1.00.
+					The current official release is V1.1beta1
 					See also <a href="#whereis_exult">1.8.</a>
 					to learn where to get the latest version.
 				</p><p>
-					To find out which version you are running, press 
+					To find out which version you are running, press
 	'<font color="maroon">v</font>'
  while in game.
 				</p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="what_platforms">1.13. On what platform does <em>Exult</em> run?</a></strong></td></tr><tr><td><p><em>Exult</em> should be able to be compiled (with minor modifications) on
 					any platform that SDL supports. Right now the source can be compiled
-					in Linux/i386, Linux/Alpha, MacOS (requires at least MacOS 8.5 or higher), 
+					in Linux/i386, Linux/Alpha, MacOS (requires at least MacOS 8.5 or higher),
 					OSX, OpenBSD, FreeBSD, Solaris, BeOS and Win32 (Windows 9x/ME/NT4/2000/XP).
 				</p><p>
-					Ruediger Hanke's ported <em>Exult</em> to MorphOS and AmigaOS. You can get this 
+					Ruediger Hanke's ported <em>Exult</em> to MorphOS and AmigaOS. You can get this
 					version at <a href="http://www.muenster.de/~tomjoad/exult.html">http://www.muenster.de/~tomjoad/exult.html</a>.
 				 </p><p>
-					Recently Artaxerxes started working on a port for 
+					Recently Artaxerxes started working on a port for
 					<a href="http://www.myzaurus.com/">Zaurus</a>, a Linux/ARM based PDA.
-					It is already fully playable (Artaxerxes played through SI). Pictures of the Zaurus 
-					running SI can be found at 
-					<a href="http://exult.sourceforge.net/images/screenshots/zaurus/">http://exult.sourceforge.net/images/screenshots/zaurus/</a> and an 
+					It is already fully playable (Artaxerxes played through SI). Pictures of the Zaurus
+					running SI can be found at
+					<a href="http://exult.sourceforge.net/images/screenshots/zaurus/">http://exult.sourceforge.net/images/screenshots/zaurus/</a> and an
 					IPK package at <a href="http://exult.sourceforge.net/download.php">http://exult.sourceforge.net/download.php</a>.
 				 </p></td></tr></table><hr width="100%"/><table width="100%"><tr><th align="left"><a name="Exult and Ultima 7">2. Exult and Ultima 7</a></th></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="u7_needed">2.1. Do I need Ultima 7?</a></strong></td></tr><tr><td><p>
 					Yes. <em>Exult</em> won't work without the original files.
@@ -186,11 +186,11 @@
 					Save games that were made with the original Ultima 7 or U7Run don't work
 					with <em>Exult</em>. You have to start a new game when you begin playing with <em>Exult</em>.
 					Sorry!
-				</p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="saves_compatibility">2.7. Do <em>Exult</em> savegames work on all Operating Systems?</a></strong></td></tr><tr><td><p><em>Exult</em> savegames are compatible on all supported Operating Systems. For example 
-					a saved game of the Mac port of <em>Exult</em> works on Windows 98 as well. 
+				</p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="saves_compatibility">2.7. Do <em>Exult</em> savegames work on all Operating Systems?</a></strong></td></tr><tr><td><p><em>Exult</em> savegames are compatible on all supported Operating Systems. For example
+					a saved game of the Mac port of <em>Exult</em> works on Windows 98 as well.
 				</p><p>
 					However it is not advisable to use savegames of games started with the 1.1.x
-					snapshot of <em>Exult</em> with the 1.0 release. 
+					snapshot of <em>Exult</em> with the 1.0 release.
 				</p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="u7_download">2.8. Where do I find Ultima 7 on the net to download?</a></strong></td></tr><tr><td><p><b><i><font size="+1">Don't!</font></i></b> You may be able to find it on the net but it would be
 					pirating the game and the <em>Exult</em> team doesn't support pirates. Look for
 					the Ultima Collection in stores or on EBay (<a href="http://www.ebay.com">http://www.ebay.com</a>).
@@ -213,7 +213,7 @@
 				</p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="how_move_ships">3.4. So why can't I sail a ship in BG?</a></strong></td></tr><tr><td><p>
 					To sail a ship in BG you naturally need to have the deed to this ship in your party.
 					Then double-click on the sail of the ship and your party moves aboard it and sits down.
-					Once they are all seated, double-click the gangplank to close it. Now double-click on 
+					Once they are all seated, double-click the gangplank to close it. Now double-click on
 					the sail once more to have it unfold. You should be able to move the ship then.
 				</p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="si_ext_intro">3.5. Will you implement the extended intro for SI?</a></strong></td></tr><tr><td><p>
 					The extended intro for Serpent Isle can be found at
@@ -231,13 +231,13 @@
 					Everyone volunteering to do it is welcome to.
 				</p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="party_formation">3.6. Why is the party formation different?</a></strong></td></tr><tr><td><p>
 					In <em>Exult</em> the party (the Avatar and his companions) move quite differently than
-					they do in the original. The problem is that this was controlled by the original 
+					they do in the original. The problem is that this was controlled by the original
 					executable. Changing the formation now is not as easy as it sounds as the party
-					formation has effects on other game internals. Changing it to be more like the 
-					original may force us to replay the whole game to make sure we didn't introduce 
+					formation has effects on other game internals. Changing it to be more like the
+					original may force us to replay the whole game to make sure we didn't introduce
 					new bugs.
 				</p><p>
-					Recently Jeff added an optional formation that behaves way more like in the 
+					Recently Jeff added an optional formation that behaves way more like in the
 					original game. The default is still the "loose" Exult formation.
 					See <a href="docs.php#exult_config">Documentation</a>.
 				</p><p>Jeff:<br/><cite>
@@ -254,7 +254,7 @@
 					serious problems.
 				</p><p>
 					Please also avoid saving when a scripted sequence is running. Whenever you can't control
-					the Avatar on your own a scripted scene is running and saving at this time will break the 
+					the Avatar on your own a scripted scene is running and saving at this time will break the
 					game on reloading.
 				</p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="choppy_game">3.8. Why does the game run so choppy?</a></strong></td></tr><tr><td><p>
 					Well, every Ultima required a fast computer. Even though <em>Exult</em> is just an
@@ -277,18 +277,18 @@
 					The most common reason for this is that you try to run Exult full screen in a
 					resolution that isn't supported by either your monitor or your graphics card.
 					Edit your exult.cfg (see <a href="docs.php#exult_config">Documentation</a>) to disable
-					full screen. If Exult now runs fine in a window you have to select a different 
+					full screen. If Exult now runs fine in a window you have to select a different
 					resolution (also editable in exult.cfg) to run it full screen.<br/>
 					If it still doesn't run contact us.
-				</p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="improvements">3.13. 
+				</p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="improvements">3.13.
 				What are the improvements in <em>Exult</em> over the original Ultima 7?</a></strong></td></tr><tr><td><ul><li>Many more keyboard shortcuts than the original had. Including in BG the
-					
+
 	'<font color="maroon">k</font>'
  key that checks if you have the right key for a lock in your
 					inventory. The list of keys can be found in the Documentation.</li><li>A new worked over Game Options menu. This menu is explained in detail in the
 					<a href="docs.php">Documentation</a> and many of the following
 					improvements  and Video/Audio options can be accessed via this menu. Open
-					this Game Options Menu by pressing 
+					this Game Options Menu by pressing
 	'<font color="maroon">Esc</font>'
  in the game.</li><li>SI style paperdoll (inventory screen) in BG. Very impressive. For this you
 					need to have Serpent Isle installed on your hard drive and you must set the
@@ -299,7 +299,7 @@
 					the original (you should run out of disc space before you run out of save game
 					slots), shows a screenshot of the location you saved at, the members of your
 					party, your stats, game time and the date you actually saved. The save game
-					box is opened either via the game menu or the 
+					box is opened either via the game menu or the
 	'<font color="maroon">s</font>'
  key.</li><li>Face status bars at the bottom of the screen that show your health (and that
 					of your party members) as well as your mana. Double-clicking on the face opens
@@ -312,22 +312,22 @@
 					in <em>Exult</em>.<br/>
 					In slider gumps (e.g. how much gold you want to
 					drop), scrolling the mouse up/down, moves the slider either left or right.
-					Holding down 
+					Holding down
 	'<font color="maroon">Alt</font>'
  while using the wheel scrolls 10 steps.<br/>
-					The save game menu scrolls one line, while pressing 
+					The save game menu scrolls one line, while pressing
 	'<font color="maroon">Alt</font>'
  it scrolls
 					pages.<br/>
 					You can also scroll the map of the game up or down and while pressing
-					
+
 	'<font color="maroon">Alt</font>'
   you scroll left or right.</li><li>Fast Mouse which makes the mouse cursor move faster in full screen mode.</li><li>Multiracial Avatar in BG. As with the paperdoll support you need to have SI
 					installed and the path set in exult.cfg.</li><li>Higher resolutions than the original. You can set the resolution as high as
 					your computer supports. But there are some issues with it and it is considered
 					cheating.</li><li>Compressed save games. Since Beta1 <em>Exult</em> compresses save games by default as
 					zip files. They are still labeled *.sav and have the save game name in the zip
-					comment.</li></ul></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="paperdoll_issues">3.14. 
+					comment.</li></ul></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="paperdoll_issues">3.14.
 				Are there issues with the SI style paperdoll in BG?
 			</a></strong></td></tr><tr><td><p>
 					There are some issues. The paperdoll in BG is still limited to the slots
@@ -340,7 +340,7 @@
 					Sparks paperdoll looks very odd (Spark on steroids) as there is no paperdoll
 					for kids in SI and we have to use the adult paperdoll. Unless someone draws
 					heaps of art we can't do anything.
-				</p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="disable_improvements">3.15. 
+				</p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="disable_improvements">3.15.
 				How do I disable all improvements?
 			</a></strong></td></tr><tr><td><p>
 					To get an Ultima 7 that looks and behaves as close to the original as possible there
@@ -348,13 +348,13 @@
 				</p><ul><li>make custom key bindings files (see <a href="docs.php">Documentation</a>)
 					in which you disable all the keys that were not in the original for Black Gate and
 					Serpents Isle.<br/>
-					Since the Alpha 4 release you have to assign 
+					Since the Alpha 4 release you have to assign
 	'<font color="maroon">s</font>'
  to old_file_gump
 					to enable the old save game menu (the line in your custom key bindings file should look
 					like: S old_file_gump)</li><li>Edit the exult.cfg file to point to those custom keys.</li><li>Disable SI-style paperdolls for BG in exult.cfg (see the documentation for that).</li><li>Alternatively click on the disk icon and disable the paperdolls in the Gameplay Options.</li><li>Edit the exult.cfg to use the resolution of 320x200, to run in full screen and
 					disable scalers.</li><li>The disc icon in the Avatar paperdoll opens the new game menu. As of now this cannot
-					be altered. Sorry!</li></ul></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="exult_engine">3.16. 
+					be altered. Sorry!</li></ul></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="exult_engine">3.16.
 				I heard that <em>Exult</em> is meant to be a game engine. Can I make my own game with <em>Exult</em>?
 			</a></strong></td></tr><tr><td><p>
 					Work has begun on "<em>Exult Studio</em>" which is aimed to be an editor for
@@ -388,9 +388,9 @@
 					report it's much easier for the team to look at the problem (speeds the process up a bit
 					as they are much more likely you take a look at the problem this way).<br/><strong>You need to check the box saying "Check to upload and Attach file".</strong>.
 					See this screenshot for an example:
-					<a href="http://exult.sourceforge.net/images/sfbug.jpg">http://exult.sourceforge.net/images/sfbug.jpg</a></li><li><b><i><font size="+1">One</font></i></b> bug per subject please.</li></ol><p><strong>Note</strong> for attaching save games SourceForge requires users to be 
+					<a href="http://exult.sourceforge.net/images/sfbug.jpg">http://exult.sourceforge.net/images/sfbug.jpg</a></li><li><b><i><font size="+1">One</font></i></b> bug per subject please.</li></ol><p><strong>Note</strong> for attaching save games SourceForge requires users to be
 					registered. Therefore we strongly advice users to register with SF.<br/>
-					Any bug report that requires a save game will most likely be 
+					Any bug report that requires a save game will most likely be
 					<strong>tagged invalid</strong> if we don't receive a save game after we requested it.
 				</p><p>
 					You can also use our
@@ -414,7 +414,7 @@
 						creatures of Britannia do.</li><li>Party members don't walk lockstep with the Avatar like they do in
 						BG/SI. Please see <a href="#party_formation">3.6. Why is the party formation different?</a>.</li><li>The way the Avatar and the companions walk. Is it 2 frames or 3 frames?
 						This has been changed a lot as this was disputed almost every four weeks.
-						Finally it works like the original and the Avatar uses two frames and the 
+						Finally it works like the original and the Avatar uses two frames and the
 						companions use three frames.</li><li>Combat works differently. We don't have any hard data or formulae
 						that tell us how combat worked in BG/SI, so Dr.Code put something
 						together. If you have any information you've worked out related to
@@ -425,7 +425,7 @@
 						currently works.</li><li>Some music loops endlessly in <em>Exult</em>. This is actually a correction of a bug
 						in the original. We respects the midi looping flag as set by U7's original data
 						files but the original didn't. Users who prefer the original (broken) are able
-						to choose so in the Game menu.</li></ul></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="known_issues">4.4. Known Issues</a></strong></td></tr><tr><td><ul><li>There might be a bug when you have any of the games installed in a 
+						to choose so in the Game menu.</li></ul></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="known_issues">4.4. Known Issues</a></strong></td></tr><tr><td><ul><li>There might be a bug when you have any of the games installed in a
 						path with spaces in it (see <a href="docs.php#path_config">Documentation</a>).</li><li>Stealing and killing innocent NPCs doesn't work yet like it does in the original</li><li>Movement is sometimes jerky or slow.</li><li>We don't know what all the data in 'weapons.dat' and 'ammo.dat'
 						means, so hit points and damage don't work as well as in the original
 						game.</li><li>If you run a resolution higher than the original (320x200) some NPCs
@@ -436,7 +436,7 @@
 						is triggering a bug in the drivers.</li><li>There is also a problem involving Win9x/ME, C-Media soundcard chipsets and MIDI music.
 						We suggest you first upgrade your drivers to the newest ones. Get them at
 						<a href="http://www.cmedia.com.tw/">http://www.cmedia.com.tw/</a>. If that doesn't help, please contact
-						us.</li><li>Nvidia 40.x reference drivers have issues with all SDL based programs. Use either a 
+						us.</li><li>Nvidia 40.x reference drivers have issues with all SDL based programs. Use either a
 						later or earlier version of the Nvidia reference drivers.</li></ul><p>
 					Possible <strong>workaround</strong> for the above mentioned audio issues:<br/>
 					We added a config file option for Windows "config/audio/force_waveout"
@@ -452,24 +452,24 @@
 						the source to the <em>Exult</em> data dir you chose in exult.cfg. This applies only if
 						you don't use "make install"</li></ul></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="not_yet_implemented">4.6. Not yet implemented</a></strong></td></tr><tr><td><ul><li>Stealing, killing innocent NPCs doesn't work yet correctly</li></ul></td></tr></table><hr width="100%"/><table width="100%"><tr><th align="left"><a name="Gameplay FAQ">5. Gameplay FAQ</a></th></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="why_gameplayfaq">5.1. Why is there a gameplay FAQ?</a></strong></td></tr><tr><td><p>
 					Although you can find many useful gameplay FAQs on the internet we do get asked
-					some questions quite frequently as people think these are bugs with <em>Exult</em>.					
-				</p><p><strong>Note that this section contains text that may spoil your game. 
+					some questions quite frequently as people think these are bugs with <em>Exult</em>.
+				</p><p><strong>Note that this section contains text that may spoil your game.
 					Caution is advised.</strong></p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="virtue_stones">5.2. Why can't I cast mark/recall on the Virtue Runes (BG)?</a></strong></td></tr><tr><td><p>
 					You never could do this in the original as well. You have to use the
 					<strong>Virtue Stones</strong> that you find in the same building as the runes.
 				</p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="skarabrae_sacrifice">5.3. Why can't I get the sacrifice in Skara Brae to work (BG)?</a></strong></td></tr><tr><td><p>
-					"I'm trying to get Forsythe in Skara Brae to sacrifice himself to destroy the well of 
+					"I'm trying to get Forsythe in Skara Brae to sacrifice himself to destroy the well of
 					souls. But I can't seem to get Rowenna or Trent to talk to me about sacrifice."<br/>
-					The solution to this is that Rowenna and Trent are standing too far apart. When you 
-					reunited the pair you initiated the conversation with Trent from too far away 
+					The solution to this is that Rowenna and Trent are standing too far apart. When you
+					reunited the pair you initiated the conversation with Trent from too far away
 					(this happens when you run at a higher resolution than the original one).<br/>
-					Now you can either reload a game from before you reunited them or you have to hackmove 
+					Now you can either reload a game from before you reunited them or you have to hackmove
 					Rowenna closer to Trent. After that the two will talk to you about sacrifice.
 				</p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="skarabrae_forsythe">5.4. Why can't I talk to the mayor of Skara Brae (BG)?</a></strong></td></tr><tr><td><p>
-					You might be talking to "The Other Forsythe"(TM). There's a ghost in the Skara Brae 
+					You might be talking to "The Other Forsythe"(TM). There's a ghost in the Skara Brae
 					town hall that looks like Forsythe, but isn't.<br/>
 					This was fixed in more recent versions of <em>Exult</em> but with games started with earlier
-					versions this bug is still present. You need to start a new game of <em>Exult</em> to fix 
+					versions this bug is still present. You need to start a new game of <em>Exult</em> to fix
 					this. But this bug poses no problem, so if you don't want to start a new game,
 					just ignore that clone and search for the real Forsythe.
 				</p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="demon_gem">5.5. Where did my gem of the Demon vanish to (BG-FoV)?</a></strong></td></tr><tr><td><p>
@@ -481,40 +481,40 @@
 				</p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="pikeman_disappears">5.6. Where is the pikeman that lets you train in Monitor (SI)?</a></strong></td></tr><tr><td><p>
 					The pikeman that lets you enter the list field in Monitor sometimes disappears due
 					to a bug in the game (even the original).<br/>
-					This bug occurs when you enter the banquet scene of Monitor. To avoid this bug, we 
+					This bug occurs when you enter the banquet scene of Monitor. To avoid this bug, we
 					recommend, that you approach the banquet hall from the right and/or double-click the
-					entrance door to the hall when the party is standing very close to it. 
+					entrance door to the hall when the party is standing very close to it.
 				</p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="fedabiblio_quest">5.7. How do I get the Mandrake Roots for Fedabiblio (SI)?</a></strong></td></tr><tr><td><p>
 					Fedabiblio in Moonshade sends you on a quest to find fresh Mandrake Roots. You get
 					to Monk Island but can't find the any fresh roots.<br/>
 					The problem is that fresh roots only appear depending on the tide. One of the nameless
 					monks of the island tells you to ask him when the tide is right. Keep coming back to him
-					and when he tells you the tide is right walk to the northern shore of the island to find 
-					fresh roots. 
+					and when he tells you the tide is right walk to the northern shore of the island to find
+					fresh roots.
 				</p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="great_hierophant">5.8. Why can't I summon the Great Hierophant (SI)?</a></strong></td></tr><tr><td><p>
 					If you follow some walkthrough you might find that your summoning of the
 					Great Hierophant doesn't work. This is a problem with the walkthrough. You
 					need to have a personal item of the Great Hierophant in your inventory, namely
 					the Serpent Staff.
 				</p><p>
-					If possible don't just play following the walkthrough, but go out and explore 
-					Serpent Isle. It's hard to imagine someone could miss the cave to the east of 
+					If possible don't just play following the walkthrough, but go out and explore
+					Serpent Isle. It's hard to imagine someone could miss the cave to the east of
 					Monitor...
 				</p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="serpent_staff">5.9. An important note about the Serpent Staff (SI)</a></strong></td></tr><tr><td><p>
-					The Serpent Staff in SI is a very important item. It doesn't seem like it but 
-					it is crucial to some major plot elements that you have the staff in your 
+					The Serpent Staff in SI is a very important item. It doesn't seem like it but
+					it is crucial to some major plot elements that you have the staff in your
 					possession.<br/>
-					Unfortunately the game also demands that you get the staff properly. For that I 
-					recommend to get it without cheating and to stand right next to it. 
+					Unfortunately the game also demands that you get the staff properly. For that I
+					recommend to get it without cheating and to stand right next to it.
 				</p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="pillars_fort">5.10. How to break the plot by doubleclicking some pillars (SI-SS)</a></strong></td></tr><tr><td><p>
-					In the dining hall of the fort in the add-on Silver Seed you can doubleclick the 
-					pillars. This teleports you to the test in the gargoyle city. If you haven't done 
-					this test yet this breaks that plot later on and if you already have it is still a 
+					In the dining hall of the fort in the add-on Silver Seed you can doubleclick the
+					pillars. This teleports you to the test in the gargoyle city. If you haven't done
+					this test yet this breaks that plot later on and if you already have it is still a
 					nuissance. So better don't do it.
 				</p><p>
 					Obviously a slight oversight of the add-on designers. Could be fixed by changing the
 					usecode and the map slightly.
-				</p></td></tr></table><hr width="100%"/><table width="100%"><tr><th align="left"><a name="Questions and Answers">6. Questions and Answers</a></th></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="howto_get_answers">6.1. 
+				</p></td></tr></table><hr width="100%"/><table width="100%"><tr><th align="left"><a name="Questions and Answers">6. Questions and Answers</a></th></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="howto_get_answers">6.1.
 				How can I get answers concerning Ultima 7/<em>Exult</em>?
 			</a></strong></td></tr><tr><td><p>
 					The best way to get answers to questions is to go to the Online discussion forum at:<br/><a href="http://exult.sourceforge.net/forum/">http://exult.sourceforge.net/forum/</a></p><p>
@@ -522,7 +522,7 @@
 					Or go to the Ultima Dragons homepage <a href="http://www.udic.org">http://www.udic.org</a> and find your
 					way from there (this is an online Ultima fan club)
 				</p><p>
-					Some <em>Exult</em> developers like to hang out on IRC on irc.openprojects.net, 
+					Some <em>Exult</em> developers like to hang out on IRC on irc.openprojects.net,
 					channel #exult.<br/>
 					The logs of #exult can be found at
 					<a href="http://www.math.leidenuniv.nl/~wpalenst/exultlog.php3">http://www.math.leidenuniv.nl/~wpalenst/exultlog.php3</a>.
