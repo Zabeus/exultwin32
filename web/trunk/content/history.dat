@@ -1,0 +1,476 @@
+<p><b>2001-11-19</b></p>
+<ul>
+<li>Colourless has implemented proper Ice Dungeon rendering
+<li>Jeff has fixed behaviour of Poison and Sleep fields as discussed in the
+forum
+<li>If Exult can't find sound effects files, it will show you in the main menu
+<li>More bug fixes in preparation for Beta.
+</ul>
+<b><p>2001-11-12</b></p>
+<ul>
+<li>Colourless has implemented compressed savegames. By default, savegames
+are now infact zip files in disguise. This should make submissions to the
+bug-tracker much easier.
+<li>Dominus has updated the FAQ again with the latest additions.
+<li>Development is slowing down as we are preparing to release the first
+beta of Exult.
+<li>More bug fixes
+</ul>
+<b><p>2001-11-5</b></p>
+<ul>
+<li>Both DrCode and Dominus have managed to complete Serpent Isle. This
+doesn't mean the experience is perfect, but many bugs have been fixed along
+the way !!!
+<li>Dominus updated the FAQ and Documentation to reflect the latest changes
+<li>WJP added mousewheel support for the slider gumps
+<li>Other bugs fixes
+</ul>
+<b><p>2001-10-25</b></p>
+<ul>
+<li>We have lost all messages in the forum, because of a bug. WJP took the
+opportunity to upgrade to the latest stable version of the forum software.
+We'll try and keep regular backups in the future. Sorry for the
+inconvenience :(
+<li>As promised on the forum, Colourless added support for multiracial Avatar in BG (SI is required)
+<li>Also, from a suggestion from the forum, Nadir added an option to show a tinted background behind text in
+conversations to make it easier to read
+<li>We have some new paperdoll artwork from Oblivious
+<li>Fawn Trial should work again
+<li>Other bugs fixes
+</ul>
+<b><p>2001-10-18</b></p>
+<ul>
+<li>Some monsters can now split
+<li>Gumps are now a bit more modal
+<li>Some more effects are now implemented (e.g. swordstrike)
+<li>Telekinesis and Fetch work
+</ul>
+<b><p>2001-10-12</b></p>
+<ul>
+<li>Gameplay Options dialog togther with fast mouse and middle-button
+support have been added by Christian Ohm. Thanks !
+<li>Slimes should behave a bit better now
+<li>Powderkegs are much more explosive !
+<li>Lots of combat fixes
+<li>Support for SI freezing attributes
+</ul>
+<b><p>2001-10-06</b></p>
+<ul>
+<li>Dead party members are now properly handled
+<li>Some bug fixes related to books and signs
+<li>Many more SI bugs fixed (endgame, trappers, Batlin scene, etc...)
+</ul>
+<b><p>2001-09-27</b></p>
+<ul>
+<li>Better animation timing
+<li>Serpentine signs, books and scrolls have been implemented
+<li>Hopefully it's now impossible to lose objects when dropping them onto
+walls
+<li>All the flags for the actors are now saved
+<li>Bug fixes in SI's plot
+</ul>
+<b><p>2001-09-18</b></p>
+<ul>
+<li>lots of animations bugs fixed
+<li>Several List Field bugs (SI) fixed. Training should work a lot better now
+<li>Some bugs related to dueling have been fixed
+</ul>
+<b><p>2001-09-12</b></p>
+<ul>
+<li>Fixed several bugs related to weight/volume checking
+<li>Improvements to pathfinding code
+<li>Fixed bugs related to teleporters
+<li>Monsters that shouldn't leave bodies now don't (ghosts, slime, etc..)
+</ul>
+<b><p>2001-09-04</b></p>
+<ul>
+<li>Avatar and NPCs now restore hitpoints and mana hourly
+<li>Several crash bugs fixed
+<li>Various other minor bugs bugs fixed
+</ul>
+<b><p>2001-08-25</b></p>
+<b>Alpha 5</b> has been released! Get it from the <a href="download.php">download page</a>.<br>&nbsp;
+
+<b><p>2001-08-23</b></p>
+<ul>
+<li>Max has implemented MIDI for the MacOS (classic and X) versions of Exult!
+<li>Attacking non-living items like chests and doors should now work properly
+<li>We have a new renderer, that should reduce the amount of glitches.
+<li>Literally dozens of plot-related bugs have been fixed, including: Moonshade Trial bugs, the Gargoyle's tests in Furnace, SI crystal balls, you can now resurrect Gwenno properly, the Banes-cutscene now works, and many more.
+</ul>
+
+	<b><p>2001-08-07</b></p>
+	<ul>
+	<li>We have several new <a href="screenshots.php">screenshots</a>,
+	including two of ExultStudio!
+	<li>Our old FAQ has been split into two sections:
+	<a href="docs.php">Documentation</a> and the new <a href="faq.php">FAQ
+	</a>
+	<li>The 'fleeing party members' bug has been fixed!
+	<li>The BG intro has been improved further
+	<li>Barges (boats, carts etc..) are working much better now
+	<li>Max has done a lot of work on the MacOS (classic and X) versions
+	<li>Many other bugfixes, including the SI Test of Purity, some
+	world-wrapping issues, 'dance' schedule, Guardian and Earth Serpent
+	speech.
+	</ul>
+
+	<b><p>2001-07-31</b></p>
+	<ul>
+	<li>Ryan has implemented new status bars. These show the health of your party members. You can also use them to quickly access their inventory and status screens. Activate them by pressing 'r'
+	<li>There is now a 'return to menu' option in the Black Gate and Serpent Isle menus. (The one in the game itself doesn't work yet)
+	<li>Lots of SI bug fixes including Erstram's turtle, a few Shamino's Castle crashes
+	</ul>
+
+	<b><p>2001-07-25</b></p>
+	<ul>
+	<li>For a preview of what Exult Studio can do, take a look at the
+	"BG-Data" section on our <a
+	href="http://sourceforge.net/project/showfiles.php?group_id=2335">SF
+	download page</a>. (This is still very experimental, and will only
+	work with a very recent snapshot)
+	<li>The quest items from the Silver Seed should work now! (Belt of
+	Strength, Gauntless of Quickness, etc...)
+	<li>Lots of bugfixes, including some bugs in the Fawn trial, the
+	Silver Seed exit bug and the Silver Seed iron maiden
+	<li>Serpent Isle is now playable up to Shamino's castle!
+	</ul>
+
+	<b><p>2001-07-17</b></p>
+	<ul>
+	<li>We have a new <a href="forum/index.php">Discussion Forum</a> to replace the defunct Jackchaos message board
+	<li>Hack-mover has been reenabled (use Alt-H)
+	<li>Ryan has fixed the Frigidazzi sex scene in SI. Let's all Exult :)
+	<li>Palette cycling fixes
+	<li>Kirben, our snapshot builder, has switched to a <a href="http://exult.on.openave.net">new, much faster</a>, hosting service
+	<li>Maciej Kalisiak has made the bilinear scaler 2x as fast
+	</ul>
+	
+	<b><p>2001-07-12</b></p>
+	<ul>
+	<li>Ryan has fixed dungeon rendering in SI!
+	<li>The in-game Video Options menu has been implemented
+	<li>The Guardian speech is now synchronized in the BG intro!
+	<li>several more SI bugfixes (Lucilla, Moonshade-kidnap, ...)
+	<li>the <a href="faq.php">FAQ</a> has been updated with a few
+	known issues
+	</ul>
+<p><b>2001-07-06</b></p>
+<ul>
+<li>The <a href="faq.php">FAQ</a> has been updated for the new Alpha 4 release.
+<li>We have been doing some optimizations: the renderer and the
+	point/interlaced scalers are now a lot faster!
+<li>Exult now compiles in MSVC6. See the 'msvcstuff' directory for the
+	required workspace (.dsw) file
+</ul>
+<p><b>2001-06-29</b></p>
+<p><b>Alpha 4</b> has been released! Highlights include:</p>
+<ul>
+<li>The SI-specific Jawbone and Combat Stats are in
+<li>The keyring from the Silver Seed now works
+<li>The MIDI SFX have been replaced by digital SFX
+<li>The new savegame interface, with unlimited savegames!
+<li>Many, many bugfixes and other improvements
+</ul>
+<p>
+        The Linux (both i386 and Alpha) and Windows version are already
+        available (along with the source, naturally). You can get them
+        from our <a href="download.php">Download page</a>. Be sure to
+        read the <a href="faq.php">FAQ</a> and the README!
+</p>
+<p><b>2001-06-19</b></p>
+<ul>
+<li>The SI Serpent Jawbone has been implemented!
+<li>Fixed a bug which prevented you from using the spellbook you
+received from Fedabiblio. (SI)
+<li>Cheat screen update: you can now modify global (plot) flags and
+NPC stats!
+<li>The map-teleport cheat now uses maps of the actual game world,
+providing a lot more accuracy.
+<li>Tons of other bug fixes, including: Erstam's machine (SI) now
+works, you won't go into combat mode automatically anymore, some
+spells fixed
+</ul>
+<p><b>2001-06-11</b></p>
+<ul>
+<li>We've implemented the Serpent Isle 'Combat Stats' window.
+<li>The mouse cursor shape is now only a hand when it's over a
+window. It will stay an arrow otherwise.
+<li>Some bugs related to combat fixed. (eg. SI List Field)
+<li>Maps in SI are working now.
+</ul>
+<p><b>2001-06-01</b></p>
+<ul>
+<li>Bugs fixed this week include (but are not limited to :-):
+containers aren't closed when casting a spell (makes mark/recall
+work properly), small audio configuration problem, several SI
+problems (Fawn trial now works!)
+<li>Two more spells have been implemented: Time Stop and Death
+Vortex.
+<li>Jeff has continued work on the interaction between Exult and
+Exult Studio
+</ul>
+<p><b>2001-05-23</b></p>
+<ul>
+<li>The 'protect' combat mode is now supported
+<li>Jeff fixed a crash during resurrection
+<li>The MIDI SFX have been disabled because they didn't sound well.
+Read the <a href="faq.php">FAQ</a> for instructions on how to
+install the digital SFX packs. (Which sound a lot better :-) )
+<li>Fixed several minor and less minor bugs.
+</ul>
+<p><b>2001-05-16</b></p>
+<ul>
+<li>Jeff fixed the bug causing the Guardian to sound like a chipmunk
+on some systems.
+<li>You can now also take screenshot with ctrl-alt-s while menus
+(such as the new savegame interface) are open
+<li>Marc Winterrowd wrote some documentation for expack. Thanks!
+</ul>
+Exult alpha 3 was reviewed by the German game magazine GameStar in
+the june 2001 issue! Translation from German (by Alexander Wetzlmaier):
+<blockquote>
+Ultima 7 still belongs to the best role-playing games. It's because
+of the many interaction possibilities and its epic story. However, 
+as a DOS program with a very exotic memory manager and missing
+speed adustment, the game doesn't run on modern PCs. Fans are now
+working on a new game engine for Windows. In the current Alpha 3
+version the first part, The Black Gate, already runs better than in
+the original because many bugs were removed. Warren Spector's
+Ultima 7: Serpent Isle still causes the programmers problems,
+though.
+</blockquote>
+They rated it 1.8 on a scale from 1 (best) to 5 (worst)!
+<p><b>2001-05-10</b></p>
+<ul>
+<li>lots and lots of bugs fixes, including resurrection, object
+names, caltrops, fields and several Forge of Virtue and Silver 
+Seed bugs
+<li>Jeff is working on the interaction between Exult Studio and
+Exult (Linux only for now). For instance, entering map-editor mode
+will now automatically launch Exult Studio if possible.
+<li>Fixed a cross-platform bug in the new savegame info. Old 
+savegames on some platforms will show wrong information. (The game	
+itself isn't damaged)
+<li>Pressing 1-8 will now open the inventory of your party members.
+(Thanks to Telemachos)
+</ul>
+<p><b>2001-05-01</b></p>
+<ul>
+<li>We have started adding support for world-wrapping. It should
+even work occasionally :-)
+<li>Our custom art is now viewable from the shape browser.
+<li>A few scaling (screenshots, fullscreen, resizing) bugs have been
+fixed.
+<li>Spell scrolls in SI have been implemented!
+<li>The spell book is now mostly working in SI!
+<li>Several Silver Seed related fixes
+<li>And the big one this week: Exult now has a new savegame
+interface! Features include:<ul>
+<li>Unlimited savegames!
+<li>A small screenshot of the location you saved!
+<li>Save statistics (RealLife(tm) time saved, in-game time saved, ...)
+<li>Statistics of the avatar and a list of party members
+</ul>
+We also have a <a href="images/savescrn.gif">screenshot</a>
+available.
+</ul>
+<p><b>2001-04-18</b></p>
+<ul>
+<li>More bugs in SI have been fixed. For instance, you can now use
+the Amulet to enter the Silver Seed.
+<li>Schedules for the blacksmiths and bakers have been added.
+<li>Exult now also compiles and runs on Solaris machines.
+</ul>
+<p><b>2001-04-15</b></p>
+<p>Binaries for OpenBSD, FreeBSD and MacOS have been released over the last few days. Have fun!
+</p>
+<p><b>2001-04-12</b></p>
+<p>We have released <b>Alpha 3</b>! Some of the highlights are:</p>
+<ul>
+	<li>Serpent Isle playability has greatly increased!
+	<li>You can now choose from multiple scalers
+	<li>We have lots of great Black Gate paperdoll art! (Thanks Adam and Philip)
+	<li>Support for digital (.wav) SFX
+	<li>Tons of bug fixes and other improvements
+</ul>
+<p>
+Go on over to the <a href="download.php">download page</a> to download it. The source code and Linux, Windows and BeOS binaries are currently available. Other versions will arrive in the next couple of days.<br><br>
+Enjoy! (Be sure to read the <a href="faq.php">FAQ</a> if you run into any problems)
+</p>
+<p><b>2001-04-03</b></p>
+<ul>
+	<li>Serpent Isle support continues to improve, with work on combat, schedules, usecode and more.
+	<li>Updates to the rendering code should reduce the amount of visual glitches.
+</ul>
+<p><b>2001-03-27</b></p>
+<ul>
+	<li>Jeff and Ryan have greatly improved SI support! (Crystal-ball scene is beginning to work, knight's test has been improved, and much more)
+	<li>Some crashes have been fixed. (Tailors, toggling wizard mode with spellbook open, ...)
+	<li>Added even more art by Adam and Philip! (All the party members now have their own unique paperdoll)
+</ul>
+<p><b>2001-03-19</b></p>
+<ul>
+	<li>I've added some more excellent art by Adam and Philip! (There's still more to come...)
+	<li>You can now use .wav files for the SFX! You can download a set of SFX (by Joseph Morris) from the <a href="http://www.sourceforge.net/project/showfiles.php?group_id=2335">Exult download page</a> on Sourceforge (jmsfx.zip). Unzip this file to get jmsfx.flx. Then, you need to add the following entry to your exult.cfg, in the config/disk/game/blackgate/ section:
+<pre>
+&lt;waves&gt;
+/path/to/jmsfx.flx
+&lt;/waves&gt;</pre>
+(replace /path/to/jmsfx.flx with the path to jmsfx.flx, for example ~/exult/jmsfx.flx or c:\exult\jmsfx.flx)
+</ul>
+<p><b>2001-03-13</b></p>
+<ul>
+	<li>Lots of audio bugs have been squashed, including a 
+	crash-at-exit in windows, and a timidity-freeze in Linux.
+	<li>Jeff is implementing support for digital SFX (as .wav's). "Real soon now" :-)
+	<li>Adam Delman and Philip Gottschalk are working on BG paperdoll 
+	art! Some of Adam's work is already in Exult. I'll include the rest
+	as soon as possible. Thanks!
+</ul>
+<p><b>2001-03-05</b></p>
+<p>A small update on what you can expect the next couple of weeks:</p>
+<ul>
+	<li>We might do another release soon, that'll fix most of the
+	annoying bugs introduced in alpha2. (mostly the combat-related
+	ones). We do want to hunt down the Windows crash-on-exit first...
+	<li>We're looking into using .wavs as SFX, to get rid of those
+	'interesting' sounds you get when opening/closing doors.
+</ul>
+<p><b>2001-02-28</b></p>
+<ul>
+	<li>There's a new scaler: SuperEagle, also by Derek Liauw Kie Fa.
+	<li>The bug that caused swords to be thrown is fixed.
+	<li>Jeff has implemented the schedule that causes NPCs to turn
+	lights on/off and open/close shutters
+</ul>
+<p><b>2001-02-19</b></p>
+<ul>
+	<li>The bug causing monsters to	replicate endlessly ("army of darkness" bug) has been fixed.
+	<li>Ryan has implemented a cheat screen similar to the one from the original. This includes an NPC schedule editor!
+	<li>You can now select which scaler you want to use. (the default 2xSaI scaler, a point scaler or an interlaced point scaler)
+	<li>Due to changes to the caching system, teleporting can currently cause crashes. We hope to resolve this soon.
+</ul>
+<p><b>2001-02-12</b></p>
+<ul>
+	<li>The whole site now passes the W3C validation test! Added W3C logos to every page.
+	<li>The FAQ is now automatically generated from XML. This allows for far simpler maintanance. Check it out, the look/content have changed slightly, too.
+</ul>
+<p><b>2001-02-09</b></p>
+<p><b>Alpha 2</b> has been released! This stunning new release offers tons of cool new stuff, including:</p>
+<ul>
+	<li>Serpent Isle is now partially playable!
+	<li>Paperdolls in Black Gate!
+	<li>Dynamic keybindings (this also fixes the 'z' vs. 'y' bug on german keyboards)
+	<li>Gamma correction
+	<li>Support for the French version of BG (Frederic Wagner)
+	<li>Alpha/Linux cxx support (Christoph Reichenbach)
+	<li>Improved BG intro (plasma screen, animations, etc)
+	<li>Screen Shots
+	<li>Reworked audio subsystem
+	<li>Massive code restructuring and cleanup
+	<li>Tons of other fixes and improvements
+</ul>
+<p><b>2001-02-08</b></p>
+<ul>
+	<li>The Exult FAQ from Dominus Dragon is now the official exult FAQ! Added it to the site
+	<li>Updated About Us page
+</ul>
+<p><b>2001-02-04</b></p>
+<ul>
+	<li>Support for customizable keybindings has been added!
+	<li>Missile weapons (triple crossbow, blowgun, sling, dragon's breath) are now working properly.
+	<li>Spells of mass destruction like Mass Death and Armageddon have been implemented.
+</ul>
+<p><b>2001-02-01</b></p>
+<ul>
+	<li>We might do a second alpha release soon! (Maybe within a week)
+	<li>Serpent Isle support continues to improve.
+	<li>Tristan is working on 'Exult studio', which is currently an improved shape browser, but which will contain more editing tools in the future.
+</ul>
+<p><b>2001-01-26</b></p>
+<ul>
+	<li>The <a href="screenshots.php">screenshot</a> page has been updated with new shots which show the latest developments (SI and paperdolls)
+	<li>The GIMP plugin which allows loading/saving of U7 .shp files is available in CVS for the artists among you.
+</ul>
+<p><b>2001-01-21</b></p>
+<ul>
+	<li>Not being satisfied with just having paperdolls in SI, Ryan has added paperdolling support to the Black Gate! We do, however, need art for the BG items/character not present in SI. If you're interested, please contact us.
+	<li>Double-right-clicking has been implemented. (pathfind to selected spot.)
+	<li>The Serpent Isle map now matches the world more closely.
+	<li>As usual, code has been cleaned up, and various bugs have been fixed.
+</ul>
+<p><b>2001-01-16</b></p>
+<ul>
+	<li>Jeff's Usecode Compiler is working, and you can already use it to supply your own usecode functions!
+	<li>Serpent Isle support is being greatly improved.
+	<li>The annoying &quot;crash on exit&quot; bug has (probably) been fixed.
+	<li>Exult now contains code to generate a full-scale &gt;400Mb map :-)
+</ul>
+<p><b>2001-01-07</b></p>
+<ul>
+	<li>Ryan has added paperdolling support to Serpent Isle!
+	<li>Pressing 'escape' in a conversation now selects 'bye', if possible.
+	<li>Frame skipping has been added to palette fades and cinematics, to make them run smoother.
+	<li>Frederic Wagner submitted a patch to stop the french U7 from crashing in conversations.
+</ul>
+<p><b>2001-01-01</b></p>
+<p>Happy New Year!</p>
+<ul>
+	<li>Jeff has started working on a Usecode compiler.
+	<li>You can now take screenshots with Ctrl-Alt-S.
+	<li>The intro is being updated, to make it look more like the original.
+	<li>Various other bugs have been fixed, for example: you can now break glass, sundials are displayed correctly.
+</ul>
+<p><b>2000-12-24</b></p>
+<ul>
+	<li>Jeff's map-editor is coming along.
+	<li>Many bugs fixed. Next release still in the pipeline.
+	<li>We've slowed down because of Christmas. Some of us are working, some of us are studying, one or two of us may actually be required to do seasonal things with our families. Joyous non-denominational festive season. Don't expect much for the next couple weeks.
+</ul>
+<p><b>2000-12-10</b></p>
+<ul>
+	<li>Tristan and Dancer have performed some more major overhauling of the audio system, fixing a lot of issues with Timidity, threads, subprocesses and tempfiles.
+	<li>The ongoing code-restructure is doing quite well, with only the occasional glitch.
+	<li>Jeff has been working on a rudimentary GTK-based map-editor.
+	<li>Everyone's fixed a lot of minor bugs many of which existed more in potentia. We're sure you folks would have been submitting more <a href="http://sourceforge.net/bugs/?group_id=2335">bug reports</a>, if you were having trouble. Course you would.
+</ul>
+<p><b>2000-12-05</b></p>
+<p>We've made our first BeOS binary available! Get it <a href="download.php">here</a>.</p>
+<p><b>2000-12-03</b></p>
+<p>Thanks for all the feedback. We're gearing up for an alpha2 release in a week or so. Here's some of the highlights:<br>
+</p>
+<ul>
+	<li>New keyboard shortcuts.
+	<li>Major code restructure, making it easier to hack on.
+	<li>Some memory management changes
+	<li>Huge audio system overhaul (with some breakage that we'll sort out before alpha2. Promise!)
+	<li>Changes to weapon animations (not quite fixing the fact that they aren't drawn correctly)
+	<li>configure.in has been completely cleaned up
+	<li>Better mouse.
+	<li>Get the Guardian's voice right under a wide variety of circumstances. No more Guardian The Death Muppet (we hope).
+	<li>New usecode support.
+</ul>
+<p><b>2000-11-21</b></p>
+<p>Version 0.90alpha1, our first Alpha, is available! Featuring a new <i>Exult</i> menu at startup, mouse support in the menus, more cheats, key ring for BG, midi sound effects, ports to BeOS and MacOS, and as always tons of fixes</p>
+<p><b>2000-08-24</b></p>
+<p>After a long wait, version 0.40 is available, with the full introduction supported, improved music, and many more plot features working.</p>
+<p><b>2000-07-10</b></p>
+<p>Version 0.35, with the first attempt at combat, better scrolling, and support for magic, is now available.</p>
+<p><b>2000-06-02</b></p>
+<p>Version 0.30 is out with support for save/restore, many plot and animation improvements, and improved Windows Midi.</p>
+<p><b>2000-05-09</b></p>
+<p>Version 0.26 is out! This has many bug fixes and plot improvements, plus the first Midi support under Windows.</p>
+<p><b>2000-04-25</b></p>
+<p>We've just released 0.25, which includes the first Windows binary since converting to the SDL library. We've also continued with lots of new development, so expect another release soon.</p>
+<p><b>2000-03-23</b></p>
+<p>Version 0.20 is out, and includes a whole lot of work by Dancer Vesperman, who has implemented speech, midi, and all the configuration.&nbsp; In addition, this version includes object animation (look at the fountains), the first support for inventories, and now shows the mouse pointers and fonts from the actual U7.</p>
+<p><b>2000-03-1</b></p>
+<p>Version 0.12 is now available. The XLib and Win32 code has been replaced with a multiplatform library called SDL. Plus, obstacle detection and climbing are implemented. This means that you now have to open a door before you can walk through it.:-) Unfortunately, the ability to climb stairs also exposes more glitches in my rendering algorithm.:-(</p>
+<p><b>2000-02-21</b></p>
+<p>Version 0.11 released, with many improvements to the &quot;usecode&quot; interpreter.&nbsp; I'm now going to work on getting the Windows port up to date.</p>
+<p><b>2000-02-10</b></p>
+<p>Version 0.10 released, with a &quot;usecode&quot; interpreter for driving the game plot and conversations.</p>
+<p><b>2000-02-08</b></p>
+<p>Moved <i>Exult</i> to SourceForge.</p>
+<p>After letting the project lie fallow for several months, I'm back, currently incorporating an interpreter for &quot;usecode&quot;, which drives the games plot.</p>

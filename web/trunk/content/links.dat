@@ -1,0 +1,101 @@
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+	<tr>
+		<td valign="top" colspan="2"><b>Exult</b></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td valign="top" width="10"></td>
+		<td valign="top"><b><a href="http://sourceforge.net/project/?group_id=2335">Project Page</a></b></td>
+		<td>
+			<p>Our official Sourceforge page, for access to <i>Exult</i>'s bug system and source-code repository.</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="10"></td>
+		<td valign="top"><a href="http://sourceforge.net/bugs/?group_id=2335"><b>Bug Tracker</b></a></td>
+		<td>Found a bug? First check if it is already in the Bug tracker; if not, add it!</td>
+	</tr>
+	<tr>
+		<td valign="top" width="10"></td>
+		<td valign="top"><a href="http://www.muenster.de/~tomjoad/exult.html"><b>Exult for Amiga</b></a></td>
+		<td>R&uuml;diger Hanke has ported Exult to the Amiga</td>
+	</tr>
+	<tr>
+		<td valign="top">&nbsp;</td>
+		<td valign="top"></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td valign="top" colspan="2"><b>Ultima</b></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td valign="top" width="10"></td>
+		<td valign="top"><b><a href="http://www.udic.org/">UDIC</a></b></td>
+		<td>The Ultima Dragons Internet Chapter - Ultima Fan Club.</td>
+	</tr>
+	<tr>
+		<td valign="top" width="10"></td>
+		<td valign="top"><a href="http://www.peroxide.dk/underworld"><b>Ultima Underworld Viewer</b></a></td>
+		<td>3D-accelerated viewer for Ultima Underworld I.</td>
+	</tr>
+	<tr>
+		<td valign="top" width="10"></td>
+		<td valign="top"><a href="http://eriadain.multimania.com/"><b>Eriadain</b></a></td>
+		<td>Another cool project, creating an alternate U9.</td>
+	</tr>
+	<tr>
+		<td valign="top" width="10"></td>
+		<td valign="top"><a href="http://www.peroxide.dk/ultima"><b>Ultima I 3D</b></a></td>
+		<td>Can you imagine Ultima 1 redone in 3D?</td>
+	</tr>
+	<tr>
+		<td valign="top" width="10"></td>
+		<td valign="top"><a href="http://www.chez.com/pulsarrtc/wizard/ultima/u7wizard.htm"><b>The U7 Wizard page</b></a></td>
+		<td>A full map editor.</td>
+	</tr>
+	<tr>
+		<td valign="top" width="10"></td>
+		<td valign="top"><a href="http://members.iinet.net.au/~rsd/U7inWindows.html"><b>U7 in Windows</b></a></td>
+		<td>Run Ultima 7 in Windows</td>
+	</tr>
+	<tr>
+		<td valign="top" width="10"></td>
+		<td valign="top"><a href="http://members.iinet.net.au/~rsd/U8inWindows.html"><b>U8 in Windows</b></a></td>
+		<td>Run Ultima 8 in Windows</td>
+	</tr>
+	<tr>
+		<td valign="top" width="10"></td>
+		<td valign="top"><a href="http://icdweb.cc.purdue.edu/~frazieri/"><b>Ultima 5: Lazarus</b></a></td>
+		<td>A project creating a 3D version of Ultima 5.</td>
+	</tr>
+	<tr>
+		<td valign="top" width="10">&nbsp;</td>
+		<td valign="top"></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td valign="top" colspan="2"><b>Libs</b></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td valign="top" width="10"></td>
+		<td valign="top"><b><a href="http://www.libsdl.org">SDL</a></b></td>
+		<td>A great cross-platform multimedia library used by <i>Exult</i>.</td>
+	</tr>
+	<tr>
+		<td valign="top" width="10"></td>
+		<td valign="top"><a href="http://www.goice.co.jp/member/mo/timidity/"><b>Timidity++</b></a></td>
+		<td>The MIDI renderer used by the Linux version of <i>Exult</i>. You will also need the <a href="http://www.stardate.bc.ca/eawpatches/html/default.htm">EAW patches</a></td>
+	</tr>
+	<tr>
+		<td valign="top" width="10"></td>
+		<td valign="top"><a href="http://www.arrakis.es/~rlarrosa/libkmid.html"><b>Libkmidi</b></a></td>
+		<td>A MIDI library which you can use under Linux for FM music support.</td>
+	</tr>
+	<tr>
+		<td valign="top" width="10"></td>
+		<td valign="top"><b><a href="http://elektron.its.tudelft.nl/~dalikifa/">2xSaI</a></b></td>
+		<td>Scaling engine by Derek Liauw.</td>
+	</tr>
+</table>

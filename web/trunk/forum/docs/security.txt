@@ -1,0 +1,252 @@
+NOTE:  This document is outdated.  However, the methods discussed here can
+       be applied to Phorum to help secure the installation.  Know that
+       there may be files and/or paths mentioned here that do not exist
+       in your installation.
+
+Phorum Security HOW-TO (Apache/Unix specific)
+
+Original Author: Jason Birch
+Updated by: Brian Moon
+Date: March 3, 2000
+Version: 1.2
+
+Contents:
+
+I) Introduction
+II) Securing the config files
+   1) change the config file's extension
+   2) deny access to the file via .htaccess
+   3) move the file outside the web tree
+III) Wrapping the scripts
+   1) running the scripts under your userid
+   2) setting appropriate file access permissions
+IV) Securing the Administrator Script
+   1) restricting access by filename
+   2) moving the admin script to a secure directory
+V) Conclusion
+
+
+I) Introduction:
+
+These instructions are not meant to be a replacement for a good
+understanding of web security.  They will allow you to set up a
+reasonably secure Phorum install, but do not count on them to cover
+everything.  Take responsibility for the integrity of your web site...
+Learn the security basics, and remember: a little paranoia is a
+good thing.
+
+It is important to implement some form of security measures around your
+Phorum installation.  Without these, a malicious user could break into
+your Phorum and change it or delete it.
+
+The basic problem is that web servers usually run on unix
+machines as "nobody", but the Phorum scripts run by the web server
+need to have access to the Phorum configuration file.  However,
+the Phorum files are generally owned by a real user.  The only
+way that a script running as "nobody" can access and update this file
+is if the user grants world read-write permissions to it.  As you might
+imagine, this opens up several security holes which need to be plugged.
+There are several methods of doing so, depending on whether you are
+running Phorum on a dedicated server or a shared server (i.e. other
+users could have access to your directories via telnet or FTP).
+
+Another potential security hole is users guessing your password by
+loading the admin area.  Restricting access to your administrative
+functions is something that should be done regardless of what type of
+server you are on.
+
+As well as securing your installation, you should also prepare for
+the worst.  If possible, place all of your phorum tables in a separate
+database created exclusively for this purpose, and give it a different
+username and password than your other databases.  If this is done, the
+worst that can happen if your security is hacked is that you loose your
+Phorum (you are making regular backups aren't you?).  Otherwise you
+might loose valuable business data (such as traffic counts) or even
+your entire site if you are generating it dynamically.
+
+Apache-specific examples of implementing a decent level of security are
+included below.  If you are not running Apache, you should read them as
+a starting point for implementing similar measures on your server.
+Most of the the examples assume that you have access to directory-level
+server directives via an .htaccess file.  If you do not, you should
+fix it (if you can) or consider moving to a server that does.
+
+
+II) Securing the config files
+
+ALL USERS SHOULD DO AT LEAST THIS!!!
+
+If trusted local users are the only ones that have login access to your
+server via telnet/ftp/etc., then securing your Phorum install is a
+relatively simple task.  You only need to make sure that the web server
+will not allow direct access to your configuration files, even if for some
+reason a misconfiguration causes the PHP code to be echoed.  If the web
+user types in "http://yourserver.com/Phorum/forums.php", the file should
+not be displayed.  There are (at least) two ways of doing this.  The first is
+the most secure.
+
+1) Move the configuration files outside the web tree, for example into
+your user directory.  This level of security is all that is required
+on a dedicated server, and can be done in two steps:
+
+a) Create a directory outside of your web tree and give it world
+read-write permissions (chmod 707 --> if you don't know what this
+means, read the chmod man page by typing "man chmod" at the unix prompt)
+
+e.g.
+  cd ~
+  mkdir phorum
+  chmod 707 phorum
+
+b) modify the file common.php in the Phorum install directory, changing
+the $inf_path variable (near the bottom):
+
+$inf_path="/your/home/directory/phorum";
+
+2) If you can not move it from the web tree, deny access to the files using a
+server directive placed in a files called ".htaccess" (or whatever your provider
+has changed this to) placed in the /include directory.  In it should be
+placed the lines:
+
+<Files forums.php>
+Order Deny,Allow
+Deny From All
+</Files>
+
+<Files forums.bak.php>
+Order Deny,Allow
+Deny From All
+</Files>
+
+You should place similar lines in the file for any other sensitive
+configuration files.
+
+III) Wrapping the scripts
+
+If you want to run Phorum on a shared server, you absolutely need to wrap
+the scripts... unless, of course, your provider makes all of your scripts
+run as your userid.  In this case, ignore this step and just chmod 700 all
+of your Phorum files.  You may also want to ensure that the inf files
+are being written as mode 700 by adding the line "umask(0077);" to the
+main admin script (admin/index.php) near the beginning of the function
+writefile().
+
+What "wrapping" means is to have the .php scripts executed under your
+userid instead of the web server's default "nobody".  This is because,
+no matter how well you hide the script (e.g. in a directory that's chmod
+711), any user on your server could create a script that is run as
+"nobody" by the web server which could alter or remove your config files.
+This is especially bad on a shared server because the config file could
+also give the user access to your database passwords which, in many cases,
+will let them mess with more than just your Phorum tables.
+
+On a shared server, your provider should be "providing" you with a
+secure and PHP-friendly script wrapper.  If they are not, you should
+either not run scripts like Phorum that read/write files that include
+passwords or you should move to another provider.
+
+1) Wrapping the scripts:
+
+With apache, it is moderately easy to wrap your php scripts, and you don't
+even need to change the script extensions.  You do, however, need to have
+a copy of the CGI version of PHP3 available in your cgi-bin directory.
+
+You first need to set up an Addtype in the .htaccess file which resides
+in your Phorum install directory.  This setting overrides the default
+.php setting:
+
+AddType application/x-httpd-wphp php
+
+And then set up an action for this new type:
+
+Action application/x-httpd-wphp /cgi-sys/php-cgiwrap/username/php3.cgi
+
+In this case, php-cgiwrap is the wrapper script that your provider has put
+in place, and it runs the PHP binary with user permissions in the specified
+user's cgi-bin directory.
+
+You will also want to ensure that the inf files are being written as
+mode 700 by adding the line "umask(0077);" to the main admin script
+(admin/index.php) near the beginning of the function writefile().
+
+2) Setting appropriate permissions:
+
+All files except .htaccess and the images directory (which the web server
+needs to read directly) should be chmod 600.  The .htaccess file should
+be chmod 604, and the images directory should be chmod 705.  The files in
+the images directory can be chmod 604.
+
+The beauty of this method is that no matter what happens to the web
+server, your files can not be directly accessed by anyone but you or a
+script running as you.
+
+
+IV) Securing the Admin Script
+
+The admin script has built in security.  It mainly controls the areas that
+a given password can gain access to.  It may not secure the script from
+intruders.  To do that follow the directions below.
+
+You can restrict access to your admin directory in one of several
+ways.  They are all equally effective, choose the one you prefer.
+These methods can be combined to make them more effective.  These examples
+assume that you have set up web user accounts in a directory called
+"webaccess" off your home directory.  This can be done using the
+htpasswd utility (man htpasswd for instructions). The passwd and
+passwd.group files must be world readable (chmod 604) so that the web
+server can access them for authorization.  The passwords are encrypted,
+but do not place the files in your web tree to tempt password crackers.
+The first two methods are simple but effective ways. It is recommended
+that you do implement as many levels of this security as you can.
+
+1) Rename the admin directory to a unique name that only you know.  It
+can still be guessed, but it is only the first level of security.  You will
+need to change the variable $admindir in common.php to point to this new
+directory.
+
+2) Rename the main admin script from admin/index.php to something else.  You
+will need to change the variable $myname in that file.  You should also provide
+an empty index.php so that users can't get a directory listing from the web.
+
+3) Restrict access based on filename.  Place the following lines in
+your .htaccess file.
+
+AuthUserFile     /usr/users/yourname/webaccess/passwd
+AuthGroupFile    /usr/users/yourname/webaccess/passwd.group
+AuthName         "Phorum administration"
+AuthType         Basic
+
+<DIRECTORY admin>
+require group admin
+</DIRECTORY>
+
+4) Move the admin script to a password-protected directory.
+
+a) Place the following lines in the new directory's .htaccess file:
+
+AuthUserFile     /usr/users/yourname/webaccess/passwd
+AuthGroupFile    /usr/users/yourname/webaccess/passwd.group
+AuthName         "Phorum administration"
+AuthType         Basic
+
+<Limit GET POST PUT>
+require group owners
+</Limit>
+
+b) Modify the path to the main phorum directory in the main amdin script:
+Change:     chdir("../");
+To:         chdir("/path/to/phorum/");
+
+c) Make sure to specify the correct value for the "forum URL" in the
+admin screen by selecting Phorum Setup, File/Paths and changing Forum URL.
+
+
+V) Conclusion
+
+I hope that this document has given you some understanding on how
+to secure your Phorum install.  After reading this document and
+implementing all the steps recommended in it, your Phorums will
+be as secure as I know how to make them.  However, there may be something
+that I am missing.  You should make the effort to learn about web
+security for yourself and, if you find any mistakes in this document,
+please forward them to me for correction.

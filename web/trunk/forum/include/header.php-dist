@@ -1,0 +1,12 @@
+<HTML>
+<HEAD>
+<meta name="Phorum Version" content="<?PHP echo $phorumver; ?>">
+<meta name="Phorum DB" content="<?PHP echo $DB->type; ?>">
+<meta name="PHP Version" content="<?PHP echo phpversion(); ?>">
+<TITLE>phorum - <?PHP if(isset($ForumName)) echo $ForumName; ?><?PHP echo initvar("title"); ?></TITLE>
+<link rel="STYLESHEET" type="text/css" href="<?PHP echo $include_path; ?>/phorum.css">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" LINK="#0000FF" ALINK="#FF0000" VLINK="#330000">
+<font class=PhorumForumTitle><b><?PHP echo $ForumName; ?></b></font>
+<center>
+<br>

@@ -1,0 +1,71 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-au">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Exult - How to compile Exult CVS source code snapshot with MinGW</title>
+</head>
+
+<body text=#333366 vLink=#669966 aLink=#ffcc33 link=#666699 bgColor=#cccccc background="../images/back.gif">
+
+<div align="center">
+  <center>
+<TABLE cellSpacing=0 cellPadding=0 width="90%" border=0>
+  <TR>
+    <TD align=middle>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD align=middle><IMG alt="Exult Logo" 
+            src="../images/exult_logo.gif"></TD></TR>
+        <TR>
+          <TD>&nbsp;</TD></TR>
+        <TR>
+          <TD align=middle><a href="../index.php">Home</a> | <a href="../download.php">Download</a> |
+            <a href="../docs.php">Documentation</a> | <a href="../faq.php">FAQ</a> |
+            <a href="../screenshots.php">Screen Shots</a> 
+          </TD></TR>
+        <TR>
+          <TD align=middle><a href="../dev.php">Development</a> | <a href="../forum/index.php">Discussion</a> |
+            <a href="../about.php">About Us</a> | <a href="../history.php">History</a> |
+            <a href="../links.php">Links</a> </TD></TR>
+        <TR>
+          <TD>&nbsp;</TD></TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TD><!-- HEADLINE -->
+
+<p><b>How to compile Exult CVS source code snapshot with MinGW</b></p>
+<p>Download <a href="http://prdownloads.sourceforge.net/mingw/Mingw-1.0.1-20010726.tar.gz">MinGW</a>
+(10MB) and install it<br>
+Extract the files to a mingw directory in root directory of drive <a href="http://www.winzip.com/"><br>
+</a>( ie C:\mingw\ )</p>
+<p>Download the current <a href="Exult.zip">CVS snapshot of Exult source code</a></p>
+<p>Download <a href="exult_sdl_win32.zip">SDL 1.2.2 source code</a></p>
+<p>Extract both files to the same location <a href="http://www.winzip.com/"><br>
+</a>
+(i.e. C:\exult\ )</p>
+<p>Open Command Prompt or MS-DOS Prompt</p>
+<p>Type 'PATH=drive:\mingw\bin;%PATH%' where drive is the letter of the hard
+disk you installed mingw on to, without quotes to add mingw to the path<br>
+(ie PATH=C:\mingw\bin;%PATH% )</p>
+<p>Change to the directory where you unpacked the CVS snapshot of Exult source
+code<br>
+(i.e. cd C:\exult\ )</p>
+<p>Open makefile.win32 from the Exult directory in a text editor and change C:\\Ultima7
+to the directory you want Exult to be installed to.<br>
+(ie C:\\Games\\Ultima7 )</p>
+<p>Type 'make -f makefile.win32 install' without quotes to compile and install Exult for Windows</p>
+<p>Once compile has finished and been installed exit the Command Prompt or
+MS-DOS Prompt</p>
+<p>Run exult.exe and enjoy the game</p>
+
+<p>&nbsp;</p>
+
+    </TD></TR></TABLE></center>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<?php
+	add_screenshot("mainmenu.png",160,100,"The Exult Menu");
+	add_screenshot("cheat.gif",160,100,"The Cheats");
+	add_screenshot("stage.gif",160,105,"The Britannia Theater");
+
+	add_screenshot("love.gif",160,106,"Love Test from Forge of Virtue");
+	add_screenshot("bgpaper.gif",160,120,"Paperdolls in Black Gate");
+	add_screenshot("si.gif",160,100,"Serpent Isle");
+
+	add_screenshot("alagnar.gif",160,104,"Alagnar");
+	add_screenshot("blackgate.gif",160,104,"The Black Gate");
+	add_screenshot("savescrn.gif",160,100,"The new savegame interface");
+	add_screenshot("stats2.png",160,116,"Stats display");
+
+	add_screenshot("exult_studio1.jpg",160,116,"ExultStudio");
+	add_screenshot("exult_studio2.png",160,120,"ExultStudio");
+
+	add_screenshot("gamemenu.png",160,100,"The game menu");
+	add_screenshot("videomenu.png",160,100,"The video menu");
+	add_screenshot("audiomenu.png",160,100,"The audio menu");
+	add_screenshot("gameplaymenu.png",160,100,"The gameplay menu");
+	add_screenshot("cheatmenu.png",160,100,"Colourless' cheat menu");
+
+	add_screenshot("multiracial.png",160,100,"Multiracial support in BG");
+	add_screenshot("shapebrowser.png",160,100,"The shape browser");
+	add_screenshot("teleportmap.png",160,100,"The teleport map");
+
+	add_screenshot("interlaced.png",160,100,"The interlaced scaler");
+	add_screenshot("textbg.png",160,100,"The shaded background behind text");
+	
+?>

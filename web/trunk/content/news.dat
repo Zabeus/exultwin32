@@ -1,0 +1,56 @@
+<table width="100%">
+	<tr><td width="20%" valign="top">6 January 2002<br></td>
+	<td><p>Happy New Year! Lots of progress these last few weeks, including:</p>
+	<ul>
+	<li>Several fixes related to character attributes. (str, int, combat, etc...)
+	<li>Fixed a bug where the Jawbone would be created in the wrong spot, causing Erstam not to realize you picked it up
+	<li>Expack is now a bit more verbose, and should be able to handle Unix-style indexfiles in Windows.
+	<li>Jeff has done a lot of work on Exult Studio. You can now edit terrain.
+	</ul>
+	</td></tr>
+	<tr><td width="20%" valign="top">26 December 2001<br></td>
+	<td><p>Merry christmas!</p>
+	<ul>
+	<li>The Spanish version of Serpent Isle should work now.
+	<li>Serpent gates work even if you don't have Silver Seed
+	<li>Duelists will attack their dummies and archery targets
+	<li>Magic Storm now actually damages enemies
+	<li>Various other fixes to schedules, monster spawning, menus,
+	and many more
+	</ul>
+	</td></tr>
+	<tr><td width="20%" valign="top">19 December 2001<br></td>
+	<td><p>Weekly News</p>
+	<ul>
+	<li>Exult now compiles under Solaris with G++
+	<li>Music looping is now configurable via the Audio Options
+	<li>A few fixes for correct display of spanish menus have gone in
+	<li>Combat has been modified slightly to make it more challenging
+	<li>More bug fixes
+	</ul>
+	</td></tr>
+	<tr><td width="20%" valign="top">10 December 2001<br></td>
+	<td><p>Weekly News (one week late)</p>
+	<ul>
+	<li>Make sure you read <a href="README.1ST">this</a>
+	<li>There is an Amiga port of Exult, which hopefully will be
+	    integrated in the mainstream code. Get it <a href="http://www.muenster.de/~tomjoad/exult.html">here</a>
+	<li>Patrick's UCXT (usecode decompiler/disassembler) now works and will
+	    be included in future "Tools" releases
+	<li>Jeff has upgraded UCC (usecode compiler) to work with the new 
+	    conversation calls, and has released a new "patch" to BG.
+	    Grab it from <a href="http://prdownloads.sourceforge.net/exult/bgpatch3.zip">here</a>
+	<li>Exult's data files (exult*.flx) have a CRC so that Exult refuses to 
+	    run with non-matching data files
+	<li>We fixed a few crashers and other bugs
+	</ul>
+	</td></tr>
+	<tr><td width="20%" valign="top">29 November 2001<br></td>
+	<td><p><b>Exult Beta released !!!</b></p>
+	<p>Get it from the <a href="download.php">download</a> page,
+	   see the <a href="screenshots.php">screenshots</a>,
+	   read the <a href="docs.php">documentation</a> and the
+	   <a href="faq.php">FAQ</a>.</p>
+	<p>And there was much rejoicing :)</p>
+	</td></tr>
+</table>
