@@ -41,26 +41,18 @@ begin_section("Additional Data files (not required)");
 end_section();
 
 // snapshots
-begin_section("Exult 1.0.x Snapshots (Stable) - use at your own risk!");
- add_local_entry("1.0/Changelog", "Changelog");
- add_local_entry("1.0/Exultwin32.exe", "Windows 9x/ME/NT/2000 binary snapshot");
- add_local_entry("1.0/Exult.zip", "Exult CVS source code snapshot");
- add_local_entry("1.0/ExultTools.exe", "Exult Win32 Tools snapshot ");
- add_local_entry("1.0/PhotoshopShapePlugin.zip", "Photoshop Plugin");
- add_local_entry("1.0/GimpPlugin.exe", "Gimp Plugin (For Windows)");
- add_local_entry("1.0/ExultStudio.exe", "Exult Studio (work in progress)");
-end_section();
-
 begin_section("Exult 1.1.x Snapshots (Unstable) - use at your own risk!");
- add_local_entry("2.0/Changelog", "Changelog");
- add_local_entry("2.0/Exultwin32.exe", "Windows 9x/ME/NT/2000 binary snapshot");
+ add_local_entry("Changelog", "Changelog");
+ add_local_entry("Exultwin32.exe", "Windows 9x/ME/NT/2000 binary snapshot");
  add_local_entry("sdl_mixer.exe", "Required file for Exult 1.1.x Snapshots");
- add_local_entry("2.0/Exult.zip", "Exult CVS source code snapshot");
- add_local_entry("2.0/ExultTools.exe", "Exult Win32 Tools snapshot ");
- add_local_entry("2.0/ExultStudio.exe", "Exult Studio (work in progress)");
- add_local_entry("2.0/exult-zaurus.ipk", "Zaurus binary snapshot");
- add_local_entry("2.0/exult-sfx-si_0.4_arm.ipk", "Zaurus SI sfx package");
- add_local_entry("2.0/exult-sfx-bg_0.4_arm.ipk", "Zaurus BG sfx package");
+ add_local_entry("Exult.zip", "Exult CVS source code snapshot");
+ add_local_entry("ExultTools.exe", "Exult Win32 Tools snapshot ");
+ add_local_entry("PhotoshopShapePlugin.zip", "Photoshop Plugin");
+ add_local_entry("GimpPlugin.exe", "Gimp Plugin (For Windows)");
+ add_local_entry("ExultStudio.exe", "Exult Studio (work in progress)");
+ add_local_entry("exult-zaurus.ipk", "Zaurus binary snapshot");
+ add_local_entry("exult-sfx-si_0.4_arm.ipk", "Zaurus SI sfx package");
+ add_local_entry("exult-sfx-bg_0.4_arm.ipk", "Zaurus BG sfx package");
 end_section();
 
 // pentagram
