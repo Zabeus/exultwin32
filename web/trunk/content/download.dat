@@ -1,13 +1,11 @@
 <?php
-begin_section("Official - v1.1Beta3");
- add_extern_entry("exult-1.1beta3.tar.gz", "Source (.tar.gz)", 1642);
- add_extern_entry("exult-1.1beta3-win32.exe", "Windows (95/98/ME/NT/2000/XP) Binary", 1904);
- add_extern_entry("exult-1.1beta3-1.i386.rpm", "RedHat 9 binary rpm", 927);
- add_extern_entry("exult-tools-1.1beta3-1.i386.rpm", "RedHat 9 binary rpm (tools)", 241);
- add_extern_entry("exult-studio-1.1beta3-1.i386.rpm", "RedHat 9 binary rpm (Exult Studio)", 225);
- add_extern_entry("exult-1.1beta3-1.src.rpm", "Source (.rpm)", 1644);
- add_extern_entry("exult_1.1beta3_arm.ipk", "Sharp Zaurus binary .ipk", 1362);
- add_extern_entry("exult-1.1Beta3.dmg", "Mac OS X binary", 1544);
+begin_section("Official - v1.1.9rc1");
+ add_extern_entry("exult-1.1.9rc1.tar.gz", "Source (.tar.gz)", 1743);
+ add_extern_entry("exult-1.1.9rc1-win32.exe", "Windows (95/98/ME/NT/2000/XP) Binary", 1940);
+ add_extern_entry("exult-1.1.9rc1-1.i386.rpm", "Fedora Core 1 binary rpm", 1014);
+ add_extern_entry("exult-tools-1.1.9rc1-1.i386.rpm", "Fedora Core 1 binary rpm (tools)", 274);
+ add_extern_entry("exult-studio-1.1.9rc1-1.i386.rpm", "Fedora Core 1 binary rpm (Exult Studio)", 250);
+ add_extern_entry("exult-1.1.9rc1-1.src.rpm", "Source (.rpm)", 1742);
 end_section();
 
 
@@ -22,13 +20,15 @@ end_section();
 
 // older release stuff
 begin_section("Older releases");
- add_extern_entry("exult_0.98rc1-1_i386.deb", "Linux Intel Debian Sid Binary
-(0.98RC1)", 994);
- add_extern_entry("exult-0.98rc1.sit", "MacOS Binary (0.98RC1)", 859);
+ add_extern_entry("exult_1.1beta3_arm.ipk", "Sharp Zaurus binary .ipk (1.1beta3)", 1362);
+ add_extern_entry("exult-1.1Beta3.dmg", "Mac OS X binary (1.1beta3)", 1544);
  add_extern_entry("exult-0.98rc1.x86.beos.zip", "BeOS binary (0.98RC1)", 1230);
 end_section();
 
 begin_section("Ancient releases");
+ add_extern_entry("exult_0.98rc1-1_i386.deb", "Linux Intel Debian Sid Binary
+(0.98RC1)", 994);
+ add_extern_entry("exult-0.98rc1.sit", "MacOS Binary (0.98RC1)", 859);
  add_extern_entry("exult-0.96beta1.openbsd-2.9.tar.gz", "OpenBSD 2.9 Binary (0.96beta1)", 1215);
  add_extern_entry("exult_0.93-alpha4_alpha.deb", "Alpha GNU/Linux Debian package (0.93alpha4)", 990);
  add_extern_entry("exult_0.93-alpha4-freebsd4.2.tar.gz", "FreeBSD (0.93alpha4)", 797);
@@ -58,12 +58,5 @@ begin_section("Exult 1.1.x Snapshots (Unstable) - use at your own risk!");
  add_local_entry("exult-zaurus.ipk", "Zaurus binary snapshot");
  add_local_entry("exult-sfx-si_0.4_arm.ipk", "Zaurus SI sfx package");
  add_local_entry("exult-sfx-bg_0.4_arm.ipk", "Zaurus BG sfx package");
-end_section();
-
-// pentagram
-begin_section("Pentagram - Experimental map and shapes viewer for Ultima 8");
- add_local_entry("pentagram/Changelog", "Changelog");
- add_local_entry("pentagram/Pentagram.zip", "Pentagram CVS source code snapshot");
- add_local_entry("pentagram/Pentagramwin32.exe", "Windows 95/98/ME/NT/2000/XP binary snapshot");
 end_section();
 ?>
