@@ -1,4 +1,27 @@
 <table width="100%">
+	<tr><td width="20%" valign="top">03 July 2004<br></td>
+	<td><b>What happens next?</b><br>
+	After the successful 1.2 release we are now going to make fundamental 
+	changes to Exult that will make snapshots a lot more unstable for the 
+	coming weeks/months. This time we really mean unstable, don't expect 
+	to be able to play through the games with coming snapshots. For playing 
+	please use the official release.<br>
+	The changes will include:<br>
+	<ul>	
+	<li>recent snapshots have the version number 1.4.x (it seems we skipped 1.3)</li>
+	<li>combat uses dexterity to determine how fast you can strike</li>
+	<li>wand charges are kept track of</li>
+	<li>rewrite of the midi & graphics system to make it easier to manage</li>
+	<li>multimap support</li>
+	<li>enhanced savegames so we can use more than 1024 shapes 
+	(this might even break old savegames)</li>
+	<li>other changes intended to make developing of new games easier</li>
+	</ul>
+	<br>
+	Some members of Exult are also busy with <a href="http://pentagram.sf.net">Pentagram</a>,
+	a project aiming to create an Ultima 8 engine for use on modern operating systems. 
+	They polished up their homepage to be a bit more informative. Have a look.<br>
+	</td></tr>
 	<tr><td width="20%" valign="top">17 June 2004<br></td>
 	<td><b>Exult 1.2 has been released!</b><br>
 	The Exult team is pleased to announce the release of Exult 1.2, our
