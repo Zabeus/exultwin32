@@ -124,7 +124,7 @@
     }
 
     if($$phcollapse==0){
-      $SQL = "SELECT thread, modifystamp FROM $ForumTableName WHERE approved='Y' AND $myflag GROUP BY thread, modifystamp ORDER BY modifystamp desc, thread desc".$limit;
+      $SQL = "SELECT thread, modifystamp, threadflags FROM $ForumTableName WHERE approved='Y' AND $myflag GROUP BY thread, modifystamp ORDER BY modifystamp desc, thread desc".$limit;
     } else {
       if($DB->type=="mysql"){
         $convfunc="FROM_UNIXTIME";
@@ -153,13 +153,15 @@
     $max=0;
     $min=0;
     while (is_array($rec)){
-      if($rec["modifystamp"]>$max) {
-        $max=$rec["modifystamp"];
-        if($min==0) {
-          $min=$max;
+      if(!($rec["threadflags"] & FLG_KEEPONTOP)) {
+        if($rec["modifystamp"]>$max) {
+          $max=$rec["modifystamp"];
+          if($min==0) {
+            $min=$max;
+          }
+        } elseif ($rec["modifystamp"]<$min) {
+          $min=$rec["modifystamp"];
         }
-      } elseif ($rec["modifystamp"]<$min) {
-        $min=$rec["modifystamp"];
       }
       $aryThreadstring[$rec["thread"]] = $rec["thread"];
       $threads[]=$rec;

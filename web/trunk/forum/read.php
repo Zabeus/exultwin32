@@ -15,7 +15,7 @@
 //   You should have received a copy of the Phorum License                    //
 //   along with this program.                                                 //
 ////////////////////////////////////////////////////////////////////////////////
-// $Id: read.php,v 1.3 2002/07/23 10:04:49 wjpalenstijn Exp $
+// $Id: read.php,v 1.4 2004/10/05 20:43:03 wjpalenstijn Exp $
 
   $read=true;
 
@@ -494,6 +494,12 @@ ans=window.confirm("<?php echo $lDelMessageWarning; ?>");
 <FONT color='<?php echo $ForumTableBodyFontColor1; ?>' class="PhorumNav"><?php echo $lModerators; ?></font>
 <br /><?php echo "<a href=\"$forum_url/moderator.$ext?mod=edit&f=$ForumId&i=$id&t=$thread$GetVars\">";?><FONT color='<?php echo $ForumTableBodyFontColor1; ?>' class="PhorumNav"><?php echo $lModEdit; ?></a></font>
 <br /><a href="javascript:delmsg('<?php echo "$forum_url/moderator.$ext?mod=delete&f=$ForumId&i=$rec_id&t=$thread$GetVars";?>')"><FONT color='<?php echo $ForumTableBodyFontColor1; ?>' class="PhorumNav"><?php echo $lModDelete; ?></a></font>
+<?php if (!($threadflags & FLG_FROZEN)) { ?>
+<br /><?php echo "<a href=\"$forum_url/moderator.$ext?mod=freeze&f=$ForumId&i=$id&t=$thread$GetVars\">";?><FONT color='<?php echo $ForumTableBodyFontColor1; ?>' class="PhorumNav"><?php echo $lModFreeze; ?></a></font>
+<?php } else { ?>
+<br /><?php echo "<a href=\"$forum_url/moderator.$ext?mod=unfreeze&f=$ForumId&i=$id&t=$thread$GetVars\">";?><FONT color='<?php echo $ForumTableBodyFontColor1; ?>' class="PhorumNav"><?php echo $lModUnfreeze; ?></a></font>
+<? } ?>
+
 </td>
 </tr>
 </table>
@@ -519,6 +525,11 @@ ans=window.confirm("<?php echo $lDelMessageWarning; ?>");
 <FONT color='<?php echo $ForumTableBodyFontColor1; ?>' class="PhorumNav"><?php echo $lModerators; ?></font>
 <br /><?php echo "<a href=\"$forum_url/moderator.$ext?mod=edit&f=$ForumId&i=$rec_id&t=$thread$GetVars\">";?><FONT color='<?php echo $ForumTableBodyFontColor1; ?>' class="PhorumNav"><?php echo $lModEdit; ?></a></font>
 <br /><a href="javascript:delmsg('<?php echo "$forum_url/moderator.$ext?mod=delete&f=$ForumId&i=$rec_id&t=$thread$GetVars";?>')"><FONT color='<?php echo $ForumTableBodyFontColor1; ?>' class="PhorumNav"><?php echo $lModDelete; ?></a></font>
+<?php if($rec_id == $thread) { if (!($threadflags & FLG_FROZEN)) { ?>
+<br /><?php echo "<a href=\"$forum_url/moderator.$ext?mod=freeze&f=$ForumId&i=$rec_id&t=$thread$GetVars\">";?><FONT color='<?php echo $ForumTableBodyFontColor1; ?>' class="PhorumNav"><?php echo $lModFreeze; ?></a></font>
+<?php } else { ?>
+<br /><?php echo "<a href=\"$forum_url/moderator.$ext?mod=unfreeze&f=$ForumId&i=$rec_id&t=$thread$GetVars\">";?><FONT color='<?php echo $ForumTableBodyFontColor1; ?>' class="PhorumNav"><?php echo $lModUnfreeze; ?></a></font>
+<?php }} ?>
 </td>
 </tr>
 </table>

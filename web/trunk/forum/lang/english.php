@@ -124,6 +124,8 @@
   $lPosts           = "Posts";
   $lModerators      = "Moderator-Functions:";
   $lModEdit         = "Edit Post";
+  $lModFreeze       = "Freeze Thread";
+  $lModUnfreeze     = "Unfreeze Thread";
   $lModDelete       = "Delete Post";
   $lEditPost        = "Edit Post";
   $lFormUpdate      = "Update Post";

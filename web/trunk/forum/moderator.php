@@ -151,6 +151,18 @@
             }
             exit;
             break;
+        case "freeze":
+            include "$include_path/threadflags.php";
+            set_threadflag($t, FLG_FROZEN);
+            header("Location: $read_page.$ext?f=$num&i=$t&t=$t$GetVars");
+            exit;
+            break;
+        case "unfreeze":
+            include "$include_path/threadflags.php";
+            clear_threadflag($t, FLG_FROZEN);
+            header("Location: $read_page.$ext?f=$num&i=$t&t=$t$GetVars");
+            exit;
+            break;
     }
 
     if(!empty($i)){
