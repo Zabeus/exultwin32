@@ -1,6 +1,7 @@
 2002-04-07  Max Horn  <max@quendi.de>
 	* forum/include/header.php,templates/main.tpl, templates/main_xhtml.tpl:
 	  added "Studio" to the navbar
+	* download.php: don't show download entries for missing files
 
 2002-03-23  Willem Jan Palenstijn <wjpalenstijn@users.sourceforge.net>
 	* content/download.dat: added BeOS binary

@@ -68,15 +68,17 @@
 	{
 		global $tpl;
 		
-		$tpl->assign(
-			array(
-				FILENAME	=>	$file,
-				DESCRIPTION	=>	$desc,
-				FILE_TIME	=>	date("H:i",filemtime("snapshots/$file")),
-				FILE_DATE	=>	date("Y-m-d",filemtime("snapshots/$file")),
-				SIZE		=>	ceil(filesize("snapshots/$file")/1024)
-			)
-		);
-		$tpl->parse(SECTION_ENTRIES,".s_entry");
+		if (file_exists("snapshots/$file")) {
+			$tpl->assign(
+				array(
+					FILENAME	=>	$file,
+					DESCRIPTION	=>	$desc,
+					FILE_TIME	=>	date("H:i",filemtime("snapshots/$file")),
+					FILE_DATE	=>	date("Y-m-d",filemtime("snapshots/$file")),
+					SIZE		=>	ceil(filesize("snapshots/$file")/1024)
+				)
+			);
+			$tpl->parse(SECTION_ENTRIES,".s_entry");
+		}
 	}
 ?>
