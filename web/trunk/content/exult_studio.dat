@@ -1,15 +1,8 @@
-<p>last changed: 22 May 2002(GMT)</p><hr/><p>
-		A text only version can be found <a href="http://exult.sourceforge.net/exultstudio.txt">here</a></p><br/><p><a href="#Changes to the Documentation">0. Changes to the Documentation</a><br/><a href="#22052002">0.1. 22 May 2002</a><br/><a href="#19052002">0.2. 19 May 2002</a><br/><a href="#06052002">0.3. 06 May 2002</a><br/><a href="#03052002">0.4. 03 May 2002</a><br/><a href="#07042002">0.5. 07 April 2002</a><br/></p><p><a href="#Introduction">1. Introduction</a><br/><a href="#whatis_studio">1.1. What is <em>Exult Studio</em>?</a><br/><a href="#about_doc">1.2. About this Documentation.</a><br/><a href="#studio_terms">1.3. Terms we use in regard to Exult and Ultima 7</a><br/></p><p><a href="#Configurations">2. Configurations</a><br/><a href="#installation">2.1. Installation</a><br/><a href="#studio_run">2.2. Running <em>Exult Studio</em></a><br/><a href="#studio_cfg">2.3. Settings in exult.cfg.</a><br/><a href="#command_line">2.4. Command line options</a><br/></p><p><a href="#Menu Options">3. Menu Options</a><br/><a href="#file_menu">3.1. File</a><br/><a href="#objects_menu">3.2. Objects</a><br/><a href="#mode_menu">3.3. Mode</a><br/><a href="#tools_menu">3.4. Tools</a><br/><a href="#tool_bar">3.5. Tool bar</a><br/></p><p><a href="#Main Working Window">4. Main Working Window</a><br/><a href="#description">4.1. Description</a><br/><a href="#shape_files">4.2. Shape files</a><br/><a href="#map_files">4.3. Map files</a><br/><a href="#palettes_files">4.4. Palettes files</a><br/><a href="#groups_files">4.5. Groups files</a><br/></p><p><a href="#Editing a Game">5. Editing a Game</a><br/><a href="#can_do_atm">5.1. What you can do at the moment</a><br/><a href="#shape_edit">5.2. The shape editor</a><br/><a href="#egg_edit">5.3. Creating/editing Eggs</a><br/><a href="#npc_edit">5.4. Creating/editing NPCs</a><br/><a href="#combo_edit">5.5. Creating Combination files</a><br/><a href="#usecode_edit">5.6. Custom Usecode</a><br/></p><p><a href="#Miscellaneous">6. Miscellaneous</a><br/><a href="#tools">6.1. Other tools that might be useful</a><br/><a href="#port_platforms">6.2. Porting <em>Exult Studio</em> to other platforms</a><br/><a href="#client_server_stuff">6.3. About this client/server stuff?</a><br/><a href="#terrain_stuff">6.4. About this 'terrain-editing' stuff and why you can't just
-  					drag objects to where you want.</a><br/><a href="#what_next">6.5. What's next?</a><br/></p><p><a href="#Credits">7. Credits</a><br/><a href="#thanks">7.1. Thanks</a><br/></p><hr width="100%"/><table width="100%"><tr><th align="left"><a name="Changes to the Documentation">0. Changes to the Documentation</a></th></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="22052002">0.1. 22 May 2002</a></strong></td></tr><tr><td><ul><li><a href="#tools">6.1. Other tools that might be useful</a> Jeff started documenting ucc.</li></ul></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="19052002">0.2. 19 May 2002</a></strong></td></tr><tr><td><ul><li><a href="#about_doc">1.2. About this Documentation.</a> Some notes for the reader.</li><li><a href="#mode_menu">3.3. Mode</a> Select-mode is now implemented and added a note 
-						about dragging.</li><li><a href="#tool_bar">3.5. Tool bar</a> added "Hide lift" option.</li><li><a href="#shape_edit">5.2. The shape editor</a> "New Shape" also lets you add a font shape.</li><li><a href="#combo_edit">5.5. Creating Combination files</a> Combinations now do work fully.</li></ul></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="06052002">0.3. 06 May 2002</a></strong></td></tr><tr><td><ul><li><a href="#command_line">2.4. Command line options</a> -d option no longer exists.</li><li><a href="#mode_menu">3.3. Mode</a> more information on Pick- and Combo-mode.</li><li><a href="#Main Working Window">4. Main Working Window</a> added (working title only).</li><li><a href="#can_do_atm">5.1. What you can do at the moment</a> shift-clicking adds currently selected shape in 
-						any mode.</li><li><a href="#combo_edit">5.5. Creating Combination files</a> when it gets saved combos.flx gets used.</li></ul></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="03052002">0.4. 03 May 2002</a></strong></td></tr><tr><td><p>
-					This is the second draft of the <em>Exult Studio</em> documentation. 					
-				</p><ul><li><a href="#command_line">2.4. Command line options</a> I had spaces between the commands and the options.</li><li><a href="#Menu Options">3. Menu Options</a> description of all the Menu Options.</li><li><a href="#can_do_atm">5.1. What you can do at the moment</a> added warning on editing terrains.</li><li><a href="#egg_edit">5.3. Creating/editing Eggs</a> added place holder for actual documentation.</li><li><a href="#npc_edit">5.4. Creating/editing NPCs</a> added place holder for actual documentation.</li><li><a href="#combo_edit">5.5. Creating Combination files</a> the latest addition.</li><li><a href="#usecode_edit">5.6. Custom Usecode</a> link to latest patch and link to Pertex'
-						documentation.</li><li><a href="#what_next">6.5. What's next?</a> 'scratched' the stuff I think got implemented.</li></ul></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="07042002">0.5. 07 April 2002</a></strong></td></tr><tr><td><p>
-					This is the first draft of the <em>Exult Studio</em> documentation. So please bear with me. It
-					is by no means perfect and I ask you to send me all your comments on how to better
-					express some stuff or to point out what I just plain forgot. 
-					<a href="mailto:gigdr@tesionmail.de">Dominus</a></p></td></tr></table><hr width="100%"/><table width="100%"><tr><th align="left"><a name="Introduction">1. Introduction</a></th></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="whatis_studio">1.1. What is <em>Exult Studio</em>?</a></strong></td></tr><tr><td><p><em>Exult</em> is not only capable of playing Ultima 7 but it is also intended as
+<p>last changed: 24 July 2002(GMT)</p><hr/><p>
+		A text only version can be found <a href="http://exult.sourceforge.net/exultstudio.txt">here</a></p><br/><p><a href="#Changes to the Documentation">0. Changes to the Documentation</a><br/><a href="#24072002">0.1. 24 July 2002</a><br/><a href="#22052002">0.2. 22 May 2002</a><br/><a href="#19052002">0.3. 19 May 2002</a><br/></p><p><a href="#Introduction">1. Introduction</a><br/><a href="#whatis_studio">1.1. What is <em>Exult Studio</em>?</a><br/><a href="#about_doc">1.2. About this Documentation.</a><br/><a href="#studio_terms">1.3. Terms we use in regard to Exult and Ultima 7</a><br/></p><p><a href="#Configurations">2. Configurations</a><br/><a href="#installation">2.1. Installation</a><br/><a href="#studio_run">2.2. Running <em>Exult Studio</em></a><br/><a href="#studio_cfg">2.3. Settings in exult.cfg.</a><br/><a href="#command_line">2.4. Command line options</a><br/></p><p><a href="#Menu Options">3. Menu Options</a><br/><a href="#file_menu">3.1. File</a><br/><a href="#edit_menu">3.2. Edit</a><br/><a href="#mode_menu">3.3. Mode</a><br/><a href="#tools_menu">3.4. Tools</a><br/><a href="#tool_bar">3.5. Tool bar</a><br/></p><p><a href="#Main Working Window">4. Main Working Window</a><br/><a href="#description">4.1. Description</a><br/><a href="#shape_files">4.2. Shape files</a><br/><a href="#map_files">4.3. Map files</a><br/><a href="#palettes_files">4.4. Palettes files</a><br/><a href="#groups_files">4.5. Groups files</a><br/></p><p><a href="#Editing a Game">5. Editing a Game</a><br/><a href="#can_do_atm">5.1. What you can do at the moment</a><br/><a href="#shape_edit">5.2. The shape editor</a><br/><a href="#egg_edit">5.3. Creating/editing Eggs</a><br/><a href="#npc_edit">5.4. Creating/editing NPCs</a><br/><a href="#combo_edit">5.5. Creating Combination files</a><br/><a href="#usecode_edit">5.6. Custom Usecode</a><br/></p><p><a href="#Miscellaneous">6. Miscellaneous</a><br/><a href="#tools">6.1. Other tools that might be useful</a><br/><a href="#port_platforms">6.2. Porting <em>Exult Studio</em> to other platforms</a><br/><a href="#client_server_stuff">6.3. About this client/server stuff?</a><br/><a href="#terrain_stuff">6.4. About this 'terrain-editing' stuff and why you can't just
+  					drag objects to where you want.</a><br/><a href="#what_next">6.5. What's next?</a><br/><a href="#win32_bugs">6.6. Known Bugs with the Win32 port</a><br/></p><p><a href="#Credits">7. Credits</a><br/><a href="#thanks">7.1. Thanks</a><br/></p><hr width="100%"/><table width="100%"><tr><th align="left"><a name="Changes to the Documentation">0. Changes to the Documentation</a></th></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="24072002">0.1. 24 July 2002</a></strong></td></tr><tr><td><ul><li><a href="#about_doc">1.2. About this Documentation.</a> You need a snasphot of the 1.1.x branch 
+						to work with <em>Exult Studio</em>.</li><li><a href="#installation">2.1. Installation</a> corrected link to <em>Exult Studio</em>.</li><li><a href="#file_menu">3.1. File</a> updated.</li><li><a href="#edit_menu">3.2. Edit</a> formerly known as Objects menu.</li><li><a href="#mode_menu">3.3. Mode</a> only three modes left.</li><li><a href="#shape_files">4.2. Shape files</a> updated.</li><li><a href="#map_files">4.3. Map files</a> updated.</li><li><a href="#groups_files">4.5. Groups files</a> updated.</li><li><a href="#shape_edit">5.2. The shape editor</a> updated.</li><li><a href="#win32_bugs">6.6. Known Bugs with the Win32 port</a> added.</li></ul></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="22052002">0.2. 22 May 2002</a></strong></td></tr><tr><td><ul><li><a href="#tools">6.1. Other tools that might be useful</a> Jeff started documenting ucc.</li></ul></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="19052002">0.3. 19 May 2002</a></strong></td></tr><tr><td><ul><li><a href="#about_doc">1.2. About this Documentation.</a> Some notes for the reader.</li><li><a href="#mode_menu">3.3. Mode</a> Select-mode is now implemented and added a note 
+						about dragging.</li><li><a href="#tool_bar">3.5. Tool bar</a> added "Hide lift" option.</li><li><a href="#shape_edit">5.2. The shape editor</a> "New Shape" also lets you add a font shape.</li><li><a href="#combo_edit">5.5. Creating Combination files</a> Combinations now do work fully.</li></ul></td></tr></table><hr width="100%"/><table width="100%"><tr><th align="left"><a name="Introduction">1. Introduction</a></th></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="whatis_studio">1.1. What is <em>Exult Studio</em>?</a></strong></td></tr><tr><td><p><em>Exult</em> is not only capable of playing Ultima 7 but it is also intended as
 					an engine in the style of the one used by Ultima 7. <em>Exult Studio</em> started it's life
 					as a simple map editor but it is slowly developing into a full fledged editor
 					enabling users to create a new game. Tristan came up with the cool name!
@@ -25,7 +18,8 @@
 					release yet this documentation refers to recent snapshots.
 				</p><p>
 				Note that you also need an up to date (aka recent snapshot) version of <em>Exult</em> to
-				have <em>Exult Studio</em> working properly.
+				have <em>Exult Studio</em> working properly. The snapshot has to be from the 1.1.x (unstable)
+				branch as <em>Exult Studio</em> is no longer supported in the 1.0.x branch.
 				</p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="studio_terms">1.3. Terms we use in regard to Exult and Ultima 7</a></strong></td></tr><tr><td><p>
 					Along with the terms explained in <a href="&#10;				docs.php#&#10;			terms">Documentation</a> there are
 					some more terms that need to be explained for the usage of <em>Exult Studio</em></p><ul><li><strong>tile</strong>:<br/>
@@ -33,11 +27,12 @@
 						16x16 tiles</li><li><strong>superchunk</strong>:<br/>
 						16x16 chunks</li><li><strong>world</strong>:<br/>
 						12x12 superchunks</li></ul></td></tr></table><hr width="100%"/><table width="100%"><tr><th align="left"><a name="Configurations">2. Configurations</a></th></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="installation">2.1. Installation</a></strong></td></tr><tr><td><ul><li>You need <em>Exult</em> and you need to install it properly 
-						(see <a href="&#10;				docs.php#&#10;			installation">Documentation</a>)</li><li>For U*ix platforms you need to build <em>Exult Studio</em> from the source avillable from our 
+						(see <a href="&#10;				docs.php#&#10;			installation">Documentation</a>). Also make sure that
+						you are using the latest snapshot of the 1.1.x branch of <em>Exult</em>.</li><li>For U*ix platforms you need to build <em>Exult Studio</em> from the source avillable from our 
 						source snapshot at <a href="http://exult.sourceforge.net/download.php">http://exult.sourceforge.net/download.php</a>.<br/>
 						You will also need the GTK+ library installed as well as
 				<a href="http://developer.gnome.org/doc/API/libglade/libglade.html">libglade</a>.<br/></li><li>For Win32 platforms (Win9x,ME,2k,XP) you need to download 
-						<a href="http://exult.sourceforge.net/snapshots/ExultStudio.exe">http://exult.sourceforge.net/snapshots/ExultStudio.exe</a>
+						<a href="http://exult.sourceforge.net/snapshots/2.0/ExultStudio.exe">http://exult.sourceforge.net/snapshots/2.0/ExultStudio.exe</a>
 						and install it in the same directory where you installed <em>Exult</em>.</li></ul></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="studio_run">2.2. Running <em>Exult Studio</em></a></strong></td></tr><tr><td><p>
 					You can run <em>Exult Studio</em> all by itself, but it isn't useful that way,
 					as it uses <em>Exult</em> as a server.  What you really want to do is:
@@ -94,7 +89,8 @@
 						When you right click a shape in a vga file you can change the info of the shape.
 						This saves this changed info.<br/><strong>Groups</strong><br/>
 						You can "bundle" shapes of vga files into groups to make world building easier. 
-						These groups get saved with this option.</li><li><strong>Reload...</strong><br/><strong>Map</strong>
+						These groups get saved with this option.<br/><strong>Combos</strong><br/>
+						This saves the combination files.</li><li><strong>Reload...</strong><br/><strong>Map</strong>
 	'<font color="maroon">Ctrl+R</font>'
 <br/>
 						Reloads the map. All changes made since the last save get discarded.<br/><strong>Usecode</strong><br/>
@@ -112,15 +108,39 @@
 						Exits <em>Exult Studio</em>.</li></ul><p>
 					Note that the default location for saving and creation of new files is the STATIC directory
 					of a game if there is no PATCH directory specified. See <a href="#can_do_atm">5.1. What you can do at the moment</a>.
-				</p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="objects_menu">3.2. Objects</a></strong></td></tr><tr><td><ul><li><strong>Egg...</strong><br/>
+				</p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="edit_menu">3.2. Edit</a></strong></td></tr><tr><td><ul><li><strong>Cut  </strong>
+	'<font color="maroon">Ctrl-X</font>'
+<br/>
+					Removes the selected object(s) and puts it into memory.</li><li><strong>Copy  </strong>
+	'<font color="maroon">Ctrl-C</font>'
+<br/>
+					Copies the selected object(s) into memory.</li><li><strong>Paste  </strong>
+	'<font color="maroon">Ctrl-V</font>'
+<br/>
+					Shows the crosshair cursor and copies the object(s) from the memory into the game
+					where you left click the crosshair.</li><li><strong>Properties...</strong><br/>
+					Shows the properties of the selected object. If more than one object is selected
+					it shows the properies of the last selected object.<br/>
+					Only NPCs and eggs show different properties than if you select Basic properties.</li><li><strong>Basic properties...</strong><br/>
+					Shows the properties of the selected object. If more than one object is selected
+					it shows the properies of the last selected object.</li><li><strong>Create egg...</strong><br/>
 					Create or edit eggs with this.
-					See <a href="#egg_edit">5.3. Creating/editing Eggs</a> for more information (not yet there).</li><li><strong>NPC...</strong><br/>
+					See <a href="#egg_edit">5.3. Creating/editing Eggs</a> for more information (not yet there).</li><li><strong>Create NPC...</strong><br/>
 					Create or edit NPCs with this.
 					See <a href="#npc_edit">5.4. Creating/editing NPCs</a> for more information (not yet there).</li></ul></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="mode_menu">3.3. Mode</a></strong></td></tr><tr><td><p>
 				It describes how the mouse behaves inside Exult when map-editing.
 				</p><ul><li><strong>Move</strong><br/>
-					This is the normal mode where you can drag things with the mouse, or single-click to 
-					identify objects.</li><li><strong>Paint</strong><br/>
+					This is the normal mode where you can drag things with the mouse, or single-click 
+					to identify objects. In this mode you also select objects. A selected object is 
+					shwon with a red outline. To select more than one object hold down 
+	'<font color="maroon">Ctrl</font>'
+ 
+					while selecting. Move the selection 
+	'<font color="maroon">Ctrl-arrow</font>'
+ (x,y coordinates) and 
+					
+	'<font color="maroon">Ctrl-page</font>'
+ keys (z coordinates).</li><li><strong>Paint</strong><br/>
 					a single-left-click inserts the last-selected shape from 'shapes.vga', and dragging 
 					with the left-button inserts that shape in every tile (so you'd probably only want 
 					to do this with 8x8 flat shapes).  Also, in 'Paint' mode, the footprint at ground 
@@ -128,22 +148,20 @@
 					If you hold the alt key down, random frames from the currently-selected shape will 
 					be painted (handy for grassy areas).</li><li><strong>Pick for Combo</strong><br/>
 					Picks objects for a new combo file. Double-left-click to add objects to the combo, 
-					single-left-click to identify object. See <a href="#combo_edit">5.5. Creating Combination files</a></li><li><strong>Select</strong><br/>
-					In this mode you can select objects and move the selection Ctrl-arrow (x,y coordinates)
-					and ctrl-page keys (z coordinates).</li><li><strong>Hide</strong><br/>
-					not yet implemented (?)</li><li><strong>Unhide</strong><br/>
-					not yet implemented (?)</li></ul><p>
+					single-left-click to identify object. See <a href="#combo_edit">5.5. Creating Combination files</a></li></ul><p>
 					Note that you can only drag objects in the game window when you are in "Move" mode.
 				</p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="tools_menu">3.4. Tools</a></strong></td></tr><tr><td><ul><li><strong>Locator...</strong>
 	'<font color="maroon">Ctrl+L</font>'
 <br/>
 					shows where the current game window is within the entire map, and lets you move 
-					the view by double-clicking a location or by dragging the little box</li><li><strong>New Combo</strong><br/>
-					Creates a new Combo file. See <a href="#combo_edit">5.5. Creating Combination files</a>.</li></ul></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="tool_bar">3.5. Tool bar</a></strong></td></tr><tr><td><ul><li><strong>Play</strong><br/>
+					the view by double-clicking a location or by dragging the little box</li><li><strong>New Combo..</strong><br/>
+					Creates a new Combo file. See <a href="#combo_edit">5.5. Creating Combination files</a>.</li><li><strong>Unused shapes...</strong><br/>
+					Finds shapes in shapes.vga that are not used in the game. Have patience when doing 
+					this and treat the results with caution.</li></ul></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="tool_bar">3.5. Tool bar</a></strong></td></tr><tr><td><ul><li><strong>Play</strong><br/>
 					This is the same as pressing 
 	'<font color="maroon">Alt+Ctrl+M</font>'
  in Exult. It exits the Map Edit Mode
-					and lets you play the game. By pressing it again you enter Map Edit Mode again.</li><li><strong>Tile Grid</strong><br/>
+					and lets you play the game. By pressing it again you enter Map Edit Mode again.</li><li><strong>Grid</strong><br/>
 					Shows a grid in the game window for better control on placing objects.</li><li><strong>Edit lift:</strong><br/>
 					Changes the lift of a selected object in the game window. Lift means the distance of
 					an object from the ground.</li><li><strong>Hide lift:</strong><br/>
@@ -152,8 +170,12 @@
 					map and changing it in one place changes it in all the others as well.</li></ul></td></tr></table><hr width="100%"/><table width="100%"><tr><th align="left"><a name="Main Working Window">4. Main Working Window</a></th></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="description">4.1. Description</a></strong></td></tr><tr><td><p>
 					Once <em>Exult Studio</em> runs correctly , a tree of game files is displayed to the left of 
 					the main window, while the currently selected file is viewed in detail to the right. 
-					At the moment, the following types of files are supported.
-				</p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="shape_files">4.2. Shape files</a></strong></td></tr><tr><td><p>
+					The types of files <em>Exult Studio</em> supports are described next.
+				</p><p><strong>Right-clicking on the detailed view of any file gives these options</strong> 
+					(along with other options specific to the file):
+				</p><ul><li><strong>File...</strong><br/><strong>Save</strong><br/>
+						Saves all the changes you made to it without saving any other file.<br/><strong>Revert</strong><br/>
+						Discards all changes..</li></ul></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="shape_files">4.2. Shape files</a></strong></td></tr><tr><td><p>
 					Shapes are the basic graphical elements of the game. Each shape has one or more 
 					frames that typically represent different states or angles of the same thing. 
 					E.g. a button shape could have frames for pressed, and released; a character 
@@ -173,13 +195,16 @@
 				</p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="map_files">4.3. Map files</a></strong></td></tr><tr><td><p>
 					These files contain so called chunks that serve as templates in the final map. 
 					The chunks of the selected map file are shown in the right part of the main window.<br/>
-					When a chunk is selected you have some options:
+					When a chunk is selected you have two options below:
 				</p><ul><li><strong>Locate</strong><br/>
-						shows places in the <em>Exult</em> game where that chunk is used.</li><li><strong>Insert</strong><br/><strong>New</strong><br/>
+						shows places in the <em>Exult</em> game where that chunk is used.</li><li><strong>Move</strong><br/>
+						Moves a chunk in the chunk file. This does not effect the display on the map.</li></ul><p>
+					Right clicking on a chunk gives you another two options 
+					(also the File-save/revert option):
+				</p><ul><li><strong>New...</strong><br/><strong>Empty</strong><br/>
 						Creates a new chunk. Drag the new chunk onto the game and edit it by dragging 
-						shapes on it.<br/><strong>Dupe</strong><br/>
-						Duplicates a chunk. Drag the duplicate chunk onto the map to edit it.</li><li><strong>Move</strong><br/>
-						Moves a chunk in the chunk file. This does not effect the display on the map.</li></ul></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="palettes_files">4.4. Palettes files</a></strong></td></tr><tr><td><p>
+						shapes on it.<br/><strong>Duplicate</strong><br/>
+						Duplicates a chunk. Drag the duplicate chunk onto the map to edit it.</li></ul></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="palettes_files">4.4. Palettes files</a></strong></td></tr><tr><td><p>
 					The palettes used by a game are stored in the files listed there.<br/>
 					When you select a palette with number zero is shown in the right part of the main 
 					window. Other palettes are shown by selecting another palettes number  
@@ -188,7 +213,9 @@
 						New/Remove adds or deletes a palettes.</li><li><strong>Move</strong><br/>
 						Moves palettes in the file.</li><li><strong>File</strong><br/><strong>Import</strong><br/>
 						Overwrites the current palettes with palette text file.<br/><strong>Export</strong><br/>
-						Exports the current palette to a text file.</li></ul></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="groups_files">4.5. Groups files</a></strong></td></tr><tr><td><p>
+						Exports the current palette to a text file.</li></ul><p>
+					Right clicking on a chunk only gives you the default File-save/revert option.
+				</p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="groups_files">4.5. Groups files</a></strong></td></tr><tr><td><p>
 					Editing a game can become quite cumbersome when you have to choose between a lot
 					of shape files containing several frames. To make this task easier we have 
 					implemented so called groups to groups several shapes together. For example you can 
@@ -205,7 +232,9 @@
 						Changes the name of the group.</li><li><strong>Frame:</strong><br/>						
 						select the frame displayed.</li><li><strong>Frames</strong><br/>						
 						shows all the frames of a shape next to each others.</li><li><strong>Find</strong><br/>						
-						Lets you search for a specified shape in the group.</li></ul></td></tr></table><hr width="100%"/><table width="100%"><tr><th align="left"><a name="Editing a Game">5. Editing a Game</a></th></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="can_do_atm">5.1. What you can do at the moment</a></strong></td></tr><tr><td><p>
+						Lets you search for a specified shape in the group.</li><li><strong>Locate</strong><br/>						
+						Locates the selected shape inside the game. It locates only the shape not a 
+						specific frame.</li></ul></td></tr></table><hr width="100%"/><table width="100%"><tr><th align="left"><a name="Editing a Game">5. Editing a Game</a></th></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="can_do_atm">5.1. What you can do at the moment</a></strong></td></tr><tr><td><p>
 					With the latest source you can
 				</p><ul><li>browse shapes in the main window.</li><li>drag a shape from the shape browser to <em>Exult</em>, and that
 							object will be placed in the game.</li><li>edit an 'egg' by double-clicking on it.  An edit box
@@ -231,11 +260,11 @@
 				</p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="shape_edit">5.2. The shape editor</a></strong></td></tr><tr><td><p>
 					When you right click on a shape in the Shape browser (e.g. Files-Shapes.vga) you 
 					get some options of how to edit the shapes.
-				</p><ul><li><strong>Info...</strong><br/>
+				</p><ul><li><strong>Add to group...</strong><br/>
+						If you set up groups you can add shapes to them with this.</li><li><strong>Info...</strong><br/>
 						Displays the information of an object. You can change a lot of stuff there and 
 						caution is adviced. The information is saved by 
-						<a href="#file_menu">3.1. File</a>.</li><li><strong>Add to group...</strong><br/>
-						If you set up groups you can add shapes to them with this.</li><li><strong>Edit...</strong>:<br/>
+						<a href="#file_menu">3.1. File</a>.</li><li><strong>Edit...</strong>:<br/>
 						Brings up your image-editor on the chosen frame.  When you save 
 						in the image-editor, ES will read the changes back within 5 seconds.  This is 
 						especially convenient if you have 'gimp-remote', as it will open a window for 
@@ -259,7 +288,14 @@
 					the shape as PNG file in GAMEDIR/itmp/ (e.g. blackgate/itmp). If you manually
 					open the file with an image editor of your liking and then save it, ES doesn't 
 					read the changes back.
-				</p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="egg_edit">5.3. Creating/editing Eggs</a></strong></td></tr><tr><td><p>
+				</p><p>
+					Below the display windows you have the following options:
+				</p><ul><li><strong>Frame:</strong><br/>						
+						select the frame displayed.</li><li><strong>Frames</strong><br/>						
+						shows all the frames of a shape next to each others.</li><li><strong>Find</strong><br/>						
+						Lets you search for a specified shape in the group.</li><li><strong>Locate</strong><br/>						
+						Locates the selected shape inside the game. It locates only the shape not a 
+						specific frame.</li></ul></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="egg_edit">5.3. Creating/editing Eggs</a></strong></td></tr><tr><td><p>
 					sorry, not documented yet (very extensive work). But make sure you resize the egg-window 
 					to show all the possible eggs. To know what 'egg' means, see 
 					<a href="&#10;				docs.php#&#10;			terms">Documentation</a>.
@@ -379,6 +415,11 @@
 				</p></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="what_next">6.5. What's next?</a></strong></td></tr><tr><td><p>
 					The next things to be implemented are:
 				</p><ul><li><em>Exult Studio</em>needs to be able to automatically create palettes 1-n from palette 0 
-					using the code from ipack. </li><li>It will also be very nice to have a Usecode debugger someday as well 
-					(Willem is actually working on it).</li><li>A 'flags' editor for viewing and editing the global Usecode flags by name.</li><li>A 'barge' editor for creating things like ships and carts.</li></ul></td></tr></table><hr width="100%"/><table width="100%"><tr><th align="left"><a name="Credits">7. Credits</a></th></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="thanks">7.1. Thanks</a></strong></td></tr><tr><td><ul><li>Colourless, Kirben and Mark Siewart invested a lot of effort to port
+					using the code from ipack.</li><li>It will also be very nice to have a Usecode debugger someday as well 
+					(Willem is actually working on it).</li><li>A 'flags' editor for viewing and editing the global Usecode flags by name.</li><li>A 'barge' editor for creating things like ships and carts.</li></ul></td></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="win32_bugs">6.6. Known Bugs with the Win32 port</a></strong></td></tr><tr><td><p><em>Exult Studio</em> is of course far from perfect and the Win32 port still has some bugs:
+				</p><ul><li>Windows NT4 and Windows 2k don't work at the moment as there is some strange
+					connection problem between <em>Exult</em> and <em>Exult Studio</em>. We have not yet been able
+					to figure out the problem.</li><li>If you start <em>Exult Studio</em> from an SI game <em>Exult Studio</em> defaults to the BG data files.
+					You have to change the game dir manually from the files menu.</li><li>When you change the game directory you can't select a different drive than the one
+   					<em>Exult Studio</em> is running from.</li></ul></td></tr></table><hr width="100%"/><table width="100%"><tr><th align="left"><a name="Credits">7. Credits</a></th></tr><tr><td>&nbsp;</td></tr><tr><td><strong><a name="thanks">7.1. Thanks</a></strong></td></tr><tr><td><ul><li>Colourless, Kirben and Mark Siewart invested a lot of effort to port
 					<em>Exult Studio</em> to Win32.</li></ul></td></tr></table>
