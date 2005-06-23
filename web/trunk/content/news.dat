@@ -1,4 +1,20 @@
 <table width="100%">
+	<tr><td width="20%" valign="top">23 June 2005<br></td>
+	<td>No we are not dead. Development is slow, but moving ahead.<br>
+	<ul>
+	<li>Support for more than 1024 shapes and 2048 global flags</li>
+	<li>In-game journal (press 'n' for notebook</li>
+	<li>Support SI intrinsics in BG</li>
+	<li>New art contributed by Crysta the Elf and Berty Zhang</li>
+	<li>Colourless has integrated Pentagram's audio subsystem in Exult:</li>
+	<ul>
+	<li>Real MT32 support</li>
+	<li>MT32 Emulation support</li>
+	<li>Fluidsynth support</li>
+	<li>It is Better(tm)</li>
+	</ul>	
+	</ul>
+	</td></tr>
 	<tr><td width="20%" valign="top">03 August 2004<br></td>
 	<td>There is now a Mac OS X binary for Exult 1.2 available on
 	our <a href="download.php">download page</a>.
