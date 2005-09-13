@@ -12,6 +12,7 @@
 			empty_tpl		=> "empty.tpl",
 			section			=> "download_section.tpl",
 			d_entry			=> "download_entry.tpl",
+			d_link			=> "download_link.tpl",
 			s_entry			=> "snapshot_entry.tpl"
 		)
 	);
