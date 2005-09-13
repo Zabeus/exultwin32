@@ -64,6 +64,19 @@
 		$tpl->parse(SECTION_ENTRIES,".d_entry");
 	}
 
+        function add_extern_link( $url, $desc )
+        {
+                global $tpl;
+                
+                $tpl->assign(
+                        array(
+                                URL                     =>      $url,
+                                DESCRIPTION     =>      $desc
+                        )
+                );
+                $tpl->parse(SECTION_ENTRIES,".d_link");
+        }
+
 	function add_local_entry( $file, $desc )
 	{
 		global $tpl;
