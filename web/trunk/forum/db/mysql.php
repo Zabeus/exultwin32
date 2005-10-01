@@ -180,6 +180,7 @@ class query {
                 msgid char(100) DEFAULT '' NOT NULL,
                 modifystamp int unsigned DEFAULT '0' NOT NULL,
                 userid int unsigned DEFAULT 0 NOT NULL,
+                threadflags int unsigned DEFAULT 0 NOT NULL,
                 PRIMARY KEY (id),
                 KEY author (author),
                 KEY userid (userid),
@@ -193,7 +194,7 @@ class query {
               )";
         $q->query($DB, $sSQL);
         if(!$q->error()){
-          $sSQL="CREATE TABLE ".$table_name."_bodies (id int unsigned DEFAULT '0' NOT NULL AUTO_INCREMENT, body text DEFAULT '' NOT NULL, thread int unsigned DEFAULT '0' NOT NULL, PRIMARY KEY (id), KEY thread (thread))";
+          $sSQL="CREATE TABLE ".$table_name."_bodies (id int unsigned NOT NULL AUTO_INCREMENT, body text DEFAULT '' NOT NULL, thread int unsigned DEFAULT '0' NOT NULL, PRIMARY KEY (id), KEY thread (thread))";
           $q->query($DB, $sSQL);
           if($q->error()){
             $errormsg = $q->error();

@@ -94,8 +94,8 @@
   }
 
   //++++ NEEDS WORK
-  $KeepOnTopOrder = " ((threadflags/" . FLG_KEEPONTOP . ")%2) desc ";
-  $KeepOnTop = " ((threadflags/" . FLG_KEEPONTOP . ")%2) ";
+  $KeepOnTopOrder = " ((threadflags DIV " . FLG_KEEPONTOP . ")%2) desc ";
+  $KeepOnTop = " ((threadflags DIV " . FLG_KEEPONTOP . ")%2) ";
 //  $KeepOnTop = " 0 ";
 
   if ($ForumMultiLevel==2) {
