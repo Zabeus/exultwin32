@@ -106,7 +106,7 @@
   $lNoPassMacth     = "Passwords Don't Match";
   $lPassAgain       = "Again";
   $lFillInAll       = "You didn't fill all mandatory fields";
-  $lDelMessageWarning= "You are about to delete this\\nmessage and all it's children.\\n Do you want to continue?";
+  $lDelMessageWarning= "You are about to delete this\\nmessage and all its children.\\n Do you want to continue?";
   //Profile Stuff
   $lUserProfile     = "User Profile";
   $lMyProfile       = "My Profile";
