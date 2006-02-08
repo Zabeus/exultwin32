@@ -36,6 +36,8 @@
                           "/\[\/(u)\]/",
                           "/\[(i)\]/",
                           "/\[\/(i)\]/",
+                          "/\[(code)\]/",
+                          "/\[\/(code)\]/",
                           "/\[(center)\]/",
                           "/\[\/(center)\]/",
                           "/\[(quote)\]/",
@@ -49,6 +51,8 @@
                         "</u>",
                         "<i>",
                         "</i>",
+                        "<pre>",
+                        "</pre>",
                         "<center>",
                         "</center>",
                         "<blockquote>$lQuote:<br />\n",
@@ -86,6 +90,14 @@
     }
 
     $body=nl2br($body);
+    // fix for double-newlines in pre-tags
+    if(preg_match_all("/((<pre>).+?(<\/pre>))/is", $body, $matches)) {
+        foreach($matches[1] as $match) {
+            $clean=preg_replace("/(<br>|<br \/>)(\r?\n)/i", "$2", $match);
+            $body=str_replace($match, $clean, $body);
+        }
+    }
+
 
     return $body;
 

@@ -32,6 +32,11 @@
 
         This will indent the text inside the tags.
 
+    [code]
+        Program code
+    [/code]
+
+        This will display program code, preserving indentation.
 
     Tags can be combined:
 
