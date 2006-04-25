@@ -132,7 +132,10 @@
       else{
         $convfunc="datetime";
       }
-      $SQL = "SELECT thread, modifystamp, count(id) AS tcount, $convfunc(modifystamp) AS latest, max(id) as maxid, threadflags FROM $ForumTableName WHERE approved='Y' AND (($myflag) or $KeepOnTop) GROUP BY thread, modifystamp ORDER BY $KeepOnTopOrder, modifystamp desc, thread desc".$limit;
+	// NOTE: the 'HAVING minid = thread' has been added to discount
+	// threads which lack an initial post, such as some thread created
+	// by spambots. (wjp, 2 april 2006)
+      $SQL = "SELECT thread, modifystamp, count(id) AS tcount, $convfunc(modifystamp) AS latest, max(id) as maxid, threadflags, min(id) AS minid FROM $ForumTableName WHERE approved='Y' AND (($myflag) or $KeepOnTop) GROUP BY thread, modifystamp HAVING minid = thread ORDER BY $KeepOnTopOrder, modifystamp desc, thread desc".$limit;
     }
 
     $thread_list = new query($DB, $SQL);
