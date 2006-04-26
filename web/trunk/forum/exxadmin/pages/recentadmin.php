@@ -7,7 +7,7 @@
 </tr>
 
 <?php
-require "./common.php";
+require_once "./common.php";
 $nav = '';
 if (!isset($navigate) || empty($navigate)) $navigate = 0;
 
