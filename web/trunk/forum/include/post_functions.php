@@ -272,6 +272,20 @@
     return $ret;
   }
 
+  // Added by wjp: require moderation for posts with links, unless logged in
+  function check_require_moderation(){
+	 global $body;
+	 global $phorum_user;
+	 return false;
+
+	 if (isset($phorum_user["id"])) return false;
+
+	 if ((preg_match("/\[url\]((http|https|ftp|mailto):\/\/[a-z0-9;\/\?:@=\&\$\-_\.\+#!*'\(\),~]+?)\[\/url\]/i", $body) > 0) ||
+		 (preg_match("/\[url=((http|https|ftp|mailto):\/\/[a-z0-9;\/\?:@=\&\$\-_\.\+#!*'\(\),~]+?)\](.+?)\[\/url\]/i", $body) > 0)) {
+		 return true;
+	 }
+  }
+
   // Add a message to the Phorum database.
   // Returns an error message on error, empty string otherwise.
   function post_to_database() {
@@ -376,8 +390,13 @@
             $approved='Y';
             break;
           default:
-            $email_mod=false;
-            $approved='Y';
+		    if (check_require_moderation()) {
+				$email_mod=false;
+				$approved='N';
+			} else {
+				$email_mod=false;
+				$approved='Y';
+			}
             break;
         }
     }
