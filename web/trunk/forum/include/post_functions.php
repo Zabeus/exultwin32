@@ -255,17 +255,18 @@
 
   // checks that the parent of a posted message still exists
   // if $checkfrozen also check if parent is frozen
-  function check_parent($parent, $checkfrozen){
+  function check_parent($parent, $thread, $checkfrozen){
     global $threadflags;
     if(!$parent) return true;
     global $ForumTableName, $q, $DB;
     $ret=false;
-    $SQL="Select id,threadflags from $ForumTableName where id=$parent";
+    $SQL="Select id,thread,threadflags from $ForumTableName where id=$parent";
     $q->query($DB, $SQL);
     if($q->numrows()>0) {
       $rec=$q->getrow();
       $threadflags = $rec["threadflags"];
-      if(!($threadflags & FLG_FROZEN) || !$checkfrozen) {
+      $parentthread = $rec["thread"];
+      if($parentthread == $thread && (!($threadflags & FLG_FROZEN) || !$checkfrozen)) {
         $ret=true;
       }
     }

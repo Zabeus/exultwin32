@@ -177,7 +177,7 @@
 
   $more="";
 
-  if (!check_dup() && check_parent($parent, $checkfrozen)) {
+  if (!check_dup() && check_parent($parent, $thread, $checkfrozen)) {
     // check_parent will also set "$threadflags"
     // generate a message id for the email if needed.
     $msgid="<".md5(uniqid(rand())).".".eregi("[^A-Z0-9]", "", $ForumName).">";
