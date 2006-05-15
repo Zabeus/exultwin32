@@ -15,5 +15,6 @@
   // $hosts[]="";
 
   $hosts[]="hux.rbc.ru";
+  $hosts[]="dix.rbc.ru";
 
 ?>
