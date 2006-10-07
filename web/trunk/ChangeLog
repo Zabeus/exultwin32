@@ -1,3 +1,7 @@
+2006-10-07  Marzo Sette Torres Junior <marzojr@yahoo.com>
+	* content/download.dat: added links for distributions of the 'BG Keyring'
+	  and 'SI Fixes' mods.
+
 2004-07-29 Dominik Reichardt <dominus@users.sourceforge.net>
 	* forum/include/footer.php, /templates/main.tpl,main2.tpl, main_xhtml.tpl:
 	  to contact us you have to use the forum now. 
