@@ -2,12 +2,9 @@
         <tr><td width="20%" valign="top">19 June 2007<br></td>
         <td>Yes, we <i>have</i> done a lot of work in the past year:<br>
         <ul>
-        <li>Our newest member, Phillip George, has succeeded in porting Exult t\
-o the PocketPC.</li>
-        <li>Marzo has been actively working on his Keyring mod, in particular, \
-improving Exult and ExultStudio to support further mod development.</li>
-        <li>Many bug fixes, such as Marzo's recent implementation of missing we\
-ather effects in SerpentIsle.  See the ChangeLog for the complete list.</li>
+        <li>Our newest member, Phillip George, has succeeded in porting Exult to the PocketPC.</li>
+        <li>Marzo has been actively working on his Keyring mod, in particular, improving Exult and ExultStudio to support further mod development.</li>
+        <li>Many bug fixes, such as Marzo's recent implementation of missing weather effects in SerpentIsle.  See the ChangeLog for the complete list.</li>
         <li>Support for the "Hq2x" and "Hq3x" screen scalers.</li>
         </ul>
         </td></tr>
