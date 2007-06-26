@@ -29,5 +29,10 @@
 	add_screenshot("textbg.png",160,100,"The shaded background behind text");
 	add_screenshot("uccshot1.png", 160,100, "Conversation script");
 	add_screenshot("uccshot2.png", 160,100, "Conversation script");
+
+	add_screenshot("pocketpc001-u7p1-keyul.png",160,120,"PocketPC, U7P1, Britain, Keyboard upper-left");
+	add_screenshot("pocketpc002-u7p1-keyll.png",160,120,"PocketPC, U7P1, Britain, Keyboard lower-left");
+	add_screenshot("pocketpc003-u7p1-keyul.png",160,94,"PocketPC, U7P1, Britain, Keyboard minimized");
+	add_screenshot("pocketpc004-u7p1-keyul.png",160,93,"PocketPC, U7P1, Start New Game, Keyboard lower-right");
 	
 ?>
