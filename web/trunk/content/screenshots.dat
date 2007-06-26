@@ -32,7 +32,7 @@
 
 	add_screenshot("pocketpc001-u7p1-keyul.png",160,120,"PocketPC, U7P1, Britain, Keyboard upper-left");
 	add_screenshot("pocketpc002-u7p1-keyll.png",160,120,"PocketPC, U7P1, Britain, Keyboard lower-left");
-	add_screenshot("pocketpc003-u7p1-keyul.png",160,94,"PocketPC, U7P1, Britain, Keyboard minimized");
-	add_screenshot("pocketpc004-u7p1-keyul.png",160,93,"PocketPC, U7P1, Start New Game, Keyboard lower-right");
+	add_screenshot("pocketpc003-u7p1-keymin.png",160,94,"PocketPC, U7P1, Britain, Keyboard minimized");
+	add_screenshot("pocketpc004-u7p1-keylr-startnewgame.png",160,93,"PocketPC, U7P1, Start New Game, Keyboard lower-right");
 	
 ?>
