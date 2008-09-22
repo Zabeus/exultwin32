@@ -1,6 +1,6 @@
 <?php
 	// Determine current file name
-	if(ereg("[^/]+$", $PHP_SELF, $regs))
+	if(ereg("[^/]+$", $_SERVER["PHP_SELF"], $regs))
 		$CURRENTFILE = $regs[0];
 
 
@@ -24,7 +24,7 @@
 	if( !isset($MOD_DATE) )
 		$MOD_DATE = date("Y-m-d",filemtime($CURRENTFILE));
 
-	if( $XHTML )
+	if( isset($XHTML) and $XHTML )
 		$MAIN_TEMPLATE .= "_xhtml";
 
 
@@ -36,18 +36,18 @@
 
 	$tpl->define(
 		array(
-			main			=> "$MAIN_TEMPLATE.tpl",
-			topic			=> "topic.tpl"
+			"main"			=> "$MAIN_TEMPLATE.tpl",
+			"topic"			=> "topic.tpl"
 		)
 	);
 	
 	$tpl->assign(
 		array(
-			URL			=>	$PHP_SELF,
-			MOD_DATE	=>	$MOD_DATE,
-			CURRENTFILE	=>	$CURRENTFILE,
+			"URL"			=>	$PHP_SELF,
+			"MOD_DATE"	=>	$MOD_DATE,
+			"CURRENTFILE"	=>	$CURRENTFILE,
 
-			TITLE		=>	$TITLE
+			"TITLE"		=>	$TITLE
 		)
 	);
 	
@@ -55,7 +55,7 @@
 	if (!$CUSTOM_PARSE )
 	{
 		add_topic($HEADLINE,$CONTENT);
-		$tpl->parse(MAIN, "main");
+		$tpl->parse("MAIN", "main");
 		$tpl->FastPrint();
 		exit;
 	}
@@ -66,10 +66,10 @@
 		
 		$tpl->assign(
 			array(
-				HEADLINE	=>	$headline
+				"HEADLINE"	=>	$headline
 			)
 		);
-		$tpl->parse(TOPICS,".topic");
+		$tpl->parse("TOPICS",".topic");
 	}
 
 	function add_topic( $headline, $content )
@@ -78,10 +78,10 @@
 		
 		$tpl->assign(
 			array(
-				HEADLINE	=>	$headline,
-				CONTENT		=>	$content
+				"HEADLINE"	=>	$headline,
+				"CONTENT"	=>	$content
 			)
 		);
-		$tpl->parse(TOPICS,".topic");
+		$tpl->parse("TOPICS",".topic");
 	}
 ?>

@@ -11,7 +11,7 @@
 
 	add_topic("What is it?", join("", file ("content/intro.dat")));
 	add_topic("News", join("", file ("content/news.dat")));
-	$tpl->parse(MAIN, "main");
+	$tpl->parse("MAIN", "main");
 	$tpl->FastPrint();
 	exit;
 ?>
