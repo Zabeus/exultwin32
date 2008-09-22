@@ -130,7 +130,7 @@
           $last_post_date="";
         }
         else{
-          $last_post_date=date_format($trec["max_date"]);
+          $last_post_date=phorum_date_format($trec["max_date"]);
         }
         $posts="$lNumPosts: <strong>$num_posts</strong>&nbsp;&nbsp;";
         $last="$lLastPostDate: <strong>$last_post_date</strong>";

@@ -136,7 +136,7 @@
 // See http://www.php.net/manual/function.date.php
 // for options on the date() formatting function.
 
-  function date_format($datestamp){
+  function phorum_date_format($datestamp){
     global $TimezoneOffset;
     $datestamp=trim($datestamp);
     if (empty($datestamp) || $datestamp=="0000-00-00") {

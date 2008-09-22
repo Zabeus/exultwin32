@@ -57,7 +57,7 @@
 
   $host = @GetHostByAddr($ip);
 
-  $datestamp = date_format($row["datestamp"]);
+  $datestamp = phorum_date_format($row["datestamp"]);
   $author = chop($row["author"]);
 
   $SQL="Select count(*) as count from $ForumTableName"."_attachments where message_id=$id";

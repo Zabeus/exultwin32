@@ -310,7 +310,7 @@
         $link="$read_page.$ext?f=$message[forum]&i=$message[id]&t=$message[thread]$GetVars";
         $subject=chop($message["subject"]);
         $author=chop($message["author"]);
-        $datestamp=date_format($message["datestamp"]);
+        $datestamp=phorum_date_format($message["datestamp"]);
         $forum=$forums[$message["forum"]];
         echo "<tr><td $bgcolor>\n";
         echo "<table width=\"100%\" cellpadding=\"4\" cellspacing=\"0\">\n";

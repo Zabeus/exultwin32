@@ -392,7 +392,7 @@ ans=window.confirm("<?php echo $lDelMessageWarning; ?>");
     if($head_row["id"]==$body_row["id"]){
       $rec_id=$head_row["id"];
       $subject = chop($head_row["subject"]);
-      $datestamp = date_format($head_row["datestamp"]);
+      $datestamp = phorum_date_format($head_row["datestamp"]);
       $body = $body_row["body"];
       $host="";
       $profile_link="";

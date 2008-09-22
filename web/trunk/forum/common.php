@@ -199,8 +199,8 @@
   }
 
   function phorum_login_user($sessid, $userid=0){
-    global $DB, $q, $pho_main, $HTTP_COOKIE_VARS;
-    if(!isset($HTTP_COOKIE_VARS["phorum_auth"])){
+    global $DB, $q, $pho_main;
+    if(!isset($_COOKIE["phorum_auth"])){
       AddGetPostVars("phorum_auth", "$sessid");
     }
     // **TODO: We should make this time configurable
@@ -381,7 +381,7 @@
         $SQL="Select forum_id from $PHORUM[mod_table] where (forum_id=$f or forum_id=0) and user_id=$phorum_user[id]";
         $q->query($DB, $SQL);
         $phorum_user["moderator"] = ($q->numrows()>0) ? true : false;
-        if(!isset($HTTP_COOKIE_VARS["phorum_auth"])){
+        if(!isset($_COOKIE["phorum_auth"])){
           AddGetPostVars("phorum_auth", "$phorum_auth");
         }
       }

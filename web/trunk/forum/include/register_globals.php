@@ -1,21 +1,21 @@
 <?php
-if(isset($HTTP_GET_VARS)){
-  while(list($var, $val)=each($HTTP_GET_VARS)){
+if(isset($_GET)){
+  while(list($var, $val)=each($_GET)){
     $$var=$val;
   }
 }
-if(isset($HTTP_POST_VARS)){
-  while(list($var, $val)=each($HTTP_POST_VARS)){
+if(isset($_POST)){
+  while(list($var, $val)=each($_POST)){
     $$var=$val;
   }
 }
-if(isset($HTTP_COOKIE_VARS)){
-  while(list($var, $val)=each($HTTP_COOKIE_VARS)){
+if(isset($_COOKIE)){
+  while(list($var, $val)=each($_COOKIE)){
     $$var=$val;
   }
 }
-if(isset($HTTP_SERVER_VARS)){
-  while(list($var, $val)=each($HTTP_SERVER_VARS)){
+if(isset($_SERVER)){
+  while(list($var, $val)=each($_SERVER)){
     $$var=$val;
   }
 }

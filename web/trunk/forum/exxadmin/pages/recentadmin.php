@@ -37,7 +37,7 @@ if (is_array($rec)) {
       $id=$tam["id"];
       $topic=$tam["thread"];
       $person=$tam["author"];
-      $datestamp = date_format($tam["datestamp"]);
+      $datestamp = phorum_date_format($tam["datestamp"]);
       $approved = $tam["approved"];
       if (($x%2)==0) { $bgcolor=$ForumTableBodyColor1; }
       else { $bgcolor=$ForumTableBodyColor2; }

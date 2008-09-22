@@ -42,7 +42,7 @@
         $author=chop($topic["author"]);
     }
 
-    $datestamp = date_format($topic["datestamp"]);
+    $datestamp = phorum_date_format($topic["datestamp"]);
 
     if($id==$topic["id"] && $read=true){
         $subject .= "<strong>".$topic["subject"]."</strong>";

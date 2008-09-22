@@ -237,7 +237,7 @@
         $text=strip_tags($text);
         $text=str_replace(PHORUM_SIG_MARKER, "", $text);
         echo $text."<br />";
-        echo "<font size=-2>$lDate: ".date_format($message["datestamp"])."</font><br />\n";
+        echo "<font size=-2>$lDate: ".phorum_date_format($message["datestamp"])."</font><br />\n";
         echo "</dl><p>\n";
         $last_id=$message["id"];
         $message=next($messages);

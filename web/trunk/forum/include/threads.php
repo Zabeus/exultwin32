@@ -45,11 +45,11 @@
     } else {
         $t_author=chop($message["author"]);
     }
-    $t_datestamp = date_format($message["datestamp"]);
+    $t_datestamp = phorum_date_format($message["datestamp"]);
     $t_flags = $message["threadflags"];
 
     if( ($$phcollapse != 0) && (!$read) ){
-      $t_latest=date_format($trec["latest"]);
+      $t_latest=phorum_date_format($trec["latest"]);
       $t_maxid=$trec["maxid"];
     }
     $message = next($headers);

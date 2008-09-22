@@ -47,7 +47,7 @@
             $AUTHOR="<a href=\"mailto:".htmlencode($EMAIL)."\">$AUTHOR</a>";
         }
 
-        $DATESTAMP=date_format($DATESTAMP);
+        $DATESTAMP=phorum_date_format($DATESTAMP);
 
         echo "<p><strong>$HEADLINE</strong><br /><font size=\"-1\">By $AUTHOR on $DATESTAMP</font><br />$BODY</p>";
     }

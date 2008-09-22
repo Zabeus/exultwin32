@@ -17,7 +17,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
   // register_globals picks up a sourceforge.net 'username' cookie... *sigh*
-  $username = $HTTP_POST_VARS['username'];
+  $username = $_POST['username'];
 
   require "./common.php";
 
@@ -67,7 +67,7 @@
   if(empty($forgotpass) && !empty($username) && !empty($password)){
     $uid=phorum_check_login($username, $password);
     if($uid){
-      $sess_id=phorum_session_id($HTTP_POST_VARS['username'], $HTTP_POST_VARS["password"]);
+      $sess_id=phorum_session_id($_POST['username'], $_POST["password"]);
       phorum_login_user($sess_id, $uid);
       if(!strstr($target, "?")){
         $target.="?f=0$GetVars";

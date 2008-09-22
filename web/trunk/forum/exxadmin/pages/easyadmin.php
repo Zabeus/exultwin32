@@ -49,7 +49,7 @@
     $subject.="&t=".$topic["thread"]."\">".$topic["subject"]."</a>";
     $author = $topic["author"];
     $approved = $topic["approved"];
-    $datestamp = date_format($topic["datestamp"]);
+    $datestamp = phorum_date_format($topic["datestamp"]);
     $threadflags = $topic["threadflags"];
     $parent = $topic["parent"];
     $thread = $topic["thread"];
