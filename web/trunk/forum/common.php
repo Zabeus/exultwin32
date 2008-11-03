@@ -414,4 +414,8 @@
   // set the error level back to what it was.
   error_reporting ($old_err_level);
 
+  // work-around SourceForge automatically sending an Expires header
+  // two days in the future
+  Header("Expires: Sat, 01 Jan 2000 00:00:00 GMT");
+
 ?>
