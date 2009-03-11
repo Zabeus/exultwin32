@@ -1,7 +1,7 @@
 <?php
 begin_section("Official - v1.2");
  add_extern_entry("exult-1.2.tar.gz", "Source (.tar.gz)", 1682);
- add_extern_entry("exult-1.2-win32.exe", "Windows (95/98/ME/NT/2000/XP) Binary", 2029);
+ add_extern_entry("exult-1.2-win32.exe", "Windows (95/98/ME/NT/2000/XP/Vista) Binary", 2029);
  add_extern_entry("exult-1.2-1.i386.rpm", "Fedora Core 1 binary rpm", 1032);
  add_extern_entry("exult-tools-1.2-1.i386.rpm", "Fedora Core 1 binary rpm (tools)", 274);
  add_extern_entry("exult-studio-1.2-1.i386.rpm", "Fedora Core 1 binary rpm (Exult Studio)", 255);
@@ -43,7 +43,7 @@ end_section();
 // snapshots
 begin_section("Exult 1.4.x Snapshots (Unstable) - use at your own risk!");
  add_local_entry("ChangeLog", "ChangeLog");
- add_local_entry("Exultwin32.exe", "Windows 95/98/ME/NT/2000/XP binary snapshot");
+ add_local_entry("Exultwin32.exe", "Windows 95/98/ME/NT/2000/XP/Vista binary snapshot");
  add_local_entry("exult-pocketpc-2003-armv4.zip", "PocketPC 2003 ARMV4 binary snapshot");
  add_local_entry("exult-pocketpc-wm5-armv5t.zip", "PocketPC Window Mobile 5 ARMV5T binary snapshot");
  add_extern_link("http://www.math.leidenuniv.nl/~wpalenst/cvs/exult-svn.tar.gz", "Exult SVN source code snapshot");
