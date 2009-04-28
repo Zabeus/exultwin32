@@ -1,12 +1,15 @@
-Quick and dirty guide to our Web-CVS
+Quick and dirty guide to our Web-SVN
 ====================================
 
-- checkout our repository in CVS called "web".
+- checkout our repository in SVN called "web/trunk".
 
 - change/add stuff there 
 
-- commit changes to CVS
+- commit changes to SVN
 
-- ssh into our webspace (/home/groups/e/ex/exult/htdocs)
+-create interactive shell session (see http://apps.sourceforge.net/trac/sourceforge/wiki/Shell%20service):
+ ssh -t USER,exult@shell.sourceforge.net create
 
-- execute "./update.sh" (updates /home/../htdocs with CVS version and gives the right permissions to everyone)
+- change dir to our webspace (cd /home/groups/e/ex/exult/htdocs)
+
+- execute "./update.sh" (updates /home/../htdocs with SVN version and gives the right permissions to everyone)
