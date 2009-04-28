@@ -66,13 +66,8 @@
 	</tr>
 	<tr>
 		<td valign="top" width="10"></td>
-		<td valign="top"><a href="http://www.peroxide.dk/underworld"><b>Ultima Underworld Viewer</b></a></td>
+		<td valign="top"><a href="http://www.peroxide.dk/underworld.shtml"><b>Ultima Underworld Viewer</b></a></td>
 		<td>3D-accelerated viewer for Ultima Underworld I.</td>
-	</tr>
-	<tr>
-		<td valign="top" width="10"></td>
-		<td valign="top"><a href="http://eriadain.multimania.com/"><b>Eriadain</b></a></td>
-		<td>Another cool project, creating an alternate U9.</td>
 	</tr>
 	<tr>
 		<td valign="top" width="10"></td>
@@ -111,7 +106,7 @@
 	</tr>
 	<tr>
 		<td valign="top" width="10"></td>
-		<td valign="top"><a href="http://icdweb.cc.purdue.edu/~frazieri/"><b>Ultima 5: Lazarus</b></a></td>
+		<td valign="top"><a href="http://lazarus.planetdungeonsiege.gamespy.com/"><b>Ultima 5: Lazarus</b></a></td>
 		<td>A project creating a 3D version of Ultima 5.</td>
 	</tr>
 	<tr>
@@ -135,7 +130,7 @@
 	</tr>
 	<tr>
 		<td valign="top" width="10"></td>
-		<td valign="top"><a href="http://www.goice.co.jp/member/mo/timidity/"><b>Timidity++</b></a></td>
+		<td valign="top"><a href="http://timidity.sourceforge.net/"><b>Timidity++</b></a></td>
 		<td>The MIDI renderer used by the Linux version of <i>Exult</i>. You will also need the <a href="http://www.stardate.bc.ca/eawpatches/html/default.htm">EAW patches</a></td>
 	</tr>
 	<tr>
@@ -145,7 +140,7 @@
 	</tr>
 	<tr>
 		<td valign="top" width="10"></td>
-		<td valign="top"><b><a href="http://elektron.its.tudelft.nl/~dalikifa/">2xSaI</a></b></td>
-		<td>Scaling engine by Derek Liauw.</td>
+		<td valign="top"><b><a href="">2xSaI</a></b></td>
+		<td>Scaling engine by Derek Liauw - unfortunately, currently no link to his homepage can be found.</td>
 	</tr>
 </table>
