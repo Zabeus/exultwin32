@@ -35,16 +35,7 @@
   $id=(int)initvar("i");
   $parent=(int)initvar("p");
 
-  $ip = getenv('REMOTE_HOST');
-  if(!$ip){
-    $ip = getenv('REMOTE_ADDR');
-  }
-  if(!$ip){
-    $ip = $REMOTE_ADDR;
-  }
-  if(!$ip){
-    $ip = $REMOTE_HOST;
-  }
+  $ip = $_SERVER['HTTP_X_REMOTE_ADDR'];
 
   $host = @GetHostByAddr($ip);
 
