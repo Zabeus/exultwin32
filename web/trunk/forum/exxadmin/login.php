@@ -2,7 +2,7 @@
   // login.php
 
     function check_login(){
-        global $PHP_SELF, $HTTP_COOKIE_VARS, $HTTP_POST_VARS, $HTTP_GET_VARS, $PHORUM, $q, $DB;
+        global $PHP_SELF, $PHORUM, $q, $DB;
 
         $success=false;
 
@@ -13,8 +13,8 @@
             exit();
         }
 
-        if(isset($HTTP_COOKIE_VARS["phorum_admin_session"])){
-            $SQL="Select * from $PHORUM[auth_table] where sess_id='$HTTP_COOKIE_VARS[phorum_admin_session]'";
+        if(isset($_COOKIE["phorum_admin_session"])){
+            $SQL="Select * from $PHORUM[auth_table] where sess_id='$_COOKIE[phorum_admin_session]'";
             $q->query($DB, $SQL);
             $PHORUM["admin_user"]=$q->getrow();
             if($PHORUM["admin_user"]["id"]) {
@@ -29,11 +29,11 @@
             }
         }
 
-        if(!$success && isset($HTTP_POST_VARS["login"]) && isset($HTTP_POST_VARS["passwd"])){
+        if(!$success && isset($_POST["login"]) && isset($_POST["passwd"])){
 
-            $id=phorum_check_login($HTTP_POST_VARS['login'], $HTTP_POST_VARS["passwd"]);
+            $id=phorum_check_login($_POST['login'], $_POST["passwd"]);
             if($id){
-                $sess_id=phorum_session_id($HTTP_POST_VARS['login'], $HTTP_POST_VARS["passwd"]);
+                $sess_id=phorum_session_id($_POST['login'], $_POST["passwd"]);
                 setcookie("phorum_admin_session", "$sess_id");
                 phorum_login_user($sess_id, $id);
                 header("Location: $PHP_SELF");
