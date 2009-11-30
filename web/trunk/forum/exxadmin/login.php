@@ -6,7 +6,7 @@
 
         $success=false;
 
-        if(isset($HTTP_GET_VARS["logout"])){
+        if(isset($_GET["logout"])){
             setcookie("phorum_admin_session", "");
             $success=true;
             header("Location: $PHP_SELF");
