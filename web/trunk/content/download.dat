@@ -44,7 +44,7 @@ end_section();
 begin_section("Exult 1.4.x Snapshots (Unstable) - use at your own risk!");
  add_local_entry("ChangeLog", "ChangeLog");
  add_local_entry("Exultwin32.exe", "Windows 95/98/ME/NT/2000/XP/Vista/7 binary snapshot");
- add_local_entry("Exult-snapshot.dmg", "Mac OS X 10.4/10.5 Intel/PPC binary snapshot");
+ add_local_entry("Exult-snapshot.dmg", "Mac OS X 10.4/10.5/10.6 Intel/PPC binary snapshot");
  add_local_entry("exult-pocketpc-2003-armv4.zip", "PocketPC 2003 ARMV4 binary snapshot");
  add_local_entry("exult-pocketpc-wm5-armv5t.zip", "PocketPC Window Mobile 5 ARMV5T binary snapshot");
  add_extern_link("http://www.math.leidenuniv.nl/~wpalenst/cvs/exult-svn.tar.gz", "Exult SVN source code snapshot");
@@ -52,6 +52,6 @@ begin_section("Exult 1.4.x Snapshots (Unstable) - use at your own risk!");
  add_local_entry("PhotoshopShapePlugin.zip", "Photoshop Plugin");
  add_local_entry("GimpPlugin.exe", "Gimp 1.x Plugin (For Windows)");
  add_local_entry("Gimp20Plugin.exe", "Gimp 2.x Plugin (For Windows)");
- add_local_entry("ExultStudio.exe", "Exult Studio (work in progress)");
+ add_local_entry("ExultStudio.exe", "Exult Studio Windows snapshot (work in progress)");
 end_section();
 ?>
