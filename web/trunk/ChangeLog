@@ -1,3 +1,11 @@
+2010-10-16 Dominik Reichardt <dominus@users.sourceforge.net>
+	* content/news.dat: cleaned up, synced with the manual news entry from 2008, moved old news to 
+	* content/history.dat
+	* intro.dat: new screenshot on our home screen
+	*images/screenshots: updated exmenu.png and changed si.png to be a cleaner HQ3x version so 
+	  we can link to that on our home screen
+	* images/screenshots/thumbs: as above
+	
 2010-03-10 Dominik Reichardt <dominus@users.sourceforge.net>
 	* Updated Documentation and FAQ
 	
