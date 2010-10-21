@@ -1,8 +1,8 @@
 <?php
 begin_section("Official - v1.4.9 RC1");
- add_extern_entry("exult-1.4.9RC1-win32.exe", "Windows (95/98/ME/NT/2000/XP/Vista/7) Binary", 2029);
- add_extern_entry("exult_1.4.9RC1.dmg", "Mac OS X 10.4 - 10.6 universal ppc and intel (32-/64-bit) binary", 5933);
- add_extern_entry("exult-1.4.9RC1.tar.gz", "Source (.tar.gz)", 4526);
+ add_extern_entry("exult-1.4.9rc1-win32.exe", "Windows (95/98/ME/NT/2000/XP/Vista/7) Binary", 2213);
+ add_extern_entry("exult_1.4.9rc1.dmg", "Mac OS X 10.4 - 10.6 universal ppc and intel (32-/64-bit) binary", 5937);
+ add_extern_entry("exult-1.4.9rc1.tar.gz", "Source (.tar.gz)", 1);
 end_section();
 
 // datafiles
