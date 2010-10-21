@@ -1,4 +1,31 @@
 <table width="100%">
+	<tr><td width="20%" valign="top">21 October 2010<br></td>
+	<td><p<b>Exult 1.4.9 RC1 has been released!</b><br/>
+	It took us over six years but with DNF seemingly getting ready to be released after all, we had to do something.
+	So here we go, please play with our RC1 and tell us of any problem you encounter.<br/>
+	And please do it quickly, so we beat DNF!<br/
+	Although rehashing some old news, we did a lot of stuff with Exult in the last six years:
+	<ul>
+	<li>Compatible with the stricter permissions of Windows Vista and Windows 7</li>
+	<li>Rewrite of the Graphics system to allow switching to full screen on modern systems</li>
+	<li>Better integration into Mac OS X with default location for the supported games</li>
+	<li>Smooth scrolling (disabled by default, though)</li>
+	<li>More data from the original has been decoded and thus improved gameplay and combat</li>
+	<li>Two mods developed by our team member Marzo, Keyring for BG which adds a keyring and a lot of other enhancements
+		and SIfixes for SI which corrects many mistakes in the game, for example you can now cure Cantra when you play with this mod</li>
+	<li>In-game Notebook with support for automatic notes (notes created by usecode)</li>
+	<li>Integrated Pentagram(tm) Audio system which means support for Real Roland MT32 device, Roland MT32 Emulation and Fluidsynth</li>
+	<li>Removed dependency of the Audio system on SDL_Mixer</li>
+	<li>New shapes for paperdoll</li>
+	<li>Multi-map support for new games</li>
+	<li>Increased limits on resource sizes (shapes, frames, etc)</li>
+	<li>Moved hard-coded information to datafiles</li>
+	<li>Greatly improved compiler tools to ease new game development</li>
+	<li>Tons of work on our map editor Exult Studio and the ability to develop new games and mods</li>
+	<li>Tons of bugfixes</li>
+	</ul>
+	</td></tr>
+
 	<tr><td width="20%" valign="top">11 November 2008<br></td>
 	<td><p>It's official: the next Exult stable version will be out soon after Duke Nukem Forever. Jokes aside here's what's been done to the development version in the past 15 months:</p>
 	<ul>

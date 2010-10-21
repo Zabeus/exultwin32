@@ -1,3 +1,7 @@
+2010-10-21 Dominik Reichardt <dominus@users.sourceforge.net>
+	* content/news.dat: Added news about 1.4.9RC1 
+	* content/download.dat: ready for release, removed ancient releases links
+	
 2010-10-16 Dominik Reichardt <dominus@users.sourceforge.net>
 	* content/news.dat: cleaned up, synced with the manual news entry from 2008, moved old news to 
 	* content/history.dat
