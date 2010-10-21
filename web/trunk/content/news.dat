@@ -1,28 +1,42 @@
 <table width="100%">
 	<tr><td width="20%" valign="top">21 October 2010<br></td>
-	<td><p<b>Exult 1.4.9 RC1 has been released!</b><br/>
-	It took us over six years but with DNF seemingly getting ready to be released after all, we had to do something.
-	So here we go, please play with our RC1 and tell us of any problem you encounter.<br/>
-	And please do it quickly, so we beat DNF!<br/
-	Although rehashing some old news, we did a lot of stuff with Exult in the last six years:
+	<td><p><b>Exult 1.4.9 RC1 has been released!</b><br/>
+	It took us over six years, but with DNF seemingly getting ready to be released after all, we had to do something.
+	To prepare for a full release, we have created a first Release Candidate, available on
+	our <a href="download.php">download page</a>.
+	Please play with it and tell us of any problem you encounter using the
+	<a href="forum/index.php">forum</a> or
+	<a href="http://sourceforge.net/bugs/?group_id=2335">bug tracker</a>.</p>
+
+	<p>If you have followed the news this list is likely already familiar to you,
+	but we did a lot with Exult in the years since 1.2:</p>
 	<ul>
 	<li>Compatible with the stricter permissions of Windows Vista and Windows 7</li>
 	<li>Rewrite of the Graphics system to allow switching to full screen on modern systems</li>
 	<li>Better integration into Mac OS X with default location for the supported games</li>
 	<li>Smooth scrolling (disabled by default, though)</li>
 	<li>More data from the original has been decoded and thus improved gameplay and combat</li>
-	<li>Two mods developed by our team member Marzo, Keyring for BG which adds a keyring and a lot of other enhancements
-		and SIfixes for SI which corrects many mistakes in the game, for example you can now cure Cantra when you play with this mod</li>
 	<li>In-game Notebook with support for automatic notes (notes created by usecode)</li>
-	<li>Integrated Pentagram(tm) Audio system which means support for Real Roland MT32 device, Roland MT32 Emulation and Fluidsynth</li>
-	<li>Removed dependency of the Audio system on SDL_Mixer</li>
-	<li>New shapes for paperdoll</li>
+	<li>Integrated Pentagram's audio system which means support for real Roland MT-32 device, Roland MT-32 emulation and FluidSynth</li>
+	<li>Removed dependency of the audio system on SDL_Mixer</li>
+	<li>New shapes for the paperdolls</li>
+	<li>Tons of bugfixes</li>
+	</ul>
+
+	<p>There have been many changes to Exult Studio and our support for mods as well:</p>
+	<ul>
 	<li>Multi-map support for new games</li>
-	<li>Increased limits on resource sizes (shapes, frames, etc)</li>
 	<li>Moved hard-coded information to datafiles</li>
+	<li>Increased limits on resource sizes (shapes, frames, etc)</li>
 	<li>Greatly improved compiler tools to ease new game development</li>
 	<li>Tons of work on our map editor Exult Studio and the ability to develop new games and mods</li>
-	<li>Tons of bugfixes</li>
+	</ul>
+
+	<p>Worth mentioning is that our team member Marzo has developed two mods, which can be
+	<a href="http://www.seventowers.org/downloads.php?section=0">downloaded separately</a>:</p>
+	<ul>
+	<li>Keyring for BG which adds a keyring and a lot of other enhancements</li>
+	<li>SIfixes for SI which corrects many mistakes in the game, for example you can now cure Cantra when you play with this mod</li>
 	</ul>
 	</td></tr>
 
@@ -40,6 +54,7 @@
 	</td></tr>
 
 	<tr><td width="20%" valign="top">19 June 2007<br></td>
+	<td>
 	<ul>
 	<li>Our newest member, Phillip George, has succeeded in porting Exult to the PocketPC.</li>
 	<li>Marzo has been actively working on his Keyring mod, in particular, improving Exult and ExultStudio to support further mod development.</li>
@@ -52,12 +67,12 @@
 	<td>Over the last several months, we've been working in two main areas:<br>
 	<ul>
 	<li>Improving our support for game details such as NPC schedules and combat.  For this, we have to thank our users who have pointed out so many features that we've missed.</li>
-	<li>Support for mods:</li>
+	<li>Support for mods:
 	<ul>
 	<li>We now allow more than 1024 shapes, so original art can be added.</li>
 	<li>There is support for multiple maps (so you can make <i>huge</i> worlds).</li>
 	<li>Our map-editor, ExultStudio, and the script compiler, UCC, have had numerous bug fixes and improvements for easier use.</li>
-	</ul>
+	</ul></li>
 	<li>...and, we have the two extensive mods, Marzo's "Serpent Isle Fixes" and the "Black Gate Keyring".
 	</ul>
 	</td></tr>
@@ -69,13 +84,13 @@
 	<li>In-game journal (press 'n' for notebook</li>
 	<li>Support SI intrinsics in BG</li>
 	<li>New art contributed by Crysta the Elf and Berty Zhang</li>
-	<li>Colourless has integrated Pentagram's audio subsystem in Exult:</li>
+	<li>Colourless has integrated Pentagram's audio subsystem in Exult:
 	<ul>
 	<li>Real MT32 support</li>
 	<li>MT32 Emulation support</li>
 	<li>Fluidsynth support</li>
 	<li>It is Better(tm)</li>
-	</ul>	
+	</ul></li>	
 	</ul>
 	</td></tr>
 </table>
