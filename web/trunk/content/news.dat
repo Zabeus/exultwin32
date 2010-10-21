@@ -15,6 +15,7 @@
 	<li>Rewrite of the Graphics system to allow switching to full screen on modern systems</li>
 	<li>Better integration into Mac OS X with default location for the supported games</li>
 	<li>Smooth scrolling (disabled by default, though)</li>
+	<li>Aspect correction is now supported</li>
 	<li>More data from the original has been decoded and thus improved gameplay and combat</li>
 	<li>In-game Notebook with support for automatic notes (notes created by usecode)</li>
 	<li>Integrated Pentagram's audio system which means support for real Roland MT-32 device, Roland MT-32 emulation and FluidSynth</li>
@@ -35,7 +36,7 @@
 	<p>Worth mentioning is that our team member Marzo has developed two mods, which can be
 	<a href="http://www.seventowers.org/downloads.php?section=0">downloaded separately</a>:</p>
 	<ul>
-	<li>Keyring for BG which adds a keyring and a lot of other enhancements</li>
+	<li>Keyring for BG which adds a large quest to obtain a SI-style keyring, as well as a lot of other enhancements such as meditating in the shrines and viewing the Codex</li>
 	<li>SIfixes for SI which corrects many mistakes in the game, for example you can now cure Cantra when you play with this mod</li>
 	</ul>
 	</td></tr>
