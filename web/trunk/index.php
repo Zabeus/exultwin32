@@ -1,4 +1,4 @@
-<?
+<?php
 	$TITLE = "Exult";
 	$HEADLINE = "What is it?";
 	$CUSTOM_PARSE = true;
