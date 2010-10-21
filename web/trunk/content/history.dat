@@ -1,3 +1,52 @@
+<p><b>11 November 2008</b></p>
+<p>It's official: the next Exult stable version will be out soon after Duke Nukem Forever. Jokes aside here's what's been done to the development version in the past 15 months:</p>
+<ul>
+<li>Unlimited NPCs (Marzo)</li>
+<li>Smooth Scrolling (Ryan)</li>
+<li>Vast improvements to the Exult toolchain (usecode compiler, ExultStudio, etc) (Marzo)</li>
+<li>Most data is now non-hardcoded but read from datafiles (Marzo)</li>
+<li>A lot of data from the originals has been decoded and combat should work a lot closer to the originals now (Marzo)</li>
+<li>Tons of fixes    (Jeff, Marzo, Willem, Ryan, Phillip)</li>
+</ul>
+<p>Most of this work has been done by Marzo aka The Unstoppable Hacking Machine !!!</p>
+
+<p><b>19 June 2007</b></p>
+<ul>
+<li>Our newest member, Phillip George, has succeeded in porting Exult to the PocketPC.</li>
+<li>Marzo has been actively working on his Keyring mod, in particular, improving Exult and ExultStudio to support further mod development.</li>
+<li>Many bug fixes, such as Marzo's recent implementation of missing weather effects in SerpentIsle.  See the ChangeLog for the complete list.</li>
+<li>Support for the "Hq2x" and "Hq3x" screen scalers.</li>
+</ul>
+
+<p><b>10 April 2006</b></p>
+<p>Over the last several months, we've been working in two main areas:</p>
+<ul>
+<li>Improving our support for game details such as NPC schedules and combat.  For this, we have to thank our users who have pointed out so many features that we've missed.</li>
+<li>Support for mods:
+<ul>
+<li>We now allow more than 1024 shapes, so original art can be added.</li>
+<li>There is support for multiple maps (so you can make <i>huge</i> worlds).</li>
+<li>Our map-editor, ExultStudio, and the script compiler, UCC, have had numerous bug fixes and improvements for easier use.</li>
+</ul></li>
+<li>...and, we have the two extensive mods, Marzo's "Serpent Isle Fixes" and the "Black Gate Keyring".
+</ul>
+	
+<p><b>23 June 2005</b></p>
+<p>No we are not dead. Development is slow, but moving ahead.</p>
+<ul>
+<li>Support for more than 1024 shapes and 2048 global flags</li>
+<li>In-game journal (press 'n' for notebook</li>
+<li>Support SI intrinsics in BG</li>
+<li>New art contributed by Crysta the Elf and Berty Zhang</li>
+<li>Colourless has integrated Pentagram's audio subsystem in Exult:
+<ul>
+<li>Real MT32 support</li>
+<li>MT32 Emulation support</li>
+<li>Fluidsynth support</li>
+<li>It is Better(tm)</li>
+</ul></li>	
+</ul>
+
 <p><b>03 August 2004</b></p>
 There is now a Mac OS X binary for Exult 1.2 available on
 our <a href="download.php">download page</a>.
@@ -120,7 +169,7 @@ and of course the source code.
 Other operating systems should be available soon.
 Enjoy !
 
-<p><b>04 May 2003</p></b>
+<p><b>04 May 2003</b></p>
 <ul>
 <li>Jeff changed party formation to look more like the one used in the
 original. He also fixed stealing some more.</li>
@@ -131,7 +180,7 @@ main branch but still needs some work.</li>
 <li>O'Reilly released an article on Exult at
 <a href="http://linux.oreillynet.com/pub/a/linux/2003/04/24/exult.html">O'Reilly Network</a>.</li>
 </ul>
-<p><b>12 March 2003</p></b>
+<p><b>12 March 2003</b></p>
 <ul>
 <li>Behaviour of the bookmark in the spellbook has been improved.</li>
 <li>A crash while sleeping has been fixed.</li>
@@ -139,7 +188,7 @@ main branch but still needs some work.</li>
 some bugfixes.</li>
 <li>Some miscellaneous bugfixes</li>
 </ul>
-<p><b>3 March 2003</p></b>
+<p><b>3 March 2003</b></p>
 Development seems to have picked up again after being stalled for a few
 months.<ul>
 <li>DrCode has added a new scaler (Scale2X by Andrea Mazzoleni),
@@ -149,7 +198,7 @@ a few bugs</li>
 a couple of fixes</li>
 <li>Nadir has been porting ExultStudio to GTK+ 2.0</li>
 </ul>
-<p><b>7 November 2002</p></b>
+<p><b>7 November 2002</b></p>
 <b>Exult 1.0 has been released !!!</b>
 After 4 years of coding we finally see Exult fit to be released as 1.0!<br>
 We would like to thank everyone who supported us so far, gave us
@@ -161,7 +210,7 @@ As always please also read the <a href="docs.php">documentation</a> and <a href=
 You can find the 1.00 version on our <a href="download.php">download</a> page.
 Not every port is yet available for download but when they are done you will find them there.<br>
 Enjoy!
-<p><b>24 October 2002</p></b>
+<p><b>24 October 2002</b></p>
 Allthough news are a little slow at the moment we are still alive!
 <ul>
 <li>Jeffrey Hoeksma wrote an in depth guide on how to use Exult Studio and Dominus merged it with
@@ -170,7 +219,7 @@ useful and a good informative read. Thanks Jeffrey!
 <li>We added a letter page that contains some of the praise we received from users and Lord British himself.
 <li>Dr.Code fixed some bugs in Exult (selling baked bread, another trial bug in SI) and Exult Studio.
 </ul>
-<p><b>11 September 2002</p></b>
+<p><b>11 September 2002</b></p>
 Development is proceeding quite slowly, but we're still fixing bugs.
 Remember some of the things mentioned here are happening on the development 1.1 branch
 whereas the 1.0 is only for bugfixes.
@@ -179,7 +228,7 @@ whereas the 1.0 is only for bugfixes.
 <li>Weather shows when gumps are open
 <li>Bug fixes
 </ul>
-<p><b>19 August 2002</p></b>
+<p><b>19 August 2002</b></p>
 Artaxerxes is making a lot of progress with the Zaurus port. The latest version supports sound!
 <ul>
 <li>Explosions inside containers should now properly work
@@ -187,7 +236,7 @@ Artaxerxes is making a lot of progress with the Zaurus port. The latest version 
 <li>Various combat-related bugfixes (slimes, party-members not attacking)
 <li>Some cosmetic fixes to conversations
 </ul>
-<p><b>28 July 2002</p></b>
+<p><b>28 July 2002</b></p>
 Artaxerxes is currently porting Exult to the Zaurus! Take a look at the
 <A HREF="screenshots_zaurus.php">screenshots</A>. You can also download the current version of the page
 from our <A HREF="download.php">download page</A> (under 1.1.x snapshots)
@@ -196,14 +245,14 @@ from our <A HREF="download.php">download page</A> (under 1.1.x snapshots)
 <li>Fixed a bug that caused the camera to lose the avatar when going through moongates
 <li>Several other bugfixes
 </ul>
-<p><b>20 July 2002</p></b>
+<p><b>20 July 2002</b></p>
 <ul>
 <li>Fixed the bug that broke moongates in the Sphere generator (BG)
 <li>Added some more new BG paperdoll art (Thanks sb-x)
 <li>Some fixes to cart-handling
 <li>Serpent Isle has been fully played through with the current 1.0.x snapshots, resulting in a lot of SI bugfixes.
 </ul>
-<p><b>7 July 2002</p></b>
+<p><b>7 July 2002</b></p>
 We've been fixing lots of bugs in the 1.0.x snapshots the last month:
 <ul>
 <li>Fixed several combat-related bugs
@@ -214,7 +263,7 @@ We've been fixing lots of bugs in the 1.0.x snapshots the last month:
 <li>Some fixes to paperdolls in BG, and some new art by Oblivious.
 <li>Lots of other minor (and not-so-minor) bugfixes
 </ul>
-<p><b>10 June 2002</p></b>
+<p><b>10 June 2002</b></p>
 <p>
 If you checked our download page recently, you may have noticed that
 we have two sets of development snapshots now: a 1.0.x (stable)
@@ -229,7 +278,7 @@ moment. We are making some very destabilizing changes to this branch,
 like a rewritten usecode interpreter and new audio code. We do not
 recommend using the 1.1.x snapshots for normal playing.
 </p>
-<p><b>6 June 2002</p></b>
+<p><b>6 June 2002</b></p>
 <b>Exult Release Candidate 2 has been released !!!</b><br>
 Exult 0.99.1RC2 is now available for download. Please read the
 <a href="docs.php">documentation</a> and <a href="faq.php">FAQ</a>
@@ -246,7 +295,7 @@ Enjoy!
 	<li>Simon Quinn has now recorded the SFX for SI and also changed the SFX for BG. Download his
 		Roland MT32 soundpacks from our download page.
 	<li>We now have combos working in Exult Studio (see the documentation for Exult Studio).
-	<li>Dominus has updated the FAQ and also the documentation for Exult and Exult Studio</a>
+	<li>Dominus has updated the FAQ and also the documentation for Exult and Exult Studio</li>
 </ul>
 <p><b>5 May 2002</b></p>
 <ul>
@@ -309,6 +358,7 @@ modifying art files.
 	<li>Bug fixes
 	</ul>
 <p><b>2002-02-11</b></p>
+	<ul>
 	<li>Colourless has made ExultStudio work under Win95 and WinNT
 	<li>DrCode has added frame browsing and palette import/export to ExultStudio
 	<li>Common code between Exult and Pentagram has been factored out to increase reusability
@@ -391,7 +441,7 @@ forum
 <li>If Exult can't find sound effects files, it will show you in the main menu
 <li>More bug fixes in preparation for Beta.
 </ul>
-<b><p>2001-11-12</b></p>
+<p><b>2001-11-12</b></p>
 <ul>
 <li>Colourless has implemented compressed savegames. By default, savegames
 are now infact zip files in disguise. This should make submissions to the
@@ -401,7 +451,7 @@ bug-tracker much easier.
 beta of Exult.
 <li>More bug fixes
 </ul>
-<b><p>2001-11-5</b></p>
+<p><b>2001-11-5</b></p>
 <ul>
 <li>Both DrCode and Dominus have managed to complete Serpent Isle. This
 doesn't mean the experience is perfect, but many bugs have been fixed along
@@ -423,14 +473,14 @@ conversations to make it easier to read
 <li>Fawn Trial should work again
 <li>Other bugs fixes
 </ul>
-<b><p>2001-10-18</b></p>
+<p><b>2001-10-18</b></p>
 <ul>
 <li>Some monsters can now split
 <li>Gumps are now a bit more modal
 <li>Some more effects are now implemented (e.g. swordstrike)
 <li>Telekinesis and Fetch work
 </ul>
-<b><p>2001-10-12</b></p>
+<p><b>2001-10-12</b></p>
 <ul>
 <li>Gameplay Options dialog togther with fast mouse and middle-button
 support have been added by Christian Ohm. Thanks !
@@ -439,13 +489,13 @@ support have been added by Christian Ohm. Thanks !
 <li>Lots of combat fixes
 <li>Support for SI freezing attributes
 </ul>
-<b><p>2001-10-06</b></p>
+<p><b>2001-10-06</b></p>
 <ul>
 <li>Dead party members are now properly handled
 <li>Some bug fixes related to books and signs
 <li>Many more SI bugs fixed (endgame, trappers, Batlin scene, etc...)
 </ul>
-<b><p>2001-09-27</b></p>
+<p><b>2001-09-27</b></p>
 <ul>
 <li>Better animation timing
 <li>Serpentine signs, books and scrolls have been implemented
@@ -454,29 +504,29 @@ walls
 <li>All the flags for the actors are now saved
 <li>Bug fixes in SI's plot
 </ul>
-<b><p>2001-09-18</b></p>
+<p><b>2001-09-18</b></p>
 <ul>
 <li>lots of animations bugs fixed
 <li>Several List Field bugs (SI) fixed. Training should work a lot better now
 <li>Some bugs related to dueling have been fixed
 </ul>
-<b><p>2001-09-12</b></p>
+<p><b>2001-09-12</b></p>
 <ul>
 <li>Fixed several bugs related to weight/volume checking
 <li>Improvements to pathfinding code
 <li>Fixed bugs related to teleporters
 <li>Monsters that shouldn't leave bodies now don't (ghosts, slime, etc..)
 </ul>
-<b><p>2001-09-04</b></p>
+<p><b>2001-09-04</b></p>
 <ul>
 <li>Avatar and NPCs now restore hitpoints and mana hourly
 <li>Several crash bugs fixed
 <li>Various other minor bugs bugs fixed
 </ul>
-<b><p>2001-08-25</b></p>
+<p><b>2001-08-25</b></p>
 <b>Alpha 5</b> has been released! Get it from the <a href="download.php">download page</a>.<br>&nbsp;
 
-<b><p>2001-08-23</b></p>
+<p><b>2001-08-23</b></p>
 <ul>
 <li>Max has implemented MIDI for the MacOS (classic and X) versions of Exult!
 <li>Attacking non-living items like chests and doors should now work properly
@@ -484,7 +534,7 @@ walls
 <li>Literally dozens of plot-related bugs have been fixed, including: Moonshade Trial bugs, the Gargoyle's tests in Furnace, SI crystal balls, you can now resurrect Gwenno properly, the Banes-cutscene now works, and many more.
 </ul>
 
-	<b><p>2001-08-07</b></p>
+	<p><b>2001-08-07</b></p>
 	<ul>
 	<li>We have several new <a href="screenshots.php">screenshots</a>,
 	including two of ExultStudio!
@@ -500,14 +550,14 @@ walls
 	speech.
 	</ul>
 
-	<b><p>2001-07-31</b></p>
+	<p><b>2001-07-31</b></p>
 	<ul>
 	<li>Ryan has implemented new status bars. These show the health of your party members. You can also use them to quickly access their inventory and status screens. Activate them by pressing 'r'
 	<li>There is now a 'return to menu' option in the Black Gate and Serpent Isle menus. (The one in the game itself doesn't work yet)
 	<li>Lots of SI bug fixes including Erstram's turtle, a few Shamino's Castle crashes
 	</ul>
 
-	<b><p>2001-07-25</b></p>
+	<p><b>2001-07-25</b></p>
 	<ul>
 	<li>For a preview of what Exult Studio can do, take a look at the
 	"BG-Data" section on our <a
@@ -521,7 +571,7 @@ walls
 	<li>Serpent Isle is now playable up to Shamino's castle!
 	</ul>
 
-	<b><p>2001-07-17</b></p>
+	<p><b>2001-07-17</b></p>
 	<ul>
 	<li>We have a new <a href="forum/index.php">Discussion Forum</a> to replace the defunct Jackchaos message board
 	<li>Hack-mover has been reenabled (use Alt-H)
@@ -531,7 +581,7 @@ walls
 	<li>Maciej Kalisiak has made the bilinear scaler 2x as fast
 	</ul>
 
-	<b><p>2001-07-12</b></p>
+	<p><b>2001-07-12</b></p>
 	<ul>
 	<li>Ryan has fixed dungeon rendering in SI!
 	<li>The in-game Video Options menu has been implemented
