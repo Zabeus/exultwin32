@@ -1,12 +1,20 @@
 <?php
+// official release
 begin_section("Official - v1.4.9 rc1");
  add_extern_entry("exult-1.4.9rc1-win32.exe", "Windows (95/98/ME/NT/2000/XP/Vista/7) Binary", 2213);
  add_extern_entry("exult_1.4.9rc1.dmg", "Mac OS X 10.4 - 10.6 universal ppc and intel (32-/64-bit) binary", 5937);
  add_extern_entry("exult-1.4.9rc1.tar.gz", "Source (.tar.gz)", 5325);
 end_section();
 
-// datafiles
-begin_section("Additional Data files (not required)");
+// all-in-one audio packs
+begin_section("All-In-One Audio Data packs (not required)");
+ add_extern_entry("Exult_Audio_Installer.exe", "Installer for Windows", 44.587);
+ add_extern_entry("Exult_Audio_Installer.dmg", "Installer for Mac OS X", 49.816);
+ add_extern_entry("exult_audio.zip", "Zipped all-in-one audio pack for manual installation", 48.439);
+end_section();
+
+// one by one audio packs
+begin_section("Single Audio Data packs (not required if you use the above All-In-One pack)");
  add_extern_entry("jmsfx.zip", "Sound pack for Black Gate", 4667);
  add_extern_entry("sqsfxbg.zip", "Sound pack for Black Gate (Roland MT-32)", 6330);
  add_extern_entry("jmsfxsi.zip", "Sound pack for Serpent Isle", 6050);

@@ -1,4 +1,35 @@
 <table width="100%">
+	<tr><td width="20%" valign="top">11 February 2011<br></td>
+	<td><p>What we've been up to since the rc1 release and why there is no final version yet.<br/></p>
+	<p>Let's start off with the the bad news:<br/>
+	We have a bug that causes random objects in the games to disappear forever, when this happens
+	Exult tends to crash badly. Unfortunately this bug is unpredictable and we have no sure way of
+	reproducing and thus fixing it. We have some ideas of what is happening but no fix yet. This is
+	a real show stopper and unless we fix it we can't release another release candidate or a final 
+	version. If you encounter this bug (disappearing objects, random crashes,especially in combat) 
+	best you can do is revert to an earlier savegame.</p>
+	<p>The good news is that we welcome a new member to our team, Malignant Manor, a long time user 
+	of Exult.<br/>
+	He took on many bugs and improved many other things:</p>
+	<ul>
+	<li>command line option for portable use of Exult and Exult Studio for Windows</li>
+	<li>fixed many NPC schedules (baking, serving food, eating food, ...)</li>
+	<li>fixed talking to NPCs through locked doors (important for the Fawn trial)</li>
+	<li>added a new combat option to make handling of charmed party members more realistic (and thus harder) and also fixed normal charmed behavior in some places</li>
+	<li>added many options to the game menu that you could only change through editing the cfg file</li>
+	<li>fixed some Silver Seed stairs teleporters</li>
+	<li>possible to have separate settings for fullscreen and windowed mode</li>
+	<li>fixed various things for new games created with Exult Studio</li>
+	<li>and many other things...</li>
+	</ul>
+	<p>We also put all our various audio files (digital music pack and the SFX packs) into an 
+	all-in-one package. You can download a zip file for manual installation or an installer for either
+	Windows or Mac OS X. You don't need to download this if you already downloaded the audio packs 
+	individually before. And if you still prefer to download the smaller, individual packs, these are
+	also still available.<br/>
+	Head to our <a href="download.php">download page</a> to grab it.</p>
+	</td></tr>
+		
 	<tr><td width="20%" valign="top">21 October 2010<br></td>
 	<td><p><b>Exult 1.4.9rc1 has been released!</b><br/>
 	It took us over six years, but with DNF seemingly getting ready to be released after all, we had to do something.
