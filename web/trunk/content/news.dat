@@ -2,11 +2,11 @@
 	<tr><td width="20%" valign="top">11 February 2011<br></td>
 	<td><p>What we've been up to since the rc1 release and why there is no final version yet.<br/></p>
 	<p>Let's start off with the the bad news:<br/>
-	We have a bug that causes random objects in the games to disappear forever, when this happens
+	We have a bug that causes random objects in the games to disappear forever. When this happens
 	Exult tends to crash badly. Unfortunately this bug is unpredictable and we have no sure way of
 	reproducing and thus fixing it. We have some ideas of what is happening but no fix yet. This is
 	a real show stopper and unless we fix it we can't release another release candidate or a final 
-	version. If you encounter this bug (disappearing objects, random crashes,especially in combat) 
+	version. If you encounter this bug (disappearing objects, random crashes, especially in combat) 
 	best you can do is revert to an earlier savegame.</p>
 	<p>The good news is that we welcome a new member to our team, Malignant Manor, a long time user 
 	of Exult.<br/>
@@ -28,8 +28,9 @@
 	individually before. And if you still prefer to download the smaller, individual packs, these are
 	also still available.<br/>
 	Head to our <a href="download.php">download page</a> to grab it.</p>
+	<p></p>
 	</td></tr>
-		
+
 	<tr><td width="20%" valign="top">21 October 2010<br></td>
 	<td><p><b>Exult 1.4.9rc1 has been released!</b><br/>
 	It took us over six years, but with DNF seemingly getting ready to be released after all, we had to do something.
