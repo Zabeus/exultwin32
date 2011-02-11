@@ -5,5 +5,5 @@ svn update
 
 echo "Fixing permissions"
 chgrp -R exult .
-chmod -f -R g+rw,a+r .
+chmod -f -R a+r .
 
