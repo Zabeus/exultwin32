@@ -7,9 +7,11 @@ Quick and dirty guide to our Web-SVN
 
 - commit changes to SVN
 
--create interactive shell session (see http://apps.sourceforge.net/trac/sourceforge/wiki/Shell%20service):
+-create interactive shell session (see (see http://sourceforge.net/apps/trac/sourceforge/wiki/Shell%20service):
  ssh -t USER,exult@shell.sourceforge.net create
 
-- change dir to our webspace (cd /home/groups/e/ex/exult/htdocs)
+- change dir to our webspace (cd /home/project-web/exult/htdocs)
 
-- execute "./update.sh" (updates /home/../htdocs with SVN version and gives the right permissions to everyone)
+- execute "./update.sh" (updates /home/project-web/exult/htdocs with SVN version and gives the right permissions to everyone)
+
+Please make use of this and do not edit the webspace directly.
