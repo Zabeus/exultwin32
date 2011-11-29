@@ -1,4 +1,14 @@
 <table width="100%">
+	<tr><td width="20%" valign="top">29 November 2011<br></td>
+	<td><p><b>After over a decade you can buy the Ultima 7 games again.</b><br/></p>
+	<p>As of today <a href="http://www.gog.com/en/gamecard/ultima_7_complete">Good old Games</a> offers 
+	"Ultima 7: The Complete Edition" for $5.99. If you don't already own it - go grab these gems now.<br/>
+	Fortunately the complete edition means that it's both games, The Black Gate and Serpent Isle, with their 
+	addons, The Forge of Virtue and The Silver Seed.</p>
+	<p>News about Exult are rather slow these days but Marzo has accepted the quest to take on the disappearing objects.</p>
+	<p></p>
+	</td></tr>
+	
 	<tr><td width="20%" valign="top">11 February 2011<br></td>
 	<td><p>What we've been up to since the rc1 release and why there is no final version yet.<br/></p>
 	<p>Let's start off with the the bad news:<br/>
@@ -15,7 +25,8 @@
 	<li>command line option for portable use of Exult and Exult Studio for Windows</li>
 	<li>fixed many NPC schedules (baking, serving food, eating food, ...)</li>
 	<li>fixed talking to NPCs through locked doors (important for the Fawn trial)</li>
-	<li>added a new combat option to make handling of charmed party members more realistic (and thus harder) and also fixed normal charmed behavior in some places</li>
+	<li>added a new combat option to make handling of charmed party members more realistic (and thus 
+		harder) and also fixed normal charmed behavior in some places</li>
 	<li>added many options to the game menu that you could only change through editing the cfg file</li>
 	<li>fixed some Silver Seed stairs teleporters</li>
 	<li>possible to have separate settings for fullscreen and windowed mode</li>
