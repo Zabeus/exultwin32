@@ -1,3 +1,7 @@
+2013-02-11 Dominik Reichardt <dominus@users.sourceforge.net>
+	* Updated documentation
+	* content/download.dat: disabled the official version links for now
+	
 2011-02-11 Dominik Reichardt <dominus@users.sourceforge.net>
 	* content/news.dat: new news 
 	* content/download.dat: added all-in-one audio pack + installers
