@@ -1,4 +1,18 @@
 <table width="100%">
+	<tr><td width="20%" valign="top">18 November 2013<br></td>
+	<td><p>Disappearing objects fixed but still no new version.<br/></p>
+	<p>Dr. Code has fixed the disappearing objects and the resulting crashes quite some time ago (August 2012)
+	and at the time it seemed we could fast forward to a new release. Unfortunately some other crashes were 
+	uncovered and Marzo went on a bug squishing rampage last years. After that very productive outburst our
+	development almost completely stopped apart from some bug fixes.</p>
+	<p>On the plus side this means that the current snapshots are much more stable than the last rc1 release, 
+	not to mention the ancient 1.2 version that should never be used again. For that reason we no longer link 
+	to our old releases on our download page.<br/>
+	However there is still no new release and thus the ancient Exult 1.2 version is unfortunately still widely 
+	regarded as the stable version, especially in Linux repositories.</p>
+	<p></p>
+	</td></tr>
+	
 	<tr><td width="20%" valign="top">29 November 2011<br></td>
 	<td><p><b>After over a decade you can buy the Ultima 7 games again.</b><br/></p>
 	<p>As of today <a href="http://www.gog.com/en/gamecard/ultima_7_complete">Good old Games</a> offers 

@@ -7,6 +7,21 @@ begin_section("Official - currently disabled - please use the snapshot as it fix
  //add_extern_entry("exult-1.4.9rc1.tar.gz", "Source (.tar.gz)", 5325);
 end_section();
 
+// snapshots
+//begin_section("Exult 1.5.x Snapshots (Unstable) - use at your own risk!");
+begin_section("Exult 1.5.x Snapshots");
+ add_local_entry("ChangeLog", "ChangeLog");
+ add_local_entry("Exultwin32.exe", "Windows 95/98/ME/NT/2000/XP/Vista/7 binary snapshot");
+ add_local_entry("Exult-snapshot.dmg", "Mac OS X 10.4 ppc & 10.5 - 10.8 intel (32-/64-bit) binary snapshot");
+ add_extern_link("https://launchpad.net/~exult-team/+archive/exult-daily", "Ubuntu PPA snapshot");
+ add_extern_link("http://www.math.leidenuniv.nl/~wpalenst/cvs/exult-svn.tar.gz", "Exult SVN source code snapshot");
+ add_local_entry("ExultTools.exe", "Exult Tools Windows snapshot ");
+ add_local_entry("ExultStudio.exe", "Exult Studio Windows snapshot (work in progress)");
+ add_local_entry("PhotoshopShapePlugin.zip", "Photoshop Plugin");
+ add_local_entry("GimpPlugin.exe", "Gimp 1.x Plugin (for Windows)");
+ add_local_entry("Gimp20Plugin.exe", "Gimp 2.x Plugin (for Windows)");
+end_section();
+
 // all-in-one audio packs
 begin_section("All-In-One Audio Data packs (not required)");
  add_extern_entry("Exult_Audio_Installer.exe", "Installer for Windows", 44.587);
@@ -24,21 +39,6 @@ begin_section("Single Audio Data packs (not required if you use the above All-In
  add_extern_entry("U7MusicOGG_2of2.zip", "Ogg encoded Music files for Exult Part 2", 10860);
  add_local_entry("exult-sfx-si_0.4_arm.ipk", "Zaurus SI sfx package");
  add_local_entry("exult-sfx-bg_0.4_arm.ipk", "Zaurus BG sfx package");
-end_section();
-
-// snapshots
-begin_section("Exult 1.5.x Snapshots (Unstable) - use at your own risk!");
- add_local_entry("ChangeLog", "ChangeLog");
- add_local_entry("Exultwin32.exe", "Windows 95/98/ME/NT/2000/XP/Vista/7 binary snapshot");
- add_local_entry("Exult-snapshot.dmg", "Mac OS X 10.4 ppc & 10.5 - 10.8 intel (32-/64-bit) binary snapshot");
- add_local_entry("exult-pocketpc-2003-armv4.zip", "PocketPC 2003 ARMV4 binary snapshot");
- add_local_entry("exult-pocketpc-wm5-armv5t.zip", "PocketPC Window Mobile 5 ARMV5T binary snapshot");
- add_extern_link("http://www.math.leidenuniv.nl/~wpalenst/cvs/exult-svn.tar.gz", "Exult SVN source code snapshot");
- add_local_entry("ExultTools.exe", "Exult Tools Windows snapshot ");
- add_local_entry("ExultStudio.exe", "Exult Studio Windows snapshot (work in progress)");
- add_local_entry("PhotoshopShapePlugin.zip", "Photoshop Plugin");
- add_local_entry("GimpPlugin.exe", "Gimp 1.x Plugin (for Windows)");
- add_local_entry("Gimp20Plugin.exe", "Gimp 2.x Plugin (for Windows)");
 end_section();
 
 // Android snapshot
