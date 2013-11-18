@@ -3,7 +3,7 @@
 	<td><p>Disappearing objects fixed but still no new version.<br/></p>
 	<p>Dr. Code has fixed the disappearing objects and the resulting crashes quite some time ago (August 2012)
 	and at the time it seemed we could fast forward to a new release. Unfortunately some other crashes were 
-	uncovered and Marzo went on a bug squishing rampage last years. After that very productive outburst our
+	uncovered and Marzo went on a bug squishing rampage last year. After that very productive outburst our
 	development almost completely stopped apart from some bug fixes.</p>
 	<p>On the plus side this means that the current snapshots are much more stable than the last rc1 release, 
 	not to mention the ancient 1.2 version that should never be used again. For that reason we no longer link 
