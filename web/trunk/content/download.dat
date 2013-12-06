@@ -46,4 +46,10 @@ begin_section("Exult Android Snapshots (Unstable) - use at your own risk!");
  add_local_entry("ChangeLog.Android", "ChangeLog");
  add_local_entry("ExultAndroid.apk", "Android binary snapshot");
 end_section();
+
+// Marzo's mods snapshots
+begin_section("BG Keyring and SI Fixes Snapshots - only work with Exult 1.5.x Snapshots");
+ add_local_entry("Keyring.zip", "Black Gate Keyring (requires FoV)");
+ add_local_entry("Sifixes.zip", "Serpent Isle Fixes (requires SS)");
+end_section();
 ?>
