@@ -17,12 +17,12 @@
 	And now we seem to be in a situation that everytime we think Exult could be ready for a new 
 	release, some new bug is discovered that prevents us from releasing.</p>
 	<p>This time the big bad bug is a flaw in which we handle game eggs 
-	(see <a href="https://sourceforge.net/p/exult/bugs/1875/">Bug #1875</a> ). Mostly you will 
+	(see <a href="http://sourceforge.net/p/exult/bugs/1875/">Bug #1875</a> ). Mostly you will 
 	not notice that something is wrong until you reach to the abandoned outpost in SI and get 
 	slaughtered by the misbehaving fire shooter/energy barrier trap room 
-	(see <a href="https://sourceforge.net/p/exult/bugs/1848/">Bug #1848</a> - savegame included) 
+	(see <a href="http://sourceforge.net/p/exult/bugs/1848/">Bug #1848</a> - savegame included) 
 	or when you notice that the anti magic rain in BG never stops until you restart Exult or whatever 
-	(see <a href="https://sourceforge.net/p/exult/bugs/1865/">Bug #1865</a>).<br/>
+	(see <a href="http://sourceforge.net/p/exult/bugs/1865/">Bug #1865</a>).<br/>
 	Whenever this is fixed you can expect another round of bug reports coming in about all the 
 	things now broken...<br/>
 	(not to mention countless other stuff, including some bug in the way we handle midi music, 
@@ -103,7 +103,7 @@
 	our <a href="download.php">download page</a>.
 	Please play with it and tell us of any problem you encounter using the
 	<a href="forum/index.php">forum</a> or
-	<a href="http://sourceforge.net/bugs/?group_id=2335">bug tracker</a>.</p>
+	<a href="http://sourceforge.net/p/exult/bugs/">bug tracker</a>.</p>
 
 	<p>If you have followed the news this list is likely already familiar to you,
 	but we did a lot with Exult in the years since 1.2:</p>
