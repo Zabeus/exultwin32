@@ -14,7 +14,7 @@ begin_section("Exult 1.5.x Snapshots");
  add_local_entry("Exultwin32.exe", "Windows 95/98/ME/NT/2000/XP/Vista/7 binary snapshot");
  add_local_entry("Exult-snapshot.dmg", "Mac OS X 10.4 ppc & 10.5 - 10.9 intel (32-/64-bit) binary snapshot");
  add_extern_link("https://launchpad.net/~exult-team/+archive/exult-daily", "Ubuntu PPA snapshot");
- add_extern_link("http://www.math.leidenuniv.nl/~wpalenst/cvs/exult-svn.tar.gz", "Exult SVN source code snapshot");
+ add_extern_link("http://sourceforge.net/p/exult/code/HEAD/tarball", "Exult SVN source code snapshot (automated - please be patient)");
  add_local_entry("ExultTools.exe", "Exult Tools Windows snapshot ");
  add_local_entry("ExultStudio.exe", "Exult Studio Windows snapshot (work in progress)");
  add_local_entry("PhotoshopShapePlugin.zip", "Photoshop Plugin");
