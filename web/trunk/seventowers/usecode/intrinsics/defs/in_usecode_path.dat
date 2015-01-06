@@ -1,0 +1,3 @@
+<?php
+	code_block("bool UI_in_usecode_path(actor npc)\nbool npc->in_usecode_path()");
+?>

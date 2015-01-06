@@ -1,0 +1,3 @@
+<?php
+	header("Location: $PHP_SELF?TYPE=3&DATAFILE=wait");
+?>

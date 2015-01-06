@@ -1,0 +1,11 @@
+<?php
+	text("Determines if a given tile or object is a water tile.");
+	make_header("Parameters", 0);
+	add_keylist(
+		array(
+				inline_code("pos"), "Location of tile or object to be tested.",
+        	), 4
+        );
+	make_header("Return", 0);
+	text("$true if the specified tile or object is a water tile, $false otherwise.");
+?>

@@ -1,0 +1,4 @@
+<?php
+	code_block("hatch");
+	text("Activates a monster, button or missile egg.");
+?>

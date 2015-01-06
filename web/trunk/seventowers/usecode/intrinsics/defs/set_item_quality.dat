@@ -1,0 +1,3 @@
+<?php
+	code_block("bool UI_set_item_quality(object obj, int qual)\nbool obj->set_item_quality(int qual)");
+?>

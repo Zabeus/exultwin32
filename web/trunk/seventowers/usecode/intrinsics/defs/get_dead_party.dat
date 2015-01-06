@@ -1,0 +1,3 @@
+<?php
+	code_block("object[] UI_get_dead_party(object obj)\nobject[] obj->get_dead_party()");
+?>

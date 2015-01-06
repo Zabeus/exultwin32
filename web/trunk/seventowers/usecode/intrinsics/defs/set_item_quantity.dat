@@ -1,0 +1,3 @@
+<?php
+	code_block("bool UI_set_item_quantity(object obj, int quant)\nbool obj->set_item_quantity(int quant)");
+?>

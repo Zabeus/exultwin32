@@ -1,0 +1,4 @@
+<?php
+	code_block("descent");
+	text("Reduces the actor's z coordinate by 1, to a minumum of 0.");
+?>

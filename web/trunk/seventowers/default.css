@@ -1,0 +1,381 @@
+a	{
+	background-color:	#DFDFDF;
+	color:				#005533;
+	padding:			0.1em;
+	text-decoration:	none;
+}
+
+a:link, a:visited	{
+	border-right:		0.5em	solid	#00AA33;
+	background-color:	#DFDFDF;
+	color:				#005533;
+}
+
+a:link.offsite, a:visited.offsite	{
+	border-right:		0.5em	solid	#00AAFF;
+	background-color:	#DFDFDF;
+	color:				#003388;
+}
+
+a:hover, a:hover.offsite	{
+	border-right:		0.5em	solid	#AA0000;
+	background-color:	#FFFF80;
+	color:				#AA0000;
+}
+
+ul.box a:hover, ul.box a:hover.offsite	{
+	border-right:		0.5em	solid	#D8AC20;
+	background-color:	#3F3F3F;
+	color:				#D8AC20;
+}
+
+a.offsite img+img	{
+	padding:			0.25em;
+}
+
+a.target, a:link.target, a:visited.target, a:hover.target	{
+	border:				inherit;
+	background-color:	inherit;
+	color:				inherit;
+}
+
+
+body	{
+	background-color:	#FFFFFF;
+	color:				#000000;
+	font-family:		helvetica, sans-serif;
+	font-size:			small;
+	padding-left:		15em;
+	text-align:			justify;
+	line-height:		1.4em;
+}
+
+h1	{
+	background-color:	#000000;
+	color:				#FFFFFF;
+	display:			block;
+	font-family:		times, serif;
+	font-size:			xx-small;
+	font-weight:		bold;
+	padding:			0.1em;
+	text-align:			justify;
+}
+
+h2	{
+	background-color:	#000000;
+	color:				#D8AC20;
+	display:			block;
+	font-size:			x-large;
+	padding-left:		0.25em;
+	line-height:		1.6em;
+}
+
+h3	{
+	background-color:	#000000;
+	color:				#D8AC20;
+	display:			block;
+	font-size:			large;
+	padding-left:		0.25em;
+	line-height:		1.4em;
+}
+
+img	{
+	border-width:		0;
+	vertical-align:		middle;
+}
+
+p.box	{
+	margin:				1em;
+	padding-left:		0.25em;
+	padding-right:		0.25em;
+	background-color:	#FFFF80;
+	color:				#000000;
+}
+
+p.boxtitle	{
+	background-color:	#000000;
+	color:				#D8AC20;
+	font-size:			large;
+	margin:				0;
+	padding:			0.25em;
+}
+
+div.download	{
+	display:			block;
+}
+
+span.logoimg	{
+	vertical-align:		middle;
+	display:			inline-block;
+}
+
+span.logoimg img+img	{
+	padding-left: 0.25em;
+	display:			inline-block;
+}
+
+span.logoimg	a	{
+	vertical-align:		middle;
+	display:			inline-block;
+}
+
+span.info	{
+	vertical-align:		middle;
+	padding-left:		0.6em;
+	display:			inline-block;
+	max-width:			70%
+}
+
+p.info	{
+	vertical-align:		top;
+	padding-top:		0.0em;
+	padding-bottom:		0.0em;
+	overflow:			auto;
+}
+
+p.subsections	{
+	text-align:			center;
+}
+
+p.subsections	a	{
+	padding-right:		0.3em;
+	vertical-align:		middle;
+	display:			table-cell;
+}
+
+span.subsections	{
+	background-color:	#3F3F3F;
+	border-right:		0.5em	solid	#D8AC20;
+	color:				#D8AC20;
+	padding:			0.1em	0.3em	0.1em	0.1em;
+	vertical-align:		middle;
+	display:			table-cell;
+}
+
+p.subsections a+a, p.subsections span.subsections+a, p.subsections a+span.subsections	{
+	border-left:		0.5em	solid	#FFFFFF;
+}
+
+span.quicktip	{
+	background-color:	#FFFF80;
+	color:				#AA0000;
+	cursor:				help;
+}
+
+ul.box span.quicktip	{
+	color:				#D8AC20;
+	background-color:	#3F3F3F;
+	cursor:				help;
+}
+
+p.backtop	{
+	padding:			0.1em	0.3em	0.1em	0.1em;
+	vertical-align:		middle;
+	display:			block;
+}
+
+ul.box	{
+	background-color:	#FFFF80;
+	color:				#000000;
+	border:				0.25em	solid	#000000;
+	display:			block;
+	list-style-type:	none;
+	margin:				0;
+	padding:			0;
+}
+
+ul.itemlist	{
+	list-style-image:	url("images/dot.png");
+	vertical-align:		middle;
+}
+
+ul.itemlist	li	{
+	padding-bottom:		0.5em;
+	padding-left:		0.5em;
+}
+
+span.navbar	{
+	background-color:	#3F3F3F;
+	border-right:		0.5em	solid	#D8AC20;
+	color:				#D8AC20;
+	display:			block;
+	list-style-type:	none;
+	padding:			0.1em;
+	vertical-align:		middle;
+	margin:				0.5em	0;
+	width:				13em;
+}
+
+ul.navbar	{
+	background-color:	#ffffff;
+	color:				inherit;
+	list-style-type:	none;
+	margin:				0;
+	padding:			0;
+	position:			fixed;
+	left:				1em;
+	top:				1em;
+	width:				14em;
+}
+
+ul.navbar	a	{
+	display:			block;
+	padding:			0.1em;
+	width:				13em;
+}
+
+ul.navbar	li	{
+	margin:				0.5em	0;
+	width:				13em;
+}
+
+.codeblock	{
+	width:				92%;
+	max-height:			30em;
+	overflow:			auto;
+}
+
+.bigcodeblock	{
+	width:				92%;
+	overflow:			auto;
+}
+
+table, td, tr	{
+	font-family:		helvetica, sans-serif;
+	font-size:			small;
+}
+
+code	{
+	font-family:		'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace;
+	font-size:			1em;
+}
+
+.right	{
+	float:				right;
+}
+
+.codeblock a, .bigcodeblock a	{
+	background-color:	inherit;
+	color:				inherit;
+	padding:			inherit;
+	text-decoration:	inherit;
+	border-right:		inherit;
+}
+
+code a, code a:link, code a:visited, code a:hover	{
+	background-color:	inherit;
+	color:				inherit;
+	padding:			inherit;
+	text-decoration:	inherit;
+	border-right:		inherit;
+}
+
+/*
+ *
+ *	GeSHi	Dynamically	Generated	Stylesheet
+ *	--------------------------------------
+ *	Dynamically	generated	stylesheet	for	ucc
+ *	CSS	class:	ucc,	CSS	id:
+ *	GeSHi	(c)	Nigel	McNie	2004	(http://qbnz.com/highlighter)
+ */
+.ucc	.de1,	.ucc	.de2	{
+	font-family:		'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace;
+	font-weight:		normal;
+	background-color:	#ffffff;
+	color:				inherit;
+	overflow:			visible;
+}
+.ucc	{
+	font-family:		'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace;
+	font-size:	1em;
+}
+.ucc	.head	{}
+.ucc	.foot	{}
+.ucc	.imp	{
+	font-family:		'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace;
+	font-weight:		bold;
+	background-color:	inherit;
+	color:				red;
+}
+.ucc	.ln-xtra	{
+	font-family:		'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace;
+	color:	#cc0;
+	background-color:	#ffc;
+}
+.ucc	li	{
+	font-family:		'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace;
+	background-color:	inherit;
+	color:				black;
+	font-weight:		normal;
+	font-style:			normal;
+	margin-left:		1.5em;
+	border-left:		2px	solid	#000000;
+	padding-left:		1em;
+}
+.ucc	li.li2	{
+	font-family:		'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace;
+	font-weight:	bold;
+}
+.ucc	.kw1	{
+	background-color:	inherit;
+	color:				#0000ff;
+	font-weight:	bold;
+}
+.ucc	.kw2	{
+	background-color:	inherit;
+	color:	#00C000;
+	font-weight:	bold;
+}
+.ucc	.kw3	{
+	background-color:	inherit;
+	color:	#008080;
+}
+.ucc	.kw4	{
+	background-color:	inherit;
+	color:	#800080;
+	font-style:	italic;
+}
+.ucc	.kw5	{
+	background-color:	inherit;
+	color:	#C000C0;
+	font-weight:	bold;
+}
+.ucc	.co1	{
+	background-color:	inherit;
+	color:	#808080;
+	font-style:	italic;
+}
+.ucc	.co2	{
+	background-color:	inherit;
+	color:	#0000ff;
+}
+.ucc	.coMULTI	{
+	background-color:	inherit;
+	color:	#808080;
+	font-style:	italic;
+}
+.ucc	.es0	{
+	background-color:	inherit;
+	color:	#800000;
+	font-weight:	bold;
+}
+.ucc	.br0	{
+	background-color:	inherit;
+	color:	#808080;
+}
+.ucc	.st0	{
+	background-color:	inherit;
+	color:	#808000;
+}
+.ucc	.nu0	{
+	background-color:	inherit;
+	color:	#ff0000;
+}
+.ucc	.me1	{
+	background-color:	inherit;
+	color:	#808080;
+}
+.ucc	.me2	{
+	background-color:	inherit;
+	color:	#808080;
+}

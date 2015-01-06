@@ -1,0 +1,4 @@
+<?php
+	code_block("nop;");
+	text("Does nothing. Identical to '" . inline_code("wait 1;") . "'.");
+?>

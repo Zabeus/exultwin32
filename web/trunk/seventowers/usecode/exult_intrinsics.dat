@@ -1,0 +1,48 @@
+<?php
+	$ucc = "Usecode C";
+	$bgimg = add_image("bgsm.png", "[BG]", false);
+	$siimg = add_image("sism.png", "[SI]", false);
+	$exultimg = add_image("exultsm.png", "[Exult]", false);
+	$exultbgimg = add_image("exultbgsm.png", "[Exult: BG]", false);
+	$exultsiimg = add_image("exultsism.png", "[Exult: SI]", false);
+	$bgexultimg = add_image("bgexultsm.png", "[BG, Exult]", false);
+	$siexultimg = add_image("siexultsm.png", "[SI, Exult]", false);
+	$true = inline_code("true");
+	$false = inline_code("false");
+	$exult = add_link("Exult", "http://exult.sourceforge.net/");
+	
+	if ($outmode != 2)
+		make_header("General Definitions");
+	else
+	{
+		make_header("Intrinsics");
+		include_once( "usecode/reference/naturaldocs_intrinsics.dat" );
+		make_header("Introduction");
+	}
+	
+	include( "usecode/reference/intrinsic_reference.dat" );
+	include( "usecode/reference/intrinsic_relations.dat" );
+
+	foreach($relation_data as $key => $reldata)
+	{
+		make_header($intrinsic_groups[$key][0], 2);
+		text($intrinsic_groups[$key][1]);
+		foreach($reldata as $datfile => $item)
+		{
+			if ($outmode == 0)
+			{
+				out("<div>");
+				anchor($datfile, true);
+			}
+			else if ($outmode == 2)
+				make_header("UI_$datfile", 1);
+			if ($outmode != 2)
+				include_once( "usecode/intrinsics/defs/$datfile.dat" );
+			include_once( "usecode/intrinsics/$datfile.dat" );
+			if ($outmode == 0)
+				out("</div>");
+			else if ($outmode == 2)
+				include_once( "usecode/intrinsics/defs/$datfile.dat" );
+		}
+	}
+?>

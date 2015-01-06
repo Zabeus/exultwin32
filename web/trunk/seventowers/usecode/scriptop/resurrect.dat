@@ -1,0 +1,4 @@
+<?php
+	code_block("resurrect");
+	text("If the actor is the " . bold("body of") . " a dead NPC, the NPC is resurrected. All items in the body are transferred over to the NPC.");
+?>

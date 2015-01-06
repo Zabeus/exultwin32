@@ -1,0 +1,3 @@
+<?php
+	header("Location: ucc_ref.php?TYPE=5&DATAFILE=get_party_list");
+?> 

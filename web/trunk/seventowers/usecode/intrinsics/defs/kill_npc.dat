@@ -1,0 +1,3 @@
+<?php
+	code_block("UI_kill_npc(actor npc)\nnpc->kill_npc()");
+?>

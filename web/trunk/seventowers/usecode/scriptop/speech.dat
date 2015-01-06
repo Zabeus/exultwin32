@@ -1,0 +1,4 @@
+<?php
+	code_block("speech track");
+	text("Plays the 'track' speech.");
+?>

@@ -1,0 +1,43 @@
+===========================================================
+Mission statement
+===========================================================
+The intent of the Ultima 7 High-Resolution Project {{name pending; suggestions welcome}} is to improve the look of the original game by providing all new graphics crafted at higher resolutions. The higher resolution images mean that they will be much more richly detailed, hopefully breathing new life into Britannia in a way that scalers in Exult and in DOSBox cannot.
+
+All is not rosy, however. By neccessity, this project works only with Exult (or will, when Exult is modified to handle it); the original games cannot use the higher resolution images, and they cannot be modified to do so. Also, the bigger images will drastically increase Exult's memory consumption, which means that not everyone -- or not every platform -- will be able to use the high resolution versions. The upside is that they are likely to use far less CPU time than the corresponding scalers, and look much better. Plus, there is little reason (other than hardware limitations...) why the high resolution images cannot be used in conjunction with a scaler for truly huge displays.
+
+===========================================================
+Art guidelines
+===========================================================
+{{pending: decide scale(s) to draw images on. I am leaning towards 3x scale}}
+
+All art must be done with the Ultima 7 palette, or as close to it as possible. Ideally, the palette that the Gimp shape plug-in generates should be used, as it uses unique entries for all colors. In particular, the last 32 colors are critical, because they are used for palette cycling and/or semi-transparency in Ultima 7, and some of them are duplicates of earlier colors. You do not [b]have[/b] to work with a paletted image (for example, if you want to use gradient tools), but you should ensure that it can be converted to the Ultima 7 palette without loss (or with tolerable dithering). Also, any color conversion should not use the last 32 colors for anything but palette animations or semi-transparent portions. {{link to Gimp shape plug-in, and to a generated palette file}}
+
+Alpha channels should not be used for the borders, but they can be used at intermediate steps -- if the resulting colors can be converted without loss to the Ultima 7 palette. Likewise, all borders should be manually anti-aliased so that they look good in high-contrast backgrounds. The lack of alpha channels mean that little to no anti-aliasing should be done. Most objects should have a thin black border around them to match the Ultima 7 style; contrary to most other cases, the width of this border should not be scaled from the original games, and should remain 1 pixel wide.
+
+The Ultima 7 "perspective" should be used for all images; it is detailed below. While the image itself need not be done directly in the Ultima 7 perspective, it should be possible to perform the conversion simply and without many complications (and with minimal loss, particularly when converting to the Ultima 7 palette). As of now, there are Gimp scripts available that map flat surfaces (a face of a box, drawn head-on) into a top, side or frontal face of the same box seen into the Ultima 7 "perspective" for the selected side. Another script combines 3 such layers into the full composite box if the layers are "compatible". Finally, there is also a script that flips the image, performing a Ultima 7-style "rotation". {{todo: link to scripts, and perhaps to expanded explanation and documentation}}
+
+Another imperative is that the art should [i]look[/i] like it [i]could[/i] be downscaled to the original Ultima 7 image. Watch for the "weasel words": if it happens that downscaling the image results in the original Ultima 7 image, this is an added bonus; but images should [b]not[/b] be designed for this purpose as this would mean an unneccessary restriction which could result in loss of detail.
+
+Likewise, the graphics should be [i]based[/i] on the original images, but [b]not[/b] directly upscaled images: we want to add details and improve the look of the game, not manually perform a job better suited to scalers. Upscaling the images and using it to base proportions and basic colors is permissible; upscaling and smoothing (manually or otherwise) to avoid pixelation is [b]not[/b]. Upscaling and manually editing to add details is a gray area: in some (many?) cases, it would probably be easier to start from scratch, while the legal minefield makes the other cases undesirable. In summary, upscaling should only be used for proportions and basic colors.
+
+===========================================================
+Cabinet Projection (a.k.a. Ultima 7 "perspective")
+===========================================================
+The Ultima 7 "perspective" is a -135 degree [url=http://en.wikipedia.org/wiki/Cabinet_projection]cabinet projection[/url]. Despite claims otherwise in many, many places, it is [b]not[/b] an [url=http://en.wikipedia.org/wiki/Isometric_projection]isometric projection[/url] (nor any other [url=http://en.wikipedia.org/wiki/Axonometric_projection]axonometric projection[/url]). In fact, it is not really a perspective at all as there are no vanishing points (but then again, neither is the isometric projection). Note that the angle is [b]negative[/b]; this is because Ultima 7 has the top left corner as the origin, and (x, y) coordinates grow to the (right, bottom), while increasing z moves the image towards the origin. This means that the transformation matrix given in the Wikipedia page linked above is:
+
+[code]
+	    [ 1  0  -sqrt(2)/4 ]
+	p = [ 0  1  -sqrt(2)/4 ]
+	    [ 0  0       0     ]
+[/code]
+
+Where sqrt(2) is the [url=http://en.wikipedia.org/wiki/Square_root_of_2]square root of 2[/url].
+
+Confused? Well, have no fear. All of the above can be summarized quite simply:
+-- Any flat surfaces that are purely horizontal are unchanged. Examples: the top of a table, a drawing on flat, level ground. This means that lengths and widths are unchanged.
+-- Any purely vertical objects have their height halved. For example, a pole with 16 pixels in height (actual height) is drawn obliquely with only 8 pixels in height (effective height).
+-- Every two pixels up (z axis) move the image 1 pixel to the screen top and 1 pixel to the screen left; likewise, every two pixels down (z axis) move the image 1 pixel to the screen bottom and 1 pixel to the screen right. Example: a purely vertical pole with dimensions 1 pixel x 1 pixel x 16 pixels (length x width x height) could be drawn starting from (0, 0) down to (7, 7). This means that heights are effectively halved; the pole in the example is drawn with 8 pixels in total.
+
+Ultima 7 also does some limited "rotations" by flipping an image through the top-left to bottom-right line. This is used very rarely in the actual shapes because the game itself can do this; one example where this happens is the moongates generated by Orb of the Moons in The Black Gate. This flip can be achieved by an horizontal flip followed by a counter-clockwise rotation by 90 degrees.
+
+

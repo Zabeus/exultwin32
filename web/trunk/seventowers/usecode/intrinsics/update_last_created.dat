@@ -1,0 +1,32 @@
+<?php
+	text("Pops the last object pushed in the 'last created' stack and places it in the game map at the supplied position.");
+	make_header("Parameters", 0);
+	add_keylist(
+		array(
+				inline_code("pos"), "The location where the new object is to be placed.",
+        	), 4
+        );
+	text("The location can be specified by arrays ranging from 1 to 4 components. The meaning of these components is as follows:");
+	add_list(
+		array(
+				"1 element: the object will be deleted (equivalent to '" . inline_code("remove_item") . "' intrinsic);",
+				"2 elements: mean a (x, y) location. The object is placed at z = 0 in the current game map;",
+				"3 elements: mean a (x, y, z) location. The object is placed in the current game map;",
+				"4 elements: mean a (x, y, z, map) location. The object is placed in the specified map unless it is -1, in which case it will be placed in the current game map.",
+    		), true, 4
+    	);
+	make_header("Return", 0);
+	text("Zero if the 'last created' stack is empty and '1' if the object was deleted. Otherwise:");
+	add_box(
+    	array(
+				"BG SPECIFIC",
+				"If successful, returns 1."
+			)
+		);
+	add_box(
+    	array(
+				"SI SPECIFIC",
+				"If successful, returns a reference to the object."
+			)
+		);
+?>

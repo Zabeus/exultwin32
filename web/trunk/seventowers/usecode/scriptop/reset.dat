@@ -1,0 +1,4 @@
+<?php
+	code_block("reset");
+	text("Makes the script start over from the beginning. the " . inline_code("repeat") . " command will only work the first time. You should be extremelly careful of combining this with the " . inline_code("nohalt") . " command as it may generate an unending script.");
+?>
