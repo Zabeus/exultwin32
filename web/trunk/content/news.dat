@@ -1,4 +1,20 @@
 <table width="100%">
+	<tr><td width="20%" valign="top">19 March 2015<br></td>
+	<td><p>Fan Project of the Year 2014 - Ultima Codex<br/></p>
+	<p>Exult has been voted Project of the Year 2014 by the readers of the 
+	<a href="http://ultimacodex.com/2015/02/exult-the-2014-fan-project-of-the-year/">Ultima Codex</a> 
+	in a close race with <a href="http://nuvie.sf.net">Nuvie</a>.<br/>
+	Our prize was a hand signed certificate by our Liege Lord British to each member of the 
+	development team.<br/>
+	<a href="images/screenshots/project2014.png"><img src="images/screenshots/thumbs/project2014.png" width="245" height="321" vspace="5" hspace="10" alt="Fan Project 2014 certificate" border="0"></a></p>
+	<p><b>Exult on an iPhone/iPad</b><br/>
+	Chaoji Li (aka Litchie) forked Exult on <a href="https://github.com/litchie/exult-ios">Github</a> to work 
+	on the initial porting effort by Lanica Dragon (which had stopped in 2013).<br/>
+	Read more about it in our <a href="http://exult.sourceforge.net/docs.php#iOS%20Guide">Documentation</a>.</p>
+	<p>As for a new version of Exult, again lot of bugs have been fixed, the game eggs bug referred to below among 
+	them but other bugs have of course appeared.</p>
+	</td><td colspan=2> </td></tr>
+
 	<tr><td width="20%" valign="top">16 May 2014<br></td>
 	<td><p><b>State of Exult or why there is still no new version</b><br/></p>
 	<p>It's been 3 1/2 years since the release candidate and almost a decade since 
@@ -36,8 +52,7 @@
 	<p>So, is Exult dead? No, but it's not teeming with life and as has been written before, without 
 	new developers Exult might never leave this state.<br/>
 	Don't mistake this for a farewell, we just want to be frank about these things.</p>
-	<p></p>
-	</td></tr>
+	</td><td colspan=2> </td></tr>
 	
 	<tr><td width="20%" valign="top">18 November 2013<br></td>
 	<td><p>Disappearing objects fixed but still no new version.<br/></p>
@@ -50,8 +65,7 @@
 	to our old releases on our download page.<br/>
 	However there is still no new release and thus the ancient Exult 1.2 version is unfortunately still widely 
 	regarded as the stable version, especially in Linux repositories.</p>
-	<p></p>
-	</td></tr>
+	</td><td colspan=2> </td></tr>
 	
 	<tr><td width="20%" valign="top">29 November 2011<br></td>
 	<td><p><b>After over a decade you can buy the Ultima 7 games again.</b><br/></p>
@@ -60,8 +74,7 @@
 	Fortunately the complete edition means that it's both games, The Black Gate and Serpent Isle, with their 
 	addons, The Forge of Virtue and The Silver Seed.</p>
 	<p>News about Exult are rather slow these days but Marzo has accepted the quest to take on the disappearing objects.</p>
-	<p></p>
-	</td></tr>
+	</td><td colspan=2> </td></tr>
 	
 	<tr><td width="20%" valign="top">11 February 2011<br></td>
 	<td><p>What we've been up to since the rc1 release and why there is no final version yet.<br/></p>
@@ -93,8 +106,7 @@
 	individually before. And if you still prefer to download the smaller, individual packs, these are
 	also still available.<br/>
 	Head to our <a href="download.php">download page</a> to grab it.</p>
-	<p></p>
-	</td></tr>
+	</td><td colspan=2> </td></tr>
 
 	<tr><td width="20%" valign="top">21 October 2010<br></td>
 	<td><p><b>Exult 1.4.9rc1 has been released!</b><br/>

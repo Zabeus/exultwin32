@@ -11,8 +11,8 @@ end_section();
 //begin_section("Exult 1.5.x Snapshots (Unstable) - use at your own risk!");
 begin_section("Exult 1.5.x Snapshots");
  add_local_entry("ChangeLog", "ChangeLog");
- add_local_entry("Exultwin32.exe", "Windows 95/98/ME/NT/2000/XP/Vista/7 binary snapshot");
- add_local_entry("Exult-snapshot.dmg", "Mac OS X 10.4 ppc & 10.5 - 10.9 intel (32-/64-bit) binary snapshot");
+ add_local_entry("Exultwin32.exe", "Windows 95/98/ME/NT/2000/XP/Vista/7/8 binary snapshot");
+ add_local_entry("Exult-snapshot.dmg", "Mac OS X 10.4 ppc & 10.5 - 10.10 intel (32-/64-bit) binary snapshot");
  add_extern_link("https://launchpad.net/~exult-team/+archive/exult-daily", "Ubuntu PPA snapshot");
  add_extern_link("http://sourceforge.net/p/exult/code/HEAD/tarball", "Exult SVN source code snapshot (automated - please be patient)");
  add_local_entry("ExultTools.exe", "Exult Tools Windows snapshot ");
@@ -37,8 +37,8 @@ begin_section("Single Audio Data packs (not required if you use the above All-In
  add_extern_entry("sqsfxsi.zip", "Sound pack for Serpent Isle (Roland MT-32)", 7834);
  add_extern_entry("U7MusicOGG_1of2.zip", "Ogg encoded Music files for Exult Part 1", 12030);
  add_extern_entry("U7MusicOGG_2of2.zip", "Ogg encoded Music files for Exult Part 2", 10860);
- add_local_entry("exult-sfx-si_0.4_arm.ipk", "Zaurus SI sfx package");
- add_local_entry("exult-sfx-bg_0.4_arm.ipk", "Zaurus BG sfx package");
+ //add_local_entry("exult-sfx-si_0.4_arm.ipk", "Zaurus SI sfx package");
+ //add_local_entry("exult-sfx-bg_0.4_arm.ipk", "Zaurus BG sfx package");
 end_section();
 
 // Android snapshot
